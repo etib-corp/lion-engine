@@ -35,4 +35,7 @@
 .vscode
 
 # CMake
-build
+build/
+
+# Feature live testing
+game/
