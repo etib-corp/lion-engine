@@ -24,7 +24,7 @@ include_directories(${glm_SOURCE_DIR})
 
 file(GLOB_RECURSE SOURCES_SFML src/SFML/*.cpp)
 
-include_directories(include/interface include/SFML)
+include_directories(include/)
 
 add_library(lion-engine SHARED ${SOURCES})
 target_link_libraries(lion-engine PRIVATE glm::glm)
