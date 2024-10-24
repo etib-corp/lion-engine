@@ -13,8 +13,9 @@ namespace LE {
         public:
             virtual ~IFont() = default;
 
+            virtual void init();
+
         protected:
-        private:
     };
 }
 
