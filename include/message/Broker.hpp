@@ -61,7 +61,7 @@ namespace LE {
          * @param topic_name The name of the topic.
          * @param message A unique pointer to the message.
          */
-        void addMessage(std::uint8_t ecs_id, std::uint8_t topic_id, Message *message);
+        void addMessage(std::uint8_t ecs_id, std::uint8_t topic_id, std::shared_ptr<Message> message);
 
         /**
          * @brief Retrieves a message from a topic.
@@ -69,7 +69,7 @@ namespace LE {
          * @param topic_name The name of the topic.
          * @return A unique pointer to the message.
          */
-        Message *getMessage(std::uint8_t ecs_id, std::uint8_t topic_id);
+        std::shared_ptr<Message> getMessage(std::uint8_t ecs_id, std::uint8_t topic_id);
 
     protected:
         std::uint8_t _ecs_id;
@@ -78,15 +78,15 @@ namespace LE {
         std::thread _thread;
         std::mutex _mutex;
         bool _is_running = true;
-        std::queue<Message *> _outgoing_messages;
-        std::queue<Message *> _incomming_messages;
-        std::function<void(Message *)> _sendFunction;
+        std::queue<std::shared_ptr<Message>> _outgoing_messages;
+        std::queue<std::shared_ptr<Message>> _incomming_messages;
+        std::function<void(std::shared_ptr<Message>)> _sendFunction;
 
         void _setNetworkModule(INetworkModule *network_module) { _network_module = network_module; }
 
         void _setECSId(int ecs_id) { _ecs_id = ecs_id; }
 
-        void _setSendFunction(std::function<void(Message *)> sendFunction) { _sendFunction = sendFunction; }
+        void _setSendFunction(std::function<void(std::shared_ptr<Message>)> sendFunction) { _sendFunction = sendFunction; }
 
         void _networkRoutine(void);
 
@@ -98,7 +98,7 @@ namespace LE {
 
         void _stop(void);
 
-        virtual void _sendMessage(Message *message) = 0;
+        virtual void _sendMessage(std::shared_ptr<Message>message) = 0;
 
         void _sendMessages(void);
     };

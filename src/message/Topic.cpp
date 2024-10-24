@@ -9,15 +9,15 @@ LE::Topic::~Topic(void)
 {
 }
 
-void LE::Topic::addMessage(Message *message)
+void LE::Topic::addMessage(std::shared_ptr<Message>message)
 {
     std::lock_guard<std::mutex> lock(_mutex);
     _messages.push(message);
 }
 
-LE::Message *LE::Topic::getMessage(void)
+std::shared_ptr<LE::Message>LE::Topic::getMessage(void)
 {
-    Message *message = nullptr;
+    std::shared_ptr<Message>message = nullptr;
     std::lock_guard<std::mutex> lock(_mutex);
     if (_messages.empty()) {
         return nullptr;

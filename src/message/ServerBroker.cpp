@@ -34,7 +34,7 @@ LE::ServerBroker::~ServerBroker(void)
     rtypeLog->log("{}", "ServerBroker stopped");
 }
 
-void LE::ServerBroker::_sendMessage(Message *message)
+void LE::ServerBroker::_sendMessage(std::shared_ptr<Message>message)
 {
     std::string compressed_request = message->serialize();
     auto client = _server->_sessionsManager->getClientById(message->getReceiverID());
@@ -48,7 +48,7 @@ void LE::ServerBroker::_sendMessage(Message *message)
 
 void LE::ServerBroker::_onReceiveRequestCallback(const Request &request)
 {
-    Message *message = new Message();
+    std::shared_ptr<Message>message = std::make_shared<Message>();
 
     message->setRequest(request);
     _incomming_messages.push(message);
@@ -60,16 +60,16 @@ void LE::ServerBroker::_onClientDisconnectedCallback(ISession *session)
     rtypeLog->log("{} disconnect", session->getId());
 }
 
-void LE::ServerBroker::sendToAllClient(Message *message, std::uint8_t topic_id, std::uint8_t ecs_id)
+void LE::ServerBroker::sendToAllClient(std::shared_ptr<Message>message, std::uint8_t topic_id, std::uint8_t ecs_id)
 {
     std::lock_guard<std::mutex> lock(_mutex);
 
-    Message *new_message = nullptr;
+    std::shared_ptr<Message>new_message = nullptr;
     std::vector<std::shared_ptr<ISession>> sessions = _server->_sessionsManager->getClients();
 
     for (auto &session : sessions)
     {
-        new_message = new Message();
+        new_message = std::make_shared<Message>();
         new_message->setRequest(message->getRequest());
         new_message->setReceiverID(session->getId());
         new_message->setEmmiterID(ecs_id);

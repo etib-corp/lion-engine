@@ -37,18 +37,18 @@ namespace LE {
          *
          * @param message A unique pointer to the message to be added.
          */
-        void addMessage(Message *message);
+        void addMessage(std::shared_ptr<Message> message);
         /**
          * @brief Retrieves and removes the next message from the topic's queue.
          *
          * @return A unique pointer to the next message, or nullptr if the queue is empty.
          */
-        Message *getMessage(void);
+        std::shared_ptr<Message> getMessage(void);
 
     private:
         std::uint8_t _ecs_id;
         std::uint8_t _id;
-        std::queue<Message *> _messages;
+        std::queue<std::shared_ptr<Message>> _messages;
         std::mutex _mutex;
     };
 }

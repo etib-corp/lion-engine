@@ -45,13 +45,13 @@ namespace LE {
          *
          * @param message The message to send.
          */
-        void sendToAllClient(Message *message, std::uint8_t topic_id, std::uint8_t ecs_id);
+        void sendToAllClient(std::shared_ptr<Message>message, std::uint8_t topic_id, std::uint8_t ecs_id);
 
     private:
         std::uint16_t _listen_port;
         IServer *_server;
 
-        void _sendMessage(Message *message) override;
+        void _sendMessage(std::shared_ptr<Message> message) override;
 
         void _onReceiveRequestCallback(const Request &request);
 
