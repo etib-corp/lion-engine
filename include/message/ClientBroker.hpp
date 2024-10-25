@@ -36,14 +36,14 @@ namespace LE {
 
         ~ClientBroker(void);
 
-        Message *getMessageFromTopic(std::uint8_t topic_id);
+        std::shared_ptr<Message>getMessageFromTopic(std::uint8_t topic_id);
 
     private:
         std::string _connect_address;
         std::uint16_t _connect_port;
         IClient *_client;
 
-        void _sendMessage(Message *message) override;
+        void _sendMessage(std::shared_ptr<Message> message) override;
 
         void _onReceiveRequestCallback(const Request &request);
     };

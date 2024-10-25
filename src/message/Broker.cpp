@@ -15,7 +15,7 @@ void LE::Broker::removeTopic(std::uint8_t ecs_id, std::uint8_t id)
 }
 
 
-void LE::Broker::addMessage(std::uint8_t ecs_id, std::uint8_t topic_id, Message *message)
+void LE::Broker::addMessage(std::uint8_t ecs_id, std::uint8_t topic_id, std::shared_ptr<Message>message)
 {
     std::lock_guard<std::mutex> lock(_mutex);
 
@@ -25,7 +25,7 @@ void LE::Broker::addMessage(std::uint8_t ecs_id, std::uint8_t topic_id, Message 
     _outgoing_messages.push(message);
 }
 
-LE::Message *LE::Broker::getMessage(std::uint8_t ecs_id, std::uint8_t topic_id)
+std::shared_ptr<LE::Message>LE::Broker::getMessage(std::uint8_t ecs_id, std::uint8_t topic_id)
 {
     return getTopic(ecs_id, topic_id)->getMessage();
 }
@@ -37,7 +37,7 @@ void LE::Broker::_networkRoutine(void)
 
 void LE::Broker::_logicalRoutine()
 {
-    LE::Message *message = nullptr;
+    std::shared_ptr<LE::Message>message = nullptr;
 
     while (!_incomming_messages.empty())
     {
@@ -82,7 +82,7 @@ void LE::Broker::_stop(void)
 
 void LE::Broker::_sendMessages(void)
 {
-    Message *message = nullptr;
+    std::shared_ptr<Message>message = nullptr;
     while (!_outgoing_messages.empty())
     {
         message = _outgoing_messages.front();

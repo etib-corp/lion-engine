@@ -35,7 +35,7 @@ LE::ClientBroker::~ClientBroker(void)
     std::cout << "ClientBroker stopped" << std::endl;
 }
 
-void LE::ClientBroker::_sendMessage(Message *message)
+void LE::ClientBroker::_sendMessage(std::shared_ptr<Message>message)
 {
     std::string compressed_request = message->serialize();
 
@@ -47,15 +47,15 @@ void LE::ClientBroker::_sendMessage(Message *message)
 
 void LE::ClientBroker::_onReceiveRequestCallback(const Request &request)
 {
-    Message *message = new Message();
+    std::shared_ptr<Message> message = std::shared_ptr<Message>();
 
     message->setRequest(request);
     _incomming_messages.push(message);
 }
 
-LE::Message *LE::ClientBroker::getMessageFromTopic(std::uint8_t topic_id)
+std::shared_ptr<LE::Message> LE::ClientBroker::getMessageFromTopic(std::uint8_t topic_id)
 {
-    Message *message = nullptr;
+    std::shared_ptr<LE::Message> message = nullptr;
 
     std::lock_guard<std::mutex> lock(_mutex);
     for (auto &topic : _topics) {
