@@ -22,7 +22,7 @@ FetchContent_MakeAvailable(glm)
 
 include_directories(${glm_SOURCE_DIR})
 
-file(GLOB_RECURSE SOURCES src/*.cpp)
+file(GLOB_RECURSE SOURCES_INTERFACE src/interface/*.cpp)
 
 include_directories(include/)
 
