@@ -16,5 +16,5 @@ include_directories(include)
 
 add_library(lion-engine-SFML SHARED ${LION_SFML_SOURCES})
 
-target_link_libraries(lion-engine-SFML PRIVATE SFML)
+target_link_libraries(lion-engine-SFML PRIVATE sfml-graphics sfml-window sfml-system sfml-audio)
 # set_target_properties(NetworkModule PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib")
