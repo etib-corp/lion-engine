@@ -4,10 +4,17 @@ project(lion-engine)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+include(cmake/Utils.cmake)
 
 file(GLOB LIB_DIRS "lib/*")
+
 foreach(dir ${LIB_DIRS})
-    add_subdirectory(${dir})
+    if (EXISTS "${dir}/CMakeLists.txt")
+        message("${BoldGreen}Adding subdirectory: ${dir}")
+        add_subdirectory(${dir})
+    else ()
+        message(WARNING "Skipping ${dir} - CMakeLists.txt file is missing")
+    endif()
 endforeach()
 
 include(FetchContent)
