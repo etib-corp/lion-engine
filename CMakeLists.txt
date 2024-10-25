@@ -5,6 +5,8 @@ project(lion-engine)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(include/ include/interface)
+
 file(GLOB LIB_DIRS "lib/*")
 foreach(dir ${LIB_DIRS})
     add_subdirectory(${dir})
@@ -24,7 +26,6 @@ include_directories(${glm_SOURCE_DIR})
 
 file(GLOB_RECURSE SOURCES src/*.cpp)
 
-include_directories(include/interface include/SFML)
 
 add_library(lion-engine SHARED ${SOURCES})
 

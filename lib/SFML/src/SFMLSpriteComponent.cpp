@@ -23,6 +23,6 @@ std::shared_ptr<LE::ISpriteComponent> LE::Sprite::createSpriteComponent(const st
 
 void LE::Sprite::drawSpriteComponent(std::shared_ptr<LE::ISpriteComponent> sprite)
 {
-    auto spriteComponent = std::dynamic_pointer_cast<LE::SFMLSpriteComponent>(sprite);
+    LE::SFMLSpriteComponent *spriteComponent = dynamic_cast<LE::SFMLSpriteComponent *>(sprite.get());
     spriteComponent->window->getWindow()->draw(*spriteComponent->sprite);
 }
