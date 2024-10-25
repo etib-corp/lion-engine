@@ -22,10 +22,15 @@ FetchContent_MakeAvailable(glm)
 
 include_directories(${glm_SOURCE_DIR})
 
-file(GLOB_RECURSE SOURCES src/*.cpp)
+file(GLOB_RECURSE SOURCES_SFML src/SFML/*.cpp)
 
-include_directories(include)
+include_directories(include/interface include/SFML)
 
 add_library(lion-engine SHARED ${SOURCES})
 target_link_libraries(lion-engine PRIVATE glm::glm)
 
+file(GLOB_RECURSE MAIN main.cpp)
+
+add_executable(main ${MAIN})
+
+target_link_libraries(main lion-engine-SFML)

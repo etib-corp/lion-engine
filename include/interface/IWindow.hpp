@@ -35,12 +35,12 @@ namespace LE {
              *
              * @return true if the window is open, false otherwise.
              */
-            virtual bool isOpen() { return _isOpen; }
+            virtual bool isOpen() = 0;
 
             /**
              * @brief Closes the window.
              */
-            virtual void close() { _isOpen = false; }
+            virtual void close() = 0;
 
             /**
              * @brief Clears the window.
@@ -53,24 +53,46 @@ namespace LE {
             virtual void display() = 0;
 
             /**
+             * @brief Gets the title of the window.
+             *
+             * @return The title of the window.
+             */
+            virtual const std::string& getTitle()
+            {
+                return _title;
+            }
+
+            /**
+             * @brief Sets the title of the window.
+             *
+             * @param title The new title of the window.
+             */
+            virtual void setTitle(const std::string& title) = 0;
+
+            /**
              * @brief Gets the width of the window.
              *
              * @return The width of the window.
              */
-            virtual std::string getTitle() { return _title; }
+            virtual unsigned int getWidth()
+            {
+                return _width;
+            }
 
             /**
              * @brief Gets the height of the window.
              *
              * @return The height of the window.
              */
-            virtual void setTitle(const std::string& title) { _title = title; }
+            virtual unsigned int getHeight()
+            {
+                return _height;
+            }
 
         protected:
-            const unsigned int _width;          ///< The width of the window.
-            const unsigned int _height;         ///< The height of the window.
+            unsigned int _width;          ///< The width of the window.
+            unsigned int _height;         ///< The height of the window.
             std::string _title;                 ///< The title of the window.
-            bool _isOpen;                       ///< Whether the window is open or not.
         private:
     };
 }

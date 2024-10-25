@@ -5,17 +5,17 @@
 ** ISpriteComponent
 */
 
-#ifndef ISPRITECOMPONENT_HPP_
-#define ISPRITECOMPONENT_HPP_
+#pragma once
+
+#include <string>
 
 namespace LE {
     class ISpriteComponent {
         public:
-            virtual ~ISpriteComponent() = default;
-
-        protected:
-        private:
+            std::string path;
+            unsigned int width;
+            unsigned int height;
+            bool hidden;
+            float rotation;
     };
 }
-
-#endif /* !ISPRITECOMPONENT_HPP_ */
