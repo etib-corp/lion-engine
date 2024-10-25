@@ -9,7 +9,6 @@
 
 // Engine include
 #include "Error.hpp"
-#include <glm/glm.hpp>
 
 // C++ include
 #include <array>
@@ -79,21 +78,6 @@ namespace LE {
                     for (int i = 0; i < HEIGHT; i++) {
                         for (int j = 0; j < WIDTH; j++) {
                             this->_matrix[i][j] = values[i * WIDTH + j];
-                        }
-                    }
-                }
-
-                /**
-                 * @brief Constructs a Matrix object from a glm::mat.
-                 *
-                 * The constructor initializes the matrix from a glm::mat.
-                 * @param matrix The glm::mat to initialize the matrix with.
-                */
-                Matrix(glm::mat<WIDTH, HEIGHT, T> matrix)
-                {
-                    for (int i = 0; i < HEIGHT; i++) {
-                        for (int j = 0; j < WIDTH; j++) {
-                            this->_matrix[i][j] = matrix[i][j];
                         }
                     }
                 }
@@ -205,22 +189,6 @@ namespace LE {
                         det += this->_matrix[0][i] * submatrix.determinant() * (i % 2 == 0 ? 1 : -1);
                     }
                     return det;
-                }
-
-                /**
-                 * @brief Returns the Matrix as a glm::mat.
-                 *
-                 * @return The Matrix as a glm::mat.
-                */
-                glm::mat<WIDTH, HEIGHT, T> toGlm() const
-                {
-                    glm::mat<WIDTH, HEIGHT, T> result;
-                    for (int i = 0; i < HEIGHT; i++) {
-                        for (int j = 0; j < WIDTH; j++) {
-                            result[i][j] = this->_matrix[i][j];
-                        }
-                    }
-                    return result;
                 }
 
                 /**

@@ -90,8 +90,8 @@ namespace LE {
             }
 
         protected:
-            unsigned int _width;          ///< The width of the window.
-            unsigned int _height;         ///< The height of the window.
+            unsigned int _width;                ///< The width of the window.
+            unsigned int _height;               ///< The height of the window.
             std::string _title;                 ///< The title of the window.
         private:
     };

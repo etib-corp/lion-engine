@@ -25,7 +25,7 @@
 namespace LE {
     class IEngineError : public IError {
         public:
-            IEngineError(const std::string &message) : IError(message) {}
+            IEngineError(const std::string &title = "", const std::string& details = "", const std::string& help = "") : IError(title, details, help) {}
             ~IEngineError() = default;
     };
 
