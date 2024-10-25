@@ -10,11 +10,22 @@ foreach(dir ${LIB_DIRS})
     add_subdirectory(${dir})
 endforeach()
 
+include(FetchContent)
+
+FetchContent_Declare(
+    glm
+    GIT_REPOSITORY https://github.com/g-truc/glm.git
+    GIT_TAG 1.0.1
+)
+
+FetchContent_MakeAvailable(glm)
+
+include_directories(${glm_SOURCE_DIR})
 
 file(GLOB_RECURSE SOURCES src/*.cpp)
 
 include_directories(include)
 
 add_library(lion-engine SHARED ${SOURCES})
-
+target_link_libraries(lion-engine PRIVATE glm::glm)
 
