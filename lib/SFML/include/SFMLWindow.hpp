@@ -33,6 +33,8 @@ namespace LE {
             unsigned int getWidth() override;
 
             unsigned int getHeight() override;
+
+            const std::shared_ptr<sf::RenderWindow>& getWindow() const;
         private:
             std::shared_ptr<sf::RenderWindow> _window;
     };
