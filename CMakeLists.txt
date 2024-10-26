@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(cmake/Utils.cmake)
 
+include_directories(include/ include/interface)
+
 file(GLOB LIB_DIRS "lib/*")
 
 foreach(dir ${LIB_DIRS})
@@ -29,15 +31,8 @@ FetchContent_MakeAvailable(glm)
 
 include_directories(${glm_SOURCE_DIR})
 
-file(GLOB_RECURSE SOURCES_SFML src/SFML/*.cpp)
+file(GLOB_RECURSE SOURCES src/*.cpp)
 
-include_directories(include/interface include/SFML)
 
 add_library(lion-engine SHARED ${SOURCES})
-target_link_libraries(lion-engine PRIVATE glm::glm)
 
-file(GLOB_RECURSE MAIN main.cpp)
-
-add_executable(main ${MAIN})
-
-target_link_libraries(main lion-engine-SFML)

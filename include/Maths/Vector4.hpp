@@ -8,7 +8,6 @@
 #pragma once
 
 #include "Error.hpp"
-#include <glm.hpp>
 #include "Vector3.hpp"
 
 #include <cmath>
@@ -55,14 +54,6 @@ namespace LE {
              * @param w The w component of the vector.
              */
             Vector4(const T& x, const T& y, const T& z, const T& w) : x(x), y(y), z(z), w(w) {}
-
-            /**
-             * @brief Constructs a Vector4 object from the specified glm::vec4 object.
-             *
-             * @param vec The glm::vec4 object.
-             */
-            Vector4(const glm::vec4& vec) : x(vec.x), y(vec.y), z(vec.z), w(vec.w) {}
-
 
             /**
              * @brief Destructor for the Vector4 object.
@@ -160,16 +151,6 @@ namespace LE {
                     return Vector3<T>();
                 else
                     return *this * eta - n * (eta * dot(n) + sqrt(k));
-            }
-
-            /**
-             * @brief Returns the Vector4 object as a glm::vec4 object.
-             *
-             * @return The Vector4 object as a glm::vec4 object.
-            */
-            glm::vec4 toGlmVec4() const
-            {
-                return glm::vec4(this->x, this->y, this->z, this->w);
             }
 
             /**
