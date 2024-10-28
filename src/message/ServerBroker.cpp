@@ -4,10 +4,10 @@
 #include "Utils.hpp"
 #include "globalLogger.hpp"
 
-LE::ServerBroker::ServerBroker(INetworkModule *network_module, std::uint8_t ecs_id, std::uint16_t listen_port) : _listen_port(listen_port)
+LE::ServerBroker::ServerBroker(INetworkModule *network_module, std::string listen_address, std::uint16_t listen_port) : _listen_address(listen_address), _listen_port(listen_port)
 {
     _setNetworkModule(network_module);
-    _setECSId(ecs_id);
+    _setECSId(0);
     _setSendFunction(std::bind(&LE::ServerBroker::_sendMessage, this, std::placeholders::_1));
 
     _server = _network_module->createServer(_listen_port);

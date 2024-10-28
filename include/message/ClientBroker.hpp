@@ -28,7 +28,7 @@ namespace LE {
          * @param connect_address The address to connect to.
          * @param connect_port The port to connect to.
          */
-        ClientBroker(INetworkModule *network_module, std::string connect_address, std::uint16_t connect_port);
+        ClientBroker(INetworkModule *network_module, std::string connect_address, unsigned short connect_port);
 
         /**
          * @brief Destroys the ClientBroker object.
@@ -40,7 +40,7 @@ namespace LE {
 
     private:
         std::string _connect_address;
-        std::uint16_t _connect_port;
+        unsigned short _connect_port;
         IClient *_client;
 
         void _sendMessage(std::shared_ptr<Message> message) override;

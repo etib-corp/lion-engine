@@ -26,7 +26,7 @@ namespace LE {
          * @param ecs_id The ID of the ECS (Entity Component System).
          * @param listen_port The port on which the server will listen for incoming connections.
          */
-        ServerBroker(INetworkModule *network_module, std::uint8_t ecs_id, std::uint16_t listen_port);
+        ServerBroker(INetworkModule *network_module, std::string _listen_address, std::uint16_t listen_port);
 
         /**
          * @brief Destroys the ServerBroker object.
@@ -48,7 +48,8 @@ namespace LE {
         void sendToAllClient(std::shared_ptr<Message>message, std::uint8_t topic_id, std::uint8_t ecs_id);
 
     private:
-        std::uint16_t _listen_port;
+        std::string _listen_address;
+        unsigned short _listen_port;
         IServer *_server;
 
         void _sendMessage(std::shared_ptr<Message> message) override;

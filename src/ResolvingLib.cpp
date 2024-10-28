@@ -9,31 +9,30 @@
 
 bool isWindows(void)
 {
-    #if defined(_WIN32) || defined(_WIN64)
+#if defined(_WIN32) || defined(_WIN64)
     return true;
-    #else
+#else
     return false;
-    #endif
+#endif
 }
 
 bool isMacOS(void)
 {
-    #if defined(__APPLE__) || defined(__MACH__)
+#if defined(__APPLE__) || defined(__MACH__)
     return true;
-    #else
+#else
     return false;
-    #endif
+#endif
 }
 
 bool isLinux(void)
 {
-    #if defined(__linux__)
+#if defined(__linux__)
     return true;
-    #else
+#else
     return false;
-    #endif
+#endif
 }
-
 
 std::string getExtensionKernel(void)
 {

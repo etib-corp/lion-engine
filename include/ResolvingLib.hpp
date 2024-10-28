@@ -6,13 +6,13 @@
 */
 
 #ifndef RESOLVELIBS_HPP_
-    #define RESOLVELIBS_HPP_
-    #include <iostream>
+#define RESOLVELIBS_HPP_
+#include <iostream>
 
-    // bool isWindows(void);
-    // bool isMacOS(void);
-    // bool isLinux(void);
-    std::string getExtensionKernel(void);
-    std::string getPathOfNetworkDynLib(void);
+bool isWindows(void);
+bool isMacOS(void);
+bool isLinux(void);
+std::string getExtensionKernel(void);
+std::string getPathOfNetworkDynLib(void);
 
 #endif /* !RESOLVELIBS_HPP_ */
