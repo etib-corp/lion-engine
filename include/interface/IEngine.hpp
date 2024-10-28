@@ -78,10 +78,18 @@ namespace LE {
              */
             virtual std::shared_ptr<LE::ISpriteComponent> createSpriteComponent(const std::string& texturePath) = 0;
 
+            /**
+             * @brief Creates Event Manager.
+             *
+             *  @return A shared pointer to the created Event Manager.
+             */
+            virtual std::shared_ptr<LE::IEventManager> createEventManager() = 0;
+
         protected:
             std::shared_ptr<IWindow> _window;
             std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
             std::map<std::string, std::shared_ptr<IFont>> _fonts;
+            std::shared_ptr<IEventManager> _eventManager;
 
         private:
     };

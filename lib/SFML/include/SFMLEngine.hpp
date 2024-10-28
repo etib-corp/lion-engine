@@ -13,6 +13,7 @@
 #include "SFMLShader.hpp"
 #include "SFMLSpriteComponent.hpp"
 #include "SFMLWindow.hpp"
+#include "SFMLEventManager.hpp"
 
 /**
  * @namespace LE
@@ -73,6 +74,12 @@ namespace LE {
                 sprite->window = std::dynamic_pointer_cast<LE::SFMLWindow>(_window);
                 _sprites[path] = sprite;
                 return sprite;
+            }
+
+            std::shared_ptr<LE::IEventManager> createEventManager() override
+            {
+                _eventManager = std::make_shared<LE::SFMLEventManager>(_window);
+                return _eventManager;
             }
     };
 }
