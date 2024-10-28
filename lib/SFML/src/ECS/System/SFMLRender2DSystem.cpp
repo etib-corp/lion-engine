@@ -22,8 +22,8 @@ void SFMLRender2DSystem::update(LE::Ecs *ecs, float dt)
 
     for (auto &entity : _entities) {
         auto &sprite = ecs->getComponent<LE::ISpriteComponent>(entity);
-        auto &transform = ecs->getComponent<LE::TransformComponent>(entity);
+        auto &transform = ecs->getComponent<TransformComponent>(entity);
 
-        auto &sfmlSprite = std::dynamic_pointer_cast<LE::SFMLSpriteComponent>(sprite);
+        auto SFMLSprite = dynamic_cast<LE::SFMLSpriteComponent *>(&sprite);
     }
 }

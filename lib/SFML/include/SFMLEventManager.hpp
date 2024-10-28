@@ -1,4 +1,4 @@
-&/*
+/*
 ** EPITECH PROJECT, 2024
 ** lion-engine
 ** File description:
@@ -9,21 +9,23 @@
     #define SFMLEVENTMANAGER_HPP_
 
     #include "interface/IEventManager.hpp"
-    #include "SFMLEngine.hpp"
-
+    #include "SFMLCommon.hpp"
 
 namespace LE {
+
+    class IEngine;
+
     class SFMLEventManager : public LE::IEventManager {
         public:
-            SFMLEventManager(std::shared_ptr<LE::IEngine> engine);
+            SFMLEventManager(LE::IEngine &engine);
             ~SFMLEventManager();
 
             void pollEvents() override;
 
         protected:
         private:
-            std::shared_ptr<LE::IEngine> _engine;
-            sf::Event event;
+            LE::IEngine &_engine;
+            sf::Event _event;
     };
 }
 

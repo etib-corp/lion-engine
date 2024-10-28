@@ -78,8 +78,13 @@ namespace LE {
 
             std::shared_ptr<LE::IEventManager> createEventManager() override
             {
-                _eventManager = std::make_shared<LE::SFMLEventManager>(_window);
+                _eventManager = std::make_shared<LE::SFMLEventManager>(*this);
                 return _eventManager;
+            }
+
+            std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs)
+            {
+                return nullptr;
             }
     };
 }

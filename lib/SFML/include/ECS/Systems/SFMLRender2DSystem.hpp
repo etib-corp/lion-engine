@@ -10,6 +10,7 @@
 
     #include "ECS/Systems/IRender2DSystem.hpp"
     #include "SFMLEngine.hpp"
+    #include <memory>
 
 class SFMLRender2DSystem : public IRender2DSystem {
     public:

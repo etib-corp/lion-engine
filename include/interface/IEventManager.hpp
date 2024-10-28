@@ -142,13 +142,14 @@ namespace LE
          * @param callback The callback function to be called when the key event occurs.
          * @return A Status object indicating the success or failure of the operation.
          */
-        virtual Status addEventListener(const LE::Key &key, std::function<void(std::shared_ptr<LE::IEngine>, float)> callback)
+        virtual Status addEventListener(const LE::Key &key, std::function<void(LE::IEngine&, float)> callback)
         {
-            auto it = _eventCallbacks.find(key);
+            auto newKey = std::make_shared<Key>(key);
+            auto it = _eventCallbacks.find(newKey);
             if (it != _eventCallbacks.end()) {
                 return {false, "Event listener already exists for this event type."};
             }
-            _eventCallbacks[key] = callback;
+            _eventCallbacks[newKey] = callback;
             return {true, "Event listener added successfully."};
         }
 
@@ -163,9 +164,10 @@ namespace LE
          */
         virtual void removeEventListener(const LE::Key &key)
         {
-            auto it = _eventCallbacks.find(key);
+            auto newKey = std::make_shared<Key>(key);
+            auto it = _eventCallbacks.find(newKey);
             if (it != _eventCallbacks.end()) {
-                _eventCallbacks.erase(key);
+                _eventCallbacks.erase(newKey);
             }
         }
 
@@ -175,7 +177,7 @@ namespace LE
         virtual void pollEvents() = 0;
 
     protected:
-        std::map<LE::Key, std::function<void(std::shared_ptr<LE::IEngine>, float)>> _eventCallbacks; ///< List of event callbacks.
+        std::map<std::shared_ptr<LE::Key>, std::function<void(LE::IEngine &, float)>> _eventCallbacks; ///< List of event callbacks.
     };
 }
 
