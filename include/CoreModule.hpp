@@ -2,6 +2,8 @@
 
 #include "interface/INetworkModule/INetworkModule.hpp"
 
+#include "ResponsibilityChain.hpp"
+
 namespace LE
 {
     class CoreModule
@@ -11,6 +13,7 @@ namespace LE
 
     public:
         INetworkModule *_network_module;
+        
     };
 
 } // namespace LE
