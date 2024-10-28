@@ -19,7 +19,7 @@ void LE::GUI::ITextField::onClick()
 
 void LE::GUI::ITextField::onHover()
 {
-    IColor *bgColor = _background->getColor();
+    Color *bgColor = _background->getColor();
 
     bgColor->setAlpha(100);
     _background->setColor(bgColor);
@@ -27,7 +27,7 @@ void LE::GUI::ITextField::onHover()
 
 void LE::GUI::ITextField::onUnhover()
 {
-    IColor *bgColor = _background->getColor();
+    Color *bgColor = _background->getColor();
 
     bgColor->setAlpha(255);
     _background->setColor(bgColor);

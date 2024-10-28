@@ -5,7 +5,7 @@
 ** IText
 */
 
-#include "IText.hpp"
+#include "GUI/IText.hpp"
 
 void LE::IText::setContent(const std::string &content)
 {
