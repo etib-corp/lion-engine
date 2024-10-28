@@ -9,7 +9,7 @@
     #define ISHAPE_HPP_
 
     #include "Maths/Vector3.hpp"
-    #include "IColor.hpp"
+    #include "Color.hpp"
 
 namespace LE {
     class IShape {
@@ -18,7 +18,7 @@ namespace LE {
 
             virtual void setPosition(const LE::Vector3<float>& position);
 
-            virtual void setColor(LE::IColor *color);
+            virtual void setColor(LE::Color *color);
 
             virtual void move(const LE::Vector3<float>& moveVector);
 
@@ -26,11 +26,11 @@ namespace LE {
 
             virtual LE::Vector3<float> getPosition() const;
 
-            virtual LE::IColor *getColor() const;
+            virtual LE::Color *getColor() const;
 
         protected:
             LE::Vector3<float> _position;
-            LE::IColor *_color;
+            LE::Color *_color;
     };
 }
 

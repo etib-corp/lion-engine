@@ -14,7 +14,7 @@
 namespace LE {
     class SFMLRectangle : public IRectangle {
         public:
-            SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::IColor *color);
+            SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::Color *color);
 
             ~SFMLRectangle();
 

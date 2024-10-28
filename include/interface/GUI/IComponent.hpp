@@ -16,7 +16,7 @@ namespace LE {
             public:
                 virtual ~IComponent() = default;
 
-                virtual void draw() = 0;
+                // virtual void draw() = 0;
 
                 size_t getId() const;
 
@@ -24,9 +24,9 @@ namespace LE {
 
                 void setPos(float x, float y);
 
-                float getWidth() const;
+                virtual float getWidth() const;
 
-                float getHeight() const;
+                virtual float getHeight() const;
 
                 float getX() const;
 

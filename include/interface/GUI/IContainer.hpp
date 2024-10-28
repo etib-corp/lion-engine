@@ -24,7 +24,11 @@ namespace LE {
 
                 virtual void removeChildren(unsigned int id);
 
-                virtual void init() = 0;
+                virtual void init();
+
+                virtual void setBackground(LE::IShape *background);
+
+                virtual void setBackgroundColor(LE::Color *color);
 
             protected:
                 std::vector<std::shared_ptr<IComponent>> _children;

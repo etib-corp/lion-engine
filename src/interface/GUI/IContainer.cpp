@@ -21,3 +21,20 @@ void LE::GUI::IContainer::removeChildren(unsigned int id)
         }
     }
 }
+
+void LE::GUI::IContainer::init()
+{
+    for (auto &child : _children) {
+        child->init();
+    }
+}
+
+void LE::GUI::IContainer::setBackground(LE::IShape *background)
+{
+    _background = background;
+}
+
+void LE::GUI::IContainer::setBackgroundColor(LE::Color *color)
+{
+    _background->setColor(color);
+}

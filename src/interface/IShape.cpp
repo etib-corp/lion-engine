@@ -12,7 +12,7 @@ void LE::IShape::setPosition(const LE::Vector3<float>& position)
     _position = position;
 }
 
-void LE::IShape::setColor(LE::IColor *color)
+void LE::IShape::setColor(LE::Color *color)
 {
     _color = color;
 }
@@ -27,7 +27,7 @@ LE::Vector3<float> LE::IShape::getPosition() const
     return _position;
 }
 
-LE::IColor *LE::IShape::getColor() const
+LE::Color *LE::IShape::getColor() const
 {
     return _color;
 }

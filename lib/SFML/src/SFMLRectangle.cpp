@@ -7,7 +7,7 @@
 
 #include "SFMLRectangle.hpp"
 
-LE::SFMLRectangle::SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::IColor *color)
+LE::SFMLRectangle::SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::Color *color)
 {
     _position = position;
     _size = size;
