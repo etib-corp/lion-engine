@@ -19,6 +19,8 @@ namespace LE {
             public:
                 virtual ~IButton() = default;
 
+                virtual void init() = 0;
+
                 void onClick() override;
 
                 void onHover() override;
