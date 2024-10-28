@@ -7,7 +7,7 @@
 
 #include "SFMLText.hpp"
 
-LE::SFMLText::SFMLText(const std::string &content, std::shared_ptr<IColor> color)
+LE::SFMLText::SFMLText(const std::string &content, IColor *color)
 {
     _content = content;
     _color = color;
@@ -42,9 +42,9 @@ void LE::SFMLText::setFont(std::shared_ptr<IFont> font)
     _text->setFont(dynamic_cast<LE::SFMLFont *>(font.get())->_font);
 }
 
-void LE::SFMLText::setColor(std::shared_ptr<IColor> color)
+void LE::SFMLText::setColor(IColor *color)
 {
-    LE::IText::setColor(color);
+    LE::IShape::setColor(color);
 
     sf::Color sfmlColor(color->getRed(), color->getGreen(), color->getBlue(), color->getAlpha());
 

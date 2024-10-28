@@ -8,11 +8,10 @@
 #ifndef ITRIANGLE_HPP_
     #define ITRIANGLE_HPP_
 
-    #include "Maths/Vector3.hpp"
-    #include "IColor.hpp"
+    #include "IShape.hpp"
 
 namespace LE {
-    class ITriangle {
+    class ITriangle : public IShape {
         public:
             virtual ~ITriangle() = default;
 
@@ -22,7 +21,7 @@ namespace LE {
 
             virtual void setPoint3(const LE::Vector3<float>& point3);
 
-            virtual void move(const LE::Vector3<float>& moveVector);
+            void move(const LE::Vector3<float>& moveVector) override;
 
             virtual void init() = 0;
 
@@ -37,7 +36,6 @@ namespace LE {
             LE::Vector3<float> _point1;
             LE::Vector3<float> _point2;
             LE::Vector3<float> _point3;
-            LE::IColor *_color;
     };
 }
 

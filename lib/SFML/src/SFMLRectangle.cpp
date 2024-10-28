@@ -27,10 +27,14 @@ void LE::SFMLRectangle::init()
 
 void LE::SFMLRectangle::setPosition(const LE::Vector3<float>& position)
 {
-    _position = position;
+    LE::IRectangle::setPosition(position);
+
+    _rectangle->setPosition(sf::Vector2f(_position.x, _position.y));
 }
 
 void LE::SFMLRectangle::move(const LE::Vector3<float>& moveVector)
 {
-    _position += moveVector;
+    LE::IRectangle::move(moveVector);
+
+    _rectangle->move(sf::Vector2f(moveVector.x, moveVector.y));
 }

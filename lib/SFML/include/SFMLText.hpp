@@ -25,7 +25,7 @@ namespace LE {
              * @return SFMLText
              *
             */
-            SFMLText(const std::string &content = "Hello, World !", std::shared_ptr<IColor> color = nullptr);
+            SFMLText(const std::string &content = "Hello, World !", IColor *color = nullptr);
 
             /**
              * @brief Destroy the SFMLText
@@ -68,7 +68,7 @@ namespace LE {
              * @return void
              *
             */
-            void setColor(std::shared_ptr<IColor> color) override;
+            void setColor(IColor *color) override;
 
         protected:
             sf::Text *_text;    /*!< The text object */
