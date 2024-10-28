@@ -5,20 +5,21 @@
 ** main
 */
 
-#include "SFMLWindow.hpp"
+#include "SFMLEngine.hpp"
+#include "GraphicalLib.hpp"
 
 #include <thread>
 
 int main()
 {
-    std::shared_ptr<LE::IWindow> window = std::make_shared<LE::SFMLWindow>(800, 600, "main");
-    unsigned int width = 800;
-    unsigned int height = 600;
-    std::string title = "main";
+    std::shared_ptr<LE::GraphicalLib> lib = std::make_shared<LE::GraphicalLib>();
+    std::shared_ptr<LE::IEngine> engine = lib->createEngine();
+    std::shared_ptr<LE::IWindow> window = engine->createWindow(800, 600, "Window");
 
     while (window->isOpen()) {
-        window->setTitle(title);
-        title += "!";
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        window->clear();
+        window->display();
+        std::this_thread::sleep_for(std::chrono::milliseconds(16));
     }
+    return 0;
 }

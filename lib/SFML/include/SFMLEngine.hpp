@@ -19,6 +19,14 @@
  * @brief The namespace for the Lion Engine.
  */
 namespace LE {
+
+    /**
+     * @brief Creates an instance of the SFMLEngine class.
+     *
+     * @return A shared pointer to the created SFMLEngine instance.
+     */
+    std::shared_ptr<LE::IEngine> createEngine();
+
     /**
      * @class SFMLEngine
      * @brief The SFMLEngine class is an implementation of the IEngine interface using the SFML library.
@@ -39,7 +47,10 @@ namespace LE {
 
             std::shared_ptr<LE::IFont> createFont(const std::string& path, int height, int width) override
             {
-
+                std::shared_ptr<LE::IFont> font = std::make_shared<LE::SFMLFont>(path, height, width);
+                font->init();
+                _fonts[path] = font;
+                return font;
             }
 
             std::shared_ptr<LE::IShader> createShader(const std::string& vertexPath, const std::string& fragmentPath) override
@@ -57,8 +68,11 @@ namespace LE {
                 if (!_window) {
                     throw LE::IEngineError("No window was created.", "You must create a window before creating a sprite component.", "Try creating a window first.");
                 }
-                std::shared_ptr<LE::SFMLSpriteComponent> sprite =  std::make_shared<LE::SFMLSpriteComponent>(path);
+                auto iSprite = LE::Sprite::createSpriteComponent(path, _window);
+                std::shared_ptr<LE::SFMLSpriteComponent> sprite = std::dynamic_pointer_cast<LE::SFMLSpriteComponent>(iSprite);
                 sprite->window = std::dynamic_pointer_cast<LE::SFMLWindow>(_window);
+                _sprites[path] = sprite;
+                return sprite;
             }
     };
 }

@@ -12,7 +12,9 @@
 namespace LE {
     class ISpriteComponent {
         public:
+            ISpriteComponent() = default;
             virtual ~ISpriteComponent() = default;
+
             std::string path;
             unsigned int width;
             unsigned int height;

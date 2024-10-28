@@ -13,9 +13,11 @@
     #include <memory>
 
     #include "interface/IError.hpp"
+    #include "interface/IEventManager.hpp"
     #include "interface/IFont.hpp"
     #include "interface/IShader.hpp"
     #include "interface/ISpriteComponent.hpp"
+    #include "interface/IText.hpp"
     #include "interface/IWindow.hpp"
 
 /**
@@ -79,6 +81,7 @@ namespace LE {
         protected:
             std::shared_ptr<IWindow> _window;
             std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
+            std::map<std::string, std::shared_ptr<IFont>> _fonts;
 
         private:
     };
