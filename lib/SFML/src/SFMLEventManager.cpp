@@ -7,8 +7,8 @@
 
 #include "SFMLEventManager.hpp"
 
-LE::SFMLEventManager::SFMLEventManager(std::shared_ptr<LE::SFMLWindow> window)
-    : _window(window)
+LE::SFMLEventManager::SFMLEventManager(std::shared_ptr<LE::IEngine> engine)
+    : _engine(engine)
 {
 }
 
@@ -18,13 +18,28 @@ LE::SFMLEventManager::~SFMLEventManager()
 
 void LE::SFMLEventManager::pollEvents()
 {
-    while (_window->getWindow()->pollEvent(event)) {
+    std::shared_ptr<LE::SFMLWindow> window = _engine->getWindow<LE::SFMLWindow>();
+
+    while (window->getWindow()->pollEvent(event)) {
         if (event.type == sf::Event::Closed) {
-            _window->close();
+            window->close();
         }
-        for (auto &callback : _eventCallbacks) {
-            if (event.type == sf::Event::KeyPressed && event.key.code == callback.first->key) {
-                callback.second(nullptr, 0);
+        for (auto &[key, callback] : _eventCallbacks) {
+            if (event.type == sf::Event::KeyPressed && key.type == LE::JUST_PRESSED && event.key.code == key.key && !key._alreadyPressed) {
+                callback(_engine, 0);
+                const_cast<LE::Key &>(key)._alreadyPressed = true;
+            }
+            if (event.type == sf::Event::KeyReleased && key.type == LE::JUST_RELEASED && event.key.code == key.key) {
+                callback(_engine, 0);
+                const_cast<LE::Key &>(key)._alreadyPressed = false;
+            }
+            if (event.type == sf::Event::KeyPressed && key.type == LE::PRESSED && event.key.code == key.key) {
+                callback(_engine, 0);
+                const_cast<LE::Key &>(key)._alreadyPressed = true;
+            }
+            if (event.type == sf::Event::KeyReleased && key.type == LE::RELEASED && event.key.code == key.key) {
+                callback(_engine, 0);
+                const_cast<LE::Key &>(key)._alreadyPressed = false;
             }
         }
     }

@@ -1,4 +1,4 @@
-/*
+&/*
 ** EPITECH PROJECT, 2024
 ** lion-engine
 ** File description:
@@ -15,14 +15,14 @@
 namespace LE {
     class SFMLEventManager : public LE::IEventManager {
         public:
-            SFMLEventManager(std::shared_ptr<LE::SFMLWindow> window);
+            SFMLEventManager(std::shared_ptr<LE::IEngine> engine);
             ~SFMLEventManager();
 
             void pollEvents() override;
 
         protected:
         private:
-            std::shared_ptr<LE::SFMLWindow> _window;
+            std::shared_ptr<LE::IEngine> _engine;
             sf::Event event;
     };
 }

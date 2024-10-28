@@ -19,6 +19,7 @@
     #include "interface/ISpriteComponent.hpp"
     #include "interface/IText.hpp"
     #include "interface/IWindow.hpp"
+    #include "ECS/Systems/IRender2DSystem.hpp"
 
 /**
  * @namespace LE
@@ -84,6 +85,19 @@ namespace LE {
              *  @return A shared pointer to the created Event Manager.
              */
             virtual std::shared_ptr<LE::IEventManager> createEventManager() = 0;
+
+
+            /**
+             * @brief Get the window.
+             *
+             * @return A shared pointer to the window.
+             */
+            template <typename T>
+            std::shared_ptr<T> getWindow() {
+                return std::dynamic_pointer_cast<T>(_window);
+            }
+
+            virtual std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs) = 0;
 
         protected:
             std::shared_ptr<IWindow> _window;
