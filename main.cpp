@@ -5,16 +5,15 @@
 ** main
 */
 
-#include "SFMLEngine.hpp"
 #include "GraphicalLib.hpp"
-
 #include <thread>
 
 int main()
 {
-    std::shared_ptr<LE::GraphicalLib> lib = std::make_shared<LE::GraphicalLib>();
-    std::shared_ptr<LE::IEngine> engine = lib->createEngine();
-    std::shared_ptr<LE::IWindow> window = engine->createWindow(800, 600, "Window");
+    LE::GraphicalLib lib("./build/lib/SFML/liblion-engine-SFML.so");
+
+    std::shared_ptr<LE::IEngine> engine = lib.createEngine();
+    std::shared_ptr<LE::IWindow> window = engine->createWindow(800, 600, "SFML Window");
 
     while (window->isOpen()) {
         window->clear();

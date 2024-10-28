@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "ISpriteComponent.hpp"
+#include "interface/ISpriteComponent.hpp"
 #include "SFMLCommon.hpp"
 #include "SFMLWindow.hpp"
 #include <memory>

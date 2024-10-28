@@ -7,9 +7,9 @@
 
 #include "GraphicalLib.hpp"
 
-LE::GraphicalLib::GraphicalLib()
+LE::GraphicalLib::GraphicalLib(const std::string& path)
 {
-    _handle = dlopen("./build/liblion-engine.so", RTLD_LAZY);
+    _handle = dlopen(path.c_str(), RTLD_LAZY);
     if (!_handle)
         throw LE::IEngineError("GraphicalLib", "Failed to load the graphical library", dlerror());
     _createEngine = reinterpret_cast<std::shared_ptr<LE::IEngine>(*)()>(dlsym(_handle, "createEngine"));

@@ -7,7 +7,9 @@
 
 #include "SFMLEngine.hpp"
 
-std::shared_ptr<LE::IEngine> LE::createEngine()
-{
-    return std::make_shared<LE::SFMLEngine>();
+extern "C" {
+    std::shared_ptr<LE::IEngine> createEngine()
+    {
+        return std::make_shared<LE::SFMLEngine>();
+    }
 }

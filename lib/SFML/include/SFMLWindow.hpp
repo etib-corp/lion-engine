@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "IWindow.hpp"
+#include "interface/IWindow.hpp"
 #include "SFMLCommon.hpp"
 #include <memory>
 

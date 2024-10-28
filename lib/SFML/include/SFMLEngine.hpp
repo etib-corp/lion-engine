@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "IEngine.hpp"
+#include "interface/IEngine.hpp"
 #include "SFMLCommon.hpp"
 #include "SFMLFont.hpp"
 #include "SFMLShader.hpp"
@@ -25,7 +25,6 @@ namespace LE {
      *
      * @return A shared pointer to the created SFMLEngine instance.
      */
-    std::shared_ptr<LE::IEngine> createEngine();
 
     /**
      * @class SFMLEngine
@@ -55,6 +54,7 @@ namespace LE {
 
             std::shared_ptr<LE::IShader> createShader(const std::string& vertexPath, const std::string& fragmentPath) override
             {
+                return nullptr;
             }
 
             std::shared_ptr<LE::IWindow> createWindow(int width, int height, const std::string& title) override
