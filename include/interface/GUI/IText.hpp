@@ -17,16 +17,29 @@
     #include "GUI/IComponent.hpp"
 
 namespace LE {
+    /**
+     * @brief The IText interface
+     *
+     * This class is an interface that is used to create a text object by inheriting from it.
+     *
+     * The text is represented by 2 values: content and font.
+     * The content is a `std::string` that contains the content of the text.
+     * The font is a `std::shared_ptr<IFont>` that contains the font of the text.
+     *
+     *
+     * @example
+     * @code
+     * LE::IText text;
+     * text.setContent("Hello, World!");
+     * text.setFont(std::make_shared<MyFontClass>());
+     * @endcode
+     *
+     */
     class IText : public IShape, public GUI::IComponent {
         public:
             /**
-             * @brief Construct a new IText
-             *
-             * The IText class is an interface that is used to create a text object.
-             *
-             * @return IText
-             *
-            */
+             * @brief Default destructor.
+             */
             virtual ~IText() = default;
 
             /**

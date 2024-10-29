@@ -9,6 +9,22 @@
     #define COLOR_HPP_
 
 namespace LE {
+    /**
+     * @brief The Color class
+     *
+     * This class is used to represent a color.
+     * 
+     * The color is represented by 4 values: red, green, blue and alpha.
+     * Each value is an unsigned char between `0` and `255`.
+     * 
+     * The default color is white.
+     *
+     * @example
+     * @code
+     * LE::Color color(255, 0, 0, 255); // red
+     * @endcode
+     *
+     */
     class Color {
         public:
             /**
