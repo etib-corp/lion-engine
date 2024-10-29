@@ -22,16 +22,28 @@ namespace LE {
          *
          * The text field is represented by 3 values: placeholder, label and input.
          * The placeholder is a `std::string` that contains the placeholder of the text field.
+<<<<<<< HEAD
          * The label is a `std::shared_ptr<LE::GUI::IText>` that contains the label of the text field.
          * The input is a `std::shared_ptr<LE::GUI::IText>` that contains the input of the text field.
+=======
+         * The label is a `std::shared_ptr<LE::IText>` that contains the label of the text field.
+         * The input is a `std::shared_ptr<LE::IText>` that contains the input of the text field.
+>>>>>>> 61e6fede (chore: add missing documentation on abstract engine)
          *
          *
          * @example
          * @code
+<<<<<<< HEAD
          * LE::GUI::ITextField textField;
          * textField.setPlaceholder("Enter your name");
          * textField.setLabel(std::make_shared<LE::GUI::IText>());
          * textField.setInput(std::make_shared<LE::GUI::IText>());
+=======
+         * LE::ITextField textField;
+         * textField.setPlaceholder("Enter your name");
+         * textField.setLabel(std::make_shared<LE::IText>());
+         * textField.setInput(std::make_shared<LE::IText>());
+>>>>>>> 61e6fede (chore: add missing documentation on abstract engine)
          * @endcode
          *
          */

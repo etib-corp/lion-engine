@@ -38,7 +38,6 @@ namespace LE {
                 virtual ~IManager() = default;
 
                 /**
-                 * @brief Add a child to the manager
                  *
                  * @param child The child to add
                  * @return void
@@ -48,7 +47,4 @@ namespace LE {
 
                 size_t _lastID = 0;       /**< The last ID of the children */
         };
-    }
-}
-
 #endif /* !IMANAGER_HPP_ */
