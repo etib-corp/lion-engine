@@ -28,7 +28,11 @@ namespace LE {
          * @endcode
          *
         */
+<<<<<<< HEAD
         class SFMLText : public LE::GUI::IText {
+=======
+        class SFMLText : public LE::IText {
+>>>>>>> b431ede3 (chore: add missing documentation on SFML module)
             public:
                 /**
                  * @brief Construct a new SFMLText
