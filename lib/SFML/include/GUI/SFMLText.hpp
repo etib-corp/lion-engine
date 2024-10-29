@@ -14,6 +14,19 @@
 
 namespace LE {
     namespace GUI {
+        /**
+         * @brief The SFMLText class
+         *
+         * The SFMLText class is a class that inherits from the IText interface.
+         *
+         * @example
+         * @code
+         * LE::SFMLText text;
+         * text.setContent("Hello, World!");
+         * text.setFont(std::make_shared<MyFontClass>());
+         * @endcode
+         *
+        */
         class SFMLText : public LE::IText {
             public:
                 /**
@@ -71,12 +84,24 @@ namespace LE {
                 */
                 void setColor(Color *color) override;
 
+                /**
+                 * @brief Get the content of the text
+                 *
+                 * @return std::string
+                 *
+                */
                 float getWidth() const override;
 
+                /**
+                 * @brief Get the font of the text
+                 *
+                 * @return std::shared_ptr<IFont>
+                 *
+                */
                 float getHeight() const override;
 
             protected:
-                sf::Text *_text;    /*!< The text object */
+                sf::Text *_text;    /*!< The text object interpreted in SFML */
         };
     }
 }
