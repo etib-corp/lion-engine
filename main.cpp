@@ -8,11 +8,17 @@
 #include "GraphicalLib.hpp"
 #include <thread>
 
+int id = 0;
+
 class Snake : public LE::IGame {
     public:
         void init(LE::IEngine &engine) override
         {
             _sceneManager = engine.createSceneManager();
+            if (id == 1)
+                _clientBroker = std::make_shared<LE::ClientBroker>(engine.getNetworkModule(), "127.0.0.1", 8080);
+            else
+                _serverBroker = std::make_shared<LE::ServerBroker>(engine.getNetworkModule(), 0, 8080);
         }
 
         void update() override
@@ -41,11 +47,13 @@ class SnakeScene : public LE::Scene {
 
 };
 
-int main()
+int main(int ac, char **av)
 {
+    id = ac;
     // try {
         LE::GraphicalLib lib("./build/lib/SFML/liblion-engine-SFML.so");
         std::shared_ptr<LE::IEngine> engine = lib.createEngine();
+        engine->init();
 
         std::shared_ptr<Snake> game = std::make_shared<Snake>();
         game->init(*engine);

@@ -24,6 +24,7 @@
     #include "interface/IGame.hpp"
     #include "Clock.hpp"
     #include "interface/IGame.hpp"
+    #include "NetworkLoaderLib.hpp"
 
 /**
  * @namespace LE
@@ -45,6 +46,12 @@ namespace LE {
     class IEngine {
         public:
             virtual ~IEngine() = default;
+
+            /**
+             * @brief Initializes the engine.
+             *
+             */
+            virtual void init();
 
             /**
              * @brief Creates a font resource.
@@ -188,6 +195,10 @@ namespace LE {
 
             void restartClock();
 
+            std::unique_ptr<NetworkLoaderLib> &getNetworkLoaderLib();
+
+            INetworkModule *getNetworkModule();
+
         protected:
             std::shared_ptr<IWindow> _window;
             std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
@@ -196,7 +207,8 @@ namespace LE {
             std::shared_ptr<IGame> _game;
             std::function<void ()> _configFunc;             ///< Configuration function. This function is called before the engine starts running.
             std::function<void ()> _loopFunc;               ///< Loop function. This function is called during the engine's main loop.
-
+            std::unique_ptr<NetworkLoaderLib> _networkLoaderLib; ///< Unique pointer to the NetworkLoaderLib object.
+            INetworkModule *_networkModule; ///< Unique pointer to the NetworkModule object.
             std::unique_ptr<LE::Clock> _clock;               ///< Unique pointer to the Clock object.
             float _dt;                                      ///< The delta time.
             std::size_t _framerateLimit;                    ///< The frame rate limit.

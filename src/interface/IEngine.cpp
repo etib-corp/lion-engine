@@ -7,6 +7,25 @@
 
 #include "IEngine.hpp"
 
+void LE::IEngine::init()
+{
+    _window = createWindow(800, 600, "Lion Engine");
+    _clock = std::make_unique<LE::Clock>();
+    _networkLoaderLib = std::make_unique<NetworkLoaderLib>("./build/lib/NetworkModule/libNetworkModule.so");
+    _networkLoaderLib->LoadModule();
+    _networkModule = _networkLoaderLib->createNetworkModule();
+}
+
+std::unique_ptr<NetworkLoaderLib> &LE::IEngine::getNetworkLoaderLib()
+{
+    return _networkLoaderLib;
+}
+
+INetworkModule *LE::IEngine::getNetworkModule()
+{
+    return _networkModule;
+}
+
 void LE::IEngine::run(bool throwError)
 {
     _throwError = throwError;
