@@ -63,6 +63,7 @@ namespace LE {
              */
             void init() override;
 
+<<<<<<< HEAD
             /**
              * @brief Draw the rectangle on the screen.
              *
@@ -72,6 +73,10 @@ namespace LE {
 
             std::shared_ptr<SFMLWindow> _window;    /*!< The window where the rectangle will be drawn*/
             sf::RectangleShape *_rectangle;         /*!< The rectangle shape interpreted in SFML*/
+=======
+        protected:
+            sf::RectangleShape *_rectangle;     /*!< The rectangle shape interpreted in SFML*/
+>>>>>>> 0f2e80ea (chore: add missing documentation on SFML module)
     };
 }
 
