@@ -8,7 +8,7 @@
 #include "Scene.hpp"
 #include "interface/IEngine.hpp"
 
-LE::Scene::Scene(const std::shared_ptr<LE::IEngine> &engine)
+LE::Scene::Scene(LE::IEngine *engine)
 {
     _ecs = std::make_shared<Ecs>();
     _ecs->registerComponent<std::shared_ptr<LE::ISpriteComponent>>();

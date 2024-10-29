@@ -123,19 +123,43 @@ namespace LE {
              */
             void debug(const std::string& message);
 
-            /**
-             * @brief Adds a scene to the engine.
-             *
-             * @param scene A shared pointer to the scene to add.
-             */
-            void setGame(const std::shared_ptr<LE::IGame> game);
 
             /**
-             * @brief Removes a scene from the engine.
+             * @brief Sets the game.
              *
-             * @return A shared pointer to the scene that was removed.
+             * @tparam T The class of the game to set.
+             */
+            template <typename T>
+            void setGame()
+            {
+                _game = std::make_shared<T>();
+                _game->init(*this);
+            }
+
+            /**
+             * @brief Gets the game.
+             *
+             * @return A shared pointer to the game.
              */
             std::shared_ptr<LE::IGame> getGame();
+
+            /**
+             * @brief Adds a scene to the game.
+             *
+             * @tparam T The class of the scene to add.
+             */
+            template <typename T>
+            void addScene(const std::string& name)
+            {
+                auto scene = std::make_shared<T>(this);
+                scene->init();
+                _game->getSceneManager()->addScene(scene, name);
+            }
+
+            void playScene(const std::string& name)
+            {
+                _game->getSceneManager()->play(name);
+            }
 
             /**
              * @brief Throws an error.

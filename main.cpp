@@ -23,7 +23,7 @@ class Snake : public LE::IGame {
 
 class SnakeScene : public LE::Scene {
     public:
-        SnakeScene(const std::shared_ptr<LE::IEngine> &engine) : LE::Scene(engine)
+        SnakeScene(LE::IEngine *engine) : LE::Scene(engine)
         {
         }
 
@@ -43,25 +43,16 @@ class SnakeScene : public LE::Scene {
 
 int main()
 {
-    // try {
-        LE::GraphicalLib lib("./build/lib/SFML/liblion-engine-SFML.so");
-        std::shared_ptr<LE::IEngine> engine = lib.createEngine();
+    LE::GraphicalLib lib("./build/lib/SFML/liblion-engine-SFML.so"); // ! in config file
+    std::shared_ptr<LE::IEngine> engine = lib.createEngine();
+    engine->setFramerateLimit(60); // ! in config file
 
-        std::shared_ptr<Snake> game = std::make_shared<Snake>();
-        game->init(*engine);
+    engine->setGame<Snake>();
 
-        std::shared_ptr<SnakeScene> scene = std::make_shared<SnakeScene>(engine);
-        std::shared_ptr<IRender2DSystem> render2d = engine->createRender2DSystem(*scene->getEcs());
-        scene->init();
-        game->getSceneManager()->addScene(scene, "SnakeScene");
-        game->getSceneManager()->play("SnakeScene");
+    engine->addScene<SnakeScene>("SnakeScene");
 
-        engine->setFramerateLimit(60);
-        engine->setGame(game);
+    engine->playScene("SnakeScene");
 
-        engine->run(true);
-    // } catch (const std::exception &e) {
-    //     std::cerr << e.what() << std::endl;
-    // }
+    engine->run(true);
     return 0;
 }

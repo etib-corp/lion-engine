@@ -20,7 +20,7 @@ namespace LE
     class IEngine;
     class Scene {
         public:
-            Scene(const std::shared_ptr<LE::IEngine> &engine);
+            Scene(LE::IEngine *engine);
             ~Scene();
 
             virtual void init();
@@ -34,7 +34,7 @@ namespace LE
         protected:
             std::shared_ptr<Ecs> _ecs;
             std::shared_ptr<IEventManager> _eventManager;
-            std::shared_ptr<LE::IEngine> _engine;
+            LE::IEngine *_engine;
         private:
     };
 
