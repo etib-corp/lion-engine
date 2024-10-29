@@ -35,7 +35,6 @@ namespace LE {
             */
             virtual ~IRectangle() = default;
 
-
             /**
              * @brief Get the size of the rectangle
              *
