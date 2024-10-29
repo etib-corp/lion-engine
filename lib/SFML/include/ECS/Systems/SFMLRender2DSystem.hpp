@@ -9,18 +9,23 @@
     #define SFMLRENDER2DSYSTEM_HPP_
 
     #include "ECS/Systems/IRender2DSystem.hpp"
-    #include "SFMLEngine.hpp"
     #include <memory>
+
+namespace LE {
+    class IEngine;
+}
 
 class SFMLRender2DSystem : public IRender2DSystem {
     public:
-        SFMLRender2DSystem(std::shared_ptr<LE::IEngine> &engine);
+        SFMLRender2DSystem(void);
         ~SFMLRender2DSystem();
 
         void update(LE::Ecs *ecs, float dt) override;
 
+        void setEngine(LE::IEngine *engine) { _engine = engine; }
+
     protected:
-        std::shared_ptr<LE::IEngine> _engine;
+        LE::IEngine *_engine;
     private:
 };
 

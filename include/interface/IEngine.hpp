@@ -20,6 +20,7 @@
     #include "interface/IText.hpp"
     #include "interface/IWindow.hpp"
     #include "ECS/Systems/IRender2DSystem.hpp"
+    #include "SceneManager.hpp"
 
 /**
  * @namespace LE
@@ -98,6 +99,11 @@ namespace LE {
             }
 
             virtual std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs) = 0;
+
+            virtual std::shared_ptr<SceneManager> createSceneManager()
+            {
+                return std::make_shared<SceneManager>(*this);
+            }
 
         protected:
             std::shared_ptr<IWindow> _window;

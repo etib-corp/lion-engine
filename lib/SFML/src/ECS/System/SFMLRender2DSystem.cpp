@@ -6,9 +6,9 @@
 */
 
 #include "ECS/Systems/SFMLRender2DSystem.hpp"
+#include "SFMLEngine.hpp"
 
-SFMLRender2DSystem::SFMLRender2DSystem(std::shared_ptr<LE::IEngine> &engine)
-    : _engine(engine)
+SFMLRender2DSystem::SFMLRender2DSystem(void)
 {
 }
 

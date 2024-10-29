@@ -14,6 +14,7 @@
 #include "SFMLSpriteComponent.hpp"
 #include "SFMLWindow.hpp"
 #include "SFMLEventManager.hpp"
+#include "ECS/Systems/SFMLRender2DSystem.hpp"
 
 /**
  * @namespace LE
@@ -84,7 +85,13 @@ namespace LE {
 
             std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs)
             {
-                return nullptr;
+                Signature signature;
+                std::shared_ptr<SFMLRender2DSystem> render2DSystem = ecs.registerSystem<SFMLRender2DSystem>();
+                render2DSystem->setEngine(this);
+                signature.set(ecs.getComponentType<TransformComponent>());
+                signature.set(ecs.getComponentType<ISpriteComponent>());
+                ecs.setSignature<IRender2DSystem>(signature);
+                return render2DSystem;
             }
     };
 }
