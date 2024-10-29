@@ -5,6 +5,7 @@ LE::ClientCoreModule::ClientCoreModule(std::shared_ptr<LoaderLib> lib_loader, st
 {
     _network_module = _lib_loader->createNetworkModule();
     _client_broker = std::make_shared<LE::ClientBroker>(_network_module, _connect_address, _connect_port);
+    _createResponsibilityChain();
 }
 
 LE::ClientCoreModule::~ClientCoreModule(void)

@@ -4,6 +4,7 @@ LE::ServerCoreModule::ServerCoreModule(std::shared_ptr<LoaderLib> lib_loader, st
 {
     _network_module = _lib_loader->createNetworkModule();
     _server_broker = std::make_shared<LE::ServerBroker>(_network_module, _listen_address, _listen_port);
+    _createResponsibilityChain();
 }
 
 LE::ServerCoreModule::~ServerCoreModule(void)
