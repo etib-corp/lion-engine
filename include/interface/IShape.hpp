@@ -11,70 +11,85 @@
 #include "Maths/Vector3.hpp"
 #include "Color.hpp"
 
-namespace LE
-{
+namespace LE {
     /**
-     * @class IShape
-     * @brief Interface for shapes.
+     * @brief The IShape interface
      *
-     * The IShape interface provides a way to create shapes.
+     * This class is an interface that is used to create a shape object by inheriting from it.
+     *
+     * The shape is represented by 2 values: position and color.
+     * The position is a `LE::Vector3<float>` that contains the `x`, `y` and `z` coordinates of the shape. (z if your are in a 3D environment like OpenGL)
+     * The color is a `LE::Color` that contains the `red`, `green`, `blue` and `alpha` values of the shape.
+     *
+     *
+     * @example
+     * @code
+     * LE::IShape shape;
+     * shape.setPosition({42, 42, 42});
+     * shape.setColor(new LE::Color(255, 0, 0, 255));
+     * @endcode
+     *
      */
-    class IShape
-    {
-    public:
-        /**
-         * @brief Construct a new IShape object
-         */
-        virtual ~IShape() = default;
+    class IShape {
+        public:
+            /**
+             * @brief Default destructor.
+             */
+            virtual ~IShape() = default;
 
-        /**
-         * @brief Set the position of the shape.
-         *
-         * @param position The position of the shape.
-         * @return void
-         */
-        virtual void setPosition(const LE::Vector3<float> &position);
+            /**
+             * @brief Set the position of the shape
+             *
+             * @param position The position of the shape
+             * @return void
+             *
+            */
+            virtual void setPosition(const LE::Vector3<float>& position);
 
-        /**
-         * @brief Set the color of the shape.
-         *
-         * @param color The color of the shape.
-         * @return void
-         */
-        virtual void setColor(LE::Color *color);
+            /**
+             * @brief Set the color of the shape
+             *
+             * @param color The color of the shape
+             * @return void
+             *
+            */
+            virtual void setColor(LE::Color *color);
 
-        /**
-         * @brief Move the shape.
-         *
-         * @param moveVector The vector to move the shape by.
-         * @return void
-         */
-        virtual void move(const LE::Vector3<float> &moveVector);
+            /**
+             * @brief Move the shape
+             *
+             * @param moveVector The vector to move the shape
+             * @return void
+             */
+            virtual void move(const LE::Vector3<float>& moveVector);
 
-        /**
-         * @brief Initialize the shape.
-         *
-         * @return void
-         */
-        virtual void init() = 0;
+            /**
+             * @brief Initialize the shape
+             *
+             * @return void
+             *
+            */
+            virtual void init() = 0;
 
-        /**
-         * @brief Get the position of the shape.
-         *
-         * @return The position of the shape.
-         */
-        virtual LE::Vector3<float> getPosition() const;
+            /**
+             * @brief Get the position of the shape
+             *
+             * @return LE::Vector3<float>
+             *
+            */
+            virtual LE::Vector3<float> getPosition() const;
 
-        /**
-         * @brief Get the color of the shape.
-         *
-         * @return The color of the shape.
-         */
-        virtual LE::Color *getColor() const;
+            /**
+             * @brief Get the color of the shape
+             *
+             * @return LE::Color
+             *
+            */
+            virtual LE::Color *getColor() const;
 
-    protected:
-        LE::Vector3<float> _position; /*!< The position of the shape */
-        LE::Color *_color;            /*!< The color of the shape */
+        protected:
+            LE::Vector3<float> _position;   /*!< The position of the shape */
+            LE::Color *_color;              /*!< The color of the shape */
     };
 }
 
