@@ -42,6 +42,13 @@ void LE::SFMLWindow::display()
     _window->display();
 }
 
+void LE::SFMLWindow::render(std::shared_ptr<LE::Scene> scene)
+{
+    clear();
+    scene->draw();
+    display();
+}
+
 const std::string& LE::SFMLWindow::getTitle()
 {
     return _title;

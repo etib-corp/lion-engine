@@ -27,6 +27,8 @@ namespace LE {
 
             void display() override;
 
+            void render(std::shared_ptr<LE::Scene> scene) override;
+
             const std::string& getTitle() override;
             void setTitle(const std::string& title) override;
 
