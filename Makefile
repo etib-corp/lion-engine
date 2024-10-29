@@ -9,7 +9,7 @@ SRC	=	main.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
-CXXFLAGS	=		 -I./include
+CXXFLAGS	=		 -I./include -std=c++20
 
 LXXDFLAGS = -L./build/ -llion-engine
 
