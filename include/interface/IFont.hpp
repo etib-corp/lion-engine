@@ -10,20 +10,35 @@
 
 #include <string>
 
-namespace LE
-{
-    class IFont
-    {
-    public:
-        /**
-         * @brief Construct a new IFont
-         *
-         * The IFont class is an interface that is used to create a font object.
-         *
-         * @return IFont
-         *
-         */
-        virtual ~IFont() = default;
+namespace LE {
+    /**
+     * @brief The IFont class
+     *
+     * This class is an interface that is used to create a font object by inheriting from it.
+     *
+     * The font is represented by 2 values: height and width.
+     * Each value is an unsigned int.
+     *
+     *
+     * @example
+     * @code
+     * LE::IFont font;
+     * font.setHeight(42);
+     * font.setWidth(42);
+     * @endcode
+     *
+     */
+    class IFont {
+        public:
+            /**
+             * @brief Construct a new IFont
+             *
+             * The IFont class is an interface that is used to create a font object.
+             *
+             * @return IFont
+             *
+            */
+            virtual ~IFont() = default;
 
         /**
          * @brief Initialize the font

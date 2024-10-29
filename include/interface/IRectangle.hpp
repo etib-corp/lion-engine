@@ -11,46 +11,57 @@
 #include "IShape.hpp"
 #include "Maths/Vector2.hpp"
 
-namespace LE
-{
+namespace LE {
     /**
-     * @class IRectangle
-     * @brief Interface for rectangle shapes.
+     * @brief The IRectangle class
      *
-     * The IRectangle interface provides a way to create rectangle shapes.
+     * This class is an interface that is used to create a rectangle object by inheriting from it.
+     *
+     * The rectangle is represented by 1 value: size.
+     * The size is a `LE::Vector2<float>` that contains the `width` and the `height` of the rectangle.
+     *
+     *
+     * @example
+     * @code
+     * LE::IRectangle rectangle;
+     * rectangle.setSize({42, 42});
+     * @endcode
+     *
      */
-    class IRectangle : public IShape
-    {
-    public:
-        /**
-         * @brief Construct a new IRectangle object
-         */
-        virtual ~IRectangle() = default;
+    class IRectangle : public IShape {
+        public:
+            /**
+             * @brief Default destructor.
+            */
+            virtual ~IRectangle() = default;
 
-        /**
-         * @brief Set the size of the rectangle.
-         *
-         * @param size The size of the rectangle.
-         * @return void
-         */
-        virtual void setSize(const LE::Vector2<float> &size);
+            /**
+             * @brief Set the size of the rectangle
+             *
+             * @param size The size of the rectangle
+             * @return void
+             *
+            */
+            virtual void setSize(const LE::Vector2<float>& size);
 
-        /**
-         * @brief Get the size of the rectangle.
-         *
-         * @return The size of the rectangle.
-         */
-        virtual void init() = 0;
+            /**
+             * @brief Get the size of the rectangle
+             *
+             * @return LE::Vector2<float>
+             *
+            */
+            virtual void init() = 0;
 
-        /**
-         * @brief Get the size of the rectangle.
-         *
-         * @return The size of the rectangle.
-         */
-        virtual LE::Vector2<float> getSize() const;
+            /**
+             * @brief Get the size of the rectangle
+             *
+             * @return LE::Vector2<float>
+             *
+            */
+            virtual LE::Vector2<float> getSize() const;
 
-    protected:
-        LE::Vector2<float> _size; /*!< The size of the rectangle */
+        protected:
+            LE::Vector2<float> _size;   /*!< The size of the rectangle */
     };
 }
 
