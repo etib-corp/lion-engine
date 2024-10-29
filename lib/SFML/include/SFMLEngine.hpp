@@ -39,7 +39,11 @@ namespace LE {
             /**
              * @brief Default constructor for the SFMLEngine class.
              */
-            SFMLEngine() = default;
+            SFMLEngine()
+            {
+                createWindow(800, 600, "Lion Engine");
+                _clock = std::make_unique<Clock>();
+            }
 
             /**
              * @brief Default destructor for the SFMLEngine class.
@@ -89,8 +93,8 @@ namespace LE {
                 std::shared_ptr<SFMLRender2DSystem> render2DSystem = ecs.registerSystem<SFMLRender2DSystem>();
                 render2DSystem->setEngine(this);
                 signature.set(ecs.getComponentType<TransformComponent>());
-                signature.set(ecs.getComponentType<ISpriteComponent>());
-                ecs.setSignature<IRender2DSystem>(signature);
+                signature.set(ecs.getComponentType<LE::ISpriteComponent>());
+                ecs.setSignature<SFMLRender2DSystem>(signature);
                 return render2DSystem;
             }
     };

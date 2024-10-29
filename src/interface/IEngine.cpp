@@ -77,3 +77,8 @@ void LE::IEngine::restartClock()
 {
     _clock->restart();
 }
+
+void LE::IEngine::setGame(std::shared_ptr<IGame> game)
+{
+    _game = game;
+}
