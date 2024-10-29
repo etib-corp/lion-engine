@@ -39,11 +39,7 @@ namespace LE {
             /**
              * @brief Default constructor for the SFMLEngine class.
              */
-            SFMLEngine()
-            {
-                createWindow(800, 600, "Lion Engine");
-                _clock = std::make_unique<Clock>();
-            }
+            SFMLEngine() = default;
 
             /**
              * @brief Default destructor for the SFMLEngine class.
