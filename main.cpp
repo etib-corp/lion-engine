@@ -31,8 +31,8 @@ class SnakeScene : public LE::Scene {
         {
             auto entity = _ecs->createEntity();
             _sprite = _engine->createSpriteComponent("/home/sleo/Pictures/C_V1.png");
-            _ecs->addComponent<LE::ISpriteComponent>(entity, *_sprite);
-            TransformComponent transform = TransformComponent{{5, 5, 0}, {0, 0, 0}, {1.0f, 1.0f, 1.0f}};
+            _ecs->addComponent<std::shared_ptr<LE::ISpriteComponent>>(entity, _sprite);
+            TransformComponent transform = TransformComponent{{5, 5, 0}, {0, 0, 0}, {0.2f, 0.2f, 1.0f}};
             _ecs->addComponent<TransformComponent>(entity, transform);
 
         }
@@ -51,10 +51,8 @@ int main()
         game->init(*engine);
 
         std::shared_ptr<SnakeScene> scene = std::make_shared<SnakeScene>(engine);
-        scene->init();
-
         std::shared_ptr<IRender2DSystem> render2d = engine->createRender2DSystem(*scene->getEcs());
-
+        scene->init();
         game->getSceneManager()->addScene(scene, "SnakeScene");
         game->getSceneManager()->play("SnakeScene");
 

@@ -11,7 +11,7 @@
 LE::Scene::Scene(const std::shared_ptr<LE::IEngine> &engine)
 {
     _ecs = std::make_shared<Ecs>();
-    _ecs->registerComponent<LE::ISpriteComponent>();
+    _ecs->registerComponent<std::shared_ptr<LE::ISpriteComponent>>();
     _ecs->registerComponent<TransformComponent>();
     _eventManager = engine->createEventManager();
     _engine = engine;

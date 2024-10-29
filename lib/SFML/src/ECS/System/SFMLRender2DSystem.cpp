@@ -20,14 +20,12 @@ void SFMLRender2DSystem::update(LE::Ecs *ecs, float dt)
 {
     std::shared_ptr<LE::SFMLWindow> window = _engine->getWindow<LE::SFMLWindow>();
     for (auto &entity : _entities) {
-        std::cout << "Entity: " << entity << std::endl;
-        auto &sprite = ecs->getComponent<LE::ISpriteComponent>(entity);
+        auto &sprite = ecs->getComponent<std::shared_ptr<LE::ISpriteComponent>>(entity);
         auto &transform = ecs->getComponent<TransformComponent>(entity);
-
-        auto SFMLSprite = dynamic_cast<LE::SFMLSpriteComponent *>(&sprite);
+        auto SFMLSprite = dynamic_cast<LE::SFMLSpriteComponent *>(sprite.get());
         if (SFMLSprite) {
             SFMLSprite->sprite->setPosition(transform.position.x, transform.position.y);
-            SFMLSprite->sprite->scale(transform.scale.x, transform.scale.y);
+            SFMLSprite->sprite->setScale(transform.scale.x, transform.scale.y);
             SFMLSprite->sprite->rotate(transform.rotation.z);
             window->getWindow()->draw(*SFMLSprite->sprite);
         }

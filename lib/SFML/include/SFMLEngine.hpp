@@ -93,7 +93,7 @@ namespace LE {
                 std::shared_ptr<SFMLRender2DSystem> render2DSystem = ecs.registerSystem<SFMLRender2DSystem>();
                 render2DSystem->setEngine(this);
                 signature.set(ecs.getComponentType<TransformComponent>());
-                signature.set(ecs.getComponentType<LE::ISpriteComponent>());
+                signature.set(ecs.getComponentType<std::shared_ptr<LE::ISpriteComponent>>());
                 ecs.setSignature<SFMLRender2DSystem>(signature);
                 return render2DSystem;
             }
