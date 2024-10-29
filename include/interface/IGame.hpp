@@ -11,13 +11,15 @@
     #include "message/ClientBroker.hpp"
     #include "message/ServerBroker.hpp"
     #include "ResponsibilityChain.hpp"
+    #include "SceneManager.hpp"
 
 namespace LE {
+    class IEngine;
     class IGame {
         public:
             virtual ~IGame() = default;
 
-            virtual void init() = 0;
+            virtual void init(LE::IEngine &) = 0;
 
             virtual void update() = 0;
 
@@ -27,10 +29,13 @@ namespace LE {
 
             std::shared_ptr<ResponsibilityChain> &getResponsibilityChain() { return _responsibilityChain; }
 
+            std::shared_ptr<SceneManager> &getSceneManager() { return _sceneManager; }
+
         protected:
             std::shared_ptr<ClientBroker> _clientBroker;
             std::shared_ptr<ServerBroker> _serverBroker;
             std::shared_ptr<ResponsibilityChain> _responsibilityChain;
+            std::shared_ptr<SceneManager> _sceneManager;
         private:
     };
 }

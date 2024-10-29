@@ -21,6 +21,9 @@
     #include "interface/IWindow.hpp"
     #include "ECS/Systems/IRender2DSystem.hpp"
     #include "SceneManager.hpp"
+    #include "interface/IGame.hpp"
+    #include "Clock.hpp"
+    #include "interface/IGame.hpp"
 
 /**
  * @namespace LE
@@ -105,11 +108,99 @@ namespace LE {
                 return std::make_shared<SceneManager>(*this);
             }
 
+
+            /**
+             * @brief Runs the engine.
+             *
+             * @param throwError A boolean flag indicating whether to throw an error.
+             */
+            void run(bool throwError = false);
+
+            /**
+             * @brief Outputs debug information.
+             *
+             * @param message The debug message to output.
+             */
+            void debug(const std::string& message);
+
+            /**
+             * @brief Adds a scene to the engine.
+             *
+             * @param scene A shared pointer to the scene to add.
+             */
+            void setGame(const std::shared_ptr<LE::IGame> game);
+
+            /**
+             * @brief Removes a scene from the engine.
+             *
+             * @return A shared pointer to the scene that was removed.
+             */
+            std::shared_ptr<LE::IGame> getGame();
+
+            /**
+             * @brief Throws an error.
+             *
+             * @param error The error to throw.
+             * @note This function is use to throw an error from the Engine class only if the throwError flag is set to true.
+             */
+            void throwError(const LE::Error& error);
+
+            /**
+             * @brief Sets the configuration function.
+             *
+             * This function is used to set a configuration function that will be called before the engine starts running.
+             *
+             * @param func The configuration function to set.
+             */
+            void setConfig(std::function<void()> func);
+
+            /**
+             * @brief Sets the loop function.
+             *
+             * This function is used to set a loop function that will be called during the engine's main loop.
+             *
+             * @param func The loop function to set.
+             */
+            void setLoop(std::function<void()> func);
+
+            /**
+             * @brief Sets the frame rate limit for the window.
+             *
+             * @param limit The frame rate limit.
+             */
+            void setFramerateLimit(std::size_t limit);
+
+            /**
+             * @brief Gets the width of the window.
+             *
+             * @return The width of the window.
+             */
+            std::size_t getWindowWidth() const;
+
+            /**
+             * @brief Gets the height of the window.
+             *
+             * @return The height of the window.
+             */
+            std::size_t getWindowHeight() const;
+
+            float getDeltaTime() const;
+
+            void restartClock();
+
         protected:
             std::shared_ptr<IWindow> _window;
             std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
             std::map<std::string, std::shared_ptr<IFont>> _fonts;
             std::shared_ptr<IEventManager> _eventManager;
+            std::shared_ptr<IGame> _game;
+            std::function<void ()> _configFunc;             ///< Configuration function. This function is called before the engine starts running.
+            std::function<void ()> _loopFunc;               ///< Loop function. This function is called during the engine's main loop.
+
+            std::unique_ptr<LE::Clock> _clock;               ///< Unique pointer to the Clock object.
+            float _dt;                                      ///< The delta time.
+            std::size_t _framerateLimit;                    ///< The frame rate limit.
+            bool _throwError;                               ///< A boolean flag indicating whether to throw an error.
 
         private:
     };
