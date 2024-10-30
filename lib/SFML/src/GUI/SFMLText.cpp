@@ -7,9 +7,10 @@
 
 #include "GUI/SFMLText.hpp"
 
-LE::GUI::SFMLText::SFMLText(const LE::Vector3<float> &pos, const std::string &content, Color *color)
+LE::GUI::SFMLText::SFMLText(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &content, Color *color)
 {
     _content = content;
+    _window = std::dynamic_pointer_cast<LE::SFMLWindow>(window);
     _color = color == nullptr ? new Color(255, 255, 255, 255) : color;
     _font = nullptr;
     _text = new sf::Text();
@@ -61,4 +62,10 @@ float LE::GUI::SFMLText::getWidth() const
 float LE::GUI::SFMLText::getHeight() const
 {
     return _text->getGlobalBounds().height;
+}
+
+void LE::GUI::SFMLText::draw()
+{
+    _text->setPosition(sf::Vector2f(_x, _y));
+    _window->getWindow()->draw(*_text);
 }

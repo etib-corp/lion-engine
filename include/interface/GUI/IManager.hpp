@@ -30,12 +30,23 @@ namespace LE {
          * @endcode
          *
          */
-        class Manager final : public IContainer {
+        class IManager : public IContainer {
             public:
                 /**
                  * @brief Default destructor.
                  */
-                virtual ~Manager() = default;
+                virtual ~IManager() = default;
+
+                /**
+                 * @brief Add a child to the manager
+                 *
+                 * @param child The child to add
+                 * @return void
+                 *
+                */
+                void addChildren(std::shared_ptr<IComponent> child) override;
+
+                size_t _lastID = 0;       /**< The last ID of the children */
         };
     }
 }
