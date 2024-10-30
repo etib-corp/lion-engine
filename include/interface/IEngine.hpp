@@ -253,6 +253,6 @@ namespace LE
     };
 }
 
-extern std::shared_ptr<LE::IEngine> engine;
+extern std::shared_ptr<LE::IEngine> g_engine;
 
 #endif /* !IENGINE_HPP_ */
