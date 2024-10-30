@@ -11,6 +11,7 @@
 #include <bitset>
 #include <cmath>
 #include "Error.hpp"
+#include <iostream>
 #include <map>
 #include <memory>
 #include <queue>

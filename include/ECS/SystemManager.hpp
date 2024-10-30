@@ -24,6 +24,7 @@ class System {
          * This function will be used to update the system
          */
         virtual void update(LE::Ecs *ecs, float dt) = 0;
+
         std::set<Entity> _entities;         ///< The entities that the system is responsible for
 };
 

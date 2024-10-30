@@ -42,6 +42,13 @@ void LE::SFMLWindow::display()
     _window->display();
 }
 
+void LE::SFMLWindow::render(std::shared_ptr<LE::Scene> scene)
+{
+    clear();
+    scene->draw();
+    display();
+}
+
 const std::string& LE::SFMLWindow::getTitle()
 {
     return _title;
@@ -61,4 +68,9 @@ unsigned int LE::SFMLWindow::getWidth()
 unsigned int LE::SFMLWindow::getHeight()
 {
     return _height;
+}
+
+const std::shared_ptr<sf::RenderWindow>& LE::SFMLWindow::getWindow() const
+{
+    return _window;
 }

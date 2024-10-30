@@ -9,7 +9,7 @@
 #define IWINDOW_HPP_
 
 #include <iostream>
-
+#include "Scene.hpp"
 
 /**
  * @namespace LE
@@ -51,6 +51,13 @@ namespace LE {
              * @brief Displays the window.
              */
             virtual void display() = 0;
+
+            /**
+             * @brief Renders the scene to the window.
+             *
+             * @param scene The scene to render.
+             */
+            virtual void render(std::shared_ptr<LE::Scene> scene) = 0;
 
             /**
              * @brief Gets the title of the window.

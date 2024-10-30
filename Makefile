@@ -1,27 +1,31 @@
-CXX = g++
-CXXFLAGS = -Iinclude/SFML
-LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system
+##
+## EPITECH PROJECT, 2024
+## lion-engine
+## File description:
+## Makefile
+##
 
-SRC_DIR = src/SFML
-SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp)
-OBJ_FILES = $(SRC_FILES:.cpp=.o)
+SRC	=	main.cpp
 
-TARGET = main
+OBJ	=	$(SRC:.cpp=.o)
 
-all: $(TARGET)
+CXXFLAGS	=		 -I./include -std=c++20 -ggdb -g3
 
-$(TARGET): $(OBJ_FILES) main.o
-	$(CXX) -o $@ $^ $(LDFLAGS)
+LXXDFLAGS = -L./build/ -llion-engine
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+CC = g++
 
-main.o: main.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+NAME	=	game
+
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
+	$(CC) -o $(NAME) $(OBJ) $(CXXFLAGS) $(LXXDFLAGS)
 
 clean:
-	rm -f $(OBJ_FILES) main.o $(TARGET)
+	rm -f $(OBJ)
 
-fclean: clean
+fclean:	clean
+	rm -f $(NAME)
 
-.PHONY: all clean
+re:	fclean all
