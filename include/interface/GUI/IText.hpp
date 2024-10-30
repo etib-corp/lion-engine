@@ -11,10 +11,10 @@
     #include <string>
     #include <memory>
 
-    #include "IFont.hpp"
+    #include "interface/IFont.hpp"
 
-    #include "IShape.hpp"
-    #include "GUI/IComponent.hpp"
+    #include "interface/IShape.hpp"
+    #include "interface/GUI/IComponent.hpp"
 
 namespace LE {
     class IText : public IShape, public GUI::IComponent {
