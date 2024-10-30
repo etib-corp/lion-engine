@@ -18,11 +18,11 @@ Lion Engine is a versatile game engine designed to support multiple graphics lib
 - **Linux**: OpenGL, GLFW
 - **Windows**: SFML
 
-### Installation
+### Installationx
 
 1. Clone the repository:
         ```sh
-        git clone https://github.com/yourusername/lion-engine.git
+        git clone https://github.com/etib-corp/lion-engine.git
         ```
 2. Navigate to the project directory:
         ```sh
@@ -30,7 +30,10 @@ Lion Engine is a versatile game engine designed to support multiple graphics lib
         ```
 3. Build the engine:
         ```sh
-        ./build.sh
+        cmake -B build -S .
+        cmake --build build
+        sudo cp build/lion-engine.so mv /usr/lib
+        sudo cp -r include/ /usr/include/lion-engine
         ```
 
 ## Usage
@@ -49,9 +52,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries or support, please contact us at support@lionengine.com.
+For any inquiries or support, please contact us on GitHub.
 
-## Acknowledgements
-
-- OpenGL and GLFW for Linux support
-- SFML for Windows support

@@ -8,13 +8,24 @@
 #ifndef IMODELCOMPONENT_HPP_
 #define IMODELCOMPONENT_HPP_
 
-namespace LE {
-    class IModelComponent {
-        public:
-            virtual ~IModelComponent() = default;
+namespace LE
+{
+    /**
+     * @class IModelComponent
+     * @brief Interface for model components.
+     *
+     * The IModelComponent interface provides a way to create model components.
+     */
+    class IModelComponent
+    {
+    public:
+        /**
+         * @brief Construct a new IModelComponent object
+         */
+        virtual ~IModelComponent() = default;
 
-        protected:
-        private:
+    protected:
+    private:
     };
 }
 

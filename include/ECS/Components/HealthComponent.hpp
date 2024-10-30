@@ -7,6 +7,7 @@
 
 #pragma once
 
-struct Health {
-    int health;
+struct Health
+{
+    int health; ///< The health of the entity.
 };

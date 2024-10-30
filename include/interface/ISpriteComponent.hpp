@@ -9,16 +9,26 @@
 
 #include <string>
 
-namespace LE {
-    class ISpriteComponent {
-        public:
-            ISpriteComponent() = default;
-            virtual ~ISpriteComponent() = default;
+namespace LE
+{
+    /**
+     * @class ISpriteComponent
+     * @brief Interface for sprite components.
+     *
+     * The ISpriteComponent interface provides a way to create sprite components.
+     */
+    class ISpriteComponent
+    {
+    public:
+        /**
+         * @brief Construct a new ISpriteComponent object
+         */
+        virtual ~ISpriteComponent() = default;
 
-            std::string path;
-            unsigned int width;
-            unsigned int height;
-            bool hidden;
-            float rotation;
+        std::string path;    ///< The path to the sprite.
+        unsigned int width;  ///< The width of the sprite.
+        unsigned int height; ///< The height of the sprite.
+        bool hidden;         ///< Whether the sprite is hidden.
+        float rotation;      ///< The rotation of the sprite.
     };
 }
