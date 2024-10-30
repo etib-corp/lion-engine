@@ -10,6 +10,7 @@
 
     #include "IRectangle.hpp"
     #include "SFMLCommon.hpp"
+    #include "SFMLWindow.hpp"
 
 namespace LE {
     /**
@@ -29,7 +30,7 @@ namespace LE {
              * @param size The size of the rectangle
              * @param color The color of the rectangle
              */
-            SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::Color *color);
+            SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::Color *color, std::shared_ptr<LE::IWindow> window);
 
             /**
              * @brief Destroy the SFMLRectangle object
@@ -62,8 +63,15 @@ namespace LE {
              */
             void init() override;
 
-        protected:
-            sf::RectangleShape *_rectangle;     /*!< The rectangle shape interpreted in SFML*/
+            /**
+             * @brief Draw the rectangle on the screen.
+             *
+             * @return void
+             */
+            void draw() override;
+
+            std::shared_ptr<SFMLWindow> _window;    /*!< The window where the rectangle will be drawn*/
+            sf::RectangleShape *_rectangle;         /*!< The rectangle shape interpreted in SFML*/
     };
 }
 

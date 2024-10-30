@@ -32,7 +32,7 @@ namespace LE {
                  * @param size The size of the button
                  * @param content The content of the button
                  */
-                SFMLButton(const LE::Vector3<float> &pos, const LE::Vector2<float> &size, const std::string &content);
+                SFMLButton(const LE::Vector3<float> &pos, const LE::Vector2<float> &size, const std::string &content, std::shared_ptr<LE::IWindow> window);
 
                 /**
                  * @brief Destroy the SFMLButton object
@@ -46,6 +46,30 @@ namespace LE {
                  * @return void
                  */
                 void init() override;
+
+                /**
+                 * @brief Draw the button
+                 *
+                 * @return void
+                 */
+                void draw() override;
+
+                /**
+                 * @brief Check if the button is hovered
+                 *
+                 * @return bool
+                 */
+                bool isHover() override;
+
+                /**
+                 * @brief Check if the button is clicked
+                 *
+                 * @return bool
+                 */
+                bool isClicked() override;
+
+                std::shared_ptr<SFMLWindow> _window; /*!< The window of the button */
+
         };
     }
 }

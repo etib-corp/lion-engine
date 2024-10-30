@@ -8,8 +8,13 @@
 #ifndef SFMLTEXTFIELD_HPP_
     #define SFMLTEXTFIELD_HPP_
 
+    #include "Maths/Vector2.hpp"
     #include "GUI/ITextField.hpp"
+
     #include "GUI/SFMLText.hpp"
+    #include "SFMLRectangle.hpp"
+
+    #include "SFMLWindow.hpp"
 
 namespace LE {
     namespace GUI {
@@ -30,7 +35,7 @@ namespace LE {
                  * @param label The label of the text field
                  * @param placeholder The placeholder of the text field
                  */
-                SFMLTextField(const LE::Vector3<float> &pos, const std::string &label = "Label", const std::string &placeholder = "Enter text");
+                SFMLTextField(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &label = "Label", const std::string &placeholder = "Enter text");
 
                 /**
                  * @brief Destroy the SFMLTextField object
@@ -38,6 +43,24 @@ namespace LE {
                  */
                 ~SFMLTextField();
 
+                /**
+                 * @brief Draw the text field.
+                 */
+                void draw() override;
+
+                /**
+                 * @brief Return if the text field is hovered.
+                 */
+                bool isHover() override;
+
+                /**
+                 * @brief Return if the text field is clicked.
+                 */
+                bool isClicked() override;
+
+                void init() override;
+
+                std::shared_ptr<SFMLWindow> _window;            /**< The window of the text field */
         };
     }
 }
