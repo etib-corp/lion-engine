@@ -9,7 +9,6 @@
     #define SFMLRENDER2DSYSTEM_HPP_
 
     #include "ECS/Systems/IRender2DSystem.hpp"
-    #include <memory>
 
 namespace LE {
     class IEngine;
