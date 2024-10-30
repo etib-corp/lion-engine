@@ -28,11 +28,7 @@ void LE::GUI::SFMLButton::init()
 {
     LE::Vector3<float> pos = {_x, _y, 0};
     LE::Vector2<float> size = {_width, _height};
-<<<<<<< HEAD
     _background = std::make_shared<SFMLRectangle>(pos, size, new LE::Color(255, 255, 255, 255), _window);
-=======
-    _background = new SFMLRectangle(pos, size, new LE::Color(255, 255, 255, 255), _window);
->>>>>>> ede13a8e (feat: add draw in SFML)
     LE::GUI::IContainer::init();
 }
 
@@ -59,10 +55,7 @@ bool LE::GUI::SFMLButton::isClicked()
 
 void LE::GUI::SFMLButton::draw()
 {
-<<<<<<< HEAD
     std::cout << "Drawing button" << std::endl;
-=======
->>>>>>> ede13a8e (feat: add draw in SFML)
     LE::GUI::IInteractable::update();
     LE::GUI::IContainer::draw();
 }

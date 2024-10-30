@@ -69,6 +69,7 @@ void LE::GUI::SFMLText::draw()
     _text->setPosition(sf::Vector2f(_x, _y));
     _window->getWindow()->draw(*_text);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 void LE::GUI::SFMLText::resize(float width, float height)
@@ -78,4 +79,6 @@ void LE::GUI::SFMLText::resize(float width, float height)
     _text->setCharacterSize(height);
 =======
 >>>>>>> ede13a8e (feat: add draw in SFML)
+=======
+>>>>>>> 57d3d630 (feat: add draw in SFML)
 }

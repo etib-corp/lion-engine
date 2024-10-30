@@ -67,7 +67,6 @@ namespace LE {
                 virtual void init() = 0;
 
                 /**
-<<<<<<< HEAD
                  * @brief Draw the component
                  *
                  * This function is used to draw the component on the screen.
@@ -78,8 +77,6 @@ namespace LE {
                 virtual void draw() = 0;
 
                 /**
-=======
->>>>>>> 75bfcf46 (chore: add missing documentation on abstract engine)
                  * @brief Set the position of the component
                  *
                  * @param x The x coordinate of the component
@@ -89,15 +86,12 @@ namespace LE {
                 */
                 void setPos(float x, float y);
 
-<<<<<<< HEAD
                 void setWidth(float width);
 
                 void setHeight(float height);
 
                 virtual void setFont(std::shared_ptr<LE::IFont> font) = 0;
 
-=======
->>>>>>> 75bfcf46 (chore: add missing documentation on abstract engine)
                 /**
                  * @brief Get the width of the component.
                  *
