@@ -5,21 +5,23 @@
 ** SFMLText
 */
 
-#include "SFMLText.hpp"
+#include "GUI/SFMLText.hpp"
 
-LE::SFMLText::SFMLText(const std::string &content, std::shared_ptr<IColor> color)
+LE::GUI::SFMLText::SFMLText(const LE::Vector3<float> &pos, const std::string &content, Color *color)
 {
     _content = content;
-    _color = color;
+    _color = color == nullptr ? new Color(255, 255, 255, 255) : color;
     _font = nullptr;
     _text = new sf::Text();
+    _x = pos.x;
+    _y = pos.y;
 }
 
-LE::SFMLText::~SFMLText()
+LE::GUI::SFMLText::~SFMLText()
 {
 }
 
-void LE::SFMLText::init()
+void LE::GUI::SFMLText::init()
 {
     sf::Color sfmlColor(_color->getRed(), _color->getGreen(), _color->getBlue(), _color->getAlpha());
 
@@ -28,25 +30,35 @@ void LE::SFMLText::init()
     _text->setFont(dynamic_cast<LE::SFMLFont *>(_font.get())->_font);
 }
 
-void LE::SFMLText::setContent(const std::string &content)
+void LE::GUI::SFMLText::setContent(const std::string &content)
 {
     LE::IText::setContent(content);
 
     _text->setString(content);
 }
 
-void LE::SFMLText::setFont(std::shared_ptr<IFont> font)
+void LE::GUI::SFMLText::setFont(std::shared_ptr<IFont> font)
 {
     LE::IText::setFont(font);
 
     _text->setFont(dynamic_cast<LE::SFMLFont *>(font.get())->_font);
 }
 
-void LE::SFMLText::setColor(std::shared_ptr<IColor> color)
+void LE::GUI::SFMLText::setColor(Color *color)
 {
-    LE::IText::setColor(color);
+    LE::IShape::setColor(color);
 
     sf::Color sfmlColor(color->getRed(), color->getGreen(), color->getBlue(), color->getAlpha());
 
     _text->setFillColor(sfmlColor);
+}
+
+float LE::GUI::SFMLText::getWidth() const
+{
+    return _text->getGlobalBounds().width;
+}
+
+float LE::GUI::SFMLText::getHeight() const
+{
+    return _text->getGlobalBounds().height;
 }
