@@ -9,7 +9,7 @@
 #include <string>
 
 enum ShootPatternEnd {
-    LOOP,
+    LLOOP,
     TIME,
 };
 
