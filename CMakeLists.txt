@@ -8,6 +8,8 @@ include(cmake/Utils.cmake)
 
 include_directories(include/ include/interface)
 
+set(LION_ENGINE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 file(GLOB LIB_DIRS "lib/*")
 
 foreach(dir ${LIB_DIRS})
