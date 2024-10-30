@@ -10,6 +10,13 @@
 
 #include <iostream>
 
+/**
+ * @brief Convert an enumeration value to a char
+ *
+ * @tparam Enumeration The enumeration type
+ * @param value The enumeration value
+ * @return The char value
+ */
 template <typename Enumeration>
 auto asChar(Enumeration const value) -> typename std::underlying_type<Enumeration>::type
 {

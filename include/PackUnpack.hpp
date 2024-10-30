@@ -159,19 +159,10 @@ struct Request
     Body body;
 };
 
-struct _Entity
-{
-    char type[256];
-    char action[256];
-    int life;
-};
-
 std::ostream &operator<<(std::ostream &os, const Body &req);
 
 std::istream &operator>>(std::istream &is, Body &req);
 
 void showHeader(Header header);
-
-void showBody(_Entity *entity);
 
 #endif /* !PACKUNPACK_HPP_ */

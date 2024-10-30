@@ -62,3 +62,7 @@ unsigned int LE::SFMLWindow::getHeight()
 {
     return _height;
 }
+
+const std::shared_ptr<sf::RenderWindow>& LE::SFMLWindow::getWindow() const {
+    return _window;
+}

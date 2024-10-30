@@ -17,14 +17,6 @@ void showHeader(Header header)
     // std::cout << "\tBodyCorp: " << header.Body << std::endl;
 }
 
-void showBody(_Entity *entity)
-{
-    std::cout << "Body:" << std::endl;
-    std::cout << "\t" << entity->type << std::endl;
-    std::cout << "\t" << entity->action << std::endl;
-    std::cout << "\t" << entity->life << std::endl;
-}
-
 std::ostream &operator<<(std::ostream &os, const Body &req)
 {
     std::vector<uint8_t> serializedData = PackUnpack::serialize(req);

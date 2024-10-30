@@ -8,7 +8,8 @@
 #include "interface/INetworkModule/INetworkModule.hpp"
 #include "interface/INetworkModule/IServer.hpp"
 
-namespace LE {
+namespace LE
+{
     /**
      * @class ServerBroker
      * @brief A class that extends Broker to manage server-side network communication.
@@ -45,16 +46,28 @@ namespace LE {
          *
          * @param message The message to send.
          */
-        void sendToAllClient(std::shared_ptr<Message>message, std::uint8_t topic_id, std::uint8_t ecs_id);
+        void sendToAllClient(std::shared_ptr<Message> message, std::uint8_t topic_id, std::uint8_t ecs_id);
 
     private:
-        std::uint16_t _listen_port;
-        IServer *_server;
+        std::uint16_t _listen_port; ///< The port on which the server will listen for incoming connections.
+        IServer *_server;           ///< The server object.
 
+        /**
+         * @brief Sends a message.
+         * @param message The message to send.
+         */
         void _sendMessage(std::shared_ptr<Message> message) override;
 
+        /**
+         * @brief Receives a message.
+         * @return The message received.
+         */
         void _onReceiveRequestCallback(const Request &request);
 
+        /**
+         * @brief Callback for when a client connects to the server.
+         * @param session The session of the client that connected.
+         */
         void _onClientDisconnectedCallback(ISession *session);
     };
 
