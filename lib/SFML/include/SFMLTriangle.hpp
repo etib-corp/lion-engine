@@ -10,6 +10,7 @@
 
     #include "ITriangle.hpp"
     #include "SFMLCommon.hpp"
+    #include "SFMLWindow.hpp"
 
     #include "Maths/Vector2.hpp"
 
@@ -31,7 +32,7 @@ namespace LE {
              * @param point2 The second point of the triangle
              * @param point3 The third point of the triangle
              */
-            SFMLTriangle(const LE::Vector3<float> &point1, const LE::Vector3<float> &point2, const LE::Vector3<float> &point3);
+            SFMLTriangle(const LE::Vector3<float> &point1, const LE::Vector3<float> &point2, const LE::Vector3<float> &point3, std::shared_ptr<LE::IWindow> window);
 
             /**
              * @brief Construct a new SFMLTriangle object
@@ -40,7 +41,7 @@ namespace LE {
              * @param point2 The second point of the triangle
              * @param point3 The third point of the triangle
              */
-            SFMLTriangle(const LE::Vector2<float> &point1, const LE::Vector2<float> &point2, const LE::Vector2<float> &point3);
+            SFMLTriangle(const LE::Vector2<float> &point1, const LE::Vector2<float> &point2, const LE::Vector2<float> &point3, std::shared_ptr<LE::IWindow> window);
 
             /**
              * @brief Construct a new SFMLTriangle object
@@ -48,7 +49,7 @@ namespace LE {
              * @param pos The position of the triangle
              * @param size The size of the triangle
              */
-            SFMLTriangle(const LE::Vector2<float> &pos, float size);
+            SFMLTriangle(const LE::Vector2<float> &pos, float size, std::shared_ptr<LE::IWindow> window);
 
             /**
              * @brief Destroy the SFMLTriangle object
@@ -64,6 +65,13 @@ namespace LE {
             void init() override;
 
             /**
+             * @brief Draw the triangle
+             *
+             * @return void
+             */
+            void draw() override;
+
+            /**
              * @brief Move the triangle by a vector.
              *
              * @param moveVector The vector to move the triangle by
@@ -72,7 +80,7 @@ namespace LE {
              */
             void move(const LE::Vector3<float>& moveVector) override;
 
-        protected:
+            std::shared_ptr<SFMLWindow> _window;    /*!< The window where the triangle will be drawn*/
             sf::ConvexShape *_triangle;     /*!< The triangle shape interpreted in SFML*/
 
     };

@@ -88,6 +88,11 @@ namespace LE {
                 */
                 virtual void setBackgroundColor(LE::Color *color);
 
+                /**
+                 * @brief Draw the container.
+                 */
+                void draw() override;
+
             protected:
                 std::vector<std::shared_ptr<IComponent>> _children;     /*!< The children of the container */
                 LE::IShape *_background;                                /*!< The background of the container */

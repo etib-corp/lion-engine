@@ -70,6 +70,25 @@ namespace LE {
                  *
                 */
                 [[nodiscard]] virtual bool isHover() = 0;
+
+                /**
+                 * @brief Update the object
+                 *
+                 * This function is called every frame by the GUI Manager.
+                 *
+                 * @return void
+                 *
+                */
+                void update();
+
+                /**
+                 * @brief Return if the object is clicked
+                 *
+                 * You have to define it in your class for each graphical library that you are using.
+                 *
+                 * @return bool
+                 */
+                [[nodiscard]] virtual bool isClicked() = 0;
         };
     }
 }

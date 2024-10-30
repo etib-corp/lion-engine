@@ -10,6 +10,7 @@
 
     #include "GUI/IText.hpp"
     #include "SFMLFont.hpp"
+    #include "SFMLWindow.hpp"
     #include "SFMLCommon.hpp"
 
 namespace LE {
@@ -39,7 +40,7 @@ namespace LE {
                  * @return SFMLText
                  *
                 */
-                SFMLText(const LE::Vector3<float> &pos, const std::string &content = "Hello, World !", Color *color = nullptr);
+                SFMLText(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &content = "Hello, World !", Color *color = nullptr);
 
                 /**
                  * @brief Destroy the SFMLText
@@ -100,8 +101,13 @@ namespace LE {
                 */
                 float getHeight() const override;
 
-            protected:
+                /**
+                 * @brief Draw the text
+                 */
+                void draw() override;
+
                 sf::Text *_text;    /*!< The text object interpreted in SFML */
+                std::shared_ptr<SFMLWindow> _window;    /*!< The window where the text will be drawn */
         };
     }
 }
