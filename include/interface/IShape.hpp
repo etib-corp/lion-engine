@@ -72,6 +72,14 @@ namespace LE {
             virtual void init() = 0;
 
             /**
+             * @brief Draw the shape
+             *
+             * @return void
+             *
+            */
+            virtual void draw() = 0;
+
+            /**
              * @brief Get the position of the shape
              *
              * @return LE::Vector3<float>
