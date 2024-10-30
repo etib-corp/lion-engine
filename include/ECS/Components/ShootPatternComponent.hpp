@@ -10,8 +10,8 @@
 
 enum ShootPatternEnd
 {
-    LOOP, ///< The pattern will loop
-    TIME, ///< The pattern will stay at the end position
+    LLOOP, ///< The pattern will loop
+    TIME,  ///< The pattern will stay at the end position
 };
 
 struct ShootPatternComponent

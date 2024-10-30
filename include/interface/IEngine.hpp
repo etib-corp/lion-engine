@@ -19,7 +19,7 @@
 #include "interface/IShader.hpp"
 #include "interface/ISpriteComponent.hpp"
 #include "interface/ICameraComponent.hpp"
-#include "interface/IText.hpp"
+#include "interface/GUI/IText.hpp"
 #include "interface/IWindow.hpp"
 #include "ECS/Systems/IRender2DSystem.hpp"
 #include "SceneManager.hpp"

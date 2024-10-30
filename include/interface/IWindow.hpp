@@ -12,7 +12,6 @@
 
 #include "Scene.hpp"
 
-
 /**
  * @namespace LE
  * @brief The namespace for the Lion Engine.
@@ -56,7 +55,13 @@ namespace LE
          */
         virtual void display() = 0;
 
-<<<<<<< HEAD
+        /**
+         * @brief Renders the scene to the window.
+         *
+         * @param scene The scene to render.
+         */
+        virtual void render(std::shared_ptr<LE::Scene> scene) = 0;
+
         /**
          * @brief Gets the title of the window.
          *
@@ -66,24 +71,6 @@ namespace LE
         {
             return _title;
         }
-=======
-            /**
-             * @brief Renders the scene to the window.
-             *
-             * @param scene The scene to render.
-             */
-            virtual void render(std::shared_ptr<LE::Scene> scene) = 0;
-
-            /**
-             * @brief Gets the title of the window.
-             *
-             * @return The title of the window.
-             */
-            virtual const std::string& getTitle()
-            {
-                return _title;
-            }
->>>>>>> main
 
         /**
          * @brief Sets the title of the window.
