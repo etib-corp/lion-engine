@@ -74,43 +74,110 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classLE_1_1Clock-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LE::Clock Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classLE_1_1Clock.html" title="The Clock class provides methods to restart the clock and get the elapsed time.">Clock</a> class provides methods to restart the clock and get the elapsed time.  
+<p>A class to manage the game clock.  
  <a href="classLE_1_1Clock.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Clock_8hpp_source.html">Clock.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae78fdb2861a396a54e46f5ac074374e1"><td class="memItemLeft" align="right" valign="top"><a id="ae78fdb2861a396a54e46f5ac074374e1" name="ae78fdb2861a396a54e46f5ac074374e1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Callback</b> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:ae78fdb2861a396a54e46f5ac074374e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type. <br /></td></tr>
+<tr class="separator:ae78fdb2861a396a54e46f5ac074374e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ae994eca63459eb75f21d6e045d5bd2"><td class="memItemLeft" align="right" valign="top"><a id="a1ae994eca63459eb75f21d6e045d5bd2" name="a1ae994eca63459eb75f21d6e045d5bd2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Clock</b> ()</td></tr>
-<tr class="memdesc:a1ae994eca63459eb75f21d6e045d5bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="classLE_1_1Clock.html" title="The Clock class provides methods to restart the clock and get the elapsed time.">Clock</a>. <br /></td></tr>
+<tr class="memdesc:a1ae994eca63459eb75f21d6e045d5bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Game <a class="el" href="classLE_1_1Clock.html" title="A class to manage the game clock.">Clock</a> object. <br /></td></tr>
 <tr class="separator:a1ae994eca63459eb75f21d6e045d5bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad961d2a29a53e1df4c475e79d1b42bc6"><td class="memItemLeft" align="right" valign="top"><a id="ad961d2a29a53e1df4c475e79d1b42bc6" name="ad961d2a29a53e1df4c475e79d1b42bc6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Clock</b> ()</td></tr>
-<tr class="memdesc:ad961d2a29a53e1df4c475e79d1b42bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="classLE_1_1Clock.html" title="The Clock class provides methods to restart the clock and get the elapsed time.">Clock</a>. <br /></td></tr>
+<tr class="memdesc:ad961d2a29a53e1df4c475e79d1b42bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Game <a class="el" href="classLE_1_1Clock.html" title="A class to manage the game clock.">Clock</a> object. <br /></td></tr>
 <tr class="separator:ad961d2a29a53e1df4c475e79d1b42bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20332086d5455ed85af87965eb7abfbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1Clock.html#a20332086d5455ed85af87965eb7abfbd">addCallback</a> (<a class="el" href="classLE_1_1Clock.html#ae78fdb2861a396a54e46f5ac074374e1">Callback</a> cb, int intervalMs)</td></tr>
+<tr class="memdesc:a20332086d5455ed85af87965eb7abfbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a callback to the clock.  <br /></td></tr>
+<tr class="separator:a20332086d5455ed85af87965eb7abfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b8c7cfd7386895c27efd3edf5dab038"><td class="memItemLeft" align="right" valign="top"><a id="a1b8c7cfd7386895c27efd3edf5dab038" name="a1b8c7cfd7386895c27efd3edf5dab038"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="memdesc:a1b8c7cfd7386895c27efd3edf5dab038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock. <br /></td></tr>
+<tr class="separator:a1b8c7cfd7386895c27efd3edf5dab038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7490ad81ff3e27e137e32180f017a373"><td class="memItemLeft" align="right" valign="top"><a id="a7490ad81ff3e27e137e32180f017a373" name="a7490ad81ff3e27e137e32180f017a373"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="memdesc:a7490ad81ff3e27e137e32180f017a373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the clock. <br /></td></tr>
+<tr class="separator:a7490ad81ff3e27e137e32180f017a373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaef7d50a48ead6f90d0e08d022e486e9"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1Clock.html#aaef7d50a48ead6f90d0e08d022e486e9">restart</a> ()</td></tr>
-<tr class="memdesc:aaef7d50a48ead6f90d0e08d022e486e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts the clock and returns the elapsed time since the last restart.  <br /></td></tr>
+<tr class="memdesc:aaef7d50a48ead6f90d0e08d022e486e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart the clock.  <br /></td></tr>
 <tr class="separator:aaef7d50a48ead6f90d0e08d022e486e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39f1220e55d866162405c021491bc99a"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1Clock.html#a39f1220e55d866162405c021491bc99a">getElapsedTime</a> () const</td></tr>
-<tr class="memdesc:a39f1220e55d866162405c021491bc99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the elapsed time since the last restart.  <br /></td></tr>
+<tr class="memdesc:a39f1220e55d866162405c021491bc99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the elapsed time.  <br /></td></tr>
 <tr class="separator:a39f1220e55d866162405c021491bc99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classLE_1_1Clock.html" title="The Clock class provides methods to restart the clock and get the elapsed time.">Clock</a> class provides methods to restart the clock and get the elapsed time. </p>
-<p>The <a class="el" href="classLE_1_1Clock.html" title="The Clock class provides methods to restart the clock and get the elapsed time.">Clock</a> class uses the high-resolution clock from the &lt;chrono&gt; library to measure time intervals. </p>
+<div class="textblock"><p>A class to manage the game clock. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a20332086d5455ed85af87965eb7abfbd" name="a20332086d5455ed85af87965eb7abfbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20332086d5455ed85af87965eb7abfbd">&#9670;&#160;</a></span>addCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::Clock::addCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLE_1_1Clock.html#ae78fdb2861a396a54e46f5ac074374e1">Callback</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>intervalMs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a callback to the clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>The callback to add </td></tr>
+    <tr><td class="paramname">intervalMs</td><td>The interval in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a39f1220e55d866162405c021491bc99a" name="a39f1220e55d866162405c021491bc99a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39f1220e55d866162405c021491bc99a">&#9670;&#160;</a></span>getElapsedTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t LE::Clock::getElapsedTime </td>
@@ -119,10 +186,16 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Gets the elapsed time since the last restart. </p>
-<dl class="section return"><dt>Returns</dt><dd>The elapsed time in milliseconds. </dd></dl>
+<p>Get the elapsed time. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t The elapsed time since the last restart </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This funciton has no impact on the callback execution or the callback interval </dd></dl>
 
 </div>
 </div>
@@ -131,6 +204,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t LE::Clock::restart </td>
@@ -139,16 +215,21 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Restarts the clock and returns the elapsed time since the last restart. </p>
-<dl class="section return"><dt>Returns</dt><dd>The elapsed time in milliseconds. </dd></dl>
+<p>Restart the clock. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t The elapsed time since the last restart </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This funciton has no impact on the callback execution or the callback interval </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="Clock_8hpp_source.html">Clock.hpp</a></li>
-<li>src/Clock.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['clear_0',['clear',['../classLE_1_1SFMLWindow.html#abc18867308099cbc59c595b0faa08c0a',1,'LE::SFMLWindow::clear()'],['../classLE_1_1IWindow.html#a063a8c6cf154fbf223bce181e73f3aa4',1,'LE::IWindow::clear()']]],
-  ['client_1',['Client',['../classClient.html',1,'']]],
-  ['clientbroker_2',['ClientBroker',['../classLE_1_1ClientBroker.html#aa27efa0bd4d6f66eee852451135c5a1e',1,'LE::ClientBroker::ClientBroker()'],['../classLE_1_1ClientBroker.html',1,'LE::ClientBroker']]],
-  ['clock_3',['Clock',['../classLE_1_1Clock.html#a1ae994eca63459eb75f21d6e045d5bd2',1,'LE::Clock::Clock()'],['../classLE_1_1Clock.html',1,'LE::Clock']]],
-  ['clock_2ehpp_4',['Clock.hpp',['../Clock_8hpp.html',1,'']]],
-  ['close_5',['close',['../classLE_1_1IWindow.html#a67d8405e1f5621375a0aed2d562c91c8',1,'LE::IWindow::close()'],['../classLE_1_1SFMLWindow.html#aadd4e10db20c2bd61e96419535f508c8',1,'LE::SFMLWindow::close()']]],
+  ['callback_0',['Callback',['../classLE_1_1Clock.html#ae78fdb2861a396a54e46f5ac074374e1',1,'LE::Clock']]],
+  ['clear_1',['clear',['../classLE_1_1SFMLWindow.html#abc18867308099cbc59c595b0faa08c0a',1,'LE::SFMLWindow::clear()'],['../classLE_1_1IWindow.html#a063a8c6cf154fbf223bce181e73f3aa4',1,'LE::IWindow::clear()']]],
+  ['client_2',['Client',['../classClient.html',1,'']]],
+  ['clientbroker_3',['ClientBroker',['../classLE_1_1ClientBroker.html#aa27efa0bd4d6f66eee852451135c5a1e',1,'LE::ClientBroker::ClientBroker()'],['../classLE_1_1ClientBroker.html',1,'LE::ClientBroker']]],
+  ['clock_4',['Clock',['../classLE_1_1Clock.html#a1ae994eca63459eb75f21d6e045d5bd2',1,'LE::Clock::Clock()'],['../classLE_1_1Clock.html',1,'LE::Clock']]],
+  ['close_5',['close',['../classLE_1_1SFMLWindow.html#aadd4e10db20c2bd61e96419535f508c8',1,'LE::SFMLWindow::close()'],['../classLE_1_1IWindow.html#a67d8405e1f5621375a0aed2d562c91c8',1,'LE::IWindow::close()']]],
   ['collisionsystem_6',['CollisionSystem',['../classCollisionSystem.html',1,'CollisionSystem'],['../classCollisionSystem.html#ac8b1ff32bb9c9ff3e765c2b334713454',1,'CollisionSystem::CollisionSystem()']]],
   ['color_7',['Color',['../classLE_1_1Color.html#a24017175e09904792e11ba1bfef0bc29',1,'LE::Color::Color()'],['../classLE_1_1Color.html',1,'LE::Color']]],
   ['componentarray_8',['ComponentArray',['../classLE_1_1ComponentArray.html#a58f0823500bf3b384183a2c3d8c9c166',1,'LE::ComponentArray::ComponentArray()'],['../classLE_1_1ComponentArray.html',1,'LE::ComponentArray&lt; T &gt;']]],

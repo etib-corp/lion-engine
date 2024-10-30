@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix_2ehpp_0',['Matrix.hpp',['../Matrix_8hpp.html',1,'']]]
+  ['sessionmanager_2ehpp_0',['SessionManager.hpp',['../SessionManager_8hpp.html',1,'']]]
 ];

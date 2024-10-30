@@ -28,7 +28,7 @@ var searchData=
   ['setgreen_25',['setGreen',['../classLE_1_1Color.html#a35b94dce5323187e4f6bb4e72deaede9',1,'LE::Color']]],
   ['setheader_26',['setHeader',['../classLE_1_1Message.html#a60a9471b4e58432cfecc5a6d842d7212',1,'LE::Message']]],
   ['setheight_27',['setHeight',['../classLE_1_1IFont.html#af8fc7c0890f2af5ed85f14c32265b15a',1,'LE::IFont']]],
-  ['setid_28',['setId',['../classISession.html#a6fa1ea16748d88b4db81815f33dbfc87',1,'ISession::setId()'],['../classIClient.html#af218949f619e1139f01f3ab8319d1781',1,'IClient::setId()']]],
+  ['setid_28',['setId',['../classIClient.html#af218949f619e1139f01f3ab8319d1781',1,'IClient::setId()'],['../classISession.html#a6fa1ea16748d88b4db81815f33dbfc87',1,'ISession::setId()']]],
   ['setloop_29',['setLoop',['../classLE_1_1IEngine.html#a63e05450e0e7af918f4d8f283cb0b855',1,'LE::IEngine']]],
   ['setmagicnumber_30',['setMagicNumber',['../classLE_1_1Message.html#a34552b223bd3c32d104cdc3a5e7fd628',1,'LE::Message']]],
   ['setonclientconnected_31',['setOnClientConnected',['../classIListenerTCP.html#a48f76fb9703b335766a11ca31626b8cf',1,'IListenerTCP::setOnClientConnected()'],['../classIServer.html#abf5bfd2d8adb1daff663ec0b226703c7',1,'IServer::setOnClientConnected()']]],
@@ -44,7 +44,7 @@ var searchData=
   ['setreliable_41',['setReliable',['../classLE_1_1Message.html#a247073d3964a6f530522a8f255455355',1,'LE::Message']]],
   ['setrequest_42',['setRequest',['../classLE_1_1Message.html#a5a4675d520a448d833a24050ddf34844',1,'LE::Message']]],
   ['setscene_43',['setScene',['../classLE_1_1Ecs.html#a15ba30b5c651ee630347032831dc599f',1,'LE::Ecs']]],
-  ['setsignature_44',['setSignature',['../classLE_1_1Ecs.html#acfa937a2970e4c5eca33cd8c34651c5a',1,'LE::Ecs::setSignature()'],['../classLE_1_1EntityManager.html#a785d87553d1dc0878db5846134e7a74a',1,'LE::EntityManager::setSignature()'],['../classLE_1_1SystemManager.html#a56e75a66cc3159926bfdabac5e2ae3e2',1,'LE::SystemManager::setSignature()']]],
+  ['setsignature_44',['setSignature',['../classLE_1_1EntityManager.html#a785d87553d1dc0878db5846134e7a74a',1,'LE::EntityManager::setSignature()'],['../classLE_1_1SystemManager.html#a56e75a66cc3159926bfdabac5e2ae3e2',1,'LE::SystemManager::setSignature()'],['../classLE_1_1Ecs.html#acfa937a2970e4c5eca33cd8c34651c5a',1,'LE::Ecs::setSignature()']]],
   ['setsize_45',['setSize',['../classLE_1_1IRectangle.html#a8e6be4ce721b5e85be8303c1698fc5ae',1,'LE::IRectangle']]],
   ['settitle_46',['setTitle',['../classLE_1_1IWindow.html#a9e0ec140305b46e1905cf2ea3858e5a1',1,'LE::IWindow::setTitle()'],['../classLE_1_1SFMLWindow.html#a87a7d7638bce9753075e7616c92e8d46',1,'LE::SFMLWindow::setTitle()']]],
   ['settopicid_47',['setTopicID',['../classLE_1_1Message.html#a581157e5c5ed372d90a83ae0fac2a36a',1,'LE::Message']]],
@@ -53,7 +53,8 @@ var searchData=
   ['sfmlfont_50',['SFMLFont',['../classLE_1_1SFMLFont.html#a8b77e9114471164b1a97a008ca3f11d1',1,'LE::SFMLFont']]],
   ['sfmltext_51',['SFMLText',['../classLE_1_1GUI_1_1SFMLText.html#af6453238764a79f9d8f21f46af120069',1,'LE::GUI::SFMLText']]],
   ['shootpatternsystem_52',['ShootPatternSystem',['../classShootPatternSystem.html#a13c5e4ea8eebc283bdbe1dfeb557b4e1',1,'ShootPatternSystem']]],
-  ['startreceive_53',['startReceive',['../classIListenerUDP.html#a485a3112410e94de15c00df4c74f7f31',1,'IListenerUDP::startReceive()'],['../classListenerUDP.html#a8be26bdfafe517ad8a8ec5c4e24bbc35',1,'ListenerUDP::startReceive()']]],
-  ['stop_54',['stop',['../classLE_1_1SceneManager.html#a596be2cf35f37c78d613336928a5b8c7',1,'LE::SceneManager']]],
-  ['systemmanagererror_55',['SystemManagerError',['../classSystemManagerError.html#a4d3567620c2002bed3dd93ae22fd64b6',1,'SystemManagerError']]]
+  ['start_53',['start',['../classLE_1_1Clock.html#a1b8c7cfd7386895c27efd3edf5dab038',1,'LE::Clock']]],
+  ['startreceive_54',['startReceive',['../classIListenerUDP.html#a485a3112410e94de15c00df4c74f7f31',1,'IListenerUDP::startReceive()'],['../classListenerUDP.html#a8be26bdfafe517ad8a8ec5c4e24bbc35',1,'ListenerUDP::startReceive()']]],
+  ['stop_55',['stop',['../classLE_1_1Clock.html#a7490ad81ff3e27e137e32180f017a373',1,'LE::Clock::stop()'],['../classLE_1_1SceneManager.html#a596be2cf35f37c78d613336928a5b8c7',1,'LE::SceneManager::stop()']]],
+  ['systemmanagererror_56',['SystemManagerError',['../classSystemManagerError.html#a4d3567620c2002bed3dd93ae22fd64b6',1,'SystemManagerError']]]
 ];
