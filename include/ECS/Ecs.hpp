@@ -171,6 +171,13 @@ namespace LE {
             void *getScene() const;
 
             void setScene(void *scene);
+
+            template <typename T>
+            std::shared_ptr<T> getSystem()
+            {
+                return _systemManager->getSystem<T>();
+            }
+
         private:
             std::unique_ptr<LE::ComponentManager> _componentManager;        ///< The component manager
             std::unique_ptr<LE::EntityManager> _entityManager;              ///< The entity manager
