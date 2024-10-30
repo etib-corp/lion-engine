@@ -68,13 +68,6 @@ void LE::SceneManager::removeScene(const std::string &sceneName)
     _scenes.erase(sceneName);
 }
 
-void LE::SceneManager::initScenes()
-{
-    for (auto &scene : _scenes) {
-        scene.second->init();
-    }
-}
-
 void LE::SceneManager::selectScene(const std::string &sceneName)
 {
     auto it = _scenes.find(sceneName);

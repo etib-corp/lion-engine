@@ -156,11 +156,12 @@ namespace LE {
              * @tparam T The class of the scene to add.
              */
             template <typename T>
-            void addScene(const std::string& name)
+            std::shared_ptr<T> addScene(const std::string& name)
             {
                 auto scene = std::make_shared<T>(this);
                 scene->init();
                 _game->getSceneManager()->addScene(scene, name);
+                return scene;
             }
 
             void playScene(const std::string& name)
@@ -237,7 +238,6 @@ namespace LE {
             float _dt;                                      ///< The delta time.
             std::size_t _framerateLimit;                    ///< The frame rate limit.
             bool _throwError;                               ///< A boolean flag indicating whether to throw an error.
-
         private:
     };
 }

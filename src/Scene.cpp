@@ -15,6 +15,7 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerComponent<TransformComponent>();
     _eventManager = engine->createEventManager();
     _engine = engine;
+    _engine->createRender2DSystem(*_ecs);
 }
 
 LE::Scene::~Scene()

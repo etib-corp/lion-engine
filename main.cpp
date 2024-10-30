@@ -15,10 +15,10 @@ class Snake : public LE::IGame {
         void init(LE::IEngine &engine) override
         {
             _sceneManager = engine.createSceneManager();
-            if (id == 1)
-                _clientBroker = std::make_shared<LE::ClientBroker>(engine.getNetworkModule(), "127.0.0.1", 8080);
-            else
-                _serverBroker = std::make_shared<LE::ServerBroker>(engine.getNetworkModule(), 0, 8080);
+            // if (id == 1)
+            //     _clientBroker = std::make_shared<LE::ClientBroker>(engine.getNetworkModule(), "127.0.0.1", 8080);
+            // else
+            //     _serverBroker = std::make_shared<LE::ServerBroker>(engine.getNetworkModule(), 0, 8080);
         }
 
         void update() override
@@ -40,7 +40,6 @@ class SnakeScene : public LE::Scene {
             _ecs->addComponent<std::shared_ptr<LE::ISpriteComponent>>(entity, _sprite);
             TransformComponent transform = TransformComponent{{5, 5, 0}, {0, 0, 0}, {0.2f, 0.2f, 1.0f}};
             _ecs->addComponent<TransformComponent>(entity, transform);
-
         }
 
         std::shared_ptr<LE::ISpriteComponent> _sprite;
@@ -56,7 +55,7 @@ int main(int ac, char **av)
 
     engine->setGame<Snake>();
 
-    engine->addScene<SnakeScene>("SnakeScene");
+    auto sceneSnake = engine->addScene<SnakeScene>("SnakeScene");
 
     engine->playScene("SnakeScene");
 

@@ -23,7 +23,6 @@ namespace LE
             Scene(LE::IEngine *engine);
             ~Scene();
 
-            virtual void init();
 
             void draw();
 
@@ -31,10 +30,24 @@ namespace LE
 
             std::shared_ptr<LE::IEventManager> &getEventManager() { return _eventManager; }
 
+
+            template <typename T>
+            void registerComponent()
+            {
+                _ecs->registerComponent<T>();
+            }
+
+            template <typename T>
+            void registerSystem()
+            {
+                _ecs->registerSystem<T>();
+            }
         protected:
+            virtual void init();
             std::shared_ptr<Ecs> _ecs;
             std::shared_ptr<IEventManager> _eventManager;
             LE::IEngine *_engine;
+            friend class IEngine;
         private:
     };
 

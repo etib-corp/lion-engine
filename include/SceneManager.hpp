@@ -141,15 +141,7 @@ namespace LE
              * @param sceneName The name of the scene to play.
              */
             void selectScene(const std::string &sceneName);
-
-            /**
-             * @brief Initializes the SceneManager.
-             *
-             * This method initializes the SceneManager, setting up any necessary resources
-             * or configurations required for managing scenes within the application.
-             */
-            void initScenes();
-
+        
         protected:
             LE::IEngine &_engine;
             std::unordered_map<std::string, std::shared_ptr<LE::Scene>> _scenes;
