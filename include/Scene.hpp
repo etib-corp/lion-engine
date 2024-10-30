@@ -14,6 +14,11 @@
     #include "ECS/Components/BoxComponent.hpp"
     #include "ECS/Components/HealthComponent.hpp"
     #include "interface/ISpriteComponent.hpp"
+    #include "interface/ICameraComponent.hpp"
+    #include "ECS/Systems/PatternSystem.hpp"
+    #include "ECS/Systems/CollisionSystem.hpp"
+    #include "ECS/Systems/MoveSystem.hpp"
+    #include "ECS/Systems/ShootPatternSystem.hpp"
 
 namespace LE
 {
@@ -38,10 +43,23 @@ namespace LE
             }
 
             template <typename T>
-            void registerSystem()
+            std::shared_ptr<T> registerSystem()
             {
-                _ecs->registerSystem<T>();
+                return _ecs->registerSystem<T>();
             }
+
+            template <typename T>
+            void setSignature(Signature signature)
+            {
+                _ecs->setSignature<T>(signature);
+            }
+
+            template <typename T>
+            std::shared_ptr<T> getSystem()
+            {
+                return _ecs->getSystem<T>();
+            }
+
         protected:
             virtual void init();
             std::shared_ptr<Ecs> _ecs;
