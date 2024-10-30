@@ -25,6 +25,7 @@ struct TransformComponent
  * @param scale The scale of the entity
  * @return TransformComponent The transform component
  */
+
 TransformComponent createTransformComponent(LE::Vector3<float> position, LE::Vector3<float> rotation, LE::Vector3<float> scale);
 
 /**

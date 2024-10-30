@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "IWindow.hpp"
+#include "interface/IWindow.hpp"
 #include "SFMLCommon.hpp"
 #include <memory>
 
@@ -26,6 +26,8 @@ namespace LE {
             void clear() override;
 
             void display() override;
+
+            void render(std::shared_ptr<LE::Scene> scene) override;
 
             const std::string& getTitle() override;
             void setTitle(const std::string& title) override;

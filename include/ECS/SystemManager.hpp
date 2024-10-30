@@ -26,6 +26,7 @@ public:
      * This function will be used to update the system
      */
     virtual void update(LE::Ecs *ecs, float dt) = 0;
+
     std::set<Entity> _entities; ///< The entities that the system is responsible for
 };
 
@@ -171,8 +172,51 @@ namespace LE
             }
         }
 
+<<<<<<< HEAD
+
     private:
         std::unordered_map<std::string, Signature> _signatures;            ///< Map of signatures
         std::unordered_map<std::string, std::shared_ptr<System>> _systems; ///< Map of systems
+=======
+        /**
+         * @brief Update the systems
+         *
+         * This function will be used to update the systems
+         */
+        void update(Ecs *ecs, float dt)
+        {
+            for (auto const &pair : _systems)
+            {
+                auto const &system = pair.second;
+
+                system->update(ecs, dt);
+            }
+        }
+
+        /**
+         * @brief Get a system
+         *
+         * This function will be used to get a system
+         *
+         * @tparam T The system to get
+         * @return std::shared_ptr<T> The system
+         */
+        template <typename T>
+        std::shared_ptr<T> getSystem()
+        {
+            std::string typeName = typeid(T).name();
+
+            if (_systems.find(typeName) == _systems.end())
+            {
+                throw SystemManagerError("System not registered before getting");
+            }
+
+            return std::dynamic_pointer_cast<T>(_systems[typeName]);
+        }
+
+    private:
+        std::unordered_map<std::string, Signature> _signatures;            ///< Map of signatures
+        std::unordered_map<std::string, std::shared_ptr<System>> _systems; ///< Map of systems
+>>>>>>> main
     };
 }

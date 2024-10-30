@@ -8,7 +8,7 @@
 #ifndef SFMLFONT_HPP_
     #define SFMLFONT_HPP_
 
-#include "IFont.hpp"
+#include "interface/IFont.hpp"
 #include "SFMLCommon.hpp"
 
 namespace LE {

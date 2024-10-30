@@ -172,6 +172,7 @@ namespace LE
 
         void *getScene() const;
 
+<<<<<<< HEAD
         void setScene(void *scene);
 
     private:
@@ -180,5 +181,21 @@ namespace LE
         std::unique_ptr<LE::SystemManager> _systemManager;       ///< The system manager
         Entity _cameraEntity;                                    ///< The entity representing the camera
         void *_scene;                                            ///< The scene that contains the ECS
+=======
+            void setScene(void *scene);
+
+            template <typename T>
+            std::shared_ptr<T> getSystem()
+            {
+                return _systemManager->getSystem<T>();
+            }
+
+        private:
+            std::unique_ptr<LE::ComponentManager> _componentManager;        ///< The component manager
+            std::unique_ptr<LE::EntityManager> _entityManager;              ///< The entity manager
+            std::unique_ptr<LE::SystemManager> _systemManager;              ///< The system manager
+            Entity _cameraEntity;                                       ///< The entity representing the camera
+            void *_scene;                                               ///< The scene that contains the ECS
+>>>>>>> main
     };
 }
