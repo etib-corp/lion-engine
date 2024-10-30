@@ -170,10 +170,35 @@ namespace LE
          */
         Entity getCameraEntity() const;
 
+        /**
+         * @brief Function to get the scene.
+         *
+         * This function is used to get the scene that contains the ECS.
+         * @return The scene that contains the ECS.
+         */
         void *getScene() const;
 
-<<<<<<< HEAD
+        /**
+         * @brief Function to set the scene.
+         *
+         * This function is used to set the scene that contains the ECS.
+         * @param scene The scene that contains the ECS.
+         */
         void setScene(void *scene);
+
+        /**
+         * @brief Get a system
+         *
+         * This function will be used to get a system
+         *
+         * @tparam T The system to get
+         * @return std::shared_ptr<T> The system
+         */
+        template <typename T>
+        std::shared_ptr<T> getSystem()
+        {
+            return _systemManager->getSystem<T>();
+        }
 
     private:
         std::unique_ptr<LE::ComponentManager> _componentManager; ///< The component manager
@@ -181,21 +206,5 @@ namespace LE
         std::unique_ptr<LE::SystemManager> _systemManager;       ///< The system manager
         Entity _cameraEntity;                                    ///< The entity representing the camera
         void *_scene;                                            ///< The scene that contains the ECS
-=======
-            void setScene(void *scene);
-
-            template <typename T>
-            std::shared_ptr<T> getSystem()
-            {
-                return _systemManager->getSystem<T>();
-            }
-
-        private:
-            std::unique_ptr<LE::ComponentManager> _componentManager;        ///< The component manager
-            std::unique_ptr<LE::EntityManager> _entityManager;              ///< The entity manager
-            std::unique_ptr<LE::SystemManager> _systemManager;              ///< The system manager
-            Entity _cameraEntity;                                       ///< The entity representing the camera
-            void *_scene;                                               ///< The scene that contains the ECS
->>>>>>> main
     };
 }

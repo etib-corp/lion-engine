@@ -172,27 +172,6 @@ namespace LE
             }
         }
 
-<<<<<<< HEAD
-
-    private:
-        std::unordered_map<std::string, Signature> _signatures;            ///< Map of signatures
-        std::unordered_map<std::string, std::shared_ptr<System>> _systems; ///< Map of systems
-=======
-        /**
-         * @brief Update the systems
-         *
-         * This function will be used to update the systems
-         */
-        void update(Ecs *ecs, float dt)
-        {
-            for (auto const &pair : _systems)
-            {
-                auto const &system = pair.second;
-
-                system->update(ecs, dt);
-            }
-        }
-
         /**
          * @brief Get a system
          *
@@ -217,6 +196,5 @@ namespace LE
     private:
         std::unordered_map<std::string, Signature> _signatures;            ///< Map of signatures
         std::unordered_map<std::string, std::shared_ptr<System>> _systems; ///< Map of systems
->>>>>>> main
     };
 }

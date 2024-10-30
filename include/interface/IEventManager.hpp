@@ -8,25 +8,6 @@
 #ifndef IEVENTMANAGER_HPP_
 #define IEVENTMANAGER_HPP_
 
-<<<<<<< HEAD namespace LE
-{
-    /**
-     * @class IEventManager
-     * @brief Interface for the event manager.
-     *
-     * The IEventManager interface provides a way to manage events in the engine.
-     */
-    class IEventManager
-    {
-    public:
-        /**
-         * @brief Construct a new IEventManager object
-         */
-        virtual ~IEventManager() = default;
-
-    protected:
-    private:
-=======
 #include <functional>
 #include <map>
 #include <memory>
@@ -198,7 +179,6 @@ namespace LE
 
     protected:
         std::map<std::shared_ptr<LE::Key>, std::function<void(LE::IEngine &, float)>> _eventCallbacks; ///< List of event callbacks.
->>>>>>> main
     };
 }
 
