@@ -2,24 +2,31 @@
 ** EPITECH PROJECT, 2024
 ** lion-engine
 ** File description:
-** IColor
+** Color
 */
 
-#ifndef ICOLOR_HPP_
-    #define ICOLOR_HPP_
+#ifndef COLOR_HPP_
+    #define COLOR_HPP_
 
 namespace LE {
-    class IColor {
+    class Color {
         public:
             /**
-             * @brief Construct a new IColor
+             * @brief Construct a new Color object
              *
-             * The IColor class is an interface that is used to create a color object.
-             *
-             * @return IColor
+             * @param r The red value
+             * @param g The green value
+             * @param b The blue value
+             * @param a The alpha value
              *
             */
-            virtual ~IColor() = default;
+            Color(unsigned char r = 255, unsigned char g = 255, unsigned char b = 255, unsigned char a = 255);
+
+            /**
+             * @brief Destroy the Color object
+             *
+            */
+            ~Color();
 
             /**
              * @brief Set the red value
@@ -109,4 +116,4 @@ namespace LE {
     };
 }
 
-#endif /* !ICOLOR_HPP_ */
+#endif /* !COLOR_HPP_ */
