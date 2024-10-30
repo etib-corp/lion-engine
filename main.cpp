@@ -43,7 +43,6 @@ class SnakeScene : public LE::Scene {
         }
 
         std::shared_ptr<LE::ISpriteComponent> _sprite;
-
 };
 
 int main(int ac, char **av)

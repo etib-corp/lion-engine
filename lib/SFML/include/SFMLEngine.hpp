@@ -8,6 +8,7 @@
 #pragma once
 
 #include "interface/IEngine.hpp"
+#include "SFMLCameraComponent.hpp"
 #include "SFMLCommon.hpp"
 #include "SFMLFont.hpp"
 #include "SFMLShader.hpp"
@@ -75,6 +76,13 @@ namespace LE {
                 sprite->window = std::dynamic_pointer_cast<LE::SFMLWindow>(_window);
                 _sprites[path] = sprite;
                 return sprite;
+            }
+
+            std::shared_ptr<LE::ICameraComponent> createCameraComponent(const LE::Vector2<float> &position, const LE::Vector2<float> &size) override
+            {
+                std::shared_ptr<LE::ICameraComponent> camera = LE::Camera::createCameraComponent(position, size, _window);
+                _cameras.push_back(camera);
+                return camera;
             }
 
             std::shared_ptr<LE::IEventManager> createEventManager() override

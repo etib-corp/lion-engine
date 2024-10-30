@@ -11,12 +11,14 @@
     #include <iostream>
     #include <map>
     #include <memory>
+    #include <vector>
 
     #include "interface/IError.hpp"
     #include "interface/IEventManager.hpp"
     #include "interface/IFont.hpp"
     #include "interface/IShader.hpp"
     #include "interface/ISpriteComponent.hpp"
+    #include "interface/ICameraComponent.hpp"
     #include "interface/IText.hpp"
     #include "interface/IWindow.hpp"
     #include "ECS/Systems/IRender2DSystem.hpp"
@@ -89,6 +91,13 @@ namespace LE {
              * @return A shared pointer to the created sprite component.
              */
             virtual std::shared_ptr<LE::ISpriteComponent> createSpriteComponent(const std::string& texturePath) = 0;
+
+            /**
+             * @brief Creates a camera component.
+             *
+             * @return A shared pointer to the created camera component.
+             */
+            virtual std::shared_ptr<LE::ICameraComponent> createCameraComponent(const LE::Vector2<float> &position, const LE::Vector2<float> &size) = 0;
 
             /**
              * @brief Creates Event Manager.
@@ -228,6 +237,7 @@ namespace LE {
             std::shared_ptr<IWindow> _window;
             std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
             std::map<std::string, std::shared_ptr<IFont>> _fonts;
+            std::vector<std::shared_ptr<ICameraComponent>> _cameras;
             std::shared_ptr<IEventManager> _eventManager;
             std::shared_ptr<IGame> _game;
             std::function<void ()> _configFunc;             ///< Configuration function. This function is called before the engine starts running.
