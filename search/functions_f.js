@@ -7,13 +7,14 @@ var searchData=
   ['refract_4',['refract',['../classLE_1_1Vector2.html#a62fbb695971a1ad0e44bad7481ae4588',1,'LE::Vector2::refract()'],['../classLE_1_1Vector3.html#aa8e25f565d9bec7350e965f7830e9986',1,'LE::Vector3::refract()'],['../classLE_1_1Vector4.html#ae2418de92ab2a2d525bdd622458fd8b7',1,'LE::Vector4::refract()']]],
   ['registercomponent_5',['registerComponent',['../classLE_1_1ComponentManager.html#aa762e938915ccd1eabf338f2fa4eff01',1,'LE::ComponentManager::registerComponent()'],['../classLE_1_1Ecs.html#a6840853ab9e84740c801f03824b782c3',1,'LE::Ecs::registerComponent()']]],
   ['registersystem_6',['registerSystem',['../classLE_1_1Ecs.html#a5646354e4a23f93e1bd36fd79e18604f',1,'LE::Ecs::registerSystem()'],['../classLE_1_1SystemManager.html#a857064bedda208f8f6456b0df4c00f84',1,'LE::SystemManager::registerSystem()']]],
-  ['removeclientbyid_7',['removeClientById',['../classSessionManager.html#a35aada9670b8402063efca2c39ce0b3d',1,'SessionManager']]],
-  ['removecomponent_8',['removeComponent',['../classLE_1_1ComponentManager.html#a0022682d3176058f817a8b2eb65cc32e',1,'LE::ComponentManager::removeComponent()'],['../classLE_1_1Ecs.html#a5ee9b24a6dab97d449e9139cc206845e',1,'LE::Ecs::removeComponent()']]],
-  ['removedata_9',['removeData',['../classLE_1_1ComponentArray.html#a2cb7d63757b56f5e73c5d5f5cde7e4a8',1,'LE::ComponentArray']]],
-  ['removeeventlistener_10',['removeEventListener',['../classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab',1,'LE::IEventManager']]],
-  ['removescene_11',['removeScene',['../classLE_1_1SceneManager.html#a5fbd05592d41728f2a7250c2afb39b5e',1,'LE::SceneManager']]],
-  ['removetopic_12',['removeTopic',['../classLE_1_1Broker.html#a09449877ccfa042e27439bb750aa2857',1,'LE::Broker']]],
-  ['render_13',['render',['../classLE_1_1IWindow.html#aac2705e691634be00fb4283d33a3a7be',1,'LE::IWindow::render()'],['../classLE_1_1SFMLWindow.html#a0a93a8090be1d47a0dcb18b634fee819',1,'LE::SFMLWindow::render()']]],
-  ['restart_14',['restart',['../classLE_1_1Clock.html#aaef7d50a48ead6f90d0e08d022e486e9',1,'LE::Clock']]],
-  ['run_15',['run',['../classLE_1_1IEngine.html#a1edbb1b65589e73c4541477cd9983504',1,'LE::IEngine::run()'],['../classIListenerTCP.html#a6819be5b322623f45264b9c54eb76d11',1,'IListenerTCP::run()'],['../classIListenerUDP.html#a2d8d6e239d8d6737ccb1377eea06d3b5',1,'IListenerUDP::run()'],['../classIServer.html#ae5e333fb3552a20437fa5230b16b5617',1,'IServer::run()'],['../classListenerTCP.html#af7cb23c7d6f213aeb80eceb7be4e12d1',1,'ListenerTCP::run()'],['../classListenerUDP.html#ad95e62ccb817752d8214f0bdeaa976b9',1,'ListenerUDP::run()'],['../classServer.html#a315fc385bb4e2fefedaca409edbe312c',1,'Server::run()']]]
+  ['removeasset_7',['removeAsset',['../classAssetManager.html#aad1ff33b2fb8de76964de5a008666696',1,'AssetManager']]],
+  ['removeclientbyid_8',['removeClientById',['../classSessionManager.html#a35aada9670b8402063efca2c39ce0b3d',1,'SessionManager']]],
+  ['removecomponent_9',['removeComponent',['../classLE_1_1ComponentManager.html#a0022682d3176058f817a8b2eb65cc32e',1,'LE::ComponentManager::removeComponent()'],['../classLE_1_1Ecs.html#a5ee9b24a6dab97d449e9139cc206845e',1,'LE::Ecs::removeComponent()']]],
+  ['removedata_10',['removeData',['../classLE_1_1ComponentArray.html#a2cb7d63757b56f5e73c5d5f5cde7e4a8',1,'LE::ComponentArray']]],
+  ['removeeventlistener_11',['removeEventListener',['../classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab',1,'LE::IEventManager']]],
+  ['removescene_12',['removeScene',['../classLE_1_1SceneManager.html#a5fbd05592d41728f2a7250c2afb39b5e',1,'LE::SceneManager']]],
+  ['removetopic_13',['removeTopic',['../classLE_1_1Broker.html#a09449877ccfa042e27439bb750aa2857',1,'LE::Broker']]],
+  ['render_14',['render',['../classLE_1_1IWindow.html#aac2705e691634be00fb4283d33a3a7be',1,'LE::IWindow::render()'],['../classLE_1_1SFMLWindow.html#a0a93a8090be1d47a0dcb18b634fee819',1,'LE::SFMLWindow::render()']]],
+  ['restart_15',['restart',['../classLE_1_1Clock.html#aaef7d50a48ead6f90d0e08d022e486e9',1,'LE::Clock']]],
+  ['run_16',['run',['../classLE_1_1IEngine.html#a1edbb1b65589e73c4541477cd9983504',1,'LE::IEngine::run()'],['../classIListenerTCP.html#a6819be5b322623f45264b9c54eb76d11',1,'IListenerTCP::run()'],['../classIListenerUDP.html#a2d8d6e239d8d6737ccb1377eea06d3b5',1,'IListenerUDP::run()'],['../classIServer.html#ae5e333fb3552a20437fa5230b16b5617',1,'IServer::run()'],['../classListenerTCP.html#af7cb23c7d6f213aeb80eceb7be4e12d1',1,'ListenerTCP::run()'],['../classListenerUDP.html#ad95e62ccb817752d8214f0bdeaa976b9',1,'ListenerUDP::run()'],['../classServer.html#a315fc385bb4e2fefedaca409edbe312c',1,'Server::run()']]]
 ];
