@@ -18,13 +18,12 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerComponent<HitBox>();
     _ecs->registerComponent<MotionComponent>();
     _ecs->registerComponent<PatternComponent>();
-    _ecs->registerComponent<std::shared_ptr<LE::ICameraComponent>>();
+    _ecs->registerComponent<LE::ICameraComponent>();
 
     _ecs->registerSystem<CollisionSystem>();
     _ecs->registerSystem<MoveSystem>();
     _ecs->registerSystem<PatternSystem>();
     _ecs->registerSystem<ShootPatternSystem>();
-    _ecs->registerSystem<std::shared_ptr<LE::ICameraSystem>>();
 
     Signature CollisionSignature;
     CollisionSignature.set(_ecs->getComponentType<TransformComponent>());
@@ -47,10 +46,6 @@ LE::Scene::Scene(LE::IEngine *engine)
     ShootPatternSignature.set(_ecs->getComponentType<MotionComponent>());
     ShootPatternSignature.set(_ecs->getComponentType<ShootPatternComponent>());
     _ecs->setSignature<ShootPatternSystem>(ShootPatternSignature);
-
-    Signature CameraSignature;
-    CameraSignature.set(_ecs->getComponentType<std::shared_ptr<LE::ICameraComponent>>());
-    _ecs->setSignature<std::shared_ptr<LE::ICameraSystem>>(CameraSignature);
 
     _eventManager = engine->createEventManager();
     _engine = engine;
