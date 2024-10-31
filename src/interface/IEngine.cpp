@@ -100,3 +100,7 @@ void LE::IEngine::restartClock()
     _clock->restart();
 }
 
+std::shared_ptr<AssetManager> LE::IEngine::getAssetManager()
+{
+    return _assetManager;
+}

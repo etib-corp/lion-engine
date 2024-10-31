@@ -264,6 +264,7 @@ namespace LE
 
         INetworkModule *getNetworkModule();
 
+        std::shared_ptr<AssetManager> getAssetManager();
 
     protected:
         std::shared_ptr<IWindow> _window;
