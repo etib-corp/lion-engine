@@ -31,18 +31,15 @@ struct AnimatedSpriteComponent {
     std::string currentAnimation;
     int textureWidth;
     int textureHeight;
+    float elapsedTime;
+    int frameWidth;
+    int frameHeight;
 };
 
-AnimatedSpriteComponent *createAnimatedSpriteComponent(std::shared_ptr<LE::ISpriteComponent> sprite)
-{
-    auto *animatedSprite = new AnimatedSpriteComponent;
+AnimatedSpriteComponent *createAnimatedSpriteComponent(std::shared_ptr<LE::ISpriteComponent> sprite, int frameWidth, int frameHeight);
 
-    animatedSprite->textureWidth = sprite-<width;
-    animatedSprite->textureHeight = sprite->height;
-    animatedSprite->currentAnimation = "";
-    animatedSprite->animations = {};
-    return animatedSprite;
-}
+void addAnimation(AnimatedSpriteComponent &animatedSprite, const std::string &name, std::vector<unsigned int> frames, std::function<void(AnimatedSpriteComponent &)> callback, float frameTime, bool loop);
 
+LE::Vector4<int> getNewFrame(AnimatedSpriteComponent &animatedSprite);
 
 #endif /* !ANIMATEDSPRITECOMPONENT_HPP_ */

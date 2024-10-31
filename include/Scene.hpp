@@ -20,6 +20,7 @@
     #include "ECS/Systems/MoveSystem.hpp"
     #include "ECS/Systems/ShootPatternSystem.hpp"
     #include "ECS/Systems/ICameraSystem.hpp"
+    #include "ECS/Systems/AnimatedSpriteSystem.hpp"
 
 namespace LE
 {

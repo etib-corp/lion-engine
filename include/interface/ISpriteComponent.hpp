@@ -31,6 +31,6 @@ namespace LE
         unsigned int height; ///< The height of the sprite.
         bool hidden;         ///< Whether the sprite is hidden.
         float rotation;      ///< The rotation of the sprite.
-        LE::Vector4<float> rect = {1, 1, 1, 1}; ///< The rectangle of the sprite.
+        LE::Vector4<int> rect = {0, 0, static_cast<int>(width), static_cast<int>(height)}; ///< The rectangle of the sprite.
     };
 }
