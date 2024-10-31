@@ -75,7 +75,17 @@ namespace LE {
                 auto iSprite = LE::Sprite::createSpriteComponent(path, _window);
                 std::shared_ptr<LE::SFMLSpriteComponent> sprite = std::dynamic_pointer_cast<LE::SFMLSpriteComponent>(iSprite);
                 sprite->window = std::dynamic_pointer_cast<LE::SFMLWindow>(_window);
-                _sprites[path] = sprite;
+                return sprite;
+            }
+
+            std::shared_ptr<LE::ISpriteComponent> createSpriteComponentFromMemory(const std::string& data) override
+            {
+                if (!_window) {
+                    throw LE::IEngineError("No window was created.", "You must create a window before creating a sprite component.", "Try creating a window first.");
+                }
+                auto iSprite = LE::Sprite::createSpriteComponentFromMemory(data, _window);
+                std::shared_ptr<LE::SFMLSpriteComponent> sprite = std::dynamic_pointer_cast<LE::SFMLSpriteComponent>(iSprite);
+                sprite->window = std::dynamic_pointer_cast<LE::SFMLWindow>(_window);
                 return sprite;
             }
 

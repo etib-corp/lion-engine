@@ -97,6 +97,14 @@ namespace LE
         virtual std::shared_ptr<LE::ISpriteComponent> createSpriteComponent(const std::string &texturePath) = 0;
 
         /**
+         * @brief Creates a sprite component from memory.
+         *
+         * @param data The data of the sprite.
+         * @return A shared pointer to the created sprite component.
+         */
+        virtual std::shared_ptr<LE::ISpriteComponent> createSpriteComponentFromMemory(const std::string &data) = 0;
+
+        /**
          * @brief Creates a camera component.
          *
          * @return A shared pointer to the created camera component.
