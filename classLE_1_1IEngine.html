@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1SceneManager.html">SceneManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#ad2b8e9b2dc4e969ebf5cd66da96c8032">createSceneManager</a> ()</td></tr>
 <tr class="memdesc:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the <a class="el" href="classLE_1_1SceneManager.html" title="Manages scenes within the application.">SceneManager</a>.  <br /></td></tr>
 <tr class="separator:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1edbb1b65589e73c4541477cd9983504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a1edbb1b65589e73c4541477cd9983504">run</a> (bool <a class="el" href="classLE_1_1IEngine.html#aeac32de5ee84be7f2edc2bafe8345c89">throwError</a>=false)</td></tr>
+<tr class="memitem:a1edbb1b65589e73c4541477cd9983504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a1edbb1b65589e73c4541477cd9983504">run</a> (bool <a class="el" href="classLE_1_1IEngine.html#a0f09b2ec4d7beccea89104fcef562f1e">throwError</a>=false)</td></tr>
 <tr class="memdesc:a1edbb1b65589e73c4541477cd9983504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the engine.  <br /></td></tr>
 <tr class="separator:a1edbb1b65589e73c4541477cd9983504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a867c2a43246da1c48b112926c6607474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a867c2a43246da1c48b112926c6607474">debug</a> (const std::string &amp;message)</td></tr>
@@ -154,9 +154,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a253e515c2b7221a570aadfb693d0d0af"><td class="memItemLeft" align="right" valign="top"><a id="a253e515c2b7221a570aadfb693d0d0af" name="a253e515c2b7221a570aadfb693d0d0af"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>playScene</b> (const std::string &amp;name)</td></tr>
 <tr class="separator:a253e515c2b7221a570aadfb693d0d0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeac32de5ee84be7f2edc2bafe8345c89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#aeac32de5ee84be7f2edc2bafe8345c89">throwError</a> (const LE::Error &amp;error)</td></tr>
-<tr class="memdesc:aeac32de5ee84be7f2edc2bafe8345c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an error.  <br /></td></tr>
-<tr class="separator:aeac32de5ee84be7f2edc2bafe8345c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f09b2ec4d7beccea89104fcef562f1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a0f09b2ec4d7beccea89104fcef562f1e">throwError</a> (const <a class="el" href="classLE_1_1IError.html">LE::IError</a> &amp;error)</td></tr>
+<tr class="memdesc:a0f09b2ec4d7beccea89104fcef562f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an error.  <br /></td></tr>
+<tr class="separator:a0f09b2ec4d7beccea89104fcef562f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed47fd60b66f4640d9f25391e320a024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#aed47fd60b66f4640d9f25391e320a024">setConfig</a> (std::function&lt; void()&gt; func)</td></tr>
 <tr class="memdesc:aed47fd60b66f4640d9f25391e320a024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration function.  <br /></td></tr>
 <tr class="separator:aed47fd60b66f4640d9f25391e320a024"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -988,8 +988,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aeac32de5ee84be7f2edc2bafe8345c89" name="aeac32de5ee84be7f2edc2bafe8345c89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeac32de5ee84be7f2edc2bafe8345c89">&#9670;&#160;</a></span>throwError()</h2>
+<a id="a0f09b2ec4d7beccea89104fcef562f1e" name="a0f09b2ec4d7beccea89104fcef562f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f09b2ec4d7beccea89104fcef562f1e">&#9670;&#160;</a></span>throwError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -997,7 +997,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void LE::IEngine::throwError </td>
           <td>(</td>
-          <td class="paramtype">const LE::Error &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classLE_1_1IError.html">LE::IError</a> &amp;&#160;</td>
           <td class="paramname"><em>error</em></td><td>)</td>
           <td></td>
         </tr>
