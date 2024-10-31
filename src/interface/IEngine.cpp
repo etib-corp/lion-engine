@@ -14,6 +14,9 @@ void LE::IEngine::init()
     _networkLoaderLib = std::make_unique<NetworkLoaderLib>("./build/lib/NetworkModule/libNetworkModule.so");
     _networkLoaderLib->LoadModule();
     _networkModule = _networkLoaderLib->createNetworkModule();
+    _assetManager = std::make_shared<AssetManager>();
+    _assetLoader = std::make_unique<AssetLoader>(_assetManager, "./assets");
+    _assetLoader->loadAssets();
 }
 
 std::unique_ptr<NetworkLoaderLib> &LE::IEngine::getNetworkLoaderLib()
