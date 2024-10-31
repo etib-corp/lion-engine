@@ -67,7 +67,7 @@ namespace LE {
                  * @return void
                  *
                 */
-                virtual void setFont(std::shared_ptr<IFont> font);
+                virtual void setFont(std::shared_ptr<IFont> font) override;
 
                 /**
                  * @brief Get the content of the text

@@ -12,7 +12,9 @@
     #include <vector>
 
     #include "interface/GUI/IComponent.hpp"
+
     #include "interface/IShape.hpp"
+    #include "interface/IFont.hpp"
 
 namespace LE {
     namespace GUI {
@@ -78,7 +80,7 @@ namespace LE {
                  * @return std::vector<std::shared_ptr<IComponent>>
                  *
                 */
-                virtual void setBackground(LE::IShape *background);
+                virtual void setBackground(std::shared_ptr<LE::IShape> background);
 
                 /**
                  * @brief Get the children of the container
@@ -88,6 +90,8 @@ namespace LE {
                 */
                 virtual void setBackgroundColor(LE::Color *color);
 
+                virtual void setFont(std::shared_ptr<LE::IFont> font) override;
+
                 /**
                  * @brief Draw the container.
                  */
@@ -95,7 +99,7 @@ namespace LE {
 
             protected:
                 std::vector<std::shared_ptr<IComponent>> _children;     /*!< The children of the container */
-                LE::IShape *_background;                                /*!< The background of the container */
+                std::shared_ptr<LE::IShape> _background;                                /*!< The background of the container */
         };
     }
 }
