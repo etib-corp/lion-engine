@@ -47,7 +47,7 @@ void LE::ClientBroker::_sendMessage(std::shared_ptr<Message>message)
 
 void LE::ClientBroker::_onReceiveRequestCallback(const Request &request)
 {
-    std::shared_ptr<Message> message = std::shared_ptr<Message>();
+    std::shared_ptr<Message> message = std::make_shared<Message>();
 
     message->setRequest(request);
     _incomming_messages.push(message);

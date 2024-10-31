@@ -28,6 +28,8 @@
     #include "Clock.hpp"
     #include "interface/IGame.hpp"
     #include "NetworkLoaderLib.hpp"
+    #include "AssetManager.hpp"
+    #include "AssetLoader.hpp"
 
 /**
  * @namespace LE
@@ -270,6 +272,8 @@ namespace LE
 
         INetworkModule *getNetworkModule();
 
+        std::shared_ptr<AssetManager> getAssetManager();
+
     protected:
         std::shared_ptr<IWindow> _window;
         std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
@@ -285,6 +289,8 @@ namespace LE
         float _dt;                                           ///< The delta time.
         std::size_t _framerateLimit;                         ///< The frame rate limit.
         bool _throwError;                                    ///< A boolean flag indicating whether to throw an error.
+        std::shared_ptr<AssetManager> _assetManager;        ///< The asset manager.
+        std::unique_ptr<AssetLoader> _assetLoader;          ///< The asset loader.
     private:
     };
 }

@@ -19,7 +19,12 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerComponent<MotionComponent>();
     _ecs->registerComponent<PatternComponent>();
     _ecs->registerComponent<std::shared_ptr<LE::ICameraComponent>>();
+    _ecs->registerComponent<ShootPatternComponent>();
 
+    _ecs->registerSystem<CollisionSystem>();
+    _ecs->registerSystem<MoveSystem>();
+    _ecs->registerSystem<PatternSystem>();
+    _ecs->registerSystem<ShootPatternSystem>();
 
     Signature CollisionSignature;
     CollisionSignature.set(_ecs->getComponentType<TransformComponent>());
