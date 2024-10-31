@@ -33,7 +33,7 @@ void LE::SFMLEventManager::pollEvents()
                 if (_event.key.code == key->key && key->type == LE::PRESSED) {
                     callback(_engine, 0);
                 }
-                const_cast<LE::Key &>(*key)._alreadyPressed = true;
+                key->_alreadyPressed = true;
             }
             if (_event.type == sf::Event::KeyReleased) {
                 if (_event.key.code == key->key && key->type == LE::JUST_RELEASED && key->_alreadyPressed) {
@@ -42,7 +42,7 @@ void LE::SFMLEventManager::pollEvents()
                 if (_event.key.code == key->key && key->type == LE::RELEASED) {
                     callback(_engine, 0);
                 }
-                const_cast<LE::Key &>(*key)._alreadyPressed = false;
+                key->_alreadyPressed = false;
             }
         }
     }
