@@ -122,11 +122,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8a31be3907effc92d572fa5c713372a"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#ab8a31be3907effc92d572fa5c713372a">getWindow</a> ()</td></tr>
 <tr class="memdesc:ab8a31be3907effc92d572fa5c713372a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the window.  <br /></td></tr>
 <tr class="separator:ab8a31be3907effc92d572fa5c713372a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3639082ef04ec57c0329717b8c0b230"><td class="memItemLeft" align="right" valign="top"><a id="af3639082ef04ec57c0329717b8c0b230" name="af3639082ef04ec57c0329717b8c0b230"></a>
-virtual std::shared_ptr&lt; <a class="el" href="classIRender2DSystem.html">IRender2DSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createRender2DSystem</b> (<a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> &amp;ecs)=0</td></tr>
+<tr class="memitem:af3639082ef04ec57c0329717b8c0b230"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classIRender2DSystem.html">IRender2DSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#af3639082ef04ec57c0329717b8c0b230">createRender2DSystem</a> (<a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> &amp;ecs)=0</td></tr>
+<tr class="memdesc:af3639082ef04ec57c0329717b8c0b230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the render 2D system.  <br /></td></tr>
 <tr class="separator:af3639082ef04ec57c0329717b8c0b230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="memItemLeft" align="right" valign="top"><a id="ad2b8e9b2dc4e969ebf5cd66da96c8032" name="ad2b8e9b2dc4e969ebf5cd66da96c8032"></a>
-virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1SceneManager.html">SceneManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createSceneManager</b> ()</td></tr>
+<tr class="memitem:a929f0c65eb5d7610ddeaeaa4f4822af2"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1ICameraSystem.html">ICameraSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a929f0c65eb5d7610ddeaeaa4f4822af2">createCameraSystem</a> (<a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> &amp;ecs)=0</td></tr>
+<tr class="memdesc:a929f0c65eb5d7610ddeaeaa4f4822af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the camera system.  <br /></td></tr>
+<tr class="separator:a929f0c65eb5d7610ddeaeaa4f4822af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1SceneManager.html">SceneManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#ad2b8e9b2dc4e969ebf5cd66da96c8032">createSceneManager</a> ()</td></tr>
+<tr class="memdesc:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the <a class="el" href="classLE_1_1SceneManager.html" title="Manages scenes within the application.">SceneManager</a>.  <br /></td></tr>
 <tr class="separator:ad2b8e9b2dc4e969ebf5cd66da96c8032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1edbb1b65589e73c4541477cd9983504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a1edbb1b65589e73c4541477cd9983504">run</a> (bool <a class="el" href="classLE_1_1IEngine.html#aeac32de5ee84be7f2edc2bafe8345c89">throwError</a>=false)</td></tr>
 <tr class="memdesc:a1edbb1b65589e73c4541477cd9983504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the engine.  <br /></td></tr>
@@ -313,6 +316,44 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a929f0c65eb5d7610ddeaeaa4f4822af2" name="a929f0c65eb5d7610ddeaeaa4f4822af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929f0c65eb5d7610ddeaeaa4f4822af2">&#9670;&#160;</a></span>createCameraSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1ICameraSystem.html">ICameraSystem</a> &gt; LE::IEngine::createCameraSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> &amp;&#160;</td>
+          <td class="paramname"><em>ecs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the camera system. </p>
+<p>This method creates the camera system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ecs</td><td>The ECS object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created camera system. </dd></dl>
+
+<p>Implemented in <a class="el" href="classLE_1_1SFMLEngine.html#aa2300f9e09189ce54c1af66833fdde0b">LE::SFMLEngine</a>.</p>
+
+</div>
+</div>
 <a id="aa4b0d10168b5ecf7649360b68d72b0fa" name="aa4b0d10168b5ecf7649360b68d72b0fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4b0d10168b5ecf7649360b68d72b0fa">&#9670;&#160;</a></span>createEventManager()</h2>
 
@@ -395,6 +436,72 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created font resource. </dd></dl>
 
 <p>Implemented in <a class="el" href="classLE_1_1SFMLEngine.html#a1b1ad30d2a2d20d5cb5a0baac8320828">LE::SFMLEngine</a>.</p>
+
+</div>
+</div>
+<a id="af3639082ef04ec57c0329717b8c0b230" name="af3639082ef04ec57c0329717b8c0b230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3639082ef04ec57c0329717b8c0b230">&#9670;&#160;</a></span>createRender2DSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classIRender2DSystem.html">IRender2DSystem</a> &gt; LE::IEngine::createRender2DSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> &amp;&#160;</td>
+          <td class="paramname"><em>ecs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the render 2D system. </p>
+<p>This method creates the render 2D system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ecs</td><td>The ECS object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created render 2D system. </dd></dl>
+
+<p>Implemented in <a class="el" href="classLE_1_1SFMLEngine.html#a805837709a7bb8842805522f23a25072">LE::SFMLEngine</a>.</p>
+
+</div>
+</div>
+<a id="ad2b8e9b2dc4e969ebf5cd66da96c8032" name="ad2b8e9b2dc4e969ebf5cd66da96c8032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b8e9b2dc4e969ebf5cd66da96c8032">&#9670;&#160;</a></span>createSceneManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1SceneManager.html">SceneManager</a> &gt; LE::IEngine::createSceneManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the <a class="el" href="classLE_1_1SceneManager.html" title="Manages scenes within the application.">SceneManager</a>. </p>
+<p>This method creates the <a class="el" href="classLE_1_1SceneManager.html" title="Manages scenes within the application.">SceneManager</a>. </p><dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created <a class="el" href="classLE_1_1SceneManager.html" title="Manages scenes within the application.">SceneManager</a>. </dd></dl>
 
 </div>
 </div>
