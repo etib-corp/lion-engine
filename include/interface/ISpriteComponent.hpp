@@ -8,6 +8,7 @@
 #pragma once
 
 #include <string>
+#include "Maths/Vector4.hpp"
 
 namespace LE
 {
@@ -30,5 +31,6 @@ namespace LE
         unsigned int height; ///< The height of the sprite.
         bool hidden;         ///< Whether the sprite is hidden.
         float rotation;      ///< The rotation of the sprite.
+        LE::Vector4<float> rect = {1, 1, 1, 1}; ///< The rectangle of the sprite.
     };
 }
