@@ -18,6 +18,7 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerComponent<HitBox>();
     _ecs->registerComponent<MotionComponent>();
     _ecs->registerComponent<PatternComponent>();
+    _ecs->registerComponent<std::shared_ptr<LE::ICameraComponent>>();
 
 
     Signature CollisionSignature;
