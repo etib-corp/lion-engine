@@ -37,6 +37,7 @@ void LE::SFMLEventManager::pollEvents()
                 }
             }
             if (_event.type == sf::Event::KeyReleased) {
+                std::cout << "Key released" << std::endl;
                 if (_event.key.code == key->key && key->type == LE::JUST_RELEASED && key->_alreadyPressed) {
                     callback(_engine, 0);
                     key->_alreadyPressed = false;
