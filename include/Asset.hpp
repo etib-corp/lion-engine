@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdint>
+#include "interface/IError.hpp"
 
 /**
  * @class Asset
@@ -268,6 +269,12 @@ private:
     std::vector<std::uint8_t> _sound_data;
 };
 
+class ErrorAssetFactory : public LE::IError
+{
+    public:
+        ErrorAssetFactory(const std::string &title = "", const std::string &details = "", const std::string &help = "") : IError(title, details, help) {}
+};
+
 class AssetFactory
 {
 public:
@@ -285,6 +292,7 @@ public:
         {
             return it->second(name, file_path);
         }
+        throw ErrorAssetFactory("Asset type not found", "The file " + file_path + " is in an unsupported directory", "Check the file organization");
         return nullptr;
     }
 
