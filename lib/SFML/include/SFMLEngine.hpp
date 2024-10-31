@@ -8,6 +8,10 @@
 #pragma once
 
 #include "interface/IEngine.hpp"
+
+#include "ECS/Systems/SFMLRender2DSystem.hpp"
+#include "ECS/Systems/SFMLCameraSystem.hpp"
+
 #include "SFMLCameraComponent.hpp"
 #include "SFMLCommon.hpp"
 #include "SFMLFont.hpp"
@@ -15,8 +19,12 @@
 #include "SFMLSpriteComponent.hpp"
 #include "SFMLWindow.hpp"
 #include "SFMLEventManager.hpp"
-#include "ECS/Systems/SFMLRender2DSystem.hpp"
-#include "ECS/Systems/SFMLCameraSystem.hpp"
+
+#include "GUI/SFMLManager.hpp"
+#include "GUI/SFMLButton.hpp"
+#include "GUI/SFMLContainer.hpp"
+#include "GUI/SFMLText.hpp"
+#include "GUI/SFMLTextField.hpp"
 
 /**
  * @namespace LE
@@ -113,5 +121,47 @@ namespace LE {
                 ecs.setSignature<SFMLCameraSystem>(signature);
                 return cameraSystem;
             }
+
+            std::shared_ptr<LE::GUI::IManager> createGUIManager(std::function<void(std::shared_ptr<LE::GUI::IManager>)> config) override
+            {
+                auto manager = std::make_shared<LE::GUI::SFMLManager>(_window);
+
+                config(manager);
+                return manager;
+            }
+
+            std::shared_ptr<LE::GUI::IButton> createButton(std::function<void(std::shared_ptr<LE::GUI::IButton>)> config) override
+            {
+                auto button = std::make_shared<LE::GUI::SFMLButton>(LE::Vector3<float>(0, 0, 0), LE::Vector2<float>(0, 0), "", _window);
+
+                config(button);
+                return button;
+            }
+
+            std::shared_ptr<LE::GUI::IText> createText(std::function<void(std::shared_ptr<LE::GUI::IText>)> config) override
+            {
+                auto text = std::make_shared<LE::GUI::SFMLText>(LE::Vector3<float>(0, 0, 0), _window, "", nullptr);
+
+                config(text);
+                return text;
+            }
+
+            std::shared_ptr<LE::GUI::ITextField> createTextField(std::function<void(std::shared_ptr<LE::GUI::ITextField>)> config) override
+            {
+                auto textField = std::make_shared<LE::GUI::SFMLTextField>(LE::Vector3<float>(0, 0, 0), _window, "", "");
+
+                config(textField);
+                return textField;
+            }
+
+            std::shared_ptr<LE::GUI::IContainer> createContainer(std::function<void(std::shared_ptr<LE::GUI::IContainer>)> config) override
+            {
+                auto container = std::make_shared<LE::GUI::SFMLContainer>(LE::Vector3<float>(0, 0, 0), LE::Vector2<float>(0, 0), _window);
+
+                config(container);
+                return container;
+            }
+
+
     };
 }

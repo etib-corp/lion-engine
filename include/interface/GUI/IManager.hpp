@@ -8,7 +8,7 @@
 #ifndef IMANAGER_HPP_
     #define IMANAGER_HPP_
 
-    #include "GUI/IContainer.hpp"
+    #include "interface/GUI/IContainer.hpp"
 
 namespace LE {
     namespace GUI {

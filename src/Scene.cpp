@@ -65,5 +65,6 @@ void LE::Scene::init()
 void LE::Scene::draw()
 {
     _ecs->update(0.0f);
+    _guiManager->draw();
     _eventManager->pollEvents();
 }

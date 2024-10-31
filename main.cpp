@@ -6,6 +6,7 @@
 */
 
 #include "GraphicalLib.hpp"
+
 #include <thread>
 
 int id = 0;
@@ -31,6 +32,20 @@ class SnakeScene : public LE::Scene {
     public:
         SnakeScene(LE::IEngine *engine) : LE::Scene(engine)
         {
+            _guiManager = engine->createGUIManager([=](std::shared_ptr<LE::GUI::IManager> manager) {
+                std::function<void(std::shared_ptr<LE::GUI::IButton>)> configButton = [&](std::shared_ptr<LE::GUI::IButton> button) {
+                    button->setBackgroundColor(new LE::Color(255, 0, 0, 255));
+                    button->setWidth(100);
+                    button->setHeight(50);
+                    button->setPos(100, 100);
+                    button->setOnClickCallback([]() {
+                        std::cout << "Button clicked" << std::endl;
+                    });
+                };
+                auto button = engine->createButton(configButton);
+
+                manager->addChildren(button);
+            });
         }
 
         void init() override
