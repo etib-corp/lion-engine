@@ -25,6 +25,7 @@ namespace LE {
 
     namespace Sprite {
         std::shared_ptr<LE::ISpriteComponent> createSpriteComponent(const std::string& path, std::shared_ptr<LE::IWindow> window);
+        std::shared_ptr<LE::ISpriteComponent> createSpriteComponentFromMemory(const std::string& data, std::shared_ptr<LE::IWindow> window);
         void drawSpriteComponent(std::shared_ptr<LE::ISpriteComponent> sprite);
     }
 }
