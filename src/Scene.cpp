@@ -50,6 +50,7 @@ LE::Scene::Scene(LE::IEngine *engine)
     _eventManager = engine->createEventManager();
     _engine = engine;
     _engine->createRender2DSystem(*_ecs);
+    _engine->createCameraSystem(*_ecs);
 }
 
 LE::Scene::~Scene()
