@@ -28,7 +28,7 @@ namespace LE {
          * @endcode
          *
         */
-        class SFMLText : public LE::IText {
+        class SFMLText : public LE::GUI::IText {
             public:
                 /**
                  * @brief Construct a new SFMLText
@@ -105,6 +105,8 @@ namespace LE {
                  * @brief Draw the text
                  */
                 void draw() override;
+
+                void resize(float width, float height) override;
 
                 sf::Text *_text;    /*!< The text object interpreted in SFML */
                 std::shared_ptr<SFMLWindow> _window;    /*!< The window where the text will be drawn */

@@ -11,8 +11,8 @@
     #include <memory>
     #include <vector>
 
-    #include "GUI/IComponent.hpp"
-    #include "IShape.hpp"
+    #include "interface/GUI/IComponent.hpp"
+    #include "interface/IShape.hpp"
 
 namespace LE {
     namespace GUI {

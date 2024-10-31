@@ -35,14 +35,6 @@ namespace LE {
             */
             virtual ~IRectangle() = default;
 
-            /**
-             * @brief Set the size of the rectangle
-             *
-             * @param size The size of the rectangle
-             * @return void
-             *
-            */
-            virtual void setSize(const LE::Vector2<float>& size);
 
             /**
              * @brief Get the size of the rectangle
@@ -59,6 +51,8 @@ namespace LE {
              *
             */
             virtual LE::Vector2<float> getSize() const;
+
+            virtual void resize(float width, float height) override;
 
         protected:
             LE::Vector2<float> _size;   /*!< The size of the rectangle */

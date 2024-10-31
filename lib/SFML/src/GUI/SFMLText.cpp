@@ -33,14 +33,14 @@ void LE::GUI::SFMLText::init()
 
 void LE::GUI::SFMLText::setContent(const std::string &content)
 {
-    LE::IText::setContent(content);
+    LE::GUI::IText::setContent(content);
 
     _text->setString(content);
 }
 
 void LE::GUI::SFMLText::setFont(std::shared_ptr<IFont> font)
 {
-    LE::IText::setFont(font);
+    LE::GUI::IText::setFont(font);
 
     _text->setFont(dynamic_cast<LE::SFMLFont *>(font.get())->_font);
 }
@@ -68,4 +68,11 @@ void LE::GUI::SFMLText::draw()
 {
     _text->setPosition(sf::Vector2f(_x, _y));
     _window->getWindow()->draw(*_text);
+}
+
+void LE::GUI::SFMLText::resize(float width, float height)
+{
+    (void)width;
+    setCharacterSize(height);
+    _text->setCharacterSize(height);
 }

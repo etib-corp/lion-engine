@@ -38,7 +38,7 @@ std::string LE::GUI::ITextField::getInputContent() const
     return _input->getContent();
 }
 
-std::shared_ptr<LE::IText> LE::GUI::ITextField::getInput() const
+std::shared_ptr<LE::GUI::IText> LE::GUI::ITextField::getInput() const
 {
     return _input;
 }

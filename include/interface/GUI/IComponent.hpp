@@ -83,6 +83,10 @@ namespace LE {
                 */
                 void setPos(float x, float y);
 
+                void setWidth(float width);
+
+                void setHeight(float height);
+
                 /**
                  * @brief Get the width of the component.
                  *

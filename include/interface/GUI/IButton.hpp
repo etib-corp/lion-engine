@@ -10,8 +10,8 @@
 
     #include <functional>
 
-    #include "GUI/IContainer.hpp"
-    #include "GUI/IInteractable.hpp"
+    #include "interface/GUI/IContainer.hpp"
+    #include "interface/GUI/IInteractable.hpp"
 
 namespace LE {
     namespace GUI {
