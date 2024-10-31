@@ -16,6 +16,7 @@
 #include "SFMLWindow.hpp"
 #include "SFMLEventManager.hpp"
 #include "ECS/Systems/SFMLRender2DSystem.hpp"
+#include "ECS/Systems/SFMLCameraSystem.hpp"
 
 /**
  * @namespace LE
@@ -91,7 +92,7 @@ namespace LE {
                 return _eventManager;
             }
 
-            std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs)
+            std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs) override
             {
                 Signature signature;
                 std::shared_ptr<SFMLRender2DSystem> render2DSystem = ecs.registerSystem<SFMLRender2DSystem>();
@@ -100,6 +101,17 @@ namespace LE {
                 signature.set(ecs.getComponentType<std::shared_ptr<LE::ISpriteComponent>>());
                 ecs.setSignature<SFMLRender2DSystem>(signature);
                 return render2DSystem;
+            }
+
+            std::shared_ptr<ICameraSystem> createCameraSystem(LE::Ecs &ecs) override
+            {
+                Signature signature;
+                std::shared_ptr<SFMLCameraSystem> cameraSystem = ecs.registerSystem<SFMLCameraSystem>();
+                cameraSystem->setEngine(this);
+                signature.set(ecs.getComponentType<TransformComponent>());
+                signature.set(ecs.getComponentType<std::shared_ptr<LE::ICameraComponent>>());
+                ecs.setSignature<SFMLCameraSystem>(signature);
+                return cameraSystem;
             }
     };
 }

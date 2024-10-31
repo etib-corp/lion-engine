@@ -8,25 +8,26 @@
 #ifndef IENGINE_HPP_
 #define IENGINE_HPP_
 
-#include <iostream>
-#include <map>
-#include <memory>
-#include <vector>
+    #include <iostream>
+    #include <map>
+    #include <memory>
+    #include <vector>
 
-#include "interface/IError.hpp"
-#include "interface/IEventManager.hpp"
-#include "interface/IFont.hpp"
-#include "interface/IShader.hpp"
-#include "interface/ISpriteComponent.hpp"
-#include "interface/ICameraComponent.hpp"
-#include "interface/GUI/IText.hpp"
-#include "interface/IWindow.hpp"
-#include "ECS/Systems/IRender2DSystem.hpp"
-#include "SceneManager.hpp"
-#include "interface/IGame.hpp"
-#include "Clock.hpp"
-#include "interface/IGame.hpp"
-#include "NetworkLoaderLib.hpp"
+    #include "interface/IError.hpp"
+    #include "interface/IEventManager.hpp"
+    #include "interface/IFont.hpp"
+    #include "interface/IShader.hpp"
+    #include "interface/ISpriteComponent.hpp"
+    #include "interface/ICameraComponent.hpp"
+    #include "interface/GUI/IText.hpp"
+    #include "interface/IWindow.hpp"
+    #include "ECS/Systems/IRender2DSystem.hpp"
+    #include "ECS/Systems/ICameraSystem.hpp"
+    #include "SceneManager.hpp"
+    #include "interface/IGame.hpp"
+    #include "Clock.hpp"
+    #include "interface/IGame.hpp"
+    #include "NetworkLoaderLib.hpp"
 
 /**
  * @namespace LE
@@ -120,8 +121,32 @@ namespace LE
             return std::dynamic_pointer_cast<T>(_window);
         }
 
+        /**
+         * @brief Creates the render 2D system.
+         *
+         * This method creates the render 2D system.
+         *
+         * @param ecs The ECS object.
+         * @return A shared pointer to the created render 2D system.
+         */
         virtual std::shared_ptr<IRender2DSystem> createRender2DSystem(LE::Ecs &ecs) = 0;
 
+        /**
+         * @brief Creates the camera system.
+         *
+         * This method creates the camera system.
+         *
+         * @param ecs The ECS object.
+         * @return A shared pointer to the created camera system.
+         */
+        virtual std::shared_ptr<ICameraSystem> createCameraSystem(LE::Ecs &ecs) = 0;
+
+        /**
+         * @brief Creates the SceneManager.
+         *
+         * This method creates the SceneManager.
+         * @return A shared pointer to the created SceneManager.
+         */
         virtual std::shared_ptr<SceneManager> createSceneManager()
         {
             return std::make_shared<SceneManager>(*this);
