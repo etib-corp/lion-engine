@@ -12,9 +12,13 @@
     #include <vector>
 
     #include "interface/GUI/IComponent.hpp"
+<<<<<<< HEAD
 
     #include "interface/IShape.hpp"
     #include "interface/IFont.hpp"
+=======
+    #include "interface/IShape.hpp"
+>>>>>>> 1ca19d74b29824b056f557fe800f0879faa9f9fb
 
 namespace LE {
     namespace GUI {
