@@ -22,6 +22,9 @@ namespace LE {
          *
          * The text field is represented by 3 values: placeholder, label and input.
          * The placeholder is a `std::string` that contains the placeholder of the text field.
+         * The label is a `std::shared_ptr<LE::GUI::IText>` that contains the label of the text field.
+         * The input is a `std::shared_ptr<LE::GUI::IText>` that contains the input of the text field.
+         *
          *
          * @example
          * @code

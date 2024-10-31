@@ -33,11 +33,7 @@ class SnakeScene : public LE::Scene {
         SnakeScene(LE::IEngine *engine) : LE::Scene(engine)
         {
             _guiManager = engine->createGUIManager([=](std::shared_ptr<LE::GUI::IManager> manager) {
-<<<<<<< HEAD
                 std::function<void(std::shared_ptr<LE::GUI::IButton>)> configButton = [=](std::shared_ptr<LE::GUI::IButton> button) {
-=======
-                std::function<void(std::shared_ptr<LE::GUI::IButton>)> configButton = [&](std::shared_ptr<LE::GUI::IButton> button) {
->>>>>>> 1ca19d74 (feat: integration of gui into example)
                     button->setBackgroundColor(new LE::Color(255, 0, 0, 255));
                     button->setWidth(100);
                     button->setHeight(50);
