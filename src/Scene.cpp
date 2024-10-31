@@ -18,7 +18,8 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerComponent<HitBox>();
     _ecs->registerComponent<MotionComponent>();
     _ecs->registerComponent<PatternComponent>();
-    _ecs->registerComponent<LE::ICameraComponent>();
+    _ecs->registerComponent<std::shared_ptr<LE::ICameraComponent>>();
+    _ecs->registerComponent<ShootPatternComponent>();
 
     _ecs->registerSystem<CollisionSystem>();
     _ecs->registerSystem<MoveSystem>();
