@@ -116,6 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad23bcb6693928b429ccb0ae9d852d1b7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1ISpriteComponent.html">LE::ISpriteComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#ad23bcb6693928b429ccb0ae9d852d1b7">createSpriteComponent</a> (const std::string &amp;path) override</td></tr>
 <tr class="memdesc:ad23bcb6693928b429ccb0ae9d852d1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a sprite component.  <br /></td></tr>
 <tr class="separator:ad23bcb6693928b429ccb0ae9d852d1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96e8aacbe9f23450dbedb1d35a7557c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1ISpriteComponent.html">LE::ISpriteComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#af96e8aacbe9f23450dbedb1d35a7557c">createSpriteComponentFromMemory</a> (const std::string &amp;data) override</td></tr>
+<tr class="memdesc:af96e8aacbe9f23450dbedb1d35a7557c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a sprite component from memory.  <br /></td></tr>
+<tr class="separator:af96e8aacbe9f23450dbedb1d35a7557c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa95455aeface64c6cd8cf7b393fbe4c6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1ICameraComponent.html">LE::ICameraComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#aa95455aeface64c6cd8cf7b393fbe4c6">createCameraComponent</a> (const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;position, const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;size) override</td></tr>
 <tr class="memdesc:aa95455aeface64c6cd8cf7b393fbe4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a camera component.  <br /></td></tr>
 <tr class="separator:aa95455aeface64c6cd8cf7b393fbe4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac5ce7d2bdfeba098d45c0a75d63e97ec inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1ISpriteComponent.html">LE::ISpriteComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#ac5ce7d2bdfeba098d45c0a75d63e97ec">createSpriteComponent</a> (const std::string &amp;texturePath)=0</td></tr>
 <tr class="memdesc:ac5ce7d2bdfeba098d45c0a75d63e97ec inherit pub_methods_classLE_1_1IEngine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a sprite component.  <br /></td></tr>
 <tr class="separator:ac5ce7d2bdfeba098d45c0a75d63e97ec inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecba6572a21101d36367bb39c866f73e inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1ISpriteComponent.html">LE::ISpriteComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#aecba6572a21101d36367bb39c866f73e">createSpriteComponentFromMemory</a> (const std::string &amp;data)=0</td></tr>
+<tr class="memdesc:aecba6572a21101d36367bb39c866f73e inherit pub_methods_classLE_1_1IEngine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a sprite component from memory.  <br /></td></tr>
+<tr class="separator:aecba6572a21101d36367bb39c866f73e inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96906f882fa5c9a6a76e385df310fd2b inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1ICameraComponent.html">LE::ICameraComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a96906f882fa5c9a6a76e385df310fd2b">createCameraComponent</a> (const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;position, const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;size)=0</td></tr>
 <tr class="memdesc:a96906f882fa5c9a6a76e385df310fd2b inherit pub_methods_classLE_1_1IEngine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a camera component.  <br /></td></tr>
 <tr class="separator:a96906f882fa5c9a6a76e385df310fd2b inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -569,6 +575,43 @@ std::unique_ptr&lt; <a class="el" href="classAssetLoader.html">AssetLoader</a> &
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created sprite component. </dd></dl>
 
 <p>Implements <a class="el" href="classLE_1_1IEngine.html#ac5ce7d2bdfeba098d45c0a75d63e97ec">LE::IEngine</a>.</p>
+
+</div>
+</div>
+<a id="af96e8aacbe9f23450dbedb1d35a7557c" name="af96e8aacbe9f23450dbedb1d35a7557c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96e8aacbe9f23450dbedb1d35a7557c">&#9670;&#160;</a></span>createSpriteComponentFromMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1ISpriteComponent.html">LE::ISpriteComponent</a> &gt; LE::SFMLEngine::createSpriteComponentFromMemory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a sprite component from memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data of the sprite. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created sprite component. </dd></dl>
+
+<p>Implements <a class="el" href="classLE_1_1IEngine.html#aecba6572a21101d36367bb39c866f73e">LE::IEngine</a>.</p>
 
 </div>
 </div>
