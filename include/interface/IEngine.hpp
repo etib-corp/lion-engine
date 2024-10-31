@@ -183,7 +183,10 @@ namespace LE
          *
          * @return A shared pointer to the game.
          */
-        std::shared_ptr<LE::IGame> getGame();
+        std::shared_ptr<LE::IGame> getGame()
+        {
+            return _game;
+        }
 
         /**
          * @brief Adds a scene to the game.
