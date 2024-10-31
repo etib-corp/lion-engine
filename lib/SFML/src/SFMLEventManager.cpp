@@ -25,27 +25,17 @@ void LE::SFMLEventManager::pollEvents()
         if (_event.type == sf::Event::Closed) {
             window->close();
         }
-        for (auto &[key, callback] : _eventCallbacks) {
-            if (_event.type == sf::Event::KeyPressed) {
-                if (_event.key.code == key->key && key->type == LE::JUST_PRESSED && !key->_alreadyPressed) {
-                    std::cout << "Key justpPressed" << std::endl;
-                    callback(_engine, 0);
-                    key->_alreadyPressed = true;
-                }
-                if (_event.key.code == key->key && key->type == LE::PRESSED) {
-                    std::cout << "Key pressed" << std::endl;
+        if (_event.type == sf::Event::KeyPressed) {
+            for (auto &[key, callback] : _eventCallbacks) {
+                if (_event.key.code == key->key && ((key->type == LE::JUST_PRESSED && !key->_alreadyPressed) || key->type == LE::PRESSED)) {
                     callback(_engine, 0);
                     key->_alreadyPressed = true;
                 }
             }
-            if (_event.type == sf::Event::KeyReleased) {
-                if (_event.key.code == key->key && key->type == LE::JUST_RELEASED && key->_alreadyPressed) {
-                    std::cout << "Key just released" << std::endl;
-                    callback(_engine, 0);
-                    key->_alreadyPressed = false;
-                }
-                if (_event.key.code == key->key && key->type == LE::RELEASED) {
-                    std::cout << "Key released" << std::endl;
+        }
+        if (_event.type == sf::Event::KeyReleased) {
+            for (auto &[key, callback] : _eventCallbacks) {
+                if (_event.key.code == key->key && (key->type == LE::JUST_RELEASED && key->_alreadyPressed) || key->type == LE::RELEASED) {
                     callback(_engine, 0);
                     key->_alreadyPressed = false;
                 }
