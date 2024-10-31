@@ -37,7 +37,7 @@
  */
 namespace LE
 {
-    class IEngineError : public IError
+    class IEngineError : public LE::IError
     {
     public:
         IEngineError(const std::string &title = "", const std::string &details = "", const std::string &help = "") : IError(title, details, help) {}
@@ -223,7 +223,7 @@ namespace LE
          * @param error The error to throw.
          * @note This function is use to throw an error from the Engine class only if the throwError flag is set to true.
          */
-        void throwError(const LE::Error &error);
+        void throwError(const LE::IError &error);
 
         /**
          * @brief Sets the configuration function.

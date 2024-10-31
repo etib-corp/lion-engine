@@ -15,15 +15,17 @@
  *
  * This class is used to throw errors related to the ComponentManager class
  */
-class ComponentManagerError : public LE::Error
+class ComponentManagerError : public LE::IError
 {
 public:
     /**
      * @brief Construct a new ComponentManagerError object
      *
-     * @param message The error message
+     * @param title The title of the error.
+     * @param details The details of the error.
+     * @param help The help message for the error.
      */
-    ComponentManagerError(const std::string &message) : Error(message) {}
+    ComponentManagerError(const std::string &title, const std::string &details, const std::string &help) : IError(title, details, help) {}
 };
 
 /**
@@ -96,7 +98,7 @@ namespace LE
         {
             if (_entityToIndexMap.find(entity) != _entityToIndexMap.end())
             {
-                throw ComponentManagerError("Component already exists");
+                throw ComponentManagerError("Component already exists", "The component already exists", "Try to add a different component");
             }
             _components[_size] = component;
             _entityToIndexMap[entity] = _size;
@@ -114,7 +116,7 @@ namespace LE
         {
             if (_entityToIndexMap.find(entity) == _entityToIndexMap.end())
             {
-                throw ComponentManagerError("Removing non-existent component");
+                throw ComponentManagerError("Removing non-existent component", "The component does not exist", "Try to remove a different component");
             }
 
             size_t indexOfRemovedEntity = _entityToIndexMap[entity];
@@ -142,7 +144,7 @@ namespace LE
         {
             if (_entityToIndexMap.find(entity) == _entityToIndexMap.end())
             {
-                throw ComponentManagerError("Retrieving non-existent component");
+                throw ComponentManagerError("Retrieving non-existent component", "The component does not exist", "Try to get a different component");
             }
 
             return _components[_entityToIndexMap[entity]];
@@ -219,7 +221,7 @@ namespace LE
             std::string typeName = typeid(T).name();
             if (_componentArrays.find(typeName) != _componentArrays.end())
             {
-                throw ComponentManagerError("Component already registered");
+                throw ComponentManagerError("Component already registered", "The component is already registered", "Try to register a different component");
             }
             _componentArrays[typeName] = std::make_unique<ComponentArray<T>>();
             _componentTypes[typeName] = _nextComponentType;
@@ -281,7 +283,7 @@ namespace LE
             std::string typeName = typeid(T).name();
             if (_componentTypes.find(typeName) == _componentTypes.end())
             {
-                throw ComponentManagerError("Component not registered before use");
+                throw ComponentManagerError("Component not registered before use", "The component is not registered", "Try to register the component before using it");
             }
             return _componentTypes[typeName];
         }
@@ -321,7 +323,7 @@ namespace LE
             std::string typeName = typeid(T).name();
             if (_componentArrays.find(typeName) == _componentArrays.end())
             {
-                throw ComponentManagerError("Component not registered before use");
+                throw ComponentManagerError("Component not registered before use", "The component is not registered", "Try to register the component before using it");
             }
             return std::static_pointer_cast<ComponentArray<T>>(_componentArrays[typeName]);
         }

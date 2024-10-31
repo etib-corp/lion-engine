@@ -56,7 +56,7 @@ void LE::IEngine::run(bool throwError)
     }
 }
 
-void LE::IEngine::throwError(const LE::Error &error)
+void LE::IEngine::throwError(const LE::IError &error)
 {
     if (_throwError) {
         throw error;

@@ -35,14 +35,16 @@ public:
  * @brief SystemManagerError class
  * This class is used to throw errors related to the SystemManager
  */
-class SystemManagerError : public LE::Error
+class SystemManagerError : public LE::IError
 {
 public:
     /**
      * @brief Construct a new SystemManagerError object
-     * @param message The message to display
+     * @param title The message to display
+     * @param details The details of the error
+     * @param help The help message
      */
-    SystemManagerError(std::string message) : LE::Error(message) {}
+    SystemManagerError(const std::string &title, const std::string &details, const std::string &help) : LE::IError(title, details, help) {}
 };
 
 namespace LE
@@ -69,7 +71,7 @@ namespace LE
 
             if (_systems.find(typeName) != _systems.end())
             {
-                throw SystemManagerError("System already registered");
+                throw SystemManagerError("System already registered", "The system is already registered", "Try to register a different system");
             }
 
             auto system = std::make_shared<T>();
@@ -91,7 +93,7 @@ namespace LE
 
             if (_systems.find(typeName) == _systems.end())
             {
-                throw SystemManagerError("System not registered before setting signature");
+                throw SystemManagerError("System not registered before setting signature", "The system is not registered", "Try to register the system before setting the signature");
             }
 
             _signatures.insert({typeName, signature});
@@ -151,7 +153,7 @@ namespace LE
 
             if (_systems.find(typeName) == _systems.end())
             {
-                throw SystemManagerError("System not registered before deleting");
+                throw SystemManagerError("System not registered before deleting", "The system is not registered", "Try to register the system before deleting");
             }
 
             _systems.erase(typeName);
@@ -187,7 +189,7 @@ namespace LE
 
             if (_systems.find(typeName) == _systems.end())
             {
-                throw SystemManagerError("System not registered before getting");
+                throw SystemManagerError("System not registered before getting", "The system is not registered", "Try to register the system before getting");
             }
 
             return std::dynamic_pointer_cast<T>(_systems[typeName]);

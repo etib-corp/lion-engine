@@ -13,14 +13,16 @@
  * @class EntityManagerError
  * @brief EntityManagerError class
  */
-class EntityManagerError : public LE::Error
+class EntityManagerError : public LE::IError
 {
 public:
     /**
      * @brief Construct a new EntityManagerError object
-     * @param message The message to display
+     * @param title The title of the error.
+     * @param details The details of the error.
+     * @param help The help message for the error.
      */
-    EntityManagerError(const std::string &message) : Error(message) {}
+    EntityManagerError(const std::string &title, const std::string &details, const std::string &help) : LE::IError(title, details, help) {}
 };
 
 namespace LE

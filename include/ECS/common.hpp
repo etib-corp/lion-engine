@@ -10,7 +10,7 @@
 #include <array>
 #include <bitset>
 #include <cmath>
-#include "Error.hpp"
+#include "interface/IError.hpp"
 #include <iostream>
 #include <map>
 #include <memory>

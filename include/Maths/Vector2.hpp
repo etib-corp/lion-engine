@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "Error.hpp"
+#include "interface/IError.hpp"
 
 #include <cmath>
 #include <iostream>
@@ -35,7 +35,7 @@ namespace LE
          * The error message is passed as a parameter to the constructor.
          * The error message can be retrieved using the what() method.
          */
-        class Vector2Error : public LE::Error
+        class Vector2Error : public LE::IError
         {
         public:
             /**
@@ -43,7 +43,7 @@ namespace LE
              *
              * @param message The error message.
              */
-            Vector2Error(const std::string &message) : Error(message) {}
+            Vector2Error(const std::string &title, const std::string &details, const std::string &help) : LE::IError(title, details, help) {}
         };
 
         /**
