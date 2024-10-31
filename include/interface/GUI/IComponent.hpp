@@ -9,6 +9,9 @@
     #define ICOMPONENT_HPP_
 
     #include <iostream>
+    #include <memory>
+
+    #include "interface/IFont.hpp"
 
 namespace LE {
     namespace GUI {
@@ -86,6 +89,8 @@ namespace LE {
                 void setWidth(float width);
 
                 void setHeight(float height);
+
+                virtual void setFont(std::shared_ptr<LE::IFont> font) = 0;
 
                 /**
                  * @brief Get the width of the component.

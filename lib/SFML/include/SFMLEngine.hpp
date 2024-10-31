@@ -126,6 +126,7 @@ namespace LE {
             {
                 auto manager = std::make_shared<LE::GUI::SFMLManager>(_window);
 
+                manager->init();
                 config(manager);
                 return manager;
             }
@@ -134,6 +135,7 @@ namespace LE {
             {
                 auto button = std::make_shared<LE::GUI::SFMLButton>(LE::Vector3<float>(0, 0, 0), LE::Vector2<float>(0, 0), "", _window);
 
+                button->init();
                 config(button);
                 return button;
             }
@@ -142,6 +144,7 @@ namespace LE {
             {
                 auto text = std::make_shared<LE::GUI::SFMLText>(LE::Vector3<float>(0, 0, 0), _window, "", nullptr);
 
+                text->init();
                 config(text);
                 return text;
             }
@@ -150,6 +153,7 @@ namespace LE {
             {
                 auto textField = std::make_shared<LE::GUI::SFMLTextField>(LE::Vector3<float>(0, 0, 0), _window, "", "");
 
+                textField->init();
                 config(textField);
                 return textField;
             }
@@ -158,6 +162,7 @@ namespace LE {
             {
                 auto container = std::make_shared<LE::GUI::SFMLContainer>(LE::Vector3<float>(0, 0, 0), LE::Vector2<float>(0, 0), _window);
 
+                container->init();
                 config(container);
                 return container;
             }
