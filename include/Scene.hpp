@@ -19,6 +19,7 @@
     #include "ECS/Systems/CollisionSystem.hpp"
     #include "ECS/Systems/MoveSystem.hpp"
     #include "ECS/Systems/ShootPatternSystem.hpp"
+    #include "ECS/Systems/ICameraSystem.hpp"
 
 namespace LE
 {
