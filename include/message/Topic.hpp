@@ -8,7 +8,8 @@
 
 #include "message/Message.hpp"
 
-namespace LE {
+namespace LE
+{
     /**
      * @class Topic
      * @brief A class that represents a topic which holds a queue of messages.
@@ -46,9 +47,9 @@ namespace LE {
         std::shared_ptr<Message> getMessage(void);
 
     private:
-        std::uint8_t _ecs_id;
-        std::uint8_t _id;
-        std::queue<std::shared_ptr<Message>> _messages;
-        std::mutex _mutex;
+        std::uint8_t _ecs_id;                           ///< The ID associated with the topic.
+        std::uint8_t _id;                               ///< The ID of the topic.
+        std::queue<std::shared_ptr<Message>> _messages; ///< The queue of messages.
+        std::mutex _mutex;                              ///< The mutex used to ensure thread safety.
     };
 }

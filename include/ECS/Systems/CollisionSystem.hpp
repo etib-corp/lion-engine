@@ -14,16 +14,32 @@
 #include "ECS/Components/TransformComponent.hpp"
 // #include "Shapes/Rectangle.hpp"
 
-class CollisionSystem : public System {
-    public:
-        CollisionSystem();
-        ~CollisionSystem();
+/**
+ * @class CollisionSystem
+ * @brief The CollisionSystem class is responsible for handling collisions
+ */
+class CollisionSystem : public System
+{
+public:
+    /**
+     * @brief Construct a new CollisionSystem object
+     */
+    CollisionSystem();
 
-        void update(LE::Ecs *ecs, float dt) override;
+    /**
+     * @brief Destroy the CollisionSystem object
+     */
+    ~CollisionSystem();
 
-    protected:
-        // std::unique_ptr<LE::Shapes::Rectangle> _rectangle;
-    private:
+    /**
+     * @brief Update the system
+     * This function will be used to update the system
+     */
+    void update(LE::Ecs *ecs, float dt) override;
+
+protected:
+    // std::unique_ptr<LE::Shapes::Rectangle> _rectangle;
+private:
 };
 
 #endif /* !COLLISIONSYSTEM_HPP_ */

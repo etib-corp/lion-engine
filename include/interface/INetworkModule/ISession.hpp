@@ -91,7 +91,7 @@ protected:
      * @brief Client ID.
      */
     std::uint8_t _id;
-    
+
     /**
      * @brief Connection status.
      */

@@ -7,7 +7,8 @@
 
 #include "PackUnpack.hpp"
 
-namespace LE {
+namespace LE
+{
     /**
      * @class Message
      * @brief A class representing a message with an ECS ID and a topic name.
@@ -118,7 +119,7 @@ namespace LE {
          *
          * @return The header of the message.
          */
-        [[nodiscard]]Header getHeader(void)
+        [[nodiscard]] Header getHeader(void)
         {
             Header header = {
                 .MagicNumber = _magicNumber,
@@ -126,8 +127,7 @@ namespace LE {
                 .ReceiverEcsId = _receiver_id,
                 .TopicID = _topic_id,
                 .Action = _action,
-                .BodyLength = 0
-            };
+                .BodyLength = 0};
             return header;
         }
 
@@ -161,7 +161,11 @@ namespace LE {
          *
          * @return The request of the message.
          */
-        [[nodiscard]] bool isReliable(void) const { std::cout << "[" << std::this_thread::get_id() << "]" << std::endl; return _is_relialbe; }
+        [[nodiscard]] bool isReliable(void) const
+        {
+            std::cout << "[" << std::this_thread::get_id() << "]" << std::endl;
+            return _is_relialbe;
+        }
 
         /**
          * @brief Sets the reliability of the message.
@@ -169,7 +173,6 @@ namespace LE {
          * @param is_reliable The reliability of the message.
          */
         void setReliable(bool is_reliable) { _is_relialbe = is_reliable; }
-
 
         /**
          * @brief Gets the request of the message.
@@ -180,8 +183,7 @@ namespace LE {
         {
             Request request = {
                 .header = getHeader(),
-                .body = getBody()
-            };
+                .body = getBody()};
             return request;
         }
 
@@ -200,13 +202,13 @@ namespace LE {
         void deserialize(std::string raw_request);
 
     private:
-        std::uint8_t _magicNumber;
-        std::uint8_t _emmiter_id;
-        std::uint8_t _receiver_id;
-        std::uint8_t _topic_id;
-        std::uint8_t _action;
-        Body _body;
-        bool _is_relialbe;
+        std::uint8_t _magicNumber; ///< The MagicNumber ID of the message.
+        std::uint8_t _emmiter_id;  ///< The ECS ID of the message.
+        std::uint8_t _receiver_id; ///< The receiver ID of the message.
+        std::uint8_t _topic_id;    ///< The topic ID of the message.
+        std::uint8_t _action;      ///< The action of the message.
+        Body _body;                ///< The body of the message.
+        bool _is_relialbe;         ///< The reliability of the message.
     };
 }
 
