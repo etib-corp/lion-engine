@@ -11,7 +11,7 @@
 #include <functional>
 #include <map>
 #include <memory>
-#include "Error.hpp"
+#include "interface/IError.hpp"
 
 namespace LE
 {
@@ -114,15 +114,17 @@ namespace LE
          *
          * @see Error
          */
-        class IEventManagerError : public Error
+        class IEventManagerError : public LE::IError
         {
         public:
             /**
              * @brief Constructs a new EventManagerError object.
              *
-             * @param message The error message to be associated with this exception.
+             * @param title The error message to be associated with this exception.
+             * @param details The details of the error.
+             * @param help The help message for the error.
              */
-            IEventManagerError(const std::string &message) : Error(message) {}
+            IEventManagerError(const std::string &title, const std::string &details, const std::string &help) : IError(title, details, help) {}
         };
 
         /**

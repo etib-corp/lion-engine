@@ -40,14 +40,16 @@ namespace LE
              *
              * @see Error
              */
-            class SceneManagerError : public Error {
+            class SceneManagerError : public LE::IError {
                 public:
                     /**
                      * @brief Constructs a new SceneManagerError object.
                      *
-                     * @param message The error message to be associated with this exception.
+                     * @param title The error message to be associated with this exception.
+                     * @param details The details of the error.
+                     * @param help The help message for the error.
                      */
-                    SceneManagerError(const std::string &message) : Error(message) {}
+                    SceneManagerError(const std::string &title, const std::string &details, const std::string &help) : IError(title, details, help) {}
             };
 
             /**
@@ -141,7 +143,6 @@ namespace LE
              * @param sceneName The name of the scene to play.
              */
             void selectScene(const std::string &sceneName);
-        
         protected:
             LE::IEngine &_engine;
             std::unordered_map<std::string, std::shared_ptr<LE::Scene>> _scenes;

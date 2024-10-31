@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "Error.hpp"
+#include "interface/IError.hpp"
 #include "Vector3.hpp"
 
 #include <cmath>
@@ -29,10 +29,11 @@ namespace LE
     class Vector4
     {
     public:
-        class Vector4Error : public Error
+        class Vector4Error : public LE::IError
         {
         public:
-            Vector4Error(const std::string &message) : Error(message) {}
+            Vector4Error(const std::string &title = "", const std::string &details = "", const std::string &help = "")
+                : LE::IError(title, details, help) {}
         };
 
         /**

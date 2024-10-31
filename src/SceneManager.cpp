@@ -23,7 +23,7 @@ LE::SceneManager::~SceneManager()
 void LE::SceneManager::play()
 {
     if (_currentScene == nullptr)
-        throw SceneManagerError("No scene selected to play.");
+        throw SceneManagerError("No scene selected to play.", "No scene is currently selected to play.", "Select a scene to play.");
     _currentSceneName = _scenes.begin()->first;
     _currentScene = _scenes.begin()->second;
 }
@@ -31,7 +31,7 @@ void LE::SceneManager::play()
 void LE::SceneManager::play(const std::string& sceneName)
 {
     if (_scenes.find(sceneName) == _scenes.end())
-        throw SceneManagerError("Scene not found.");
+        throw SceneManagerError("Scene not found.", "The scene " + sceneName + " was not found.", "Check the scene name and try again.");
     _currentSceneName = sceneName;
     _currentScene = _scenes[sceneName];
 }
@@ -57,14 +57,14 @@ std::shared_ptr<LE::Scene> LE::SceneManager::getPreviousScene() const
 void LE::SceneManager::addScene(std::shared_ptr<LE::Scene> scene, const std::string &name)
 {
     if (_scenes.find(name) != _scenes.end())
-        throw SceneManagerError("Scene already exists.");
+        throw SceneManagerError("Scene already exists.", "The scene " + name + " already exists.", "Choose a different name for the scene.");
     _scenes[name] = scene;
 }
 
 void LE::SceneManager::removeScene(const std::string &sceneName)
 {
     if (_scenes.find(sceneName) == _scenes.end())
-        throw SceneManagerError("Scene not found.");
+        throw SceneManagerError("Scene not found.", "The scene " + sceneName + " was not found.", "Check the scene name and try again.");
     _scenes.erase(sceneName);
 }
 
@@ -80,6 +80,6 @@ void LE::SceneManager::selectScene(const std::string &sceneName)
         _currentScene = it->second;
         _currentSceneName = sceneName;
     } else {
-        throw SceneManagerError("Scene not found: " + sceneName);
+        throw SceneManagerError("Scene not found: " + sceneName, "The scene " + sceneName + " was not found.", "Check the scene name and try again.");
     }
 }

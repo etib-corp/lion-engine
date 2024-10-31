@@ -8,7 +8,7 @@
 #pragma once
 
 // Engine include
-#include "Error.hpp"
+#include "interface/IError.hpp"
 
 // C++ include
 #include <array>
@@ -40,15 +40,16 @@ namespace LE
         /**
          * @brief Represents an error that can occur in the Matrix class.
          */
-        class MatrixError : public Error
+        class MatrixError : public LE::IError
         {
         public:
             /**
              * @brief Constructs a MatrixError object with the specified error message.
-             * @param message The error message.
+             * @param title The title of the error.
+             * @param details The details of the error.
+             * @param help The help message for the error.
              */
-            MatrixError(const std::string &message)
-                : Error(message) {};
+            MatrixError(const std::string &title, const std::string &details, const std::string &help) : LE::IError(title, details, help) {};
         };
 
         /**
@@ -143,7 +144,7 @@ namespace LE
             T *ptr = new T[WIDTH * HEIGHT];
 
             if (!ptr)
-                throw MatrixError("Failed to allocate memory for matrix values.");
+                throw MatrixError("Failed to allocate memory for matrix values.", "The function failed to allocate memory for the matrix values.", "Try to free some memory and try again.");
             for (int i = 0; i < HEIGHT; i++)
             {
                 for (int j = 0; j < WIDTH; j++)
@@ -183,7 +184,7 @@ namespace LE
         {
             if (WIDTH != HEIGHT)
             {
-                throw MatrixError("Matrix must be square to calculate determinant.");
+                throw MatrixError("Matrix must be square to calculate determinant.", "The matrix must be square to calculate the determinant.", "Try to use a square matrix.");
             }
             if (WIDTH == 2)
             {
@@ -378,7 +379,7 @@ namespace LE
         {
             if (scalar == 0)
             {
-                throw MatrixError("Cannot divide by zero.");
+                throw MatrixError("Cannot divide by zero.", "The scalar is zero.", "Try to use a non-zero scalar.");
             }
             Matrix<WIDTH, HEIGHT, T> result;
             for (int i = 0; i < HEIGHT; i++)
@@ -400,7 +401,7 @@ namespace LE
         {
             if (scalar == 0)
             {
-                throw MatrixError("Cannot divide by zero.");
+                throw MatrixError("Cannot divide by zero.", "The scalar is zero.", "Try to use a non-zero scalar.");
             }
             for (int i = 0; i < HEIGHT; i++)
             {
@@ -457,7 +458,7 @@ namespace LE
         {
             if (pos < 0 || pos >= HEIGHT)
             {
-                throw MatrixError("Position out of range");
+                throw MatrixError("Position out of range", "The position is out of range.", "Try to use a valid position.");
             }
             return _matrix[pos];
         }
@@ -474,7 +475,7 @@ namespace LE
         {
             if (pos < 0 || pos >= HEIGHT)
             {
-                throw MatrixError("Position out of range");
+                throw MatrixError("Position out of range", "The position is out of range.", "Try to use a valid position.");
             }
             return _matrix[pos];
         }
