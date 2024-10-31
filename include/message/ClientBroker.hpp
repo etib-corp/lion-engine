@@ -10,7 +10,8 @@
 #include "interface/INetworkModule/INetworkModule.hpp"
 #include "interface/INetworkModule/IServer.hpp"
 
-namespace LE {
+namespace LE
+{
     /**
      * @class ClientBroker
      * @brief A class that handles client-side network communication.
@@ -36,15 +37,26 @@ namespace LE {
 
         ~ClientBroker(void);
 
-        std::shared_ptr<Message>getMessageFromTopic(std::uint8_t topic_id);
+        /**
+         * @brief Get a message from a topic. From every ECS.
+         */
+        std::shared_ptr<Message> getMessageFromTopic(std::uint8_t topic_id);
 
     private:
-        std::string _connect_address;
-        std::uint16_t _connect_port;
-        IClient *_client;
+        std::string _connect_address; ///< The address to connect to.
+        std::uint16_t _connect_port;  ///< The port to connect to.
+        IClient *_client;             ///< The client object.
 
+        /**
+         * @brief Sends a message.
+         * @param message The message to send.
+         */
         void _sendMessage(std::shared_ptr<Message> message) override;
 
+        /**
+         * @brief Receives a message.
+         * @return The message received.
+         */
         void _onReceiveRequestCallback(const Request &request);
     };
 }

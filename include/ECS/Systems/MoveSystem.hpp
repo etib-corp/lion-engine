@@ -12,15 +12,31 @@
 #include "ECS/Components/TransformComponent.hpp"
 #include "ECS/Components/MotionComponent.hpp"
 
-class MoveSystem : public System {
-    public:
-        MoveSystem();
-        ~MoveSystem();
+/**
+ * @class MoveSystem
+ * @brief The MoveSystem class is responsible for moving entities
+ */
+class MoveSystem : public System
+{
+public:
+    /**
+     * @brief Construct a new MoveSystem object
+     */
+    MoveSystem();
 
-        void update(LE::Ecs *ecs, float delta);
+    /**
+     * @brief Destroy the MoveSystem object
+     */
+    ~MoveSystem();
 
-    protected:
-    private:
+    /**
+     * @brief Update the system
+     * This function will be used to update the system
+     */
+    void update(LE::Ecs *ecs, float delta);
+
+protected:
+private:
 };
 
 #endif /* !MOVESYSTEM_HPP_ */

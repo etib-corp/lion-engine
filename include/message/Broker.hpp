@@ -12,7 +12,8 @@
 
 #include "interface/INetworkModule/INetworkModule.hpp"
 
-namespace LE {
+namespace LE
+{
     /**
      * @class Broker
      * @brief Manages topics and messages in a multi-threaded environment.
@@ -72,34 +73,69 @@ namespace LE {
         std::shared_ptr<Message> getMessage(std::uint8_t ecs_id, std::uint8_t topic_id);
 
     protected:
-        std::uint8_t _ecs_id;
-        INetworkModule *_network_module;
-        std::map<std::pair<std::uint8_t, std::uint8_t>, std::unique_ptr<Topic>> _topics;
-        std::thread _thread;
-        std::mutex _mutex;
-        bool _is_running = true;
-        std::queue<std::shared_ptr<Message>> _outgoing_messages;
-        std::queue<std::shared_ptr<Message>> _incomming_messages;
-        std::function<void(std::shared_ptr<Message>)> _sendFunction;
+        std::uint8_t _ecs_id;                                                            ///< The ECS ID of the broker.
+        INetworkModule *_network_module;                                                 ///< The network module.
+        std::map<std::pair<std::uint8_t, std::uint8_t>, std::unique_ptr<Topic>> _topics; ///< The topics managed by the broker.
+        std::thread _thread;                                                             ///< The thread used to run the broker.
+        std::mutex _mutex;                                                               ///< The mutex used to ensure thread safety.
+        bool _is_running = true;                                                         ///< Whether the broker is running.
+        std::queue<std::shared_ptr<Message>> _outgoing_messages;                         ///< The queue of outgoing messages.
+        std::queue<std::shared_ptr<Message>> _incomming_messages;                        ///< The queue of incoming messages.
+        std::function<void(std::shared_ptr<Message>)> _sendFunction;                     ///< The function used to send a message.
 
+        /**
+         * @brief Sets the network module.
+         * @param network_module The network module.
+         */
         void _setNetworkModule(INetworkModule *network_module) { _network_module = network_module; }
 
+        /**
+         * @brief Sets the ECS ID.
+         * @param ecs_id The ECS ID.
+         */
         void _setECSId(int ecs_id) { _ecs_id = ecs_id; }
 
+        /**
+         * @brief Sets the send function.
+         * @param sendFunction The send function.
+         */
         void _setSendFunction(std::function<void(std::shared_ptr<Message>)> sendFunction) { _sendFunction = sendFunction; }
 
+        /**
+         * @brief The main routine of the broker.
+         */
         void _networkRoutine(void);
 
+        /**
+         * @brief The logical routine of the broker.
+         */
         void _logicalRoutine(void);
 
+        /**
+         * @brief The physical routine of the broker.
+         */
         void _routine(void);
 
+        /**
+         * @brief Runs the broker.
+         */
         void _run(void);
 
+        /**
+         * @brief Stops the broker.
+         */
         void _stop(void);
 
-        virtual void _sendMessage(std::shared_ptr<Message>message) = 0;
+        /**
+         * @brief Sends a message.
+         * @param message The message to send.
+         */
+        virtual void _sendMessage(std::shared_ptr<Message> message) = 0;
 
+        /**
+         * @brief Receives a message.
+         * @return The message received.
+         */
         void _sendMessages(void);
     };
 } // namespace LE

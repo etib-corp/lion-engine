@@ -6,37 +6,40 @@
 */
 
 #ifndef IGAME_HPP_
-    #define IGAME_HPP_
+#define IGAME_HPP_
 
-    #include "message/ClientBroker.hpp"
-    #include "message/ServerBroker.hpp"
-    #include "ResponsibilityChain.hpp"
-    #include "SceneManager.hpp"
+#include "message/ClientBroker.hpp"
+#include "message/ServerBroker.hpp"
+#include "ResponsibilityChain.hpp"
+#include "SceneManager.hpp"
 
-namespace LE {
+namespace LE
+{
     class IEngine;
-    class IGame {
-        public:
-            virtual ~IGame() = default;
+    class IGame
+    {
+    public:
+        virtual ~IGame() = default;
 
-            virtual void init(LE::IEngine &) = 0;
+        virtual void init(LE::IEngine &) = 0;
 
-            virtual void update() = 0;
+        virtual void update() = 0;
 
-            std::shared_ptr<ClientBroker> &getClientBroker() { return _clientBroker; }
+        std::shared_ptr<ClientBroker> &getClientBroker() { return _clientBroker; }
 
-            std::shared_ptr<ServerBroker> &getServerBroker() { return _serverBroker; }
+        std::shared_ptr<ServerBroker> &getServerBroker() { return _serverBroker; }
 
-            std::shared_ptr<ResponsibilityChain> &getResponsibilityChain() { return _responsibilityChain; }
+        std::shared_ptr<ResponsibilityChain> &getResponsibilityChain() { return _responsibilityChain; }
 
-            std::shared_ptr<SceneManager> &getSceneManager() { return _sceneManager; }
+        std::shared_ptr<SceneManager> &getSceneManager() { return _sceneManager; }
 
-        protected:
-            std::shared_ptr<ClientBroker> _clientBroker;
-            std::shared_ptr<ServerBroker> _serverBroker;
-            std::shared_ptr<ResponsibilityChain> _responsibilityChain;
-            std::shared_ptr<SceneManager> _sceneManager;
-        private:
+    protected:
+        std::shared_ptr<ClientBroker> _clientBroker;
+        std::shared_ptr<ServerBroker> _serverBroker;
+        std::shared_ptr<ResponsibilityChain> _responsibilityChain;
+        std::shared_ptr<SceneManager> _sceneManager;
+
+    private:
     };
 }
 

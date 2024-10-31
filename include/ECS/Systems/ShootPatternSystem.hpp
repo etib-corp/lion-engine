@@ -12,12 +12,28 @@
 #include "ECS/Components/TransformComponent.hpp"
 #include "ECS/Components/MotionComponent.hpp"
 
-class ShootPatternSystem : public System {
-    public:
-        ShootPatternSystem();
-        ~ShootPatternSystem();
+/**
+ * @class ShootPatternSystem
+ * @brief The ShootPatternSystem class is responsible for handling shoot patterns
+ */
+class ShootPatternSystem : public System
+{
+public:
+    /**
+     * @brief Construct a new ShootPatternSystem object
+     */
+    ShootPatternSystem();
 
-        void update(LE::Ecs *ecs, float dt) override;
+    /**
+     * @brief Destroy the ShootPatternSystem object
+     */
+    ~ShootPatternSystem();
 
-    protected:
+    /**
+     * @brief Update the system
+     * This function will be used to update the system
+     */
+    void update(LE::Ecs *ecs, float dt) override;
+
+protected:
 };

@@ -6,13 +6,12 @@
 */
 
 #ifndef IEVENTMANAGER_HPP_
-    #define IEVENTMANAGER_HPP_
+#define IEVENTMANAGER_HPP_
 
-    #include <functional>
-    #include <map>
-    #include <memory>
-    #include "Error.hpp"
-
+#include <functional>
+#include <map>
+#include <memory>
+#include "Error.hpp"
 
 namespace LE
 {
@@ -28,8 +27,8 @@ namespace LE
      */
     typedef struct
     {
-        bool success;           ///< A boolean value indicating whether the operation was successful.
-        std::string message;    ///< A string message providing additional information about the operation.
+        bool success;        ///< A boolean value indicating whether the operation was successful.
+        std::string message; ///< A string message providing additional information about the operation.
     } Status;
 
     /**
@@ -45,10 +44,10 @@ namespace LE
      */
     typedef enum
     {
-        PRESSED,            ///< The key is currently pressed.
-        RELEASED,           ///< The key is currently released.
-        JUST_PRESSED,       ///< The key was just pressed.
-        JUST_RELEASED       ///< The key was just released.
+        PRESSED,      ///< The key is currently pressed.
+        RELEASED,     ///< The key is currently released.
+        JUST_PRESSED, ///< The key was just pressed.
+        JUST_RELEASED ///< The key was just released.
     } Type;
 
     /**
@@ -64,10 +63,10 @@ namespace LE
      */
     typedef enum
     {
-        KEYBOARD,           ///< The event is from a keyboard.
-        MOUSE,              ///< The event is from a mouse.
-        JOYSTICK_BUTTON,    ///< The event is from a joystick button.
-        JOYSTICK_AXIS       ///< The event is from a joystick axis.
+        KEYBOARD,        ///< The event is from a keyboard.
+        MOUSE,           ///< The event is from a mouse.
+        JOYSTICK_BUTTON, ///< The event is from a joystick button.
+        JOYSTICK_AXIS    ///< The event is from a joystick axis.
     } Input;
 
     /**
@@ -83,10 +82,10 @@ namespace LE
      */
     typedef struct
     {
-        Input input;            ///< The input source of the event.
-        int key;                ///< The key code of the event.
-        Type type;              ///< The type of the event.
-        bool _alreadyPressed;   ///< A boolean value indicating whether the key was already pressed.
+        Input input;          ///< The input source of the event.
+        int key;              ///< The key code of the event.
+        Type type;            ///< The type of the event.
+        bool _alreadyPressed; ///< A boolean value indicating whether the key was already pressed.
     } Key;
 
     /**
@@ -142,11 +141,12 @@ namespace LE
          * @param callback The callback function to be called when the key event occurs.
          * @return A Status object indicating the success or failure of the operation.
          */
-        virtual Status addEventListener(const LE::Key &key, std::function<void(LE::IEngine&, float)> callback)
+        virtual Status addEventListener(const LE::Key &key, std::function<void(LE::IEngine &, float)> callback)
         {
             auto newKey = std::make_shared<Key>(key);
             auto it = _eventCallbacks.find(newKey);
-            if (it != _eventCallbacks.end()) {
+            if (it != _eventCallbacks.end())
+            {
                 return {false, "Event listener already exists for this event type."};
             }
             _eventCallbacks[newKey] = callback;
@@ -166,7 +166,8 @@ namespace LE
         {
             auto newKey = std::make_shared<Key>(key);
             auto it = _eventCallbacks.find(newKey);
-            if (it != _eventCallbacks.end()) {
+            if (it != _eventCallbacks.end())
+            {
                 _eventCallbacks.erase(newKey);
             }
         }
