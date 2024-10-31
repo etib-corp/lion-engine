@@ -44,9 +44,13 @@ void LE::GUI::IContainer::draw()
 {
     std::cout << "Drawing container" << std::endl;
     if (_background != nullptr) {
+<<<<<<< HEAD
         std::cout << "Resizing background" << std::endl;
         _background->resize(_width, _height);
         std::cout << "Drawing background" << std::endl;
+=======
+        _background->resize(_width, _height);
+>>>>>>> 1ca19d74 (feat: integration of gui into example)
         _background->draw();
     }
 

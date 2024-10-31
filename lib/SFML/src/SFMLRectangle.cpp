@@ -43,5 +43,6 @@ void LE::SFMLRectangle::move(const LE::Vector3<float>& moveVector)
 
 void LE::SFMLRectangle::draw()
 {
+    _rectangle->setSize(sf::Vector2f(_size.x, _size.y));
     _window->getWindow()->draw(*_rectangle);
 }
