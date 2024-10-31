@@ -12,6 +12,13 @@
 #include <map>
 #include <memory>
 #include <vector>
+#include <functional>
+
+#include "interface/GUI/IManager.hpp"
+#include "interface/GUI/IButton.hpp"
+#include "interface/GUI/IContainer.hpp"
+#include "interface/GUI/IText.hpp"
+#include "interface/GUI/ITextField.hpp"
 
 #include "interface/IError.hpp"
 #include "interface/IEventManager.hpp"
@@ -19,13 +26,13 @@
 #include "interface/IShader.hpp"
 #include "interface/ISpriteComponent.hpp"
 #include "interface/ICameraComponent.hpp"
-#include "interface/GUI/IText.hpp"
 #include "interface/IWindow.hpp"
+#include "interface/IGame.hpp"
+
 #include "ECS/Systems/IRender2DSystem.hpp"
+
 #include "SceneManager.hpp"
-#include "interface/IGame.hpp"
 #include "Clock.hpp"
-#include "interface/IGame.hpp"
 #include "NetworkLoaderLib.hpp"
 
 /**
@@ -233,6 +240,16 @@ namespace LE
         std::unique_ptr<NetworkLoaderLib> &getNetworkLoaderLib();
 
         INetworkModule *getNetworkModule();
+
+        virtual std::shared_ptr<LE::GUI::IManager> createGUIManager(std::function<void(std::shared_ptr<LE::GUI::IManager>)> config) = 0;
+
+        virtual std::shared_ptr<LE::GUI::IButton> createButton(std::function<void(std::shared_ptr<LE::GUI::IButton>)> config) = 0;
+
+        virtual std::shared_ptr<LE::GUI::IText> createText(std::function<void(std::shared_ptr<LE::GUI::IText>)> config) = 0;
+
+        virtual std::shared_ptr<LE::GUI::ITextField> createTextField(std::function<void(std::shared_ptr<LE::GUI::ITextField>)> config) = 0;
+
+        virtual std::shared_ptr<LE::GUI::IContainer> createContainer(std::function<void(std::shared_ptr<LE::GUI::IContainer>)> config) = 0;
 
     protected:
         std::shared_ptr<IWindow> _window;

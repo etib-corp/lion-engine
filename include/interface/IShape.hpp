@@ -95,6 +95,8 @@ namespace LE {
             */
             virtual LE::Color *getColor() const;
 
+            virtual void resize(float width, float height) = 0;
+
         protected:
             LE::Vector3<float> _position;   /*!< The position of the shape */
             LE::Color *_color;              /*!< The color of the shape */

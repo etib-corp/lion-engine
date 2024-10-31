@@ -42,6 +42,7 @@ void LE::GUI::IContainer::setBackgroundColor(LE::Color *color)
 void LE::GUI::IContainer::draw()
 {
     if (_background != nullptr) {
+        _background->resize(_width, _height);
         _background->draw();
     }
 

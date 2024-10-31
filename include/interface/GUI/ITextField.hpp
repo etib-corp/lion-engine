@@ -8,8 +8,8 @@
 #ifndef ITEXTFIELD_HPP_
     #define ITEXTFIELD_HPP_
 
-    #include "GUI/IContainer.hpp"
-    #include "GUI/IInteractable.hpp"
+    #include "interface/GUI/IContainer.hpp"
+    #include "interface/GUI/IInteractable.hpp"
 
     #include "IText.hpp"
 
@@ -22,16 +22,16 @@ namespace LE {
          *
          * The text field is represented by 3 values: placeholder, label and input.
          * The placeholder is a `std::string` that contains the placeholder of the text field.
-         * The label is a `std::shared_ptr<LE::IText>` that contains the label of the text field.
-         * The input is a `std::shared_ptr<LE::IText>` that contains the input of the text field.
+         * The label is a `std::shared_ptr<LE::GUI::IText>` that contains the label of the text field.
+         * The input is a `std::shared_ptr<LE::GUI::IText>` that contains the input of the text field.
          *
          *
          * @example
          * @code
-         * LE::ITextField textField;
+         * LE::GUI::ITextField textField;
          * textField.setPlaceholder("Enter your name");
-         * textField.setLabel(std::make_shared<LE::IText>());
-         * textField.setInput(std::make_shared<LE::IText>());
+         * textField.setLabel(std::make_shared<LE::GUI::IText>());
+         * textField.setInput(std::make_shared<LE::GUI::IText>());
          * @endcode
          *
          */
@@ -82,14 +82,14 @@ namespace LE {
                 /**
                  * @brief Get the input as a shared pointer of IText.
                  *
-                 * @return std::shared_ptr<LE::IText>
+                 * @return std::shared_ptr<LE::GUI::IText>
                  */
-                std::shared_ptr<LE::IText> getInput() const;
+                std::shared_ptr<LE::GUI::IText> getInput() const;
 
             protected:
                 std::string _placeholder;           /*!< The placeholder of the text field */
-                std::shared_ptr<LE::IText> _label;  /*!< The label of the text field */
-                std::shared_ptr<LE::IText> _input;  /*!< The input of the text field */
+                std::shared_ptr<LE::GUI::IText> _label;  /*!< The label of the text field */
+                std::shared_ptr<LE::GUI::IText> _input;  /*!< The input of the text field */
                 bool _isFocus;                      /*!< The state of the text field */
                 unsigned int _maxChar = 18;         /*!< The maximum number of characters the text field can contain */
         };

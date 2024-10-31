@@ -6,9 +6,11 @@
 */
 
 #ifndef ITRIANGLE_HPP_
-#define ITRIANGLE_HPP_
+    #define ITRIANGLE_HPP_
 
-#include "IShape.hpp"
+    #include <vector>
+
+    #include "IShape.hpp"
 
 namespace LE {
     /**
@@ -102,6 +104,8 @@ namespace LE {
              *
             */
             LE::Vector3<float> getPoint3() const;
+
+            void resize(float width, float height) override;
 
 
         protected:
