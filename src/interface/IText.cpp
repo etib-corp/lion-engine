@@ -7,27 +7,27 @@
 
 #include "GUI/IText.hpp"
 
-void LE::IText::setContent(const std::string &content)
+void LE::GUI::IText::setContent(const std::string &content)
 {
     _content = content;
 }
 
-void LE::IText::setFont(std::shared_ptr<IFont> font)
+void LE::GUI::IText::setFont(std::shared_ptr<IFont> font)
 {
     _font = font;
 }
 
-void LE::IText::setCharacterSize(unsigned int size)
+void LE::GUI::IText::setCharacterSize(unsigned int size)
 {
     _font->setHeight(size);
 }
 
-std::shared_ptr<LE::IFont> LE::IText::getFont() const
+std::shared_ptr<LE::IFont> LE::GUI::IText::getFont() const
 {
     return _font;
 }
 
-std::string LE::IText::getContent() const
+std::string LE::GUI::IText::getContent() const
 {
     return _content;
 }

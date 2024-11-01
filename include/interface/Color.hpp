@@ -8,21 +8,35 @@
 #ifndef COLOR_HPP_
 #define COLOR_HPP_
 
-namespace LE
-{
-    class Color
-    {
-    public:
-        /**
-         * @brief Construct a new Color object
-         *
-         * @param r The red value
-         * @param g The green value
-         * @param b The blue value
-         * @param a The alpha value
-         *
-         */
-        Color(unsigned char r = 255, unsigned char g = 255, unsigned char b = 255, unsigned char a = 255);
+namespace LE {
+    /**
+     * @brief The Color class
+     *
+     * This class is used to represent a color.
+     * 
+     * The color is represented by 4 values: red, green, blue and alpha.
+     * Each value is an unsigned char between `0` and `255`.
+     * 
+     * The default color is white.
+     *
+     * @example
+     * @code
+     * LE::Color color(255, 0, 0, 255); // red
+     * @endcode
+     *
+     */
+    class Color {
+        public:
+            /**
+             * @brief Construct a new Color object
+             *
+             * @param r The red value
+             * @param g The green value
+             * @param b The blue value
+             * @param a The alpha value
+             *
+            */
+            Color(unsigned char r = 255, unsigned char g = 255, unsigned char b = 255, unsigned char a = 255);
 
         /**
          * @brief Destroy the Color object

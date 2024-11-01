@@ -12,9 +12,12 @@ void LE::IShape::setPosition(const LE::Vector3<float>& position)
     _position = position;
 }
 
-void LE::IShape::setColor(LE::Color *color)
+void LE::IShape::setColor(std::shared_ptr<LE::Color> color)
 {
-    _color = color;
+    _color->setRed(color->getRed());
+    _color->setGreen(color->getGreen());
+    _color->setBlue(color->getBlue());
+    _color->setAlpha(color->getAlpha());
 }
 
 void LE::IShape::move(const LE::Vector3<float>& moveVector)
@@ -27,7 +30,7 @@ LE::Vector3<float> LE::IShape::getPosition() const
     return _position;
 }
 
-LE::Color *LE::IShape::getColor() const
+std::shared_ptr<LE::Color> LE::IShape::getColor() const
 {
     return _color;
 }
