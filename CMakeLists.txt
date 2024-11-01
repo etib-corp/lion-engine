@@ -4,9 +4,19 @@ project(lion-engine)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(FetchContent)
 include(cmake/Utils.cmake)
 
-include_directories(include/ include/interface)
+FetchContent_Declare(
+    openal
+    GIT_REPOSITORY https://github.com/kcat/openal-soft.git
+    GIT_TAG 1.23.1
+)
+
+FetchContent_MakeAvailable(openal)
+
+include_directories(include/ include/interface lib/SFML/dependencies)
 
 set(LION_ENGINE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
