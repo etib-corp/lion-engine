@@ -48,3 +48,4 @@ file(GLOB_RECURSE SOURCES src/*.cpp)
 
 add_library(lion-engine SHARED ${SOURCES})
 
+target_link_libraries(lion-engine openal)
