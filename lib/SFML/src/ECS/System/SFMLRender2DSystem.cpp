@@ -27,7 +27,7 @@ void SFMLRender2DSystem::update(LE::Ecs *ecs, float dt)
             SFMLSprite->sprite->setPosition(transform.position.x, transform.position.y);
             SFMLSprite->sprite->setTextureRect(sf::IntRect(sprite->rect.x, sprite->rect.y, sprite->rect.z, sprite->rect.w));
             SFMLSprite->sprite->setScale(transform.scale.x, transform.scale.y);
-            SFMLSprite->sprite->rotate(transform.rotation.z);
+            SFMLSprite->sprite->setRotation(transform.rotation.z);
             window->getWindow()->draw(*SFMLSprite->sprite);
         }
     }

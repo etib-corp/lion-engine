@@ -17,7 +17,6 @@ AnimatedSpriteSystem::~AnimatedSpriteSystem()
 
 void AnimatedSpriteSystem::update(LE::Ecs *ecs, float dt)
 {
-    std::cout << "delta time: " << dt << std::endl;
     for (auto &entity : _entities) {
         auto &animatedSprite = ecs->getComponent<AnimatedSpriteComponent>(entity);
         auto &sprite = ecs->getComponent<std::shared_ptr<LE::ISpriteComponent>>(entity);
