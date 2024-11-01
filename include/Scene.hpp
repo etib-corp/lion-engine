@@ -9,6 +9,7 @@
     #define SCENE_HPP_
 
     #include <memory>
+    #include <map>
     #include "ECS/Ecs.hpp"
     #include "interface/IEventManager.hpp"
     #include "ECS/Components/BoxComponent.hpp"
@@ -21,6 +22,7 @@
     #include "ECS/Systems/ShootPatternSystem.hpp"
     #include "ECS/Systems/ICameraSystem.hpp"
     #include "ECS/Systems/AnimatedSpriteSystem.hpp"
+    #include "Sound/Playlist.hpp"
 
 namespace LE
 {
@@ -37,6 +39,9 @@ namespace LE
 
             std::shared_ptr<LE::IEventManager> &getEventManager() { return _eventManager; }
 
+            void setPlaylist(std::shared_ptr<LE::Sound::Playlist> playlist);
+
+            std::shared_ptr<LE::Sound::Playlist> getPlaylist();
 
             template <typename T>
             void registerComponent()
@@ -67,6 +72,7 @@ namespace LE
             std::shared_ptr<Ecs> _ecs;
             std::shared_ptr<IEventManager> _eventManager;
             LE::IEngine *_engine;
+            std::shared_ptr<LE::Sound::Playlist> _playlist;
             friend class IEngine;
         private:
     };
