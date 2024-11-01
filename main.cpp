@@ -40,6 +40,19 @@ class SnakeScene : public LE::Scene {
             _ecs->addComponent<std::shared_ptr<LE::ISpriteComponent>>(entity, _sprite);
             TransformComponent transform = TransformComponent{{5, 5, 0}, {0, 0, 0}, {0.2f, 0.2f, 1.0f}};
             _ecs->addComponent<TransformComponent>(entity, transform);
+
+            auto entity2 = _ecs->createEntity();
+            std::shared_ptr<ImageAsset> image = _engine->getAssetManager()->getAsset<ImageAsset>("r-typesheet42.png");
+            _sprite = _engine->createSpriteComponent(image->getImageFile());
+            _ecs->addComponent<std::shared_ptr<LE::ISpriteComponent>>(entity2, _sprite);
+            TransformComponent transform2 = TransformComponent{{5, 5, 0}, {0, 0, 0}, {1.0f, 1.0f, 1.0f}};
+            _ecs->addComponent<TransformComponent>(entity2, transform2);
+            auto animatedSprite = createAnimatedSpriteComponent(_sprite, 33, 17);
+            addAnimation(*animatedSprite, "idle", {0, 1, 2, 3, 4, 5, 6}, [](AnimatedSpriteComponent &animatedSprite) {
+                std::cout << "Animation ended" << std::endl;
+            }, 1.0f, true);
+            animatedSprite->currentAnimation = "idle";
+            _ecs->addComponent<AnimatedSpriteComponent>(entity2, *animatedSprite);
         }
 
         std::shared_ptr<LE::ISpriteComponent> _sprite;
