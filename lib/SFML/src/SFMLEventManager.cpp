@@ -21,6 +21,23 @@ void LE::SFMLEventManager::pollEvents()
 {
     std::shared_ptr<LE::SFMLWindow> window = _engine.getWindow<LE::SFMLWindow>();
 
+    for (auto &[key, callback] : _eventCallbacks) {
+        if (sf::Keyboard::isKeyPressed(static_cast<sf::Keyboard::Key>(key->key)) && ((key->type == LE::JUST_PRESSED && !key->_alreadyPressed) || key->type == LE::PRESSED)) {
+            callback(_engine, 0);
+            key->_alreadyPressed = true;
+        }
+        if (!sf::Keyboard::isKeyPressed(static_cast<sf::Keyboard::Key>(key->key)) && (key->type == LE::JUST_RELEASED && key->_alreadyPressed) || key->type == LE::RELEASED) {
+            callback(_engine, 0);
+            key->_alreadyPressed = false;
+        }
+    }
+    while (window->getWindow()->pollEvent(_event)) {
+        if (_event.type == sf::Event::Closed) {
+            window->close();
+        }
+    }
+}
+/*
     while (window->getWindow()->pollEvent(_event)) {
         if (_event.type == sf::Event::Closed) {
             window->close();
@@ -42,8 +59,7 @@ void LE::SFMLEventManager::pollEvents()
             }
         }
     }
-}
-
+*/
 /*
 if (_event.type == sf::Event::KeyPressed && key->type == LE::JUST_PRESSED && _event.key.code == key->key && !key->_alreadyPressed) {
     callback(_engine, 0);
