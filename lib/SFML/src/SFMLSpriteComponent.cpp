@@ -18,6 +18,7 @@ std::shared_ptr<LE::ISpriteComponent> LE::Sprite::createSpriteComponent(const st
     sprite->width = sprite->texture->getSize().x;
     sprite->height = sprite->texture->getSize().y;
     sprite->hidden = false;
+    sprite->rect = {0, 0, static_cast<int>(sprite->width), static_cast<int>(sprite->height)};
     return sprite;
 }
 

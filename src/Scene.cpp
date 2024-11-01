@@ -20,11 +20,13 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerComponent<PatternComponent>();
     _ecs->registerComponent<std::shared_ptr<LE::ICameraComponent>>();
     _ecs->registerComponent<ShootPatternComponent>();
+    _ecs->registerComponent<AnimatedSpriteComponent>();
 
     _ecs->registerSystem<CollisionSystem>();
     _ecs->registerSystem<MoveSystem>();
     _ecs->registerSystem<PatternSystem>();
     _ecs->registerSystem<ShootPatternSystem>();
+    _ecs->registerSystem<AnimatedSpriteSystem>();
 
     Signature CollisionSignature;
     CollisionSignature.set(_ecs->getComponentType<TransformComponent>());
@@ -48,6 +50,11 @@ LE::Scene::Scene(LE::IEngine *engine)
     ShootPatternSignature.set(_ecs->getComponentType<ShootPatternComponent>());
     _ecs->setSignature<ShootPatternSystem>(ShootPatternSignature);
 
+    Signature AnimatedSpriteSignature;
+    AnimatedSpriteSignature.set(_ecs->getComponentType<std::shared_ptr<LE::ISpriteComponent>>());
+    AnimatedSpriteSignature.set(_ecs->getComponentType<AnimatedSpriteComponent>());
+    _ecs->setSignature<AnimatedSpriteSystem>(AnimatedSpriteSignature);
+
     _eventManager = engine->createEventManager();
     _engine = engine;
     _engine->createRender2DSystem(*_ecs);
@@ -64,7 +71,8 @@ void LE::Scene::init()
 
 void LE::Scene::draw()
 {
-    _ecs->update(0.0f);
+
     _guiManager->draw();
+    _ecs->update(_engine->getDeltaTime());
     _eventManager->pollEvents();
 }

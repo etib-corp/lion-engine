@@ -25,6 +25,7 @@ void SFMLRender2DSystem::update(LE::Ecs *ecs, float dt)
         auto SFMLSprite = dynamic_cast<LE::SFMLSpriteComponent *>(sprite.get());
         if (SFMLSprite) {
             SFMLSprite->sprite->setPosition(transform.position.x, transform.position.y);
+            SFMLSprite->sprite->setTextureRect(sf::IntRect(sprite->rect.x, sprite->rect.y, sprite->rect.z, sprite->rect.w));
             SFMLSprite->sprite->setScale(transform.scale.x, transform.scale.y);
             SFMLSprite->sprite->rotate(transform.rotation.z);
             window->getWindow()->draw(*SFMLSprite->sprite);
