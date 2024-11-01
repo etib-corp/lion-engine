@@ -4,7 +4,17 @@ project(lion-engine)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(FetchContent)
 include(cmake/Utils.cmake)
+
+FetchContent_Declare(
+    openal
+    GIT_REPOSITORY https://github.com/kcat/openal-soft.git
+    GIT_TAG openal-soft-1.21.1
+)
+
+FetchContent_MakeAvailable(openal)
 
 include_directories(include/ include/interface)
 
