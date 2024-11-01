@@ -7,10 +7,11 @@
 
 #include "GUI/SFMLText.hpp"
 
-LE::GUI::SFMLText::SFMLText(const LE::Vector3<float> &pos, const std::string &content, Color *color)
+LE::GUI::SFMLText::SFMLText(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &content, std::shared_ptr<Color> color)
 {
     _content = content;
-    _color = color == nullptr ? new Color(255, 255, 255, 255) : color;
+    _window = std::dynamic_pointer_cast<LE::SFMLWindow>(window);
+    _color = color == nullptr ? std::make_shared<Color>(255, 255, 255, 255) : color;
     _font = nullptr;
     _text = new sf::Text();
     _x = pos.x;
@@ -32,19 +33,19 @@ void LE::GUI::SFMLText::init()
 
 void LE::GUI::SFMLText::setContent(const std::string &content)
 {
-    LE::IText::setContent(content);
+    LE::GUI::IText::setContent(content);
 
     _text->setString(content);
 }
 
 void LE::GUI::SFMLText::setFont(std::shared_ptr<IFont> font)
 {
-    LE::IText::setFont(font);
+    LE::GUI::IText::setFont(font);
 
     _text->setFont(dynamic_cast<LE::SFMLFont *>(font.get())->_font);
 }
 
-void LE::GUI::SFMLText::setColor(Color *color)
+void LE::GUI::SFMLText::setColor(std::shared_ptr<Color> color)
 {
     LE::IShape::setColor(color);
 
@@ -61,4 +62,17 @@ float LE::GUI::SFMLText::getWidth() const
 float LE::GUI::SFMLText::getHeight() const
 {
     return _text->getGlobalBounds().height;
+}
+
+void LE::GUI::SFMLText::draw()
+{
+    _text->setPosition(sf::Vector2f(_x, _y));
+    _window->getWindow()->draw(*_text);
+}
+
+void LE::GUI::SFMLText::resize(float width, float height)
+{
+    (void)width;
+    setCharacterSize(height);
+    _text->setCharacterSize(height);
 }

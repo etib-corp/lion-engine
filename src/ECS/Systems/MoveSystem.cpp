@@ -25,7 +25,7 @@ void MoveSystem::update(LE::Ecs *ecs, float delta)
 
         motion.velocity = {0, 0, 0};
         motion.velocity.x = (motion.direction[MOVEMENT_RIGHT] - motion.direction[MOVEMENT_LEFT]);
-        motion.velocity.y = (motion.direction[MOVEMENT_UP] - motion.direction[MOVEMENT_DOWN]);
+        motion.velocity.y = (motion.direction[MOVEMENT_DOWN] - motion.direction[MOVEMENT_UP]);
 
         // if (motion.velocity.length() > 0)
         //     motion.velocity.normalize();

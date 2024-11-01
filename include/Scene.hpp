@@ -10,12 +10,18 @@
 
     #include <memory>
     #include <map>
-    #include "ECS/Ecs.hpp"
+
     #include "interface/IEventManager.hpp"
-    #include "ECS/Components/BoxComponent.hpp"
-    #include "ECS/Components/HealthComponent.hpp"
     #include "interface/ISpriteComponent.hpp"
     #include "interface/ICameraComponent.hpp"
+
+    #include "interface/GUI/IManager.hpp"
+
+    #include "ECS/Ecs.hpp"
+
+    #include "ECS/Components/BoxComponent.hpp"
+    #include "ECS/Components/HealthComponent.hpp"
+
     #include "ECS/Systems/PatternSystem.hpp"
     #include "ECS/Systems/CollisionSystem.hpp"
     #include "ECS/Systems/MoveSystem.hpp"
@@ -71,6 +77,7 @@ namespace LE
             virtual void init();
             std::shared_ptr<Ecs> _ecs;
             std::shared_ptr<IEventManager> _eventManager;
+            std::shared_ptr<LE::GUI::IManager> _guiManager;
             LE::IEngine *_engine;
             std::shared_ptr<LE::Sound::Playlist> _playlist;
             friend class IEngine;

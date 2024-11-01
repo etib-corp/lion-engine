@@ -37,3 +37,13 @@ float LE::GUI::IComponent::getY() const
 {
     return _y;
 }
+
+void LE::GUI::IComponent::setWidth(float width)
+{
+    _width = width;
+}
+
+void LE::GUI::IComponent::setHeight(float height)
+{
+    _height = height;
+}
