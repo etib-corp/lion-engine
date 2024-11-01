@@ -10,7 +10,7 @@
 
 #include "Sound/Sound.hpp"
 
-#include "IError.hpp"
+#include "interface/IError.hpp"
 #include "Utils.hpp"
 
 #include <string>

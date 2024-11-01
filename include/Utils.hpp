@@ -13,7 +13,7 @@
 #include <filesystem>
 #include <fstream>
 
-#include "IError.hpp"
+#include "interface/IError.hpp"
 
 /**
  * @brief Convert an enumeration value to a char
