@@ -17,6 +17,7 @@ void LE::IEngine::init()
     _assetManager = std::make_shared<AssetManager>();
     _assetLoader = std::make_unique<AssetLoader>(_assetManager, "./assets");
     _assetLoader->loadAssets();
+    _soundDevice = std::make_shared<LE::Sound::Device>();
 }
 
 std::unique_ptr<NetworkLoaderLib> &LE::IEngine::getNetworkLoaderLib()

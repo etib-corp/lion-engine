@@ -38,6 +38,8 @@
 #include "AssetManager.hpp"
 #include "AssetLoader.hpp"
 
+#include "Sound/Device.hpp"
+
 
 /**
  * @namespace LE
@@ -309,6 +311,7 @@ namespace LE
         bool _throwError;                                    ///< A boolean flag indicating whether to throw an error.
         std::shared_ptr<AssetManager> _assetManager;        ///< The asset manager.
         std::unique_ptr<AssetLoader> _assetLoader;          ///< The asset loader.
+        std::shared_ptr<LE::Sound::Device> _soundDevice;    ///< The sound device.
     private:
     };
 }

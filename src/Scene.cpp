@@ -76,3 +76,13 @@ void LE::Scene::draw()
     _ecs->update(_engine->getDeltaTime());
     _eventManager->pollEvents();
 }
+
+void LE::Scene::setPlaylist(std::shared_ptr<LE::Sound::Playlist> playlist)
+{
+    _playlist = playlist;
+}
+
+std::shared_ptr<LE::Sound::Playlist> LE::Scene::getPlaylist()
+{
+    return _playlist;
+}
