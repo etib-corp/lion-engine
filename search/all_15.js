@@ -9,6 +9,7 @@ var searchData=
   ['vector3data_6',['Vector3Data',['../structLE_1_1Vector3Data.html',1,'LE']]],
   ['vector3error_7',['Vector3Error',['../classLE_1_1Vector3_1_1Vector3Error.html',1,'LE::Vector3']]],
   ['vector4_8',['Vector4',['../classLE_1_1Vector4.html',1,'LE::Vector4&lt; T &gt;'],['../classLE_1_1Vector4.html#ad6e8992223a358a86af7080f658b8ba6',1,'LE::Vector4::Vector4()'],['../classLE_1_1Vector4.html#ac3bde7a0601263c221c23df9b889dbd6',1,'LE::Vector4::Vector4(const T &amp;x, const T &amp;y, const T &amp;z, const T &amp;w)']]],
-  ['vector4error_9',['Vector4Error',['../classLE_1_1Vector4_1_1Vector4Error.html',1,'LE::Vector4']]],
-  ['velocity_10',['velocity',['../structMotionComponent.html#a9fe99b33b0b29855f5c60a399856ffa8',1,'MotionComponent']]]
+  ['vector4_3c_20int_20_3e_9',['Vector4&lt; int &gt;',['../classLE_1_1Vector4.html',1,'LE']]],
+  ['vector4error_10',['Vector4Error',['../classLE_1_1Vector4_1_1Vector4Error.html',1,'LE::Vector4']]],
+  ['velocity_11',['velocity',['../structMotionComponent.html#a9fe99b33b0b29855f5c60a399856ffa8',1,'MotionComponent']]]
 ];
