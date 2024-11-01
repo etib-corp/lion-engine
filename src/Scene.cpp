@@ -71,6 +71,8 @@ void LE::Scene::init()
 
 void LE::Scene::draw()
 {
+
+    _guiManager->draw();
     _ecs->update(_engine->getDeltaTime());
     _eventManager->pollEvents();
 }

@@ -6,6 +6,7 @@
 */
 
 #include "GraphicalLib.hpp"
+
 #include <thread>
 
 int id = 0;
@@ -31,6 +32,36 @@ class SnakeScene : public LE::Scene {
     public:
         SnakeScene(LE::IEngine *engine) : LE::Scene(engine)
         {
+            _guiManager = engine->createGUIManager([=](std::shared_ptr<LE::GUI::IManager> manager) {
+                auto button = engine->createButton([=](std::shared_ptr<LE::GUI::IButton> button) {
+                    button->setBackgroundColor(std::make_shared<LE::Color>(255, 0, 0, 255));
+                    button->setWidth(100);
+                    button->setHeight(50);
+                    button->setContent("Marvin");
+                    button->setPos(100, 100);
+                    button->setFont(engine->createFont("./assets/fonts/arial.ttf", 20, 20));
+                    button->setOnClickCallback([=]() {
+                        std::cout << "Button clicked" << std::endl;
+                    });
+                });
+                // auto textfield = engine->createTextField([=](std::shared_ptr<LE::GUI::ITextField> textfield) {
+                //     textfield->setBackgroundColor(std::make_shared<LE::Color>(255, 255, 255, 255));
+                //     textfield->setWidth(100);
+                //     textfield->setHeight(50);
+                //     textfield->setPos(100, 200);
+                //     textfield->setFont(engine->createFont("./assets/fonts/arial.ttf", 20, 20));
+                //     textfield->setPlaceholder("Enter your name");
+                // });
+                auto container = engine->createContainer([=](std::shared_ptr<LE::GUI::IContainer> container) {
+                    container->setBackgroundColor(std::make_shared<LE::Color>(0, 0, 255, 255));
+                    container->setWidth(200);
+                    container->setHeight(200);
+                    container->setPos(200, 200);
+                });
+                container->addChildren(button);
+
+                manager->addChildren(container);
+            });
         }
 
         void init() override
