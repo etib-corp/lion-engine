@@ -80,23 +80,18 @@ $(function() {
   <div class="headertitle"><div class="title">LE::IShape Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Interface for shapes.  
- <a href="classLE_1_1IShape.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="IShape_8hpp_source.html">IShape.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LE::IShape:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classLE_1_1IShape.png" usemap="#LE::IShape_map" alt=""/>
   <map id="LE::IShape_map" name="LE::IShape_map">
-<area href="classLE_1_1IRectangle.html" title="Interface for rectangle shapes." alt="LE::IRectangle" shape="rect" coords="0,56,123,80"/>
-<area href="classLE_1_1IText.html" alt="LE::IText" shape="rect" coords="133,56,256,80"/>
-<area href="classLE_1_1ITriangle.html" title="Interface for triangle shapes." alt="LE::ITriangle" shape="rect" coords="266,56,389,80"/>
-<area href="classLE_1_1SFMLRectangle.html" alt="LE::SFMLRectangle" shape="rect" coords="0,112,123,136"/>
-<area href="classLE_1_1GUI_1_1SFMLText.html" alt="LE::GUI::SFMLText" shape="rect" coords="133,112,256,136"/>
-<area href="classLE_1_1SFMLTriangle.html" alt="LE::SFMLTriangle" shape="rect" coords="266,112,389,136"/>
+<area href="classLE_1_1GUI_1_1IText.html" alt="LE::GUI::IText" shape="rect" coords="0,56,123,80"/>
+<area href="classLE_1_1IRectangle.html" alt="LE::IRectangle" shape="rect" coords="133,56,256,80"/>
+<area href="classLE_1_1ITriangle.html" alt="LE::ITriangle" shape="rect" coords="266,56,389,80"/>
+<area href="classLE_1_1GUI_1_1SFMLText.html" alt="LE::GUI::SFMLText" shape="rect" coords="0,112,123,136"/>
+<area href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class." alt="LE::SFMLRectangle" shape="rect" coords="133,112,256,136"/>
+<area href="classLE_1_1SFMLTriangle.html" title="The SFMLTriangle class." alt="LE::SFMLTriangle" shape="rect" coords="266,112,389,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -104,40 +99,46 @@ Inheritance diagram for LE::IShape:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a96673c786359296a9f9cf265934cd2b7"><td class="memItemLeft" align="right" valign="top"><a id="a96673c786359296a9f9cf265934cd2b7" name="a96673c786359296a9f9cf265934cd2b7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IShape</b> ()=default</td></tr>
-<tr class="memdesc:a96673c786359296a9f9cf265934cd2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1IShape.html" title="Interface for shapes.">IShape</a> object. <br /></td></tr>
+<tr class="memdesc:a96673c786359296a9f9cf265934cd2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a96673c786359296a9f9cf265934cd2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d61f6ba051d6f4352f58061ce09c05"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a10d61f6ba051d6f4352f58061ce09c05">setPosition</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position)</td></tr>
 <tr class="memdesc:a10d61f6ba051d6f4352f58061ce09c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the shape.  <br /></td></tr>
 <tr class="separator:a10d61f6ba051d6f4352f58061ce09c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc865e0a93d8dabf27069a4c11a0a714"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#acc865e0a93d8dabf27069a4c11a0a714">setColor</a> (<a class="el" href="classLE_1_1Color.html">LE::Color</a> *color)</td></tr>
-<tr class="memdesc:acc865e0a93d8dabf27069a4c11a0a714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the shape.  <br /></td></tr>
-<tr class="separator:acc865e0a93d8dabf27069a4c11a0a714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cfc2781afd7845faac0f6d600c7123"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a57cfc2781afd7845faac0f6d600c7123">setColor</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; color)</td></tr>
+<tr class="memdesc:a57cfc2781afd7845faac0f6d600c7123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the shape.  <br /></td></tr>
+<tr class="separator:a57cfc2781afd7845faac0f6d600c7123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f540d98e94ba64bfe405a1542491d73"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a5f540d98e94ba64bfe405a1542491d73">move</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;moveVector)</td></tr>
 <tr class="memdesc:a5f540d98e94ba64bfe405a1542491d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the shape.  <br /></td></tr>
 <tr class="separator:a5f540d98e94ba64bfe405a1542491d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6ea25896b15769cbdf1b3781c20e51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a1d6ea25896b15769cbdf1b3781c20e51">init</a> ()=0</td></tr>
 <tr class="memdesc:a1d6ea25896b15769cbdf1b3781c20e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the shape.  <br /></td></tr>
 <tr class="separator:a1d6ea25896b15769cbdf1b3781c20e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6329d4854e3b86142061ea340f4c1dd1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a6329d4854e3b86142061ea340f4c1dd1">draw</a> ()=0</td></tr>
+<tr class="memdesc:a6329d4854e3b86142061ea340f4c1dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the shape.  <br /></td></tr>
+<tr class="separator:a6329d4854e3b86142061ea340f4c1dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567c8e7b89d368bdb1bf38aa57f57202"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a567c8e7b89d368bdb1bf38aa57f57202">getPosition</a> () const</td></tr>
 <tr class="memdesc:a567c8e7b89d368bdb1bf38aa57f57202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of the shape.  <br /></td></tr>
 <tr class="separator:a567c8e7b89d368bdb1bf38aa57f57202"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d603a7d87d663d63db16cf5e07a910e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a1d603a7d87d663d63db16cf5e07a910e">getColor</a> () const</td></tr>
-<tr class="memdesc:a1d603a7d87d663d63db16cf5e07a910e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color of the shape.  <br /></td></tr>
-<tr class="separator:a1d603a7d87d663d63db16cf5e07a910e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237a9a89cb31c786c49fa4875edabc12"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a237a9a89cb31c786c49fa4875edabc12">getColor</a> () const</td></tr>
+<tr class="memdesc:a237a9a89cb31c786c49fa4875edabc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color of the shape.  <br /></td></tr>
+<tr class="separator:a237a9a89cb31c786c49fa4875edabc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00432c99ba89ab8b761e3451d50e92a"><td class="memItemLeft" align="right" valign="top"><a id="ac00432c99ba89ab8b761e3451d50e92a" name="ac00432c99ba89ab8b761e3451d50e92a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (float width, float height)=0</td></tr>
+<tr class="separator:ac00432c99ba89ab8b761e3451d50e92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a048214f7c09ee47cfbe1c1fe80283496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a048214f7c09ee47cfbe1c1fe80283496">_position</a></td></tr>
 <tr class="separator:a048214f7c09ee47cfbe1c1fe80283496"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac50cfc4c882664c10bec9f60730fe01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#aac50cfc4c882664c10bec9f60730fe01">_color</a></td></tr>
-<tr class="separator:aac50cfc4c882664c10bec9f60730fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70f6b38128013d6c5116ca145b67654"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#ad70f6b38128013d6c5116ca145b67654">_color</a></td></tr>
+<tr class="separator:ad70f6b38128013d6c5116ca145b67654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface for shapes. </p>
-<p>The <a class="el" href="classLE_1_1IShape.html" title="Interface for shapes.">IShape</a> interface provides a way to create shapes. </p>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#_a0">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1d603a7d87d663d63db16cf5e07a910e" name="a1d603a7d87d663d63db16cf5e07a910e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d603a7d87d663d63db16cf5e07a910e">&#9670;&#160;</a></span>getColor()</h2>
+<a id="a6329d4854e3b86142061ea340f4c1dd1" name="a6329d4854e3b86142061ea340f4c1dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6329d4854e3b86142061ea340f4c1dd1">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +147,39 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLE_1_1Color.html">LE::Color</a> * LE::IShape::getColor </td>
+          <td class="memname">virtual void LE::IShape::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw the shape. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Implemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#a8f7ae0c04dfb71168fce76f8cfc56f1e">LE::GUI::SFMLText</a>, <a class="el" href="classLE_1_1SFMLRectangle.html#a22fd9c370339ac7f2e3bddf97c2a9a74">LE::SFMLRectangle</a>, and <a class="el" href="classLE_1_1SFMLTriangle.html#ac5bcdbac73075c38a949d16d9a47b7ad">LE::SFMLTriangle</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a8">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a237a9a89cb31c786c49fa4875edabc12" name="a237a9a89cb31c786c49fa4875edabc12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237a9a89cb31c786c49fa4875edabc12">&#9670;&#160;</a></span>getColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; LE::IShape::getColor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -160,7 +193,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the color of the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>The color of the shape. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classLE_1_1Color.html">LE::Color</a> </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a10">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -188,7 +223,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the position of the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>The position of the shape. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE::Vector3&lt;float&gt; </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a9">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -218,7 +255,9 @@ Protected Attributes</h2></td></tr>
 <p>Initialize the shape. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Implemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#aad55d1d94f41f2eb332d4c105df9e2ed">LE::GUI::SFMLText</a>, <a class="el" href="classLE_1_1SFMLRectangle.html#ab4c074e74e444ebf78aecbc21d1e867a">LE::SFMLRectangle</a>, <a class="el" href="classLE_1_1SFMLTriangle.html#a168605993791228e80a6208a09f81ef4">LE::SFMLTriangle</a>, <a class="el" href="classLE_1_1IText.html#a7e4ea49da3f07162ff93c77ab2bb30e0">LE::IText</a>, <a class="el" href="classLE_1_1IRectangle.html#a1b4b876227aacf14c60f29edda92c53c">LE::IRectangle</a>, and <a class="el" href="classLE_1_1ITriangle.html#a794e15c8241e21954c21954ecdff130d">LE::ITriangle</a>.</p>
+<p>Implemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#aad55d1d94f41f2eb332d4c105df9e2ed">LE::GUI::SFMLText</a>, <a class="el" href="classLE_1_1SFMLRectangle.html#ab4c074e74e444ebf78aecbc21d1e867a">LE::SFMLRectangle</a>, <a class="el" href="classLE_1_1SFMLTriangle.html#a168605993791228e80a6208a09f81ef4">LE::SFMLTriangle</a>, <a class="el" href="classLE_1_1GUI_1_1IText.html#ab4a5989e9999f76b567dc7ab309f4749">LE::GUI::IText</a>, <a class="el" href="classLE_1_1IRectangle.html#a1b4b876227aacf14c60f29edda92c53c">LE::IRectangle</a>, and <a class="el" href="classLE_1_1ITriangle.html#a794e15c8241e21954c21954ecdff130d">LE::ITriangle</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a7">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -249,18 +288,20 @@ Protected Attributes</h2></td></tr>
 <p>Move the shape. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">moveVector</td><td>The vector to move the shape by. </td></tr>
+    <tr><td class="paramname">moveVector</td><td>The vector to move the shape </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classLE_1_1ITriangle.html#aa395130ebba3d019bb89f457d7c2360c">LE::ITriangle</a>, <a class="el" href="classLE_1_1SFMLRectangle.html#a1a070dd537ac2bd5a78a8c60ea0f829d">LE::SFMLRectangle</a>, and <a class="el" href="classLE_1_1SFMLTriangle.html#a55d3f440669704ef283a7eb17b1deb50">LE::SFMLTriangle</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a6">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="acc865e0a93d8dabf27069a4c11a0a714" name="acc865e0a93d8dabf27069a4c11a0a714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc865e0a93d8dabf27069a4c11a0a714">&#9670;&#160;</a></span>setColor()</h2>
+<a id="a57cfc2781afd7845faac0f6d600c7123" name="a57cfc2781afd7845faac0f6d600c7123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57cfc2781afd7845faac0f6d600c7123">&#9670;&#160;</a></span>setColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +312,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void LE::IShape::setColor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>
@@ -286,13 +327,13 @@ Protected Attributes</h2></td></tr>
 <p>Set the color of the shape. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">color</td><td>The color of the shape. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the shape </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#a75ea660ce75ff29f7924cd71d6c27702">LE::GUI::SFMLText</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a2">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -323,19 +364,21 @@ Protected Attributes</h2></td></tr>
 <p>Set the position of the shape. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td>The position of the shape. </td></tr>
+    <tr><td class="paramname">position</td><td>The position of the shape </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classLE_1_1SFMLRectangle.html#aac2ca40f774a2ae88760e06492185167">LE::SFMLRectangle</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a1">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aac50cfc4c882664c10bec9f60730fe01" name="aac50cfc4c882664c10bec9f60730fe01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac50cfc4c882664c10bec9f60730fe01">&#9670;&#160;</a></span>_color</h2>
+<a id="ad70f6b38128013d6c5116ca145b67654" name="ad70f6b38128013d6c5116ca145b67654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70f6b38128013d6c5116ca145b67654">&#9670;&#160;</a></span>_color</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,7 +387,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLE_1_1Color.html">LE::Color</a>* LE::IShape::_color</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classLE_1_1Color.html">LE::Color</a>&gt; LE::IShape::_color</td>
         </tr>
       </table>
   </td>
@@ -354,6 +397,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The color of the shape </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a12">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -377,6 +422,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The position of the shape </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2IShape_8hpp-example.html#a11">/home/runner/work/lion-engine/lion-engine/include/interface/IShape.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>

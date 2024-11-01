@@ -75,89 +75,213 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classLE_1_1SFMLRectangle-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LE::SFMLRectangle Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> class.  
+ <a href="classLE_1_1SFMLRectangle.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="SFMLRectangle_8hpp_source.html">SFMLRectangle.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LE::SFMLRectangle:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classLE_1_1SFMLRectangle.png" usemap="#LE::SFMLRectangle_map" alt=""/>
   <map id="LE::SFMLRectangle_map" name="LE::SFMLRectangle_map">
-<area href="classLE_1_1IRectangle.html" title="Interface for rectangle shapes." alt="LE::IRectangle" shape="rect" coords="0,56,123,80"/>
-<area href="classLE_1_1IShape.html" title="Interface for shapes." alt="LE::IShape" shape="rect" coords="0,0,123,24"/>
+<area href="classLE_1_1IRectangle.html" alt="LE::IRectangle" shape="rect" coords="0,56,123,80"/>
+<area href="classLE_1_1IShape.html" alt="LE::IShape" shape="rect" coords="0,0,123,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7401fdb19f20c3896b5cd87a1ce298b7"><td class="memItemLeft" align="right" valign="top"><a id="a7401fdb19f20c3896b5cd87a1ce298b7" name="a7401fdb19f20c3896b5cd87a1ce298b7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SFMLRectangle</b> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position, const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;size, <a class="el" href="classLE_1_1Color.html">LE::Color</a> *color)</td></tr>
-<tr class="separator:a7401fdb19f20c3896b5cd87a1ce298b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a376d932f8192cb3c2259d3cd6aa5a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#a2a376d932f8192cb3c2259d3cd6aa5a1">SFMLRectangle</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position, const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;size, std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; color, std::shared_ptr&lt; <a class="el" href="classLE_1_1IWindow.html">LE::IWindow</a> &gt; window)</td></tr>
+<tr class="memdesc:a2a376d932f8192cb3c2259d3cd6aa5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> object.  <br /></td></tr>
+<tr class="separator:a2a376d932f8192cb3c2259d3cd6aa5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace862980c59c7d27ae8b0dc197ea95e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#ace862980c59c7d27ae8b0dc197ea95e5">~SFMLRectangle</a> ()</td></tr>
+<tr class="memdesc:ace862980c59c7d27ae8b0dc197ea95e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> object.  <br /></td></tr>
+<tr class="separator:ace862980c59c7d27ae8b0dc197ea95e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac2ca40f774a2ae88760e06492185167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#aac2ca40f774a2ae88760e06492185167">setPosition</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position) override</td></tr>
-<tr class="memdesc:aac2ca40f774a2ae88760e06492185167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the shape.  <br /></td></tr>
+<tr class="memdesc:aac2ca40f774a2ae88760e06492185167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the rectangle.  <br /></td></tr>
 <tr class="separator:aac2ca40f774a2ae88760e06492185167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a070dd537ac2bd5a78a8c60ea0f829d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#a1a070dd537ac2bd5a78a8c60ea0f829d">move</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;moveVector) override</td></tr>
-<tr class="memdesc:a1a070dd537ac2bd5a78a8c60ea0f829d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the shape.  <br /></td></tr>
+<tr class="memdesc:a1a070dd537ac2bd5a78a8c60ea0f829d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the rectangle by a vector.  <br /></td></tr>
 <tr class="separator:a1a070dd537ac2bd5a78a8c60ea0f829d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4c074e74e444ebf78aecbc21d1e867a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#ab4c074e74e444ebf78aecbc21d1e867a">init</a> () override</td></tr>
-<tr class="memdesc:ab4c074e74e444ebf78aecbc21d1e867a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the rectangle.  <br /></td></tr>
+<tr class="memdesc:ab4c074e74e444ebf78aecbc21d1e867a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the rectangle.  <br /></td></tr>
 <tr class="separator:ab4c074e74e444ebf78aecbc21d1e867a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22fd9c370339ac7f2e3bddf97c2a9a74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#a22fd9c370339ac7f2e3bddf97c2a9a74">draw</a> () override</td></tr>
+<tr class="memdesc:a22fd9c370339ac7f2e3bddf97c2a9a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the rectangle on the screen.  <br /></td></tr>
+<tr class="separator:a22fd9c370339ac7f2e3bddf97c2a9a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLE_1_1IRectangle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLE_1_1IRectangle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLE_1_1IRectangle.html">LE::IRectangle</a></td></tr>
 <tr class="memitem:a5f8696ebebac16a6cca8a88d91e27f01 inherit pub_methods_classLE_1_1IRectangle"><td class="memItemLeft" align="right" valign="top"><a id="a5f8696ebebac16a6cca8a88d91e27f01" name="a5f8696ebebac16a6cca8a88d91e27f01"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IRectangle</b> ()=default</td></tr>
-<tr class="memdesc:a5f8696ebebac16a6cca8a88d91e27f01 inherit pub_methods_classLE_1_1IRectangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1IRectangle.html" title="Interface for rectangle shapes.">IRectangle</a> object. <br /></td></tr>
+<tr class="memdesc:a5f8696ebebac16a6cca8a88d91e27f01 inherit pub_methods_classLE_1_1IRectangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a5f8696ebebac16a6cca8a88d91e27f01 inherit pub_methods_classLE_1_1IRectangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e6be4ce721b5e85be8303c1698fc5ae inherit pub_methods_classLE_1_1IRectangle"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IRectangle.html#a8e6be4ce721b5e85be8303c1698fc5ae">setSize</a> (const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;size)</td></tr>
-<tr class="memdesc:a8e6be4ce721b5e85be8303c1698fc5ae inherit pub_methods_classLE_1_1IRectangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the rectangle.  <br /></td></tr>
-<tr class="separator:a8e6be4ce721b5e85be8303c1698fc5ae inherit pub_methods_classLE_1_1IRectangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b4b876227aacf14c60f29edda92c53c inherit pub_methods_classLE_1_1IRectangle"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IRectangle.html#a1b4b876227aacf14c60f29edda92c53c">init</a> ()=0</td></tr>
 <tr class="memdesc:a1b4b876227aacf14c60f29edda92c53c inherit pub_methods_classLE_1_1IRectangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the rectangle.  <br /></td></tr>
 <tr class="separator:a1b4b876227aacf14c60f29edda92c53c inherit pub_methods_classLE_1_1IRectangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0449067e18da2e69b758d03146b49865 inherit pub_methods_classLE_1_1IRectangle"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IRectangle.html#a0449067e18da2e69b758d03146b49865">getSize</a> () const</td></tr>
 <tr class="memdesc:a0449067e18da2e69b758d03146b49865 inherit pub_methods_classLE_1_1IRectangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the rectangle.  <br /></td></tr>
 <tr class="separator:a0449067e18da2e69b758d03146b49865 inherit pub_methods_classLE_1_1IRectangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31eb4d1aef98f8ff28ec30158c05ad8 inherit pub_methods_classLE_1_1IRectangle"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IRectangle.html#af31eb4d1aef98f8ff28ec30158c05ad8">resize</a> (float width, float height) override</td></tr>
+<tr class="separator:af31eb4d1aef98f8ff28ec30158c05ad8 inherit pub_methods_classLE_1_1IRectangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLE_1_1IShape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLE_1_1IShape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLE_1_1IShape.html">LE::IShape</a></td></tr>
 <tr class="memitem:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a id="a96673c786359296a9f9cf265934cd2b7" name="a96673c786359296a9f9cf265934cd2b7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IShape</b> ()=default</td></tr>
-<tr class="memdesc:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1IShape.html" title="Interface for shapes.">IShape</a> object. <br /></td></tr>
+<tr class="memdesc:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d61f6ba051d6f4352f58061ce09c05 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a10d61f6ba051d6f4352f58061ce09c05">setPosition</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position)</td></tr>
 <tr class="memdesc:a10d61f6ba051d6f4352f58061ce09c05 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the shape.  <br /></td></tr>
 <tr class="separator:a10d61f6ba051d6f4352f58061ce09c05 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc865e0a93d8dabf27069a4c11a0a714 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#acc865e0a93d8dabf27069a4c11a0a714">setColor</a> (<a class="el" href="classLE_1_1Color.html">LE::Color</a> *color)</td></tr>
-<tr class="memdesc:acc865e0a93d8dabf27069a4c11a0a714 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the shape.  <br /></td></tr>
-<tr class="separator:acc865e0a93d8dabf27069a4c11a0a714 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cfc2781afd7845faac0f6d600c7123 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a57cfc2781afd7845faac0f6d600c7123">setColor</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; color)</td></tr>
+<tr class="memdesc:a57cfc2781afd7845faac0f6d600c7123 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the shape.  <br /></td></tr>
+<tr class="separator:a57cfc2781afd7845faac0f6d600c7123 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f540d98e94ba64bfe405a1542491d73 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a5f540d98e94ba64bfe405a1542491d73">move</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;moveVector)</td></tr>
 <tr class="memdesc:a5f540d98e94ba64bfe405a1542491d73 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the shape.  <br /></td></tr>
 <tr class="separator:a5f540d98e94ba64bfe405a1542491d73 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6ea25896b15769cbdf1b3781c20e51 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a1d6ea25896b15769cbdf1b3781c20e51">init</a> ()=0</td></tr>
 <tr class="memdesc:a1d6ea25896b15769cbdf1b3781c20e51 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the shape.  <br /></td></tr>
 <tr class="separator:a1d6ea25896b15769cbdf1b3781c20e51 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6329d4854e3b86142061ea340f4c1dd1 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a6329d4854e3b86142061ea340f4c1dd1">draw</a> ()=0</td></tr>
+<tr class="memdesc:a6329d4854e3b86142061ea340f4c1dd1 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the shape.  <br /></td></tr>
+<tr class="separator:a6329d4854e3b86142061ea340f4c1dd1 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567c8e7b89d368bdb1bf38aa57f57202 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a567c8e7b89d368bdb1bf38aa57f57202">getPosition</a> () const</td></tr>
 <tr class="memdesc:a567c8e7b89d368bdb1bf38aa57f57202 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of the shape.  <br /></td></tr>
 <tr class="separator:a567c8e7b89d368bdb1bf38aa57f57202 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d603a7d87d663d63db16cf5e07a910e inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a1d603a7d87d663d63db16cf5e07a910e">getColor</a> () const</td></tr>
-<tr class="memdesc:a1d603a7d87d663d63db16cf5e07a910e inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color of the shape.  <br /></td></tr>
-<tr class="separator:a1d603a7d87d663d63db16cf5e07a910e inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237a9a89cb31c786c49fa4875edabc12 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a237a9a89cb31c786c49fa4875edabc12">getColor</a> () const</td></tr>
+<tr class="memdesc:a237a9a89cb31c786c49fa4875edabc12 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color of the shape.  <br /></td></tr>
+<tr class="separator:a237a9a89cb31c786c49fa4875edabc12 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00432c99ba89ab8b761e3451d50e92a inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a id="ac00432c99ba89ab8b761e3451d50e92a" name="ac00432c99ba89ab8b761e3451d50e92a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (float width, float height)=0</td></tr>
+<tr class="separator:ac00432c99ba89ab8b761e3451d50e92a inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a80b5a3af3f4c65c75899989e342728bf"><td class="memItemLeft" align="right" valign="top"><a id="a80b5a3af3f4c65c75899989e342728bf" name="a80b5a3af3f4c65c75899989e342728bf"></a>
-sf::RectangleShape *&#160;</td><td class="memItemRight" valign="bottom"><b>_rectangle</b></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a5a353e55f44814fc9bc2d3103cc2e004"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1SFMLWindow.html">SFMLWindow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#a5a353e55f44814fc9bc2d3103cc2e004">_window</a></td></tr>
+<tr class="separator:a5a353e55f44814fc9bc2d3103cc2e004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b5a3af3f4c65c75899989e342728bf"><td class="memItemLeft" align="right" valign="top">sf::RectangleShape *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLRectangle.html#a80b5a3af3f4c65c75899989e342728bf">_rectangle</a></td></tr>
 <tr class="separator:a80b5a3af3f4c65c75899989e342728bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classLE_1_1IRectangle"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classLE_1_1IRectangle')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classLE_1_1IRectangle.html">LE::IRectangle</a></td></tr>
 <tr class="memitem:aef7279deae3f9db121e8504721d55397 inherit pro_attribs_classLE_1_1IRectangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IRectangle.html#aef7279deae3f9db121e8504721d55397">_size</a></td></tr>
 <tr class="separator:aef7279deae3f9db121e8504721d55397 inherit pro_attribs_classLE_1_1IRectangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classLE_1_1IShape"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classLE_1_1IShape')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classLE_1_1IShape.html">LE::IShape</a></td></tr>
 <tr class="memitem:a048214f7c09ee47cfbe1c1fe80283496 inherit pro_attribs_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a048214f7c09ee47cfbe1c1fe80283496">_position</a></td></tr>
 <tr class="separator:a048214f7c09ee47cfbe1c1fe80283496 inherit pro_attribs_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac50cfc4c882664c10bec9f60730fe01 inherit pro_attribs_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#aac50cfc4c882664c10bec9f60730fe01">_color</a></td></tr>
-<tr class="separator:aac50cfc4c882664c10bec9f60730fe01 inherit pro_attribs_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70f6b38128013d6c5116ca145b67654 inherit pro_attribs_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#ad70f6b38128013d6c5116ca145b67654">_color</a></td></tr>
+<tr class="separator:ad70f6b38128013d6c5116ca145b67654 inherit pro_attribs_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> class. </p>
+<p>The <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> class is a class that inherits from the <a class="el" href="classLE_1_1IRectangle.html">IRectangle</a> interface.</p>
+<p>It's used to draw a rectangle on the screen. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2a376d932f8192cb3c2259d3cd6aa5a1" name="a2a376d932f8192cb3c2259d3cd6aa5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a376d932f8192cb3c2259d3cd6aa5a1">&#9670;&#160;</a></span>SFMLRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LE::SFMLRectangle::SFMLRectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1IWindow.html">LE::IWindow</a> &gt;&#160;</td>
+          <td class="paramname"><em>window</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the rectangle </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the rectangle </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace862980c59c7d27ae8b0dc197ea95e5" name="ace862980c59c7d27ae8b0dc197ea95e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace862980c59c7d27ae8b0dc197ea95e5">&#9670;&#160;</a></span>~SFMLRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LE::SFMLRectangle::~SFMLRectangle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy the <a class="el" href="classLE_1_1SFMLRectangle.html" title="The SFMLRectangle class.">SFMLRectangle</a> object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a22fd9c370339ac7f2e3bddf97c2a9a74" name="a22fd9c370339ac7f2e3bddf97c2a9a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22fd9c370339ac7f2e3bddf97c2a9a74">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::SFMLRectangle::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw the rectangle on the screen. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Implements <a class="el" href="classLE_1_1IShape.html#a6329d4854e3b86142061ea340f4c1dd1">LE::IShape</a>.</p>
+
+</div>
+</div>
 <a id="ab4c074e74e444ebf78aecbc21d1e867a" name="ab4c074e74e444ebf78aecbc21d1e867a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4c074e74e444ebf78aecbc21d1e867a">&#9670;&#160;</a></span>init()</h2>
 
@@ -181,8 +305,8 @@ sf::RectangleShape *&#160;</td><td class="memItemRight" valign="bottom"><b>_rect
 </table>
 </div><div class="memdoc">
 
-<p>Get the size of the rectangle. </p>
-<dl class="section return"><dt>Returns</dt><dd>The size of the rectangle. </dd></dl>
+<p>Initialize the rectangle. </p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Implements <a class="el" href="classLE_1_1IRectangle.html#a1b4b876227aacf14c60f29edda92c53c">LE::IRectangle</a>.</p>
 
@@ -212,10 +336,10 @@ sf::RectangleShape *&#160;</td><td class="memItemRight" valign="bottom"><b>_rect
 </table>
 </div><div class="memdoc">
 
-<p>Move the shape. </p>
+<p>Move the rectangle by a vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">moveVector</td><td>The vector to move the shape by. </td></tr>
+    <tr><td class="paramname">moveVector</td><td>The vector to move the rectangle by</td></tr>
   </table>
   </dd>
 </dl>
@@ -249,16 +373,47 @@ sf::RectangleShape *&#160;</td><td class="memItemRight" valign="bottom"><b>_rect
 </table>
 </div><div class="memdoc">
 
-<p>Set the position of the shape. </p>
+<p>Set the position of the rectangle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td>The position of the shape. </td></tr>
+    <tr><td class="paramname">position</td><td>The position of the rectangle</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classLE_1_1IShape.html#a10d61f6ba051d6f4352f58061ce09c05">LE::IShape</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a80b5a3af3f4c65c75899989e342728bf" name="a80b5a3af3f4c65c75899989e342728bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b5a3af3f4c65c75899989e342728bf">&#9670;&#160;</a></span>_rectangle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::RectangleShape* LE::SFMLRectangle::_rectangle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The rectangle shape interpreted in SFML </p>
+
+</div>
+</div>
+<a id="a5a353e55f44814fc9bc2d3103cc2e004" name="a5a353e55f44814fc9bc2d3103cc2e004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a353e55f44814fc9bc2d3103cc2e004">&#9670;&#160;</a></span>_window</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classLE_1_1SFMLWindow.html">SFMLWindow</a>&gt; LE::SFMLRectangle::_window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The window where the rectangle will be drawn </p>
 
 </div>
 </div>

@@ -131,6 +131,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2300f9e09189ce54c1af66833fdde0b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1ICameraSystem.html">ICameraSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#aa2300f9e09189ce54c1af66833fdde0b">createCameraSystem</a> (<a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> &amp;ecs) override</td></tr>
 <tr class="memdesc:aa2300f9e09189ce54c1af66833fdde0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the camera system.  <br /></td></tr>
 <tr class="separator:aa2300f9e09189ce54c1af66833fdde0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0300c86b85be3b01413a84879109e6f7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IManager.html">LE::GUI::IManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#a0300c86b85be3b01413a84879109e6f7">createGUIManager</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IManager.html">LE::GUI::IManager</a> &gt;)&gt; config) override</td></tr>
+<tr class="separator:a0300c86b85be3b01413a84879109e6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25509c80dc4fba4782171ebc38ad5ea"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IButton.html">LE::GUI::IButton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#ad25509c80dc4fba4782171ebc38ad5ea">createButton</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IButton.html">LE::GUI::IButton</a> &gt;)&gt; config) override</td></tr>
+<tr class="separator:ad25509c80dc4fba4782171ebc38ad5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18435428fc90d5a231f6e7fe9de17dcd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IText.html">LE::GUI::IText</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#a18435428fc90d5a231f6e7fe9de17dcd">createText</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IText.html">LE::GUI::IText</a> &gt;)&gt; config) override</td></tr>
+<tr class="separator:a18435428fc90d5a231f6e7fe9de17dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a40ddf2f70c2b197b1672d426cbdac"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1ITextField.html">LE::GUI::ITextField</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#aa1a40ddf2f70c2b197b1672d426cbdac">createTextField</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1ITextField.html">LE::GUI::ITextField</a> &gt;)&gt; config) override</td></tr>
+<tr class="separator:aa1a40ddf2f70c2b197b1672d426cbdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a7b7aa5edba2b854c221820a6b362b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1SFMLEngine.html#a01a7b7aa5edba2b854c221820a6b362b">createContainer</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a> &gt;)&gt; config) override</td></tr>
+<tr class="separator:a01a7b7aa5edba2b854c221820a6b362b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLE_1_1IEngine"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLE_1_1IEngine')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a></td></tr>
 <tr class="memitem:a53ae7b256614f9c8a7f0578fe2e3878c inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a53ae7b256614f9c8a7f0578fe2e3878c">init</a> ()</td></tr>
 <tr class="memdesc:a53ae7b256614f9c8a7f0578fe2e3878c inherit pub_methods_classLE_1_1IEngine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine.  <br /></td></tr>
@@ -222,6 +232,21 @@ std::unique_ptr&lt; <a class="el" href="classNetworkLoaderLib.html">NetworkLoade
 <tr class="memitem:af7d5fc97ae93b8017be5dc3fc2b8f3d3 inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top"><a id="af7d5fc97ae93b8017be5dc3fc2b8f3d3" name="af7d5fc97ae93b8017be5dc3fc2b8f3d3"></a>
 std::shared_ptr&lt; <a class="el" href="classAssetManager.html">AssetManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAssetManager</b> ()</td></tr>
 <tr class="separator:af7d5fc97ae93b8017be5dc3fc2b8f3d3 inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261e6a03b2e4ab1a4835adc22cc4cf29 inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top"><a id="a261e6a03b2e4ab1a4835adc22cc4cf29" name="a261e6a03b2e4ab1a4835adc22cc4cf29"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IManager.html">LE::GUI::IManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createGUIManager</b> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IManager.html">LE::GUI::IManager</a> &gt;)&gt; config)=0</td></tr>
+<tr class="separator:a261e6a03b2e4ab1a4835adc22cc4cf29 inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4cadf4f90b78fa4ff0e237487b11eb inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top"><a id="a3d4cadf4f90b78fa4ff0e237487b11eb" name="a3d4cadf4f90b78fa4ff0e237487b11eb"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IButton.html">LE::GUI::IButton</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createButton</b> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IButton.html">LE::GUI::IButton</a> &gt;)&gt; config)=0</td></tr>
+<tr class="separator:a3d4cadf4f90b78fa4ff0e237487b11eb inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3a370cbf438ae6e776428aa4e75ba0 inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top"><a id="afe3a370cbf438ae6e776428aa4e75ba0" name="afe3a370cbf438ae6e776428aa4e75ba0"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IText.html">LE::GUI::IText</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createText</b> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IText.html">LE::GUI::IText</a> &gt;)&gt; config)=0</td></tr>
+<tr class="separator:afe3a370cbf438ae6e776428aa4e75ba0 inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9c0e66327fd440c1a5f5fcb2363b65 inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top"><a id="a7e9c0e66327fd440c1a5f5fcb2363b65" name="a7e9c0e66327fd440c1a5f5fcb2363b65"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1ITextField.html">LE::GUI::ITextField</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createTextField</b> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1ITextField.html">LE::GUI::ITextField</a> &gt;)&gt; config)=0</td></tr>
+<tr class="separator:a7e9c0e66327fd440c1a5f5fcb2363b65 inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7b8f051280b2b40483d6945132d887 inherit pub_methods_classLE_1_1IEngine"><td class="memItemLeft" align="right" valign="top"><a id="a2f7b8f051280b2b40483d6945132d887" name="a2f7b8f051280b2b40483d6945132d887"></a>
+virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createContainer</b> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a> &gt;)&gt; config)=0</td></tr>
+<tr class="separator:a2f7b8f051280b2b40483d6945132d887 inherit pub_methods_classLE_1_1IEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -291,6 +316,34 @@ std::unique_ptr&lt; <a class="el" href="classAssetLoader.html">AssetLoader</a> &
 <p>The <a class="el" href="classLE_1_1SFMLEngine.html" title="Creates an instance of the SFMLEngine class.">SFMLEngine</a> class is an implementation of the <a class="el" href="classLE_1_1IEngine.html" title="Interface for the Lion Engine core functionalities.">IEngine</a> interface using the SFML library.</p>
 <p>The <a class="el" href="classLE_1_1SFMLEngine.html" title="Creates an instance of the SFMLEngine class.">SFMLEngine</a> class provides methods to create various engine components such as fonts, shaders, and windows using the SFML library. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad25509c80dc4fba4782171ebc38ad5ea" name="ad25509c80dc4fba4782171ebc38ad5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad25509c80dc4fba4782171ebc38ad5ea">&#9670;&#160;</a></span>createButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IButton.html">LE::GUI::IButton</a> &gt; LE::SFMLEngine::createButton </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IButton.html">LE::GUI::IButton</a> &gt;)&gt;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a>.</p>
+
+</div>
+</div>
 <a id="aa95455aeface64c6cd8cf7b393fbe4c6" name="aa95455aeface64c6cd8cf7b393fbe4c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa95455aeface64c6cd8cf7b393fbe4c6">&#9670;&#160;</a></span>createCameraComponent()</h2>
 
@@ -367,6 +420,34 @@ std::unique_ptr&lt; <a class="el" href="classAssetLoader.html">AssetLoader</a> &
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created camera system. </dd></dl>
 
 <p>Implements <a class="el" href="classLE_1_1IEngine.html#a929f0c65eb5d7610ddeaeaa4f4822af2">LE::IEngine</a>.</p>
+
+</div>
+</div>
+<a id="a01a7b7aa5edba2b854c221820a6b362b" name="a01a7b7aa5edba2b854c221820a6b362b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a7b7aa5edba2b854c221820a6b362b">&#9670;&#160;</a></span>createContainer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a> &gt; LE::SFMLEngine::createContainer </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a> &gt;)&gt;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a>.</p>
 
 </div>
 </div>
@@ -452,6 +533,34 @@ std::unique_ptr&lt; <a class="el" href="classAssetLoader.html">AssetLoader</a> &
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created font resource. </dd></dl>
 
 <p>Implements <a class="el" href="classLE_1_1IEngine.html#af99d5cac5471f3f20533c7a3299a9b14">LE::IEngine</a>.</p>
+
+</div>
+</div>
+<a id="a0300c86b85be3b01413a84879109e6f7" name="a0300c86b85be3b01413a84879109e6f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0300c86b85be3b01413a84879109e6f7">&#9670;&#160;</a></span>createGUIManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IManager.html">LE::GUI::IManager</a> &gt; LE::SFMLEngine::createGUIManager </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IManager.html">LE::GUI::IManager</a> &gt;)&gt;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a>.</p>
 
 </div>
 </div>
@@ -612,6 +721,62 @@ std::unique_ptr&lt; <a class="el" href="classAssetLoader.html">AssetLoader</a> &
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created sprite component. </dd></dl>
 
 <p>Implements <a class="el" href="classLE_1_1IEngine.html#aecba6572a21101d36367bb39c866f73e">LE::IEngine</a>.</p>
+
+</div>
+</div>
+<a id="a18435428fc90d5a231f6e7fe9de17dcd" name="a18435428fc90d5a231f6e7fe9de17dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18435428fc90d5a231f6e7fe9de17dcd">&#9670;&#160;</a></span>createText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IText.html">LE::GUI::IText</a> &gt; LE::SFMLEngine::createText </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IText.html">LE::GUI::IText</a> &gt;)&gt;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a>.</p>
+
+</div>
+</div>
+<a id="aa1a40ddf2f70c2b197b1672d426cbdac" name="aa1a40ddf2f70c2b197b1672d426cbdac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a40ddf2f70c2b197b1672d426cbdac">&#9670;&#160;</a></span>createTextField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1ITextField.html">LE::GUI::ITextField</a> &gt; LE::SFMLEngine::createTextField </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1ITextField.html">LE::GUI::ITextField</a> &gt;)&gt;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a>.</p>
 
 </div>
 </div>

@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classLE_1_1GUI_1_1IComponent-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LE::GUI::IComponent Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
@@ -86,59 +87,271 @@ Inheritance diagram for LE::GUI::IComponent:</div>
  <div class="center">
   <img src="classLE_1_1GUI_1_1IComponent.png" usemap="#LE::GUI::IComponent_map" alt=""/>
   <map id="LE::GUI::IComponent_map" name="LE::GUI::IComponent_map">
-<area href="classLE_1_1GUI_1_1IContainer.html" alt="LE::GUI::IContainer" shape="rect" coords="154,56,298,80"/>
-<area href="classLE_1_1IText.html" alt="LE::IText" shape="rect" coords="462,56,606,80"/>
-<area href="classLE_1_1GUI_1_1IButton.html" alt="LE::GUI::IButton" shape="rect" coords="0,112,144,136"/>
-<area href="classLE_1_1GUI_1_1ITextField.html" alt="LE::GUI::ITextField" shape="rect" coords="154,112,298,136"/>
-<area href="classLE_1_1GUI_1_1Manager.html" alt="LE::GUI::Manager" shape="rect" coords="308,112,452,136"/>
-<area href="classLE_1_1GUI_1_1SFMLText.html" alt="LE::GUI::SFMLText" shape="rect" coords="462,112,606,136"/>
-<area href="classLE_1_1GUI_1_1SFMLButton.html" alt="LE::GUI::SFMLButton" shape="rect" coords="0,168,144,192"/>
-<area href="classLE_1_1GUI_1_1SFMLTextField.html" alt="LE::GUI::SFMLTextField" shape="rect" coords="154,168,298,192"/>
+<area href="classLE_1_1GUI_1_1IContainer.html" alt="LE::GUI::IContainer" shape="rect" coords="237,56,385,80"/>
+<area href="classLE_1_1GUI_1_1IText.html" alt="LE::GUI::IText" shape="rect" coords="632,56,780,80"/>
+<area href="classLE_1_1GUI_1_1IButton.html" alt="LE::GUI::IButton" shape="rect" coords="0,112,148,136"/>
+<area href="classLE_1_1GUI_1_1IManager.html" alt="LE::GUI::IManager" shape="rect" coords="158,112,306,136"/>
+<area href="classLE_1_1GUI_1_1ITextField.html" alt="LE::GUI::ITextField" shape="rect" coords="316,112,464,136"/>
+<area href="classLE_1_1GUI_1_1SFMLContainer.html" alt="LE::GUI::SFMLContainer" shape="rect" coords="474,112,622,136"/>
+<area href="classLE_1_1GUI_1_1SFMLText.html" alt="LE::GUI::SFMLText" shape="rect" coords="632,112,780,136"/>
+<area href="classLE_1_1GUI_1_1SFMLButton.html" title="The SFMLButton class." alt="LE::GUI::SFMLButton" shape="rect" coords="0,168,148,192"/>
+<area href="classLE_1_1GUI_1_1SFMLManager.html" alt="LE::GUI::SFMLManager" shape="rect" coords="158,168,306,192"/>
+<area href="classLE_1_1GUI_1_1SFMLTextField.html" title="The SFMLTextField class." alt="LE::GUI::SFMLTextField" shape="rect" coords="316,168,464,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeba800f56459bc7b6bf20a67a9d39896"><td class="memItemLeft" align="right" valign="top"><a id="aeba800f56459bc7b6bf20a67a9d39896" name="aeba800f56459bc7b6bf20a67a9d39896"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="memitem:a432f339ab744faa85bcf185c19a8f276"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a432f339ab744faa85bcf185c19a8f276">~IComponent</a> ()=default</td></tr>
+<tr class="memdesc:a432f339ab744faa85bcf185c19a8f276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a>.  <br /></td></tr>
+<tr class="separator:a432f339ab744faa85bcf185c19a8f276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba800f56459bc7b6bf20a67a9d39896"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#aeba800f56459bc7b6bf20a67a9d39896">getId</a> () const</td></tr>
+<tr class="memdesc:aeba800f56459bc7b6bf20a67a9d39896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the id of the component.  <br /></td></tr>
 <tr class="separator:aeba800f56459bc7b6bf20a67a9d39896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af31c3604e04ea5d6a5e80f57de59683a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#af31c3604e04ea5d6a5e80f57de59683a">init</a> ()=0</td></tr>
+<tr class="memdesc:af31c3604e04ea5d6a5e80f57de59683a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the id of the component.  <br /></td></tr>
 <tr class="separator:af31c3604e04ea5d6a5e80f57de59683a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a862f37efcc51286355488841f988ec"><td class="memItemLeft" align="right" valign="top"><a id="a9a862f37efcc51286355488841f988ec" name="a9a862f37efcc51286355488841f988ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (float x, float y)</td></tr>
+<tr class="memitem:a0cf786b83c71215c67c06217d8ccdec0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a0cf786b83c71215c67c06217d8ccdec0">draw</a> ()=0</td></tr>
+<tr class="memdesc:a0cf786b83c71215c67c06217d8ccdec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the component.  <br /></td></tr>
+<tr class="separator:a0cf786b83c71215c67c06217d8ccdec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a862f37efcc51286355488841f988ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a9a862f37efcc51286355488841f988ec">setPos</a> (float x, float y)</td></tr>
+<tr class="memdesc:a9a862f37efcc51286355488841f988ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the component.  <br /></td></tr>
 <tr class="separator:a9a862f37efcc51286355488841f988ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542a3c259e9f6b96864a4f16dab07879"><td class="memItemLeft" align="right" valign="top"><a id="a542a3c259e9f6b96864a4f16dab07879" name="a542a3c259e9f6b96864a4f16dab07879"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const</td></tr>
+<tr class="memitem:aba8d7af73ba2883b4daaaf489ca96bce"><td class="memItemLeft" align="right" valign="top"><a id="aba8d7af73ba2883b4daaaf489ca96bce" name="aba8d7af73ba2883b4daaaf489ca96bce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (float width)</td></tr>
+<tr class="separator:aba8d7af73ba2883b4daaaf489ca96bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dfb8f2f3ce253599fc2b74f8acea9d9"><td class="memItemLeft" align="right" valign="top"><a id="a4dfb8f2f3ce253599fc2b74f8acea9d9" name="a4dfb8f2f3ce253599fc2b74f8acea9d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (float height)</td></tr>
+<tr class="separator:a4dfb8f2f3ce253599fc2b74f8acea9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade96c9ded251f7157ee30545d7035472"><td class="memItemLeft" align="right" valign="top"><a id="ade96c9ded251f7157ee30545d7035472" name="ade96c9ded251f7157ee30545d7035472"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setFont</b> (std::shared_ptr&lt; <a class="el" href="classLE_1_1IFont.html">LE::IFont</a> &gt; font)=0</td></tr>
+<tr class="separator:ade96c9ded251f7157ee30545d7035472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542a3c259e9f6b96864a4f16dab07879"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a542a3c259e9f6b96864a4f16dab07879">getWidth</a> () const</td></tr>
+<tr class="memdesc:a542a3c259e9f6b96864a4f16dab07879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the component.  <br /></td></tr>
 <tr class="separator:a542a3c259e9f6b96864a4f16dab07879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c5548966c078572566c84a01b33b68"><td class="memItemLeft" align="right" valign="top"><a id="a96c5548966c078572566c84a01b33b68" name="a96c5548966c078572566c84a01b33b68"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const</td></tr>
+<tr class="memitem:a96c5548966c078572566c84a01b33b68"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a96c5548966c078572566c84a01b33b68">getHeight</a> () const</td></tr>
+<tr class="memdesc:a96c5548966c078572566c84a01b33b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the component.  <br /></td></tr>
 <tr class="separator:a96c5548966c078572566c84a01b33b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f972f4bd25ef2e431a6cc218c6349df"><td class="memItemLeft" align="right" valign="top"><a id="a7f972f4bd25ef2e431a6cc218c6349df" name="a7f972f4bd25ef2e431a6cc218c6349df"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const</td></tr>
+<tr class="memitem:a7f972f4bd25ef2e431a6cc218c6349df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a7f972f4bd25ef2e431a6cc218c6349df">getX</a> () const</td></tr>
+<tr class="memdesc:a7f972f4bd25ef2e431a6cc218c6349df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the x coordinate of the component.  <br /></td></tr>
 <tr class="separator:a7f972f4bd25ef2e431a6cc218c6349df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb78347b7658b771fcc3a07dffa46e22"><td class="memItemLeft" align="right" valign="top"><a id="abb78347b7658b771fcc3a07dffa46e22" name="abb78347b7658b771fcc3a07dffa46e22"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const</td></tr>
+<tr class="memitem:abb78347b7658b771fcc3a07dffa46e22"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#abb78347b7658b771fcc3a07dffa46e22">getY</a> () const</td></tr>
+<tr class="memdesc:abb78347b7658b771fcc3a07dffa46e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y coordinate of the component.  <br /></td></tr>
 <tr class="separator:abb78347b7658b771fcc3a07dffa46e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac144337050da2e12e9c11f2d082ef531"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#ac144337050da2e12e9c11f2d082ef531">_id</a></td></tr>
+<tr class="separator:ac144337050da2e12e9c11f2d082ef531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac144337050da2e12e9c11f2d082ef531"><td class="memItemLeft" align="right" valign="top"><a id="ac144337050da2e12e9c11f2d082ef531" name="ac144337050da2e12e9c11f2d082ef531"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>_id</b></td></tr>
-<tr class="separator:ac144337050da2e12e9c11f2d082ef531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a84fea534c4c4e847f3c5649144a4a0"><td class="memItemLeft" align="right" valign="top"><a id="a1a84fea534c4c4e847f3c5649144a4a0" name="a1a84fea534c4c4e847f3c5649144a4a0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_x</b></td></tr>
+<tr class="memitem:a1a84fea534c4c4e847f3c5649144a4a0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a1a84fea534c4c4e847f3c5649144a4a0">_x</a></td></tr>
 <tr class="separator:a1a84fea534c4c4e847f3c5649144a4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63b69e07661f457723548e20963f9cfe"><td class="memItemLeft" align="right" valign="top"><a id="a63b69e07661f457723548e20963f9cfe" name="a63b69e07661f457723548e20963f9cfe"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_y</b></td></tr>
+<tr class="memitem:a63b69e07661f457723548e20963f9cfe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a63b69e07661f457723548e20963f9cfe">_y</a></td></tr>
 <tr class="separator:a63b69e07661f457723548e20963f9cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274f7dca42b5767df193d52b4b25b7e3"><td class="memItemLeft" align="right" valign="top"><a id="a274f7dca42b5767df193d52b4b25b7e3" name="a274f7dca42b5767df193d52b4b25b7e3"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_width</b></td></tr>
+<tr class="memitem:a274f7dca42b5767df193d52b4b25b7e3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a274f7dca42b5767df193d52b4b25b7e3">_width</a></td></tr>
 <tr class="separator:a274f7dca42b5767df193d52b4b25b7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2870a7d0d90a75e31c01ecf482189e5"><td class="memItemLeft" align="right" valign="top"><a id="ab2870a7d0d90a75e31c01ecf482189e5" name="ab2870a7d0d90a75e31c01ecf482189e5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_height</b></td></tr>
+<tr class="memitem:ab2870a7d0d90a75e31c01ecf482189e5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#ab2870a7d0d90a75e31c01ecf482189e5">_height</a></td></tr>
 <tr class="separator:ab2870a7d0d90a75e31c01ecf482189e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a432f339ab744faa85bcf185c19a8f276" name="a432f339ab744faa85bcf185c19a8f276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432f339ab744faa85bcf185c19a8f276">&#9670;&#160;</a></span>~IComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual LE::GUI::IComponent::~IComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a>. </p>
+<p>The <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> class is an interface that is used to create a component object.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a0">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0cf786b83c71215c67c06217d8ccdec0" name="a0cf786b83c71215c67c06217d8ccdec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf786b83c71215c67c06217d8ccdec0">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void LE::GUI::IComponent::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw the component. </p>
+<p>This function is used to draw the component on the screen.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Implemented in <a class="el" href="classLE_1_1GUI_1_1IContainer.html#af92c24ee23fae992d9b410f4fe65c41d">LE::GUI::IContainer</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLButton.html#ac77875c6c335cd7d429725be5a30f544">LE::GUI::SFMLButton</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#a8f7ae0c04dfb71168fce76f8cfc56f1e">LE::GUI::SFMLText</a>, and <a class="el" href="classLE_1_1GUI_1_1SFMLTextField.html#a3de09fd9a50f87ee993c899bce42a94f">LE::GUI::SFMLTextField</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a3">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a96c5548966c078572566c84a01b33b68" name="a96c5548966c078572566c84a01b33b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c5548966c078572566c84a01b33b68">&#9670;&#160;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the height of the component. </p>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#a82f91ea846458253a91407d9dbbd96d9">LE::GUI::SFMLText</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a6">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="aeba800f56459bc7b6bf20a67a9d39896" name="aeba800f56459bc7b6bf20a67a9d39896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba800f56459bc7b6bf20a67a9d39896">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LE::GUI::IComponent::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the id of the component. </p>
+<p>The id is unique to each component. It is managed by the GUI Manager.</p>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a1">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a542a3c259e9f6b96864a4f16dab07879" name="a542a3c259e9f6b96864a4f16dab07879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542a3c259e9f6b96864a4f16dab07879">&#9670;&#160;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the width of the component. </p>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#a3db7bc1d346ef282a121369981eea99d">LE::GUI::SFMLText</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a5">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f972f4bd25ef2e431a6cc218c6349df" name="a7f972f4bd25ef2e431a6cc218c6349df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f972f4bd25ef2e431a6cc218c6349df">&#9670;&#160;</a></span>getX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::getX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the x coordinate of the component. </p>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a7">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="abb78347b7658b771fcc3a07dffa46e22" name="abb78347b7658b771fcc3a07dffa46e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb78347b7658b771fcc3a07dffa46e22">&#9670;&#160;</a></span>getY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::getY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the y coordinate of the component. </p>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a8">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="af31c3604e04ea5d6a5e80f57de59683a" name="af31c3604e04ea5d6a5e80f57de59683a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af31c3604e04ea5d6a5e80f57de59683a">&#9670;&#160;</a></span>init()</h2>
 
@@ -162,7 +375,177 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>_height</b></td></tr
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#aad55d1d94f41f2eb332d4c105df9e2ed">LE::GUI::SFMLText</a>, and <a class="el" href="classLE_1_1IText.html#a7e4ea49da3f07162ff93c77ab2bb30e0">LE::IText</a>.</p>
+<p>Set the id of the component. </p>
+<p>The id is unique to each component. It is managed by the GUI Manager.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The id of the component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Implemented in <a class="el" href="classLE_1_1GUI_1_1IContainer.html#af257599408650c57e95aabc802def969">LE::GUI::IContainer</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLButton.html#a3764710886718d481e21c8d77827ff83">LE::GUI::SFMLButton</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLManager.html#a31f5dc5a884d44e8f2b2cbeb58992111">LE::GUI::SFMLManager</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLText.html#aad55d1d94f41f2eb332d4c105df9e2ed">LE::GUI::SFMLText</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLTextField.html#ae06ed4950fea3ff7c3762e9090e7da6a">LE::GUI::SFMLTextField</a>, <a class="el" href="classLE_1_1GUI_1_1IButton.html#a9e469770b1167d24b89c26d5aacdf79b">LE::GUI::IButton</a>, and <a class="el" href="classLE_1_1GUI_1_1IText.html#ab4a5989e9999f76b567dc7ab309f4749">LE::GUI::IText</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a2">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a9a862f37efcc51286355488841f988ec" name="a9a862f37efcc51286355488841f988ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a862f37efcc51286355488841f988ec">&#9670;&#160;</a></span>setPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IComponent::setPos </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the position of the component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x coordinate of the component </td></tr>
+    <tr><td class="paramname">y</td><td>The y coordinate of the component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a4">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab2870a7d0d90a75e31c01ecf482189e5" name="ab2870a7d0d90a75e31c01ecf482189e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2870a7d0d90a75e31c01ecf482189e5">&#9670;&#160;</a></span>_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::_height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The height of the component </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a13">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ac144337050da2e12e9c11f2d082ef531" name="ac144337050da2e12e9c11f2d082ef531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac144337050da2e12e9c11f2d082ef531">&#9670;&#160;</a></span>_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LE::GUI::IComponent::_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The id of the component </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a9">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a274f7dca42b5767df193d52b4b25b7e3" name="a274f7dca42b5767df193d52b4b25b7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274f7dca42b5767df193d52b4b25b7e3">&#9670;&#160;</a></span>_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::_width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The width of the component </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a12">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a84fea534c4c4e847f3c5649144a4a0" name="a1a84fea534c4c4e847f3c5649144a4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a84fea534c4c4e847f3c5649144a4a0">&#9670;&#160;</a></span>_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The x coordinate of the component </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a10">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a63b69e07661f457723548e20963f9cfe" name="a63b69e07661f457723548e20963f9cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b69e07661f457723548e20963f9cfe">&#9670;&#160;</a></span>_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LE::GUI::IComponent::_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The y coordinate of the component </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IComponent_8hpp-example.html#a11">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IComponent.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>

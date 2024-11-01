@@ -80,19 +80,14 @@ $(function() {
   <div class="headertitle"><div class="title">LE::ITriangle Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Interface for triangle shapes.  
- <a href="classLE_1_1ITriangle.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="ITriangle_8hpp_source.html">ITriangle.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LE::ITriangle:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classLE_1_1ITriangle.png" usemap="#LE::ITriangle_map" alt=""/>
   <map id="LE::ITriangle_map" name="LE::ITriangle_map">
-<area href="classLE_1_1IShape.html" title="Interface for shapes." alt="LE::IShape" shape="rect" coords="0,0,113,24"/>
-<area href="classLE_1_1SFMLTriangle.html" alt="LE::SFMLTriangle" shape="rect" coords="0,112,113,136"/>
+<area href="classLE_1_1IShape.html" alt="LE::IShape" shape="rect" coords="0,0,113,24"/>
+<area href="classLE_1_1SFMLTriangle.html" title="The SFMLTriangle class." alt="LE::SFMLTriangle" shape="rect" coords="0,112,113,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -100,7 +95,7 @@ Inheritance diagram for LE::ITriangle:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c2f62816ee871de96fb579365d07f85"><td class="memItemLeft" align="right" valign="top"><a id="a3c2f62816ee871de96fb579365d07f85" name="a3c2f62816ee871de96fb579365d07f85"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITriangle</b> ()=default</td></tr>
-<tr class="memdesc:a3c2f62816ee871de96fb579365d07f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1ITriangle.html" title="Interface for triangle shapes.">ITriangle</a> object. <br /></td></tr>
+<tr class="memdesc:a3c2f62816ee871de96fb579365d07f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a3c2f62816ee871de96fb579365d07f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d758998edc4bd0b51e765a50cd481d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1ITriangle.html#a81d758998edc4bd0b51e765a50cd481d">setPoint1</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;point1)</td></tr>
 <tr class="memdesc:a81d758998edc4bd0b51e765a50cd481d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the first point of the triangle.  <br /></td></tr>
@@ -112,7 +107,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITriangle</b> ()=
 <tr class="memdesc:a5d949a1755892b793ee2a45ace956bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the third point of the triangle.  <br /></td></tr>
 <tr class="separator:a5d949a1755892b793ee2a45ace956bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa395130ebba3d019bb89f457d7c2360c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1ITriangle.html#aa395130ebba3d019bb89f457d7c2360c">move</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;moveVector) override</td></tr>
-<tr class="memdesc:aa395130ebba3d019bb89f457d7c2360c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first point of the triangle.  <br /></td></tr>
+<tr class="memdesc:aa395130ebba3d019bb89f457d7c2360c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the triangle.  <br /></td></tr>
 <tr class="separator:aa395130ebba3d019bb89f457d7c2360c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a794e15c8241e21954c21954ecdff130d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1ITriangle.html#a794e15c8241e21954c21954ecdff130d">init</a> ()=0</td></tr>
 <tr class="memdesc:a794e15c8241e21954c21954ecdff130d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the triangle.  <br /></td></tr>
@@ -126,29 +121,37 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITriangle</b> ()=
 <tr class="memitem:a2f9b1b6586aed6bfacaa7ca0c0a0cf33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1ITriangle.html#a2f9b1b6586aed6bfacaa7ca0c0a0cf33">getPoint3</a> () const</td></tr>
 <tr class="memdesc:a2f9b1b6586aed6bfacaa7ca0c0a0cf33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the third point of the triangle.  <br /></td></tr>
 <tr class="separator:a2f9b1b6586aed6bfacaa7ca0c0a0cf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535a3bb1299a427598d1ad3543a6addd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1ITriangle.html#a535a3bb1299a427598d1ad3543a6addd">resize</a> (float width, float height) override</td></tr>
+<tr class="separator:a535a3bb1299a427598d1ad3543a6addd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLE_1_1IShape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLE_1_1IShape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLE_1_1IShape.html">LE::IShape</a></td></tr>
 <tr class="memitem:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a id="a96673c786359296a9f9cf265934cd2b7" name="a96673c786359296a9f9cf265934cd2b7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IShape</b> ()=default</td></tr>
-<tr class="memdesc:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1IShape.html" title="Interface for shapes.">IShape</a> object. <br /></td></tr>
+<tr class="memdesc:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a96673c786359296a9f9cf265934cd2b7 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d61f6ba051d6f4352f58061ce09c05 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a10d61f6ba051d6f4352f58061ce09c05">setPosition</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position)</td></tr>
 <tr class="memdesc:a10d61f6ba051d6f4352f58061ce09c05 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the shape.  <br /></td></tr>
 <tr class="separator:a10d61f6ba051d6f4352f58061ce09c05 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc865e0a93d8dabf27069a4c11a0a714 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#acc865e0a93d8dabf27069a4c11a0a714">setColor</a> (<a class="el" href="classLE_1_1Color.html">LE::Color</a> *color)</td></tr>
-<tr class="memdesc:acc865e0a93d8dabf27069a4c11a0a714 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the shape.  <br /></td></tr>
-<tr class="separator:acc865e0a93d8dabf27069a4c11a0a714 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cfc2781afd7845faac0f6d600c7123 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a57cfc2781afd7845faac0f6d600c7123">setColor</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; color)</td></tr>
+<tr class="memdesc:a57cfc2781afd7845faac0f6d600c7123 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the shape.  <br /></td></tr>
+<tr class="separator:a57cfc2781afd7845faac0f6d600c7123 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f540d98e94ba64bfe405a1542491d73 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a5f540d98e94ba64bfe405a1542491d73">move</a> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;moveVector)</td></tr>
 <tr class="memdesc:a5f540d98e94ba64bfe405a1542491d73 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the shape.  <br /></td></tr>
 <tr class="separator:a5f540d98e94ba64bfe405a1542491d73 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6ea25896b15769cbdf1b3781c20e51 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a1d6ea25896b15769cbdf1b3781c20e51">init</a> ()=0</td></tr>
 <tr class="memdesc:a1d6ea25896b15769cbdf1b3781c20e51 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the shape.  <br /></td></tr>
 <tr class="separator:a1d6ea25896b15769cbdf1b3781c20e51 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6329d4854e3b86142061ea340f4c1dd1 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a6329d4854e3b86142061ea340f4c1dd1">draw</a> ()=0</td></tr>
+<tr class="memdesc:a6329d4854e3b86142061ea340f4c1dd1 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the shape.  <br /></td></tr>
+<tr class="separator:a6329d4854e3b86142061ea340f4c1dd1 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567c8e7b89d368bdb1bf38aa57f57202 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a567c8e7b89d368bdb1bf38aa57f57202">getPosition</a> () const</td></tr>
 <tr class="memdesc:a567c8e7b89d368bdb1bf38aa57f57202 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of the shape.  <br /></td></tr>
 <tr class="separator:a567c8e7b89d368bdb1bf38aa57f57202 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d603a7d87d663d63db16cf5e07a910e inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a1d603a7d87d663d63db16cf5e07a910e">getColor</a> () const</td></tr>
-<tr class="memdesc:a1d603a7d87d663d63db16cf5e07a910e inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color of the shape.  <br /></td></tr>
-<tr class="separator:a1d603a7d87d663d63db16cf5e07a910e inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237a9a89cb31c786c49fa4875edabc12 inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a237a9a89cb31c786c49fa4875edabc12">getColor</a> () const</td></tr>
+<tr class="memdesc:a237a9a89cb31c786c49fa4875edabc12 inherit pub_methods_classLE_1_1IShape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color of the shape.  <br /></td></tr>
+<tr class="separator:a237a9a89cb31c786c49fa4875edabc12 inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00432c99ba89ab8b761e3451d50e92a inherit pub_methods_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a id="ac00432c99ba89ab8b761e3451d50e92a" name="ac00432c99ba89ab8b761e3451d50e92a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (float width, float height)=0</td></tr>
+<tr class="separator:ac00432c99ba89ab8b761e3451d50e92a inherit pub_methods_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -161,12 +164,12 @@ Protected Attributes</h2></td></tr>
 <tr class="inherit_header pro_attribs_classLE_1_1IShape"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classLE_1_1IShape')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classLE_1_1IShape.html">LE::IShape</a></td></tr>
 <tr class="memitem:a048214f7c09ee47cfbe1c1fe80283496 inherit pro_attribs_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#a048214f7c09ee47cfbe1c1fe80283496">_position</a></td></tr>
 <tr class="separator:a048214f7c09ee47cfbe1c1fe80283496 inherit pro_attribs_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac50cfc4c882664c10bec9f60730fe01 inherit pro_attribs_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLE_1_1Color.html">LE::Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#aac50cfc4c882664c10bec9f60730fe01">_color</a></td></tr>
-<tr class="separator:aac50cfc4c882664c10bec9f60730fe01 inherit pro_attribs_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70f6b38128013d6c5116ca145b67654 inherit pro_attribs_classLE_1_1IShape"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IShape.html#ad70f6b38128013d6c5116ca145b67654">_color</a></td></tr>
+<tr class="separator:ad70f6b38128013d6c5116ca145b67654 inherit pro_attribs_classLE_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface for triangle shapes. </p>
-<p>The <a class="el" href="classLE_1_1ITriangle.html" title="Interface for triangle shapes.">ITriangle</a> interface provides a way to create triangle shapes. </p>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#_a0">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae2eb19035c7614fb89e34dca454099f5" name="ae2eb19035c7614fb89e34dca454099f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2eb19035c7614fb89e34dca454099f5">&#9670;&#160;</a></span>getPoint1()</h2>
@@ -184,7 +187,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the first point of the triangle. </p>
-<dl class="section return"><dt>Returns</dt><dd>The first point of the triangle. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE::Vector3&lt;float&gt; </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a8">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -204,7 +209,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the second point of the triangle. </p>
-<dl class="section return"><dt>Returns</dt><dd>The second point of the triangle. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE::Vector3&lt;float&gt; </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a9">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -224,7 +231,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the third point of the triangle. </p>
-<dl class="section return"><dt>Returns</dt><dd>The third point of the triangle. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE::Vector3&lt;float&gt; </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a10">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -257,6 +266,8 @@ Protected Attributes</h2></td></tr>
 <p>Implements <a class="el" href="classLE_1_1IShape.html#a1d6ea25896b15769cbdf1b3781c20e51">LE::IShape</a>.</p>
 
 <p>Implemented in <a class="el" href="classLE_1_1SFMLTriangle.html#a168605993791228e80a6208a09f81ef4">LE::SFMLTriangle</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a7">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -284,12 +295,58 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the first point of the triangle. </p>
-<dl class="section return"><dt>Returns</dt><dd>The first point of the triangle. </dd></dl>
+<p>Move the triangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moveVector</td><td>The vector to move the triangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classLE_1_1IShape.html#a5f540d98e94ba64bfe405a1542491d73">LE::IShape</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classLE_1_1SFMLTriangle.html#a55d3f440669704ef283a7eb17b1deb50">LE::SFMLTriangle</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a6">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a535a3bb1299a427598d1ad3543a6addd" name="a535a3bb1299a427598d1ad3543a6addd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535a3bb1299a427598d1ad3543a6addd">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::ITriangle::resize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classLE_1_1IShape.html">LE::IShape</a>.</p>
 
 </div>
 </div>
@@ -320,11 +377,13 @@ Protected Attributes</h2></td></tr>
 <p>Set the first point of the triangle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">point1</td><td>The first point of the triangle. </td></tr>
+    <tr><td class="paramname">point1</td><td>The first point of the triangle </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a1">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -355,11 +414,13 @@ Protected Attributes</h2></td></tr>
 <p>Set the second point of the triangle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">point2</td><td>The second point of the triangle. </td></tr>
+    <tr><td class="paramname">point2</td><td>The second point of the triangle </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a2">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -390,11 +451,13 @@ Protected Attributes</h2></td></tr>
 <p>Set the third point of the triangle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">point3</td><td>The third point of the triangle. </td></tr>
+    <tr><td class="paramname">point3</td><td>The third point of the triangle </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a3">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -419,6 +482,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The first point of the triangle </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a11">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -442,6 +507,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The second point of the triangle </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a12">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -465,6 +532,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The third point of the triangle </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2ITriangle_8hpp-example.html#a13">/home/runner/work/lion-engine/lion-engine/include/interface/ITriangle.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>

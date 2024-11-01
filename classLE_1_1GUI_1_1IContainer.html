@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classLE_1_1GUI_1_1IContainer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LE::GUI::IContainer Class Reference</div></div>
@@ -86,79 +87,207 @@ Inheritance diagram for LE::GUI::IContainer:</div>
  <div class="center">
   <img src="classLE_1_1GUI_1_1IContainer.png" usemap="#LE::GUI::IContainer_map" alt=""/>
   <map id="LE::GUI::IContainer_map" name="LE::GUI::IContainer_map">
-<area href="classLE_1_1GUI_1_1IComponent.html" alt="LE::GUI::IComponent" shape="rect" coords="154,0,298,24"/>
-<area href="classLE_1_1GUI_1_1IButton.html" alt="LE::GUI::IButton" shape="rect" coords="0,112,144,136"/>
-<area href="classLE_1_1GUI_1_1ITextField.html" alt="LE::GUI::ITextField" shape="rect" coords="154,112,298,136"/>
-<area href="classLE_1_1GUI_1_1Manager.html" alt="LE::GUI::Manager" shape="rect" coords="308,112,452,136"/>
-<area href="classLE_1_1GUI_1_1SFMLButton.html" alt="LE::GUI::SFMLButton" shape="rect" coords="0,168,144,192"/>
-<area href="classLE_1_1GUI_1_1SFMLTextField.html" alt="LE::GUI::SFMLTextField" shape="rect" coords="154,168,298,192"/>
+<area href="classLE_1_1GUI_1_1IComponent.html" alt="LE::GUI::IComponent" shape="rect" coords="237,0,385,24"/>
+<area href="classLE_1_1GUI_1_1IButton.html" alt="LE::GUI::IButton" shape="rect" coords="0,112,148,136"/>
+<area href="classLE_1_1GUI_1_1IManager.html" alt="LE::GUI::IManager" shape="rect" coords="158,112,306,136"/>
+<area href="classLE_1_1GUI_1_1ITextField.html" alt="LE::GUI::ITextField" shape="rect" coords="316,112,464,136"/>
+<area href="classLE_1_1GUI_1_1SFMLContainer.html" alt="LE::GUI::SFMLContainer" shape="rect" coords="474,112,622,136"/>
+<area href="classLE_1_1GUI_1_1SFMLButton.html" title="The SFMLButton class." alt="LE::GUI::SFMLButton" shape="rect" coords="0,168,148,192"/>
+<area href="classLE_1_1GUI_1_1SFMLManager.html" alt="LE::GUI::SFMLManager" shape="rect" coords="158,168,306,192"/>
+<area href="classLE_1_1GUI_1_1SFMLTextField.html" title="The SFMLTextField class." alt="LE::GUI::SFMLTextField" shape="rect" coords="316,168,464,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb342e58c3c4d0bb67944d60808c47f2"><td class="memItemLeft" align="right" valign="top"><a id="abb342e58c3c4d0bb67944d60808c47f2" name="abb342e58c3c4d0bb67944d60808c47f2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addChildren</b> (std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> &gt; child)</td></tr>
+<tr class="memitem:a320b9e5045c669dc51abf8c0db5b9e8d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#a320b9e5045c669dc51abf8c0db5b9e8d">~IContainer</a> ()=default</td></tr>
+<tr class="memdesc:a320b9e5045c669dc51abf8c0db5b9e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1GUI_1_1IContainer.html">IContainer</a>.  <br /></td></tr>
+<tr class="separator:a320b9e5045c669dc51abf8c0db5b9e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb342e58c3c4d0bb67944d60808c47f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#abb342e58c3c4d0bb67944d60808c47f2">addChildren</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> &gt; child)</td></tr>
+<tr class="memdesc:abb342e58c3c4d0bb67944d60808c47f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a child to the container.  <br /></td></tr>
 <tr class="separator:abb342e58c3c4d0bb67944d60808c47f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c4875077ea93f04b9a0da9e194e362a"><td class="memItemLeft" align="right" valign="top"><a id="a3c4875077ea93f04b9a0da9e194e362a" name="a3c4875077ea93f04b9a0da9e194e362a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>removeChildren</b> (unsigned int id)</td></tr>
+<tr class="memitem:a3c4875077ea93f04b9a0da9e194e362a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#a3c4875077ea93f04b9a0da9e194e362a">removeChildren</a> (unsigned int id)</td></tr>
+<tr class="memdesc:a3c4875077ea93f04b9a0da9e194e362a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a child from the container.  <br /></td></tr>
 <tr class="separator:a3c4875077ea93f04b9a0da9e194e362a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af257599408650c57e95aabc802def969"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#af257599408650c57e95aabc802def969">init</a> ()</td></tr>
+<tr class="memdesc:af257599408650c57e95aabc802def969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the children of the container.  <br /></td></tr>
 <tr class="separator:af257599408650c57e95aabc802def969"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa228dcba0414f4a62dd8f752f230a933"><td class="memItemLeft" align="right" valign="top"><a id="aa228dcba0414f4a62dd8f752f230a933" name="aa228dcba0414f4a62dd8f752f230a933"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setBackground</b> (<a class="el" href="classLE_1_1IShape.html">LE::IShape</a> *background)</td></tr>
-<tr class="separator:aa228dcba0414f4a62dd8f752f230a933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6235a815111e21da01ead5edbd6ee9ee"><td class="memItemLeft" align="right" valign="top"><a id="a6235a815111e21da01ead5edbd6ee9ee" name="a6235a815111e21da01ead5edbd6ee9ee"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setBackgroundColor</b> (<a class="el" href="classLE_1_1Color.html">LE::Color</a> *color)</td></tr>
-<tr class="separator:a6235a815111e21da01ead5edbd6ee9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa7326b14ed7fd30ed60c4fa340bcfe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#afaa7326b14ed7fd30ed60c4fa340bcfe">setBackground</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1IShape.html">LE::IShape</a> &gt; background)</td></tr>
+<tr class="memdesc:afaa7326b14ed7fd30ed60c4fa340bcfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the children of the container.  <br /></td></tr>
+<tr class="separator:afaa7326b14ed7fd30ed60c4fa340bcfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176eec75807732b7cdd133dec462ff48"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#a176eec75807732b7cdd133dec462ff48">setBackgroundColor</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; color)</td></tr>
+<tr class="memdesc:a176eec75807732b7cdd133dec462ff48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the children of the container.  <br /></td></tr>
+<tr class="separator:a176eec75807732b7cdd133dec462ff48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e01d1ee7a878af0da26379dedbb43f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#a1e01d1ee7a878af0da26379dedbb43f5">setFont</a> (std::shared_ptr&lt; <a class="el" href="classLE_1_1IFont.html">LE::IFont</a> &gt; font) override</td></tr>
+<tr class="separator:a1e01d1ee7a878af0da26379dedbb43f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92c24ee23fae992d9b410f4fe65c41d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#af92c24ee23fae992d9b410f4fe65c41d">draw</a> () override</td></tr>
+<tr class="memdesc:af92c24ee23fae992d9b410f4fe65c41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the container.  <br /></td></tr>
+<tr class="separator:af92c24ee23fae992d9b410f4fe65c41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLE_1_1GUI_1_1IComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLE_1_1GUI_1_1IComponent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLE_1_1GUI_1_1IComponent.html">LE::GUI::IComponent</a></td></tr>
-<tr class="memitem:aeba800f56459bc7b6bf20a67a9d39896 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="aeba800f56459bc7b6bf20a67a9d39896" name="aeba800f56459bc7b6bf20a67a9d39896"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="memitem:a432f339ab744faa85bcf185c19a8f276 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a432f339ab744faa85bcf185c19a8f276">~IComponent</a> ()=default</td></tr>
+<tr class="memdesc:a432f339ab744faa85bcf185c19a8f276 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a>.  <br /></td></tr>
+<tr class="separator:a432f339ab744faa85bcf185c19a8f276 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba800f56459bc7b6bf20a67a9d39896 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#aeba800f56459bc7b6bf20a67a9d39896">getId</a> () const</td></tr>
+<tr class="memdesc:aeba800f56459bc7b6bf20a67a9d39896 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the id of the component.  <br /></td></tr>
 <tr class="separator:aeba800f56459bc7b6bf20a67a9d39896 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af31c3604e04ea5d6a5e80f57de59683a inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#af31c3604e04ea5d6a5e80f57de59683a">init</a> ()=0</td></tr>
+<tr class="memdesc:af31c3604e04ea5d6a5e80f57de59683a inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the id of the component.  <br /></td></tr>
 <tr class="separator:af31c3604e04ea5d6a5e80f57de59683a inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a862f37efcc51286355488841f988ec inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a9a862f37efcc51286355488841f988ec" name="a9a862f37efcc51286355488841f988ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPos</b> (float x, float y)</td></tr>
+<tr class="memitem:a0cf786b83c71215c67c06217d8ccdec0 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a0cf786b83c71215c67c06217d8ccdec0">draw</a> ()=0</td></tr>
+<tr class="memdesc:a0cf786b83c71215c67c06217d8ccdec0 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the component.  <br /></td></tr>
+<tr class="separator:a0cf786b83c71215c67c06217d8ccdec0 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a862f37efcc51286355488841f988ec inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a9a862f37efcc51286355488841f988ec">setPos</a> (float x, float y)</td></tr>
+<tr class="memdesc:a9a862f37efcc51286355488841f988ec inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the component.  <br /></td></tr>
 <tr class="separator:a9a862f37efcc51286355488841f988ec inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542a3c259e9f6b96864a4f16dab07879 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a542a3c259e9f6b96864a4f16dab07879" name="a542a3c259e9f6b96864a4f16dab07879"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const</td></tr>
+<tr class="memitem:aba8d7af73ba2883b4daaaf489ca96bce inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="aba8d7af73ba2883b4daaaf489ca96bce" name="aba8d7af73ba2883b4daaaf489ca96bce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (float width)</td></tr>
+<tr class="separator:aba8d7af73ba2883b4daaaf489ca96bce inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dfb8f2f3ce253599fc2b74f8acea9d9 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a4dfb8f2f3ce253599fc2b74f8acea9d9" name="a4dfb8f2f3ce253599fc2b74f8acea9d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (float height)</td></tr>
+<tr class="separator:a4dfb8f2f3ce253599fc2b74f8acea9d9 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade96c9ded251f7157ee30545d7035472 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="ade96c9ded251f7157ee30545d7035472" name="ade96c9ded251f7157ee30545d7035472"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setFont</b> (std::shared_ptr&lt; <a class="el" href="classLE_1_1IFont.html">LE::IFont</a> &gt; font)=0</td></tr>
+<tr class="separator:ade96c9ded251f7157ee30545d7035472 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542a3c259e9f6b96864a4f16dab07879 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a542a3c259e9f6b96864a4f16dab07879">getWidth</a> () const</td></tr>
+<tr class="memdesc:a542a3c259e9f6b96864a4f16dab07879 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the component.  <br /></td></tr>
 <tr class="separator:a542a3c259e9f6b96864a4f16dab07879 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c5548966c078572566c84a01b33b68 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a96c5548966c078572566c84a01b33b68" name="a96c5548966c078572566c84a01b33b68"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const</td></tr>
+<tr class="memitem:a96c5548966c078572566c84a01b33b68 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a96c5548966c078572566c84a01b33b68">getHeight</a> () const</td></tr>
+<tr class="memdesc:a96c5548966c078572566c84a01b33b68 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the component.  <br /></td></tr>
 <tr class="separator:a96c5548966c078572566c84a01b33b68 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f972f4bd25ef2e431a6cc218c6349df inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a7f972f4bd25ef2e431a6cc218c6349df" name="a7f972f4bd25ef2e431a6cc218c6349df"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const</td></tr>
+<tr class="memitem:a7f972f4bd25ef2e431a6cc218c6349df inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a7f972f4bd25ef2e431a6cc218c6349df">getX</a> () const</td></tr>
+<tr class="memdesc:a7f972f4bd25ef2e431a6cc218c6349df inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the x coordinate of the component.  <br /></td></tr>
 <tr class="separator:a7f972f4bd25ef2e431a6cc218c6349df inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb78347b7658b771fcc3a07dffa46e22 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="abb78347b7658b771fcc3a07dffa46e22" name="abb78347b7658b771fcc3a07dffa46e22"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const</td></tr>
+<tr class="memitem:abb78347b7658b771fcc3a07dffa46e22 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#abb78347b7658b771fcc3a07dffa46e22">getY</a> () const</td></tr>
+<tr class="memdesc:abb78347b7658b771fcc3a07dffa46e22 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y coordinate of the component.  <br /></td></tr>
 <tr class="separator:abb78347b7658b771fcc3a07dffa46e22 inherit pub_methods_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a72bae3e6c1a836f8086ca05a50a6dcb6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLE_1_1IShape.html">LE::IShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#a72bae3e6c1a836f8086ca05a50a6dcb6">_background</a></td></tr>
+<tr class="separator:a72bae3e6c1a836f8086ca05a50a6dcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classLE_1_1GUI_1_1IComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classLE_1_1GUI_1_1IComponent')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classLE_1_1GUI_1_1IComponent.html">LE::GUI::IComponent</a></td></tr>
+<tr class="memitem:ac144337050da2e12e9c11f2d082ef531 inherit pub_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#ac144337050da2e12e9c11f2d082ef531">_id</a></td></tr>
+<tr class="separator:ac144337050da2e12e9c11f2d082ef531 inherit pub_attribs_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af0447f38453212e486fa5f17f4dddabc"><td class="memItemLeft" align="right" valign="top"><a id="af0447f38453212e486fa5f17f4dddabc" name="af0447f38453212e486fa5f17f4dddabc"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_children</b></td></tr>
+<tr class="memitem:af0447f38453212e486fa5f17f4dddabc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#af0447f38453212e486fa5f17f4dddabc">_children</a></td></tr>
 <tr class="separator:af0447f38453212e486fa5f17f4dddabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89a479c4ec032a568769435ab8ea3349"><td class="memItemLeft" align="right" valign="top"><a id="a89a479c4ec032a568769435ab8ea3349" name="a89a479c4ec032a568769435ab8ea3349"></a>
-<a class="el" href="classLE_1_1IShape.html">LE::IShape</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_background</b></td></tr>
-<tr class="separator:a89a479c4ec032a568769435ab8ea3349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classLE_1_1GUI_1_1IComponent"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classLE_1_1GUI_1_1IComponent')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classLE_1_1GUI_1_1IComponent.html">LE::GUI::IComponent</a></td></tr>
-<tr class="memitem:ac144337050da2e12e9c11f2d082ef531 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="ac144337050da2e12e9c11f2d082ef531" name="ac144337050da2e12e9c11f2d082ef531"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>_id</b></td></tr>
-<tr class="separator:ac144337050da2e12e9c11f2d082ef531 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a84fea534c4c4e847f3c5649144a4a0 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a1a84fea534c4c4e847f3c5649144a4a0" name="a1a84fea534c4c4e847f3c5649144a4a0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_x</b></td></tr>
+<tr class="memitem:a1a84fea534c4c4e847f3c5649144a4a0 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a1a84fea534c4c4e847f3c5649144a4a0">_x</a></td></tr>
 <tr class="separator:a1a84fea534c4c4e847f3c5649144a4a0 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63b69e07661f457723548e20963f9cfe inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a63b69e07661f457723548e20963f9cfe" name="a63b69e07661f457723548e20963f9cfe"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_y</b></td></tr>
+<tr class="memitem:a63b69e07661f457723548e20963f9cfe inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a63b69e07661f457723548e20963f9cfe">_y</a></td></tr>
 <tr class="separator:a63b69e07661f457723548e20963f9cfe inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274f7dca42b5767df193d52b4b25b7e3 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="a274f7dca42b5767df193d52b4b25b7e3" name="a274f7dca42b5767df193d52b4b25b7e3"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_width</b></td></tr>
+<tr class="memitem:a274f7dca42b5767df193d52b4b25b7e3 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#a274f7dca42b5767df193d52b4b25b7e3">_width</a></td></tr>
 <tr class="separator:a274f7dca42b5767df193d52b4b25b7e3 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2870a7d0d90a75e31c01ecf482189e5 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top"><a id="ab2870a7d0d90a75e31c01ecf482189e5" name="ab2870a7d0d90a75e31c01ecf482189e5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_height</b></td></tr>
+<tr class="memitem:ab2870a7d0d90a75e31c01ecf482189e5 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IComponent.html#ab2870a7d0d90a75e31c01ecf482189e5">_height</a></td></tr>
 <tr class="separator:ab2870a7d0d90a75e31c01ecf482189e5 inherit pro_attribs_classLE_1_1GUI_1_1IComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a320b9e5045c669dc51abf8c0db5b9e8d" name="a320b9e5045c669dc51abf8c0db5b9e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320b9e5045c669dc51abf8c0db5b9e8d">&#9670;&#160;</a></span>~IContainer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual LE::GUI::IContainer::~IContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classLE_1_1GUI_1_1IContainer.html">IContainer</a>. </p>
+<p>The <a class="el" href="classLE_1_1GUI_1_1IContainer.html">IContainer</a> class is an interface that is used to create a container object.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classLE_1_1GUI_1_1IContainer.html">IContainer</a> </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a0">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abb342e58c3c4d0bb67944d60808c47f2" name="abb342e58c3c4d0bb67944d60808c47f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb342e58c3c4d0bb67944d60808c47f2">&#9670;&#160;</a></span>addChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IContainer::addChildren </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a> &gt;&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a child to the container. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>The child to add </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1IManager.html#a0b06593bd7fe4898043747ae3d66d87b">LE::GUI::IManager</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a1">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="af92c24ee23fae992d9b410f4fe65c41d" name="af92c24ee23fae992d9b410f4fe65c41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92c24ee23fae992d9b410f4fe65c41d">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IContainer::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw the container. </p>
+
+<p>Implements <a class="el" href="classLE_1_1GUI_1_1IComponent.html#a0cf786b83c71215c67c06217d8ccdec0">LE::GUI::IComponent</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1SFMLButton.html#ac77875c6c335cd7d429725be5a30f544">LE::GUI::SFMLButton</a>, and <a class="el" href="classLE_1_1GUI_1_1SFMLTextField.html#a3de09fd9a50f87ee993c899bce42a94f">LE::GUI::SFMLTextField</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a6">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="af257599408650c57e95aabc802def969" name="af257599408650c57e95aabc802def969"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af257599408650c57e95aabc802def969">&#9670;&#160;</a></span>init()</h2>
 
@@ -182,7 +311,184 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>_height</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>Get the children of the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;IComponent&gt;&gt; </dd></dl>
+
+<p>Implements <a class="el" href="classLE_1_1GUI_1_1IComponent.html#af31c3604e04ea5d6a5e80f57de59683a">LE::GUI::IComponent</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1SFMLButton.html#a3764710886718d481e21c8d77827ff83">LE::GUI::SFMLButton</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLManager.html#a31f5dc5a884d44e8f2b2cbeb58992111">LE::GUI::SFMLManager</a>, <a class="el" href="classLE_1_1GUI_1_1SFMLTextField.html#ae06ed4950fea3ff7c3762e9090e7da6a">LE::GUI::SFMLTextField</a>, and <a class="el" href="classLE_1_1GUI_1_1IButton.html#a9e469770b1167d24b89c26d5aacdf79b">LE::GUI::IButton</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a3">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c4875077ea93f04b9a0da9e194e362a" name="a3c4875077ea93f04b9a0da9e194e362a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4875077ea93f04b9a0da9e194e362a">&#9670;&#160;</a></span>removeChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IContainer::removeChildren </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a child from the container. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The id of the child to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a2">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="afaa7326b14ed7fd30ed60c4fa340bcfe" name="afaa7326b14ed7fd30ed60c4fa340bcfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa7326b14ed7fd30ed60c4fa340bcfe">&#9670;&#160;</a></span>setBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IContainer::setBackground </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1IShape.html">LE::IShape</a> &gt;&#160;</td>
+          <td class="paramname"><em>background</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the children of the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;IComponent&gt;&gt; </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a4">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a176eec75807732b7cdd133dec462ff48" name="a176eec75807732b7cdd133dec462ff48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a176eec75807732b7cdd133dec462ff48">&#9670;&#160;</a></span>setBackgroundColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IContainer::setBackgroundColor </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the children of the container. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;IComponent&gt;&gt; </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a5">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a1e01d1ee7a878af0da26379dedbb43f5" name="a1e01d1ee7a878af0da26379dedbb43f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e01d1ee7a878af0da26379dedbb43f5">&#9670;&#160;</a></span>setFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::IContainer::setFont </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLE_1_1IFont.html">LE::IFont</a> &gt;&#160;</td>
+          <td class="paramname"><em>font</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Implements <a class="el" href="classLE_1_1GUI_1_1IComponent.html">LE::GUI::IComponent</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a72bae3e6c1a836f8086ca05a50a6dcb6" name="a72bae3e6c1a836f8086ca05a50a6dcb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72bae3e6c1a836f8086ca05a50a6dcb6">&#9670;&#160;</a></span>_background</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classLE_1_1IShape.html">LE::IShape</a>&gt; LE::GUI::IContainer::_background</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The background of the container </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a7">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="af0447f38453212e486fa5f17f4dddabc" name="af0447f38453212e486fa5f17f4dddabc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0447f38453212e486fa5f17f4dddabc">&#9670;&#160;</a></span>_children</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classLE_1_1GUI_1_1IComponent.html">IComponent</a>&gt; &gt; LE::GUI::IContainer::_children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The children of the container </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2IContainer_8hpp-example.html#a8">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/IContainer.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
