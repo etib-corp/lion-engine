@@ -11,12 +11,12 @@ include(cmake/Utils.cmake)
 FetchContent_Declare(
     openal
     GIT_REPOSITORY https://github.com/kcat/openal-soft.git
-    GIT_TAG openal-soft-1.21.1
+    GIT_TAG 1.23.1
 )
 
 FetchContent_MakeAvailable(openal)
 
-include_directories(include/ include/interface)
+include_directories(include/ include/interface lib/SFML/dependencies)
 
 set(LION_ENGINE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
