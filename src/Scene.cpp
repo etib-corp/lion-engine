@@ -10,6 +10,9 @@
 
 LE::Scene::Scene(LE::IEngine *engine)
 {
+    _guiManager = engine->createGUIManager([](std::shared_ptr<LE::GUI::IManager> manager){
+        // do nothing
+    });
     _ecs = std::make_shared<Ecs>();
     _ecs->setScene(this);
     _ecs->registerComponent<std::shared_ptr<LE::ISpriteComponent>>();
