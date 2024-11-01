@@ -13,6 +13,7 @@
     #include "Maths/Vector2.hpp"
 
     #include "SFMLWindow.hpp"
+    #include "SFMLRectangle.hpp"
 
 namespace LE {
     namespace GUI {

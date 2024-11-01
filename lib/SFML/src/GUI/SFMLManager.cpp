@@ -23,4 +23,5 @@ LE::GUI::SFMLManager::~SFMLManager()
 
 void LE::GUI::SFMLManager::init()
 {
+    std::cout << "Init manager" << std::endl;
 }

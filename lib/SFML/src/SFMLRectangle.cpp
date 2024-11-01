@@ -7,7 +7,7 @@
 
 #include "SFMLRectangle.hpp"
 
-LE::SFMLRectangle::SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::Color *color, std::shared_ptr<LE::IWindow> window)
+LE::SFMLRectangle::SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, std::shared_ptr<LE::Color> color, std::shared_ptr<LE::IWindow> window)
 {
     _position = position;
     _size = size;
@@ -44,5 +44,6 @@ void LE::SFMLRectangle::move(const LE::Vector3<float>& moveVector)
 void LE::SFMLRectangle::draw()
 {
     _rectangle->setSize(sf::Vector2f(_size.x, _size.y));
+    _rectangle->setFillColor(sf::Color(_color->getRed(), _color->getGreen(), _color->getBlue(), _color->getAlpha()));
     _window->getWindow()->draw(*_rectangle);
 }

@@ -12,6 +12,7 @@
 
     #include "interface/GUI/IContainer.hpp"
     #include "interface/GUI/IInteractable.hpp"
+    #include "interface/GUI/IText.hpp"
 
 namespace LE {
     namespace GUI {
@@ -117,7 +118,16 @@ namespace LE {
                 */
                 void setOnUnhoverCallback(std::function<void()> onUnhover);
 
+                void setContent(std::shared_ptr<LE::GUI::IText> text);
+
+                void setContent(const std::string &text);
+
+                std::shared_ptr<LE::GUI::IText> getContent() const;
+
+                std::string getContentString() const;
+
             protected:
+                std::shared_ptr<LE::GUI::IText> _text;       /*!< The text of the button */
                 std::function<void()> _onClick;     /*!< The function to call when the button is clicked */
                 std::function<void()> _onHover;     /*!< The function to call when the button is hovered */
                 std::function<void()> _onUnhover;   /*!< The function to call when the button is unhovered */

@@ -86,6 +86,12 @@ namespace LE {
                  */
                 std::shared_ptr<LE::GUI::IText> getInput() const;
 
+                void setPlaceholder(const std::string &placeholder);
+
+                void setLabel(std::shared_ptr<LE::GUI::IText> label);
+
+                void setLabel(const std::string &label);
+
             protected:
                 std::string _placeholder;           /*!< The placeholder of the text field */
                 std::shared_ptr<LE::GUI::IText> _label;  /*!< The label of the text field */

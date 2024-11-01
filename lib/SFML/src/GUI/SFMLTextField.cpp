@@ -56,6 +56,6 @@ void LE::GUI::SFMLTextField::init()
 {
     LE::Vector3<float> pos = {_x, _y, 0};
     LE::Vector2<float> size = {_width, _height};
-    _background = std::make_shared<LE::SFMLRectangle>(pos, size, new LE::Color(255, 255, 255, 255), _window);
+    _background = std::make_shared<LE::SFMLRectangle>(pos, size, std::make_shared<LE::Color>(255, 255, 255, 255), _window);
     LE::GUI::IContainer::init();
 }

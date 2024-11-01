@@ -143,7 +143,7 @@ namespace LE {
 
             std::shared_ptr<LE::GUI::IButton> createButton(std::function<void(std::shared_ptr<LE::GUI::IButton>)> config) override
             {
-                auto button = std::make_shared<LE::GUI::SFMLButton>(LE::Vector3<float>(0, 0, 0), LE::Vector2<float>(0, 0), "", _window);
+                std::shared_ptr<LE::GUI::SFMLButton> button = std::make_shared<LE::GUI::SFMLButton>(LE::Vector3<float>(0, 0, 0), LE::Vector2<float>(0, 0), "Hello", _window);
 
                 button->init();
                 config(button);
@@ -152,7 +152,7 @@ namespace LE {
 
             std::shared_ptr<LE::GUI::IText> createText(std::function<void(std::shared_ptr<LE::GUI::IText>)> config) override
             {
-                auto text = std::make_shared<LE::GUI::SFMLText>(LE::Vector3<float>(0, 0, 0), _window, "", nullptr);
+                std::shared_ptr<LE::GUI::SFMLText> text = std::make_shared<LE::GUI::SFMLText>(LE::Vector3<float>(0, 0, 0), _window, "", nullptr);
 
                 text->init();
                 config(text);

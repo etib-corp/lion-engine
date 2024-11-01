@@ -79,7 +79,7 @@ namespace LE {
                  * @return void
                  *
                 */
-                void update();
+                virtual void update();
 
                 /**
                  * @brief Return if the object is clicked

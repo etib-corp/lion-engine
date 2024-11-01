@@ -15,9 +15,9 @@ LE::GUI::SFMLButton::SFMLButton(const LE::Vector3<float> &pos, const LE::Vector2
     _x = pos.x;
     _y = pos.y;
 
-    auto text = std::make_shared<LE::GUI::SFMLText>(LE::Vector3<float>(_x, _y, 0), window, content);
+    _text = std::make_shared<LE::GUI::SFMLText>(LE::Vector3<float>(_x, _y, 0), window, content);
 
-    addChildren(text);
+    addChildren(_text);
 }
 
 LE::GUI::SFMLButton::~SFMLButton()
@@ -28,7 +28,7 @@ void LE::GUI::SFMLButton::init()
 {
     LE::Vector3<float> pos = {_x, _y, 0};
     LE::Vector2<float> size = {_width, _height};
-    _background = std::make_shared<SFMLRectangle>(pos, size, new LE::Color(255, 255, 255, 255), _window);
+    _background = std::make_shared<SFMLRectangle>(pos, size, std::make_shared<LE::Color>(255, 0, 255, 255), _window);
     LE::GUI::IContainer::init();
 }
 
@@ -38,8 +38,8 @@ bool LE::GUI::SFMLButton::isHover()
     auto windowPos = _window->getWindow()->getPosition();
     auto windowSize = _window->getWindow()->getSize();
 
-    if (mousePos.x >= windowPos.x + _x && mousePos.x <= windowPos.x + _x + _width &&
-        mousePos.y >= windowPos.y + _y && mousePos.y <= windowPos.y + _y + _height) {
+    if (mousePos.x >= _x && mousePos.x <= _x + _width &&
+        mousePos.y >= _y && mousePos.y <= _y + _height) {
         return true;
     }
     return false;
@@ -55,7 +55,6 @@ bool LE::GUI::SFMLButton::isClicked()
 
 void LE::GUI::SFMLButton::draw()
 {
-    std::cout << "Drawing button" << std::endl;
     LE::GUI::IInteractable::update();
     LE::GUI::IContainer::draw();
 }

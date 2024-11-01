@@ -53,7 +53,7 @@ namespace LE {
              * @return void
              *
             */
-            virtual void setColor(LE::Color *color);
+            virtual void setColor(std::shared_ptr<LE::Color> color);
 
             /**
              * @brief Move the shape
@@ -93,13 +93,13 @@ namespace LE {
              * @return LE::Color
              *
             */
-            virtual LE::Color *getColor() const;
+            virtual std::shared_ptr<LE::Color> getColor() const;
 
             virtual void resize(float width, float height) = 0;
 
         protected:
             LE::Vector3<float> _position;   /*!< The position of the shape */
-            LE::Color *_color;              /*!< The color of the shape */
+            std::shared_ptr<LE::Color> _color;              /*!< The color of the shape */
     };
 }
 

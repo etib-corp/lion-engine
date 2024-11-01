@@ -40,7 +40,7 @@ namespace LE {
                  * @return SFMLText
                  *
                 */
-                SFMLText(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &content = "Hello, World !", Color *color = nullptr);
+                SFMLText(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &content = "Hello, World !", std::shared_ptr<Color> color = nullptr);
 
                 /**
                  * @brief Destroy the SFMLText
@@ -83,7 +83,7 @@ namespace LE {
                  * @return void
                  *
                 */
-                void setColor(Color *color) override;
+                void setColor(std::shared_ptr<Color> color) override;
 
                 /**
                  * @brief Get the content of the text

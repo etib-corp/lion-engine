@@ -14,7 +14,7 @@ LE::GUI::SFMLContainer::SFMLContainer(LE::Vector3<float> position, LE::Vector2<f
     _width = size.x;
     _height = size.y;
     _window = std::dynamic_pointer_cast<LE::SFMLWindow>(window);
-    init();
+    _background = std::make_shared<LE::SFMLRectangle>(LE::Vector3<float>(_x, _y, 0), LE::Vector2<float>(_width, _height), std::make_shared<LE::Color>(255, 255, 255, 255), window);
 }
 
 LE::GUI::SFMLContainer::~SFMLContainer()

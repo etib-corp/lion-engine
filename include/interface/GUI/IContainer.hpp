@@ -88,7 +88,7 @@ namespace LE {
                  * @return std::vector<std::shared_ptr<IComponent>>
                  *
                 */
-                virtual void setBackgroundColor(LE::Color *color);
+                virtual void setBackgroundColor(std::shared_ptr<LE::Color> color);
 
                 virtual void setFont(std::shared_ptr<LE::IFont> font) override;
 
@@ -97,9 +97,9 @@ namespace LE {
                  */
                 void draw() override;
 
+                std::shared_ptr<LE::IShape> _background;                                /*!< The background of the container */
             protected:
                 std::vector<std::shared_ptr<IComponent>> _children;     /*!< The children of the container */
-                std::shared_ptr<LE::IShape> _background;                                /*!< The background of the container */
         };
     }
 }

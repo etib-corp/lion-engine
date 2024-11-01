@@ -30,7 +30,7 @@ namespace LE {
              * @param size The size of the rectangle
              * @param color The color of the rectangle
              */
-            SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, LE::Color *color, std::shared_ptr<LE::IWindow> window);
+            SFMLRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, std::shared_ptr<LE::Color> color, std::shared_ptr<LE::IWindow> window);
 
             /**
              * @brief Destroy the SFMLRectangle object

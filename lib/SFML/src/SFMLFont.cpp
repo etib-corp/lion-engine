@@ -13,6 +13,7 @@ LE::SFMLFont::SFMLFont(const std::string &path, unsigned int height, unsigned in
     _height = height;
     _width = width;
     _font = sf::Font();
+    init();
 }
 
 LE::SFMLFont::~SFMLFont()
