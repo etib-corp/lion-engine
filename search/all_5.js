@@ -7,6 +7,7 @@ var searchData=
   ['entitymanagererror_4',['EntityManagerError',['../classEntityManagerError.html',1,'EntityManagerError'],['../classEntityManagerError.html#a7e64f6ef27c250efef51e9ab4551322f',1,'EntityManagerError::EntityManagerError()']]],
   ['entitysignaturechanged_5',['entitySignatureChanged',['../classLE_1_1SystemManager.html#afd2c86a1955b6f035dea14b7f2eb37ea',1,'LE::SystemManager']]],
   ['errorassetfactory_6',['ErrorAssetFactory',['../classErrorAssetFactory.html',1,'']]],
-  ['eventmanager_7',['EventManager',['../classEventManager.html',1,'']]],
-  ['eventmanagererror_8',['EventManagerError',['../classEventManagerError.html',1,'']]]
+  ['errortype_7',['ErrorType',['../classLE_1_1Sound_1_1Device.html#a9a61bcab7b67f2e1388bce04fc6212a7',1,'LE::Sound::Device']]],
+  ['eventmanager_8',['EventManager',['../classEventManager.html',1,'']]],
+  ['eventmanagererror_9',['EventManagerError',['../classEventManagerError.html',1,'']]]
 ];

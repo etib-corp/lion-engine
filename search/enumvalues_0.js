@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['joystick_5faxis_0',['JOYSTICK_AXIS',['../namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18',1,'LE']]],
-  ['joystick_5fbutton_1',['JOYSTICK_BUTTON',['../namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762',1,'LE']]],
-  ['just_5fpressed_2',['JUST_PRESSED',['../namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4a5b099a9b2de46ab5fb87e0b374c89807',1,'LE']]],
-  ['just_5freleased_3',['JUST_RELEASED',['../namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4a0b0fbb882a120ae1ffdc6928b583f27d',1,'LE']]]
+  ['can_5fnot_5fcreate_5fcontext_0',['CAN_NOT_CREATE_CONTEXT',['../classLE_1_1Sound_1_1Device.html#a9a61bcab7b67f2e1388bce04fc6212a7a7b6d53b5eba4511fe3e12a9342ac643d',1,'LE::Sound::Device']]],
+  ['can_5fnot_5fmake_5fcontext_5fcurrent_1',['CAN_NOT_MAKE_CONTEXT_CURRENT',['../classLE_1_1Sound_1_1Device.html#a9a61bcab7b67f2e1388bce04fc6212a7a9c10cb58ce79f758386b7f3d345f08b9',1,'LE::Sound::Device']]],
+  ['can_5fnot_5fopen_5fdevice_2',['CAN_NOT_OPEN_DEVICE',['../classLE_1_1Sound_1_1Device.html#a9a61bcab7b67f2e1388bce04fc6212a7a10cb5e8ec586c286b536e54d4f210590',1,'LE::Sound::Device']]]
 ];
