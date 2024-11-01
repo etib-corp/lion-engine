@@ -18,7 +18,7 @@
 #include <vector>
 #include <thread>
 
-#include "IError.hpp"
+#include "interface/IError.hpp"
 
 namespace LE {
     namespace Sound {
