@@ -48,13 +48,12 @@ LE::Vector4<int> getNewFrame(AnimatedSpriteComponent &animatedSprite)
     if (animation->frames.empty())
         return {0, 0, animatedSprite.textureWidth, animatedSprite.textureHeight};
     LE::Vector4<int> frame = getFrameIndex(animation->frames[animation->currentFrame], animatedSprite);
+    animation->currentFrame++;
     if (animation->currentFrame >= animation->frames.size()) {
         animation->currentFrame = 0;
         if (!animation->loop)
             animatedSprite.currentAnimation = "";
         animation->callback(animatedSprite);
-    } else {
-        animation->currentFrame++;
     }
     return frame;
 }
