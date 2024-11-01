@@ -35,7 +35,7 @@ void LE::SFMLEventManager::pollEvents()
     }
     while (window->getWindow()->pollEvent(_event)) {
         if (_event.type == sf::Event::Closed) {
-            window->close();
+            exit(0);
         }
     }
 }
