@@ -13,7 +13,7 @@
 
     #include "IText.hpp"
     // #include "IEngine.hpp"
-    #include "IEventManager.hpp"
+    #include "interface/IEventManager.hpp"
 
 namespace LE {
     class IEngine;
@@ -78,7 +78,7 @@ namespace LE {
                 /**
                  * @brief Initialize the text field.
                  */
-                void init() override;
+                virtual void init() = 0;
 
                 /**
                  * @brief Get the string of the input.

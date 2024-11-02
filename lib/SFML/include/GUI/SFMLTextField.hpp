@@ -15,7 +15,6 @@
     #include "SFMLRectangle.hpp"
 
     #include "SFMLWindow.hpp"
-    #include "SFMLEngine.hpp"
     #include "SFMLKeys.hpp"
 
 namespace LE {

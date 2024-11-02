@@ -6,6 +6,7 @@
 */
 
 #include "GUI/SFMLTextField.hpp"
+#include "interface/IEngine.hpp"
 
 LE::GUI::SFMLTextField::SFMLTextField(const LE::Vector3<float> &pos, std::shared_ptr<LE::IWindow> window, const std::string &label, const std::string &placeholder)
 {
