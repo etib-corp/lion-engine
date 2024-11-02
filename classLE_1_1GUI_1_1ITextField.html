@@ -77,7 +77,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classLE_1_1GUI_1_1ITextField-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">LE::GUI::ITextField Class Reference</div></div>
+  <div class="headertitle"><div class="title">LE::GUI::ITextField Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -111,6 +111,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITextField</b> ()
 <tr class="memitem:aab21f13cd037c67e6a1e67fea89cdc13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1ITextField.html#aab21f13cd037c67e6a1e67fea89cdc13">onUnhover</a> () override</td></tr>
 <tr class="memdesc:aab21f13cd037c67e6a1e67fea89cdc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the text field is unhovered.  <br /></td></tr>
 <tr class="separator:aab21f13cd037c67e6a1e67fea89cdc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab955d5f10e2ad17fda3a3e89ad28ed91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1ITextField.html#ab955d5f10e2ad17fda3a3e89ad28ed91">init</a> () override</td></tr>
+<tr class="memdesc:ab955d5f10e2ad17fda3a3e89ad28ed91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the text field.  <br /></td></tr>
+<tr class="separator:ab955d5f10e2ad17fda3a3e89ad28ed91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ffc6fe48b7cb711657ee6873ab7c0d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1ITextField.html#a3ffc6fe48b7cb711657ee6873ab7c0d8">getInputContent</a> () const</td></tr>
 <tr class="memdesc:a3ffc6fe48b7cb711657ee6873ab7c0d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the string of the input.  <br /></td></tr>
 <tr class="separator:a3ffc6fe48b7cb711657ee6873ab7c0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +129,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabel</b> (std::sh
 <tr class="memitem:a176561001099b555d671656f30e8243b"><td class="memItemLeft" align="right" valign="top"><a id="a176561001099b555d671656f30e8243b" name="a176561001099b555d671656f30e8243b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabel</b> (const std::string &amp;label)</td></tr>
 <tr class="separator:a176561001099b555d671656f30e8243b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1252a921c1dd66f34585d59a287ce603"><td class="memItemLeft" align="right" valign="top"><a id="a1252a921c1dd66f34585d59a287ce603" name="a1252a921c1dd66f34585d59a287ce603"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (<a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a> *engine)=0</td></tr>
+<tr class="separator:a1252a921c1dd66f34585d59a287ce603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLE_1_1GUI_1_1IContainer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLE_1_1GUI_1_1IContainer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLE_1_1GUI_1_1IContainer.html">LE::GUI::IContainer</a></td></tr>
 <tr class="memitem:a320b9e5045c669dc51abf8c0db5b9e8d inherit pub_methods_classLE_1_1GUI_1_1IContainer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1GUI_1_1IContainer.html#a320b9e5045c669dc51abf8c0db5b9e8d">~IContainer</a> ()=default</td></tr>
 <tr class="memdesc:a320b9e5045c669dc51abf8c0db5b9e8d inherit pub_methods_classLE_1_1GUI_1_1IContainer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLE_1_1GUI_1_1IContainer.html">IContainer</a>.  <br /></td></tr>
@@ -266,7 +272,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the input as a shared pointer of <a class="el" href="classLE_1_1GUI_1_1IText.html">IText</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;LE::GUI::IText&gt; </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a9">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a10">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
 </div>
@@ -288,6 +294,39 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the string of the input. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a9">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ab955d5f10e2ad17fda3a3e89ad28ed91" name="ab955d5f10e2ad17fda3a3e89ad28ed91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab955d5f10e2ad17fda3a3e89ad28ed91">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LE::GUI::ITextField::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the text field. </p>
+
+<p>Reimplemented from <a class="el" href="classLE_1_1GUI_1_1IContainer.html#af257599408650c57e95aabc802def969">LE::GUI::IContainer</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classLE_1_1GUI_1_1SFMLTextField.html#ae06ed4950fea3ff7c3762e9090e7da6a">LE::GUI::SFMLTextField</a>.</p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a8">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
@@ -439,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The input of the text field </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a12">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a14">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
 </div>
@@ -464,7 +503,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The state of the text field </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a13">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a15">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
 </div>
@@ -489,7 +528,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The label of the text field </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a11">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a13">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
 </div>
@@ -514,7 +553,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The maximum number of characters the text field can contain </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a14">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a16">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
 </div>
@@ -539,7 +578,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The placeholder of the text field </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a10">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2lion-engine_2lion-engine_2include_2interface_2GUI_2ITextField_8hpp-example.html#a12">/home/runner/work/lion-engine/lion-engine/include/interface/GUI/ITextField.hpp</a>.</dd>
 </dl>
 
 </div>
