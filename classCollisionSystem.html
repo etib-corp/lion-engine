@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classCollisionSystem-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CollisionSystem Class Reference</div></div>
 </div><!--header-->
@@ -100,12 +101,21 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~CollisionSystem</b> ()</td></tr>
 <tr class="memdesc:a128d2a8b457f119368f0c9fc95ed61f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classCollisionSystem.html" title="The CollisionSystem class is responsible for handling collisions.">CollisionSystem</a> object. <br /></td></tr>
 <tr class="separator:a128d2a8b457f119368f0c9fc95ed61f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b18104ea298d55107aaecc1b93bc7df"><td class="memItemLeft" align="right" valign="top"><a id="a7b18104ea298d55107aaecc1b93bc7df" name="a7b18104ea298d55107aaecc1b93bc7df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>createRectangle</b> (<a class="el" href="classLE_1_1IEngine.html">LE::IEngine</a> *engine)</td></tr>
+<tr class="separator:a7b18104ea298d55107aaecc1b93bc7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af754857ed29623ef445a6aa781c772c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionSystem.html#af754857ed29623ef445a6aa781c772c3">update</a> (<a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> *ecs, float dt) override</td></tr>
 <tr class="memdesc:af754857ed29623ef445a6aa781c772c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the system This function will be used to update the system.  <br /></td></tr>
 <tr class="separator:af754857ed29623ef445a6aa781c772c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9e26c7fed970e357f7e3ed3d17ade1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSystem.html#afb9e26c7fed970e357f7e3ed3d17ade1">update</a> (<a class="el" href="classLE_1_1Ecs.html">LE::Ecs</a> *ecs, float dt)=0</td></tr>
 <tr class="memdesc:afb9e26c7fed970e357f7e3ed3d17ade1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the system This function will be used to update the system.  <br /></td></tr>
 <tr class="separator:afb9e26c7fed970e357f7e3ed3d17ade1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a2adfad9c216b121210799848008219d7"><td class="memItemLeft" align="right" valign="top"><a id="a2adfad9c216b121210799848008219d7" name="a2adfad9c216b121210799848008219d7"></a>
+std::shared_ptr&lt; <a class="el" href="classLE_1_1IRectangle.html">LE::IRectangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_rectangle</b></td></tr>
+<tr class="separator:a2adfad9c216b121210799848008219d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
