@@ -15,6 +15,8 @@
     #include "SFMLRectangle.hpp"
 
     #include "SFMLWindow.hpp"
+    #include "SFMLEngine.hpp"
+    #include "SFMLKeys.hpp"
 
 namespace LE {
     namespace GUI {
@@ -59,6 +61,8 @@ namespace LE {
                 bool isClicked() override;
 
                 void init() override;
+
+                void bind(LE::IEngine *engine) override;
 
                 std::shared_ptr<SFMLWindow> _window;            /**< The window of the text field */
         };

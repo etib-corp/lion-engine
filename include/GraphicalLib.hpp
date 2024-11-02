@@ -5,7 +5,9 @@
 ** GraphicalLib
 */
 
-#pragma once
+#ifndef GRAPHICALLIB_HPP_
+    #define GRAPHICALLIB_HPP_
+
 
 #include "interface/IEngine.hpp"
 #include <dlfcn.h>
@@ -33,3 +35,5 @@ namespace LE {
             std::shared_ptr<IEngine> (*_createEngine)();
     };
 }
+
+#endif /* !GRAPHICALLIB_HPP_ */

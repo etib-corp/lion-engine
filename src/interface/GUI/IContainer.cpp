@@ -28,11 +28,8 @@ void LE::GUI::IContainer::init()
         _background->init();
     if (_children.empty())
         return;
-    std::cout << "Init container" << std::endl;
     for (auto &child : _children) {
-        std::cout << "Init child" << std::endl;
         child->init();
-        std::cout << "Init child done" << std::endl;
     }
 }
 

@@ -7,6 +7,8 @@
 
 #include "IEngine.hpp"
 
+#include "interface/GUI/ITextField.hpp"
+
 void LE::IEngine::init()
 {
     _window = createWindow(800, 600, "Lion Engine");

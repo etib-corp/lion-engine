@@ -12,8 +12,11 @@
     #include "interface/GUI/IInteractable.hpp"
 
     #include "IText.hpp"
+    // #include "IEngine.hpp"
+    #include "IEventManager.hpp"
 
 namespace LE {
+    class IEngine;
     namespace GUI {
         /**
          * @brief The ITextField interface
@@ -73,6 +76,11 @@ namespace LE {
                 void onUnhover() override;
 
                 /**
+                 * @brief Initialize the text field.
+                 */
+                void init() override;
+
+                /**
                  * @brief Get the string of the input.
                  *
                  * @return std::string
@@ -91,6 +99,8 @@ namespace LE {
                 void setLabel(std::shared_ptr<LE::GUI::IText> label);
 
                 void setLabel(const std::string &label);
+
+                virtual void bind(LE::IEngine *engine) = 0;
 
             protected:
                 std::string _placeholder;           /*!< The placeholder of the text field */

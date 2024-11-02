@@ -43,6 +43,8 @@ FetchContent_MakeAvailable(glm)
 
 include_directories(${glm_SOURCE_DIR})
 
+include_directories(${openal_SOURCE_DIR}/include)
+
 file(GLOB_RECURSE SOURCES src/*.cpp)
 
 

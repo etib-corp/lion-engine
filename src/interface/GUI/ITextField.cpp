@@ -5,7 +5,9 @@
 ** ITextField
 */
 
-#include "GUI/ITextField.hpp"
+#include "interface/GUI/ITextField.hpp"
+
+#include "interface/IEngine.hpp"
 
 void LE::GUI::ITextField::setMaxChar(unsigned int maxChar)
 {
