@@ -108,72 +108,205 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_enumvalue" href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4a0b0fbb882a120ae1ffdc6928b583f27d">JUST_RELEASED</a> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4a0b0fbb882a120ae1ffdc6928b583f27d">   51</a></span>    } <a class="code hl_enumeration" href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4">Type</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">   64</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc">   66</a></span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc">KEYBOARD</a>,        </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68">   67</a></span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68">MOUSE</a>,           </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762">   68</a></span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762">JOYSTICK_BUTTON</a>, </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18">JOYSTICK_AXIS</a>    </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18">   70</a></span>    } <a class="code hl_enumeration" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">Input</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html">   83</a></span>    <span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#a858af223257903f1f44a87db61b9aaee">   85</a></span>        <a class="code hl_enumeration" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">Input</a> <a class="code hl_variable" href="structLE_1_1Key.html#a858af223257903f1f44a87db61b9aaee">input</a>;          </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#aaac50c7a80c137d1c42d35ce2dbf3b96">   86</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structLE_1_1Key.html#aaac50c7a80c137d1c42d35ce2dbf3b96">key</a>;              </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd">   87</a></span>        <a class="code hl_enumeration" href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4">Type</a> <a class="code hl_variable" href="structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd">type</a>;            </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#a9fcf89cdb72c2a3f415c360a00424bfa">   88</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLE_1_1Key.html#a9fcf89cdb72c2a3f415c360a00424bfa">_alreadyPressed</a>; </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    } <a class="code hl_struct" href="structLE_1_1Key.html">Key</a>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html">  104</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classLE_1_1IEventManager.html">IEventManager</a></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager_1_1IEventManagerError.html">  117</a></span>        <span class="keyword">class </span><a class="code hl_class" href="classLE_1_1IEventManager_1_1IEventManagerError.html">IEventManagerError</a> : <span class="keyword">public</span> <a class="code hl_class" href="classLE_1_1IError.html">LE::IError</a></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager_1_1IEventManagerError.html#aa1e6b2c6b620ddd22023dee860e1c04e">  127</a></span>            <a class="code hl_function" href="classLE_1_1IEventManager_1_1IEventManagerError.html#aa1e6b2c6b620ddd22023dee860e1c04e">IEventManagerError</a>(<span class="keyword">const</span> std::string &amp;title, <span class="keyword">const</span> std::string &amp;details, <span class="keyword">const</span> std::string &amp;help) : <a class="code hl_class" href="classLE_1_1IError.html">IError</a>(title, details, help) {}</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        };</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a3c5963234139aaa3ad0fbbcd0cbfdd49">  133</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classLE_1_1IEventManager.html#a3c5963234139aaa3ad0fbbcd0cbfdd49">~IEventManager</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a25209e7d160306169e615ca499ef63ea">  146</a></span>        <span class="keyword">virtual</span> <a class="code hl_struct" href="structLE_1_1Status.html">Status</a> <a class="code hl_function" href="classLE_1_1IEventManager.html#a25209e7d160306169e615ca499ef63ea">addEventListener</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLE_1_1Key.html">LE::Key</a> &amp;key, std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classLE_1_1IEngine.html">LE::IEngine</a> &amp;, <span class="keywordtype">float</span>)&gt; callback)</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keyword">auto</span> newKey = std::make_shared&lt;Key&gt;(key);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.find(newKey);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.end())</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                <span class="keywordflow">return</span> {<span class="keyword">false</span>, <span class="stringliteral">&quot;Event listener already exists for this event type.&quot;</span>};</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>[newKey] = callback;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> {<span class="keyword">true</span>, <span class="stringliteral">&quot;Event listener added successfully.&quot;</span>};</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab">  167</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab">removeEventListener</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLE_1_1Key.html">LE::Key</a> &amp;key)</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keyword">auto</span> newKey = std::make_shared&lt;Key&gt;(key);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.find(newKey);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.end())</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.erase(newKey);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a7aba8561a62515ba4da72ddce4e538e9">  180</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLE_1_1IEventManager.html#a7aba8561a62515ba4da72ddce4e538e9">pollEvents</a>() = 0;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">  183</a></span>        std::map&lt;std::shared_ptr&lt;LE::Key&gt;, std::function&lt;void(<a class="code hl_class" href="classLE_1_1IEngine.html">LE::IEngine</a> &amp;, <span class="keywordtype">float</span>)&gt;&gt; <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>; </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    };</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#endif </span><span class="comment">/* !IEVENTMANAGER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="namespaceLE.html#a77ec8703445f48e7d3407bc63f1b3df6">  166</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        LE_EVENT_NONE = -1,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="comment">// Letters</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        LE_KEY_A = 0,</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        LE_KEY_B = 1,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        LE_KEY_C = 2,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        LE_KEY_D = 3,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        LE_KEY_E = 4,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        LE_KEY_F = 5,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        LE_KEY_G = 6,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        LE_KEY_H = 7,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        LE_KEY_I = 8,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        LE_KEY_J = 9,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        LE_KEY_K = 10,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        LE_KEY_L = 11,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        LE_KEY_M = 12,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        LE_KEY_N = 13,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        LE_KEY_O = 14,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        LE_KEY_P = 15,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        LE_KEY_Q = 16,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        LE_KEY_R = 17,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        LE_KEY_S = 18,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        LE_KEY_T = 19,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        LE_KEY_U = 20,</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        LE_KEY_V = 21,</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        LE_KEY_W = 22,</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        LE_KEY_X = 23,</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        LE_KEY_Y = 24,</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        LE_KEY_Z = 25,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="comment">// Numbers</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        LE_KEY_0 = 26,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        LE_KEY_1 = 27,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        LE_KEY_2 = 28,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        LE_KEY_3 = 29,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        LE_KEY_4 = 30,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        LE_KEY_5 = 31,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        LE_KEY_6 = 32,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        LE_KEY_7 = 33,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        LE_KEY_8 = 34,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        LE_KEY_9 = 35,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">// Function Keys</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        LE_KEY_F1 = 36,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        LE_KEY_F2 = 37,</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        LE_KEY_F3 = 38,</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        LE_KEY_F4 = 39,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        LE_KEY_F5 = 40,</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        LE_KEY_F6 = 41,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        LE_KEY_F7 = 42,</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        LE_KEY_F8 = 43,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        LE_KEY_F9 = 44,</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        LE_KEY_F10 = 45,</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        LE_KEY_F11 = 46,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        LE_KEY_F12 = 47,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="comment">// Special Keys</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        LE_KEY_ESCAPE = 48,</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        LE_KEY_TAB = 49,</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        LE_KEY_CAPSLOCK = 50,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        LE_KEY_LSHIFT = 51,</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        LE_KEY_RSHIFT = 52,</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        LE_KEY_LCTRL = 53,</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        LE_KEY_RCTRL = 54,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        LE_KEY_LALT = 55,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        LE_KEY_RALT = 56,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        LE_KEY_SPACE = 57,</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        LE_KEY_ENTER = 58,</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        LE_KEY_BACKSPACE = 59,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="comment">// Arrow Keys</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        LE_KEY_UP = 60,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        LE_KEY_DOWN = 61,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        LE_KEY_LEFT = 62,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        LE_KEY_RIGHT = 63,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="comment">// Punctuation and Misc</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        LE_KEY_COMMA = 64,</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        LE_KEY_PERIOD = 65,</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        LE_KEY_SLASH = 66,</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        LE_KEY_SEMICOLON = 67,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        LE_KEY_QUOTE = 68,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        LE_KEY_LEFTBRACKET = 69,</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        LE_KEY_RIGHTBRACKET = 70,</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        LE_KEY_BACKSLASH = 71,</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        LE_KEY_MINUS = 72,</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        LE_KEY_EQUALS = 73,</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        LE_KEY_GRAVE = 74,</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="comment">// Numpad Keys</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        LE_KEY_NUMPAD_0 = 75,</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        LE_KEY_NUMPAD_1 = 76,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        LE_KEY_NUMPAD_2 = 77,</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        LE_KEY_NUMPAD_3 = 78,</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        LE_KEY_NUMPAD_4 = 79,</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        LE_KEY_NUMPAD_5 = 80,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        LE_KEY_NUMPAD_6 = 81,</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        LE_KEY_NUMPAD_7 = 82,</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        LE_KEY_NUMPAD_8 = 83,</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        LE_KEY_NUMPAD_9 = 84,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        LE_KEY_NUMPAD_PLUS = 85,</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        LE_KEY_NUMPAD_MINUS = 86,</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        LE_KEY_NUMPAD_MULTIPLY = 87,</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        LE_KEY_NUMPAD_DIVIDE = 88,</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        LE_KEY_NUMPAD_ENTER = 89,</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        LE_KEY_NUMPAD_DOT = 90,</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="comment">// System Keys</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        LE_KEY_PRINTSCREEN = 91,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        LE_KEY_SCROLLLOCK = 92,</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        LE_KEY_PAUSE = 93,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        LE_KEY_INSERT = 94,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        LE_KEY_DELETE = 95,</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        LE_KEY_HOME = 96,</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        LE_KEY_END = 97,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        LE_KEY_PAGEUP = 98,</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        LE_KEY_PAGEDOWN = 99,</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="comment">// Windows / Meta Keys</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        LE_KEY_LEFTMETA = 100,</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        LE_KEY_RIGHTMETA = 101,</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        LE_KEY_APPLICATION = 102,</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="comment">// Mouse Buttons</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        LE_MOUSE_BUTTON_LEFT = 103,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        LE_MOUSE_BUTTON_RIGHT = 104,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        LE_MOUSE_BUTTON_MIDDLE = 105,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        LE_MOUSE_BUTTON_X1 = 106,</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        LE_MOUSE_BUTTON_X2 = 107,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    } <a class="code hl_enumeration" href="namespaceLE.html#a77ec8703445f48e7d3407bc63f1b3df6">Event</a>;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">  310</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    {</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc">  312</a></span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc">KEYBOARD</a>,        </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68">  313</a></span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68">MOUSE</a>,           </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762">  314</a></span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762">JOYSTICK_BUTTON</a>, </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <a class="code hl_enumvalue" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18">JOYSTICK_AXIS</a>    </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18">  316</a></span>    } <a class="code hl_enumeration" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">Input</a>;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html">  329</a></span>    <span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#a858af223257903f1f44a87db61b9aaee">  331</a></span>        <a class="code hl_enumeration" href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">Input</a> <a class="code hl_variable" href="structLE_1_1Key.html#a858af223257903f1f44a87db61b9aaee">input</a>;          </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#aaac50c7a80c137d1c42d35ce2dbf3b96">  332</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structLE_1_1Key.html#aaac50c7a80c137d1c42d35ce2dbf3b96">key</a>;              </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd">  333</a></span>        <a class="code hl_enumeration" href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4">Type</a> <a class="code hl_variable" href="structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd">type</a>;            </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="structLE_1_1Key.html#a9fcf89cdb72c2a3f415c360a00424bfa">  334</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLE_1_1Key.html#a9fcf89cdb72c2a3f415c360a00424bfa">_alreadyPressed</a>; </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    } <a class="code hl_struct" href="structLE_1_1Key.html">Key</a>;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html">  350</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classLE_1_1IEventManager.html">IEventManager</a></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    {</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager_1_1IEventManagerError.html">  363</a></span>        <span class="keyword">class </span><a class="code hl_class" href="classLE_1_1IEventManager_1_1IEventManagerError.html">IEventManagerError</a> : <span class="keyword">public</span> <a class="code hl_class" href="classLE_1_1IError.html">LE::IError</a></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager_1_1IEventManagerError.html#aa1e6b2c6b620ddd22023dee860e1c04e">  373</a></span>            <a class="code hl_function" href="classLE_1_1IEventManager_1_1IEventManagerError.html#aa1e6b2c6b620ddd22023dee860e1c04e">IEventManagerError</a>(<span class="keyword">const</span> std::string &amp;title, <span class="keyword">const</span> std::string &amp;details, <span class="keyword">const</span> std::string &amp;help) : <a class="code hl_class" href="classLE_1_1IError.html">IError</a>(title, details, help) {}</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        };</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a3c5963234139aaa3ad0fbbcd0cbfdd49">  379</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classLE_1_1IEventManager.html#a3c5963234139aaa3ad0fbbcd0cbfdd49">~IEventManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a25209e7d160306169e615ca499ef63ea">  392</a></span>        <span class="keyword">virtual</span> <a class="code hl_struct" href="structLE_1_1Status.html">Status</a> <a class="code hl_function" href="classLE_1_1IEventManager.html#a25209e7d160306169e615ca499ef63ea">addEventListener</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLE_1_1Key.html">LE::Key</a> &amp;key, std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classLE_1_1IEngine.html">LE::IEngine</a> &amp;, <span class="keywordtype">float</span>)&gt; callback)</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        {</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            <span class="keyword">auto</span> newKey = std::make_shared&lt;Key&gt;(key);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.find(newKey);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.end())</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            {</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                <span class="keywordflow">return</span> {<span class="keyword">false</span>, <span class="stringliteral">&quot;Event listener already exists for this event type.&quot;</span>};</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            }</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>[newKey] = callback;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            <span class="keywordflow">return</span> {<span class="keyword">true</span>, <span class="stringliteral">&quot;Event listener added successfully.&quot;</span>};</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        }</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab">  413</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab">removeEventListener</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLE_1_1Key.html">LE::Key</a> &amp;key)</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        {</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="keyword">auto</span> newKey = std::make_shared&lt;Key&gt;(key);</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.find(newKey);</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.end())</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            {</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>.erase(newKey);</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>            }</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        }</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a7aba8561a62515ba4da72ddce4e538e9">  426</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classLE_1_1IEventManager.html#a7aba8561a62515ba4da72ddce4e538e9">pollEvents</a>() = 0;</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno"><a class="line" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">  429</a></span>        std::map&lt;std::shared_ptr&lt;LE::Key&gt;, std::function&lt;void(<a class="code hl_class" href="classLE_1_1IEngine.html">LE::IEngine</a> &amp;, <span class="keywordtype">float</span>)&gt;&gt; <a class="code hl_variable" href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">_eventCallbacks</a>; </div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>    };</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>}</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="preprocessor">#endif </span><span class="comment">/* !IEVENTMANAGER_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassLE_1_1IEngine_html"><div class="ttname"><a href="classLE_1_1IEngine.html">LE::IEngine</a></div><div class="ttdoc">Interface for the Lion Engine core functionalities.</div><div class="ttdef"><b>Definition:</b> IEngine.hpp:64</div></div>
 <div class="ttc" id="aclassLE_1_1IError_html"><div class="ttname"><a href="classLE_1_1IError.html">LE::IError</a></div><div class="ttdoc">Interface for error handling.</div><div class="ttdef"><b>Definition:</b> IError.hpp:26</div></div>
-<div class="ttc" id="aclassLE_1_1IEventManager_1_1IEventManagerError_html"><div class="ttname"><a href="classLE_1_1IEventManager_1_1IEventManagerError.html">LE::IEventManager::IEventManagerError</a></div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:118</div></div>
-<div class="ttc" id="aclassLE_1_1IEventManager_1_1IEventManagerError_html_aa1e6b2c6b620ddd22023dee860e1c04e"><div class="ttname"><a href="classLE_1_1IEventManager_1_1IEventManagerError.html#aa1e6b2c6b620ddd22023dee860e1c04e">LE::IEventManager::IEventManagerError::IEventManagerError</a></div><div class="ttdeci">IEventManagerError(const std::string &amp;title, const std::string &amp;details, const std::string &amp;help)</div><div class="ttdoc">Constructs a new EventManagerError object.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:127</div></div>
-<div class="ttc" id="aclassLE_1_1IEventManager_html"><div class="ttname"><a href="classLE_1_1IEventManager.html">LE::IEventManager</a></div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:105</div></div>
-<div class="ttc" id="aclassLE_1_1IEventManager_html_a25209e7d160306169e615ca499ef63ea"><div class="ttname"><a href="classLE_1_1IEventManager.html#a25209e7d160306169e615ca499ef63ea">LE::IEventManager::addEventListener</a></div><div class="ttdeci">virtual Status addEventListener(const LE::Key &amp;key, std::function&lt; void(LE::IEngine &amp;, float)&gt; callback)</div><div class="ttdoc">Adds an event listener for the specified key.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:146</div></div>
+<div class="ttc" id="aclassLE_1_1IEventManager_1_1IEventManagerError_html"><div class="ttname"><a href="classLE_1_1IEventManager_1_1IEventManagerError.html">LE::IEventManager::IEventManagerError</a></div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:364</div></div>
+<div class="ttc" id="aclassLE_1_1IEventManager_1_1IEventManagerError_html_aa1e6b2c6b620ddd22023dee860e1c04e"><div class="ttname"><a href="classLE_1_1IEventManager_1_1IEventManagerError.html#aa1e6b2c6b620ddd22023dee860e1c04e">LE::IEventManager::IEventManagerError::IEventManagerError</a></div><div class="ttdeci">IEventManagerError(const std::string &amp;title, const std::string &amp;details, const std::string &amp;help)</div><div class="ttdoc">Constructs a new EventManagerError object.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:373</div></div>
+<div class="ttc" id="aclassLE_1_1IEventManager_html"><div class="ttname"><a href="classLE_1_1IEventManager.html">LE::IEventManager</a></div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:351</div></div>
+<div class="ttc" id="aclassLE_1_1IEventManager_html_a25209e7d160306169e615ca499ef63ea"><div class="ttname"><a href="classLE_1_1IEventManager.html#a25209e7d160306169e615ca499ef63ea">LE::IEventManager::addEventListener</a></div><div class="ttdeci">virtual Status addEventListener(const LE::Key &amp;key, std::function&lt; void(LE::IEngine &amp;, float)&gt; callback)</div><div class="ttdoc">Adds an event listener for the specified key.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:392</div></div>
 <div class="ttc" id="aclassLE_1_1IEventManager_html_a3c5963234139aaa3ad0fbbcd0cbfdd49"><div class="ttname"><a href="classLE_1_1IEventManager.html#a3c5963234139aaa3ad0fbbcd0cbfdd49">LE::IEventManager::~IEventManager</a></div><div class="ttdeci">virtual ~IEventManager()=default</div><div class="ttdoc">Destructor for the EventManager class.</div></div>
-<div class="ttc" id="aclassLE_1_1IEventManager_html_a67eccf5f764c0e7fa4d0bc9b9a02cbab"><div class="ttname"><a href="classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab">LE::IEventManager::removeEventListener</a></div><div class="ttdeci">virtual void removeEventListener(const LE::Key &amp;key)</div><div class="ttdoc">Removes an event listener for the specified key.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:167</div></div>
-<div class="ttc" id="aclassLE_1_1IEventManager_html_a7a6dd74c51deee0e57ae6cb7dddb2ecc"><div class="ttname"><a href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">LE::IEventManager::_eventCallbacks</a></div><div class="ttdeci">std::map&lt; std::shared_ptr&lt; LE::Key &gt;, std::function&lt; void(LE::IEngine &amp;, float)&gt; &gt; _eventCallbacks</div><div class="ttdoc">List of event callbacks.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:183</div></div>
+<div class="ttc" id="aclassLE_1_1IEventManager_html_a67eccf5f764c0e7fa4d0bc9b9a02cbab"><div class="ttname"><a href="classLE_1_1IEventManager.html#a67eccf5f764c0e7fa4d0bc9b9a02cbab">LE::IEventManager::removeEventListener</a></div><div class="ttdeci">virtual void removeEventListener(const LE::Key &amp;key)</div><div class="ttdoc">Removes an event listener for the specified key.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:413</div></div>
+<div class="ttc" id="aclassLE_1_1IEventManager_html_a7a6dd74c51deee0e57ae6cb7dddb2ecc"><div class="ttname"><a href="classLE_1_1IEventManager.html#a7a6dd74c51deee0e57ae6cb7dddb2ecc">LE::IEventManager::_eventCallbacks</a></div><div class="ttdeci">std::map&lt; std::shared_ptr&lt; LE::Key &gt;, std::function&lt; void(LE::IEngine &amp;, float)&gt; &gt; _eventCallbacks</div><div class="ttdoc">List of event callbacks.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:429</div></div>
 <div class="ttc" id="aclassLE_1_1IEventManager_html_a7aba8561a62515ba4da72ddce4e538e9"><div class="ttname"><a href="classLE_1_1IEventManager.html#a7aba8561a62515ba4da72ddce4e538e9">LE::IEventManager::pollEvents</a></div><div class="ttdeci">virtual void pollEvents()=0</div><div class="ttdoc">Polls for events and dispatches them to the appropriate listeners.</div></div>
 <div class="ttc" id="anamespaceLE_html"><div class="ttname"><a href="namespaceLE.html">LE</a></div><div class="ttdoc">Namespace for the Lion Engine.</div></div>
 <div class="ttc" id="anamespaceLE_html_a6a38d5ec26795c109be9ba947245eef4"><div class="ttname"><a href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4">LE::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Represents the type of an event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:46</div></div>
@@ -181,16 +314,17 @@ $(function() {
 <div class="ttc" id="anamespaceLE_html_a6a38d5ec26795c109be9ba947245eef4a5b099a9b2de46ab5fb87e0b374c89807"><div class="ttname"><a href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4a5b099a9b2de46ab5fb87e0b374c89807">LE::JUST_PRESSED</a></div><div class="ttdeci">@ JUST_PRESSED</div><div class="ttdoc">The key was just pressed.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:49</div></div>
 <div class="ttc" id="anamespaceLE_html_a6a38d5ec26795c109be9ba947245eef4aad62655caf9e13bc19cd30b6b6c2046a"><div class="ttname"><a href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4aad62655caf9e13bc19cd30b6b6c2046a">LE::RELEASED</a></div><div class="ttdeci">@ RELEASED</div><div class="ttdoc">The key is currently released.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:48</div></div>
 <div class="ttc" id="anamespaceLE_html_a6a38d5ec26795c109be9ba947245eef4ac1ebade5fd5827d1601449492686b581"><div class="ttname"><a href="namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4ac1ebade5fd5827d1601449492686b581">LE::PRESSED</a></div><div class="ttdeci">@ PRESSED</div><div class="ttdoc">The key is currently pressed.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:47</div></div>
-<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6f"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">LE::Input</a></div><div class="ttdeci">Input</div><div class="ttdoc">Represents the input source of an event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:65</div></div>
-<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762">LE::JOYSTICK_BUTTON</a></div><div class="ttdeci">@ JOYSTICK_BUTTON</div><div class="ttdoc">The event is from a joystick button.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:68</div></div>
-<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc">LE::KEYBOARD</a></div><div class="ttdeci">@ KEYBOARD</div><div class="ttdoc">The event is from a keyboard.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:66</div></div>
-<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18">LE::JOYSTICK_AXIS</a></div><div class="ttdeci">@ JOYSTICK_AXIS</div><div class="ttdoc">The event is from a joystick axis.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:69</div></div>
-<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68">LE::MOUSE</a></div><div class="ttdeci">@ MOUSE</div><div class="ttdoc">The event is from a mouse.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:67</div></div>
-<div class="ttc" id="astructLE_1_1Key_html"><div class="ttname"><a href="structLE_1_1Key.html">LE::Key</a></div><div class="ttdoc">Represents a key event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:84</div></div>
-<div class="ttc" id="astructLE_1_1Key_html_a858af223257903f1f44a87db61b9aaee"><div class="ttname"><a href="structLE_1_1Key.html#a858af223257903f1f44a87db61b9aaee">LE::Key::input</a></div><div class="ttdeci">Input input</div><div class="ttdoc">The input source of the event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:85</div></div>
-<div class="ttc" id="astructLE_1_1Key_html_a9fcf89cdb72c2a3f415c360a00424bfa"><div class="ttname"><a href="structLE_1_1Key.html#a9fcf89cdb72c2a3f415c360a00424bfa">LE::Key::_alreadyPressed</a></div><div class="ttdeci">bool _alreadyPressed</div><div class="ttdoc">A boolean value indicating whether the key was already pressed.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:88</div></div>
-<div class="ttc" id="astructLE_1_1Key_html_aaac50c7a80c137d1c42d35ce2dbf3b96"><div class="ttname"><a href="structLE_1_1Key.html#aaac50c7a80c137d1c42d35ce2dbf3b96">LE::Key::key</a></div><div class="ttdeci">int key</div><div class="ttdoc">The key code of the event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:86</div></div>
-<div class="ttc" id="astructLE_1_1Key_html_ad0eea4ace8db9bd84e5f5928b1a159dd"><div class="ttname"><a href="structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd">LE::Key::type</a></div><div class="ttdeci">Type type</div><div class="ttdoc">The type of the event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:87</div></div>
+<div class="ttc" id="anamespaceLE_html_a77ec8703445f48e7d3407bc63f1b3df6"><div class="ttname"><a href="namespaceLE.html#a77ec8703445f48e7d3407bc63f1b3df6">LE::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Represents the type of an event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:166</div></div>
+<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6f"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6f">LE::Input</a></div><div class="ttdeci">Input</div><div class="ttdoc">Represents the input source of an event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:311</div></div>
+<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa065adf9325eb609b44e98dd9eb695762">LE::JOYSTICK_BUTTON</a></div><div class="ttdeci">@ JOYSTICK_BUTTON</div><div class="ttdoc">The event is from a joystick button.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:314</div></div>
+<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fa34d0e0f3ef7536da7055fe837bebfcbc">LE::KEYBOARD</a></div><div class="ttdeci">@ KEYBOARD</div><div class="ttdoc">The event is from a keyboard.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:312</div></div>
+<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac7791a77292d56ada3ec8472991c7a18">LE::JOYSTICK_AXIS</a></div><div class="ttdeci">@ JOYSTICK_AXIS</div><div class="ttdoc">The event is from a joystick axis.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:315</div></div>
+<div class="ttc" id="anamespaceLE_html_a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68"><div class="ttname"><a href="namespaceLE.html#a86857615d58faee7e56423da77db2c6fac94b900b3c7430be36d31f9801dc8a68">LE::MOUSE</a></div><div class="ttdeci">@ MOUSE</div><div class="ttdoc">The event is from a mouse.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:313</div></div>
+<div class="ttc" id="astructLE_1_1Key_html"><div class="ttname"><a href="structLE_1_1Key.html">LE::Key</a></div><div class="ttdoc">Represents a key event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:330</div></div>
+<div class="ttc" id="astructLE_1_1Key_html_a858af223257903f1f44a87db61b9aaee"><div class="ttname"><a href="structLE_1_1Key.html#a858af223257903f1f44a87db61b9aaee">LE::Key::input</a></div><div class="ttdeci">Input input</div><div class="ttdoc">The input source of the event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:331</div></div>
+<div class="ttc" id="astructLE_1_1Key_html_a9fcf89cdb72c2a3f415c360a00424bfa"><div class="ttname"><a href="structLE_1_1Key.html#a9fcf89cdb72c2a3f415c360a00424bfa">LE::Key::_alreadyPressed</a></div><div class="ttdeci">bool _alreadyPressed</div><div class="ttdoc">A boolean value indicating whether the key was already pressed.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:334</div></div>
+<div class="ttc" id="astructLE_1_1Key_html_aaac50c7a80c137d1c42d35ce2dbf3b96"><div class="ttname"><a href="structLE_1_1Key.html#aaac50c7a80c137d1c42d35ce2dbf3b96">LE::Key::key</a></div><div class="ttdeci">int key</div><div class="ttdoc">The key code of the event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:332</div></div>
+<div class="ttc" id="astructLE_1_1Key_html_ad0eea4ace8db9bd84e5f5928b1a159dd"><div class="ttname"><a href="structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd">LE::Key::type</a></div><div class="ttdeci">Type type</div><div class="ttdoc">The type of the event.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:333</div></div>
 <div class="ttc" id="astructLE_1_1Status_html"><div class="ttname"><a href="structLE_1_1Status.html">LE::Status</a></div><div class="ttdoc">Represents the status of an operation.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:29</div></div>
 <div class="ttc" id="astructLE_1_1Status_html_a68597a446d7ca475d50ddb8b0804abe6"><div class="ttname"><a href="structLE_1_1Status.html#a68597a446d7ca475d50ddb8b0804abe6">LE::Status::message</a></div><div class="ttdeci">std::string message</div><div class="ttdoc">A string message providing additional information about the operation.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:31</div></div>
 <div class="ttc" id="astructLE_1_1Status_html_a6e321bf1799a222576bc4d3c6b2fa750"><div class="ttname"><a href="structLE_1_1Status.html#a6e321bf1799a222576bc4d3c6b2fa750">LE::Status::success</a></div><div class="ttdeci">bool success</div><div class="ttdoc">A boolean value indicating whether the operation was successful.</div><div class="ttdef"><b>Definition:</b> IEventManager.hpp:30</div></div>
