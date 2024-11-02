@@ -177,6 +177,13 @@ namespace LE {
                 return container;
             }
 
+            std::shared_ptr<LE::IRectangle> createRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, std::shared_ptr<LE::Color> color, std::shared_ptr<LE::IWindow> window)
+            {
+                auto rectangle = std::make_shared<LE::SFMLRectangle>(position, size, color, window);
+
+                rectangle->init();
+                return rectangle;
+            }
 
     };
 }

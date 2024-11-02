@@ -141,6 +141,11 @@ namespace LE
             return std::dynamic_pointer_cast<T>(_window);
         }
 
+        std::shared_ptr<IWindow> getWindow()
+        {
+            return _window;
+        }
+
         /**
          * @brief Creates the render 2D system.
          *
@@ -293,6 +298,8 @@ namespace LE
         virtual std::shared_ptr<LE::GUI::ITextField> createTextField(std::function<void(std::shared_ptr<LE::GUI::ITextField>)> config) = 0;
 
         virtual std::shared_ptr<LE::GUI::IContainer> createContainer(std::function<void(std::shared_ptr<LE::GUI::IContainer>)> config) = 0;
+
+        virtual std::shared_ptr<LE::IRectangle> createRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, std::shared_ptr<LE::Color> color, std::shared_ptr<LE::IWindow> window) = 0;
 
     protected:
         std::shared_ptr<IWindow> _window;

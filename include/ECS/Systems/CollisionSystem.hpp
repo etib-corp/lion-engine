@@ -12,7 +12,11 @@
 #include "ECS/Components/HurtBoxComponent.hpp"
 #include "ECS/Components/HitBoxComponent.hpp"
 #include "ECS/Components/TransformComponent.hpp"
-// #include "Shapes/Rectangle.hpp"
+#include "interface/IRectangle.hpp"
+
+namespace LE {
+    class IEngine;
+}
 
 /**
  * @class CollisionSystem
@@ -31,6 +35,8 @@ public:
      */
     ~CollisionSystem();
 
+    void createRectangle(LE::IEngine *engine);
+
     /**
      * @brief Update the system
      * This function will be used to update the system
@@ -38,7 +44,7 @@ public:
     void update(LE::Ecs *ecs, float dt) override;
 
 protected:
-    // std::unique_ptr<LE::Shapes::Rectangle> _rectangle;
+    std::shared_ptr<LE::IRectangle> _rectangle;
 private:
 };
 
