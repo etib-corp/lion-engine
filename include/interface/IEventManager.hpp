@@ -329,7 +329,7 @@ namespace LE
     typedef struct
     {
         Input input;          ///< The input source of the event.
-        int key;              ///< The key code of the event.
+        Event key;              ///< The key code of the event.
         Type type;            ///< The type of the event.
         bool _alreadyPressed; ///< A boolean value indicating whether the key was already pressed.
     } Key;

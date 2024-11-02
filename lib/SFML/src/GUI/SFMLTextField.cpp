@@ -86,7 +86,7 @@ void LE::GUI::SFMLTextField::bind(LE::IEngine *engine)
     });
 
     for (int key = LE_KEY_A; key <= LE_KEY_Z; key++) {
-        eventManager->addEventListener({LE::KEYBOARD, key, LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
+        eventManager->addEventListener({LE::KEYBOARD, static_cast<LE::Event>(key), LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
             if (_isFocus) {
                 if (_input->getContent().size() < _maxChar)
                     _input->setContent(_input->getContent() + static_cast<char>(key));
@@ -95,7 +95,7 @@ void LE::GUI::SFMLTextField::bind(LE::IEngine *engine)
     }
 
     for (int key = LE_KEY_0; key <= LE_KEY_9; key++) {
-        eventManager->addEventListener({LE::KEYBOARD, key, LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
+        eventManager->addEventListener({LE::KEYBOARD, static_cast<LE::Event>(key), LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
             if (_isFocus) {
                 if (_input->getContent().size() < _maxChar)
                     _input->setContent(_input->getContent() + static_cast<char>(key));
