@@ -96,7 +96,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">    #include &quot;IText.hpp&quot;</span></div>
 <div class="line">    <span class="comment">// #include &quot;IEngine.hpp&quot;</span></div>
-<div class="line"><span class="preprocessor">    #include &quot;IEventManager.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">    #include &quot;interface/IEventManager.hpp&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceLE.html">LE</a> {</div>
 <div class="line">    <span class="keyword">class </span>IEngine;</div>
@@ -113,7 +113,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">                <span class="keywordtype">void</span> <a id="a7" name="a7"></a><a class="code hl_function" href="classLE_1_1GUI_1_1ITextField.html#aab21f13cd037c67e6a1e67fea89cdc13">onUnhover</a>() <span class="keyword">override</span>;</div>
 <div class="line"> </div>
-<div class="line">                <span class="keywordtype">void</span> <a id="a8" name="a8"></a><a class="code hl_function" href="classLE_1_1GUI_1_1ITextField.html#ab955d5f10e2ad17fda3a3e89ad28ed91">init</a>() <span class="keyword">override</span>;</div>
+<div class="line">                <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a8" name="a8"></a><a class="code hl_function" href="classLE_1_1GUI_1_1ITextField.html#adc10017019e11c5869231ab458606b4f">init</a>() = 0;</div>
 <div class="line"> </div>
 <div class="line">                std::string <a id="a9" name="a9"></a><a class="code hl_function" href="classLE_1_1GUI_1_1ITextField.html#a3ffc6fe48b7cb711657ee6873ab7c0d8">getInputContent</a>() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
@@ -149,8 +149,8 @@ $(function() {
 <div class="ttc" id="aclassLE_1_1GUI_1_1ITextField_html_a911d8812e8629a192ac539f57208a213"><div class="ttname"><a href="classLE_1_1GUI_1_1ITextField.html#a911d8812e8629a192ac539f57208a213">LE::GUI::ITextField::getInput</a></div><div class="ttdeci">std::shared_ptr&lt; LE::GUI::IText &gt; getInput() const</div><div class="ttdoc">Get the input as a shared pointer of IText.</div><div class="ttdef"><b>Definition:</b> ITextField.cpp:43</div></div>
 <div class="ttc" id="aclassLE_1_1GUI_1_1ITextField_html_a924996d201574e591837d6a53c2ed388"><div class="ttname"><a href="classLE_1_1GUI_1_1ITextField.html#a924996d201574e591837d6a53c2ed388">LE::GUI::ITextField::onClick</a></div><div class="ttdeci">void onClick() override</div><div class="ttdoc">Called when the text field is clicked.</div><div class="ttdef"><b>Definition:</b> ITextField.cpp:17</div></div>
 <div class="ttc" id="aclassLE_1_1GUI_1_1ITextField_html_aab21f13cd037c67e6a1e67fea89cdc13"><div class="ttname"><a href="classLE_1_1GUI_1_1ITextField.html#aab21f13cd037c67e6a1e67fea89cdc13">LE::GUI::ITextField::onUnhover</a></div><div class="ttdeci">void onUnhover() override</div><div class="ttdoc">Called when the text field is unhovered.</div><div class="ttdef"><b>Definition:</b> ITextField.cpp:30</div></div>
-<div class="ttc" id="aclassLE_1_1GUI_1_1ITextField_html_ab955d5f10e2ad17fda3a3e89ad28ed91"><div class="ttname"><a href="classLE_1_1GUI_1_1ITextField.html#ab955d5f10e2ad17fda3a3e89ad28ed91">LE::GUI::ITextField::init</a></div><div class="ttdeci">void init() override</div><div class="ttdoc">Initialize the text field.</div></div>
 <div class="ttc" id="aclassLE_1_1GUI_1_1ITextField_html_ad175d9f4ae5092b84971ca808641af3b"><div class="ttname"><a href="classLE_1_1GUI_1_1ITextField.html#ad175d9f4ae5092b84971ca808641af3b">LE::GUI::ITextField::_placeholder</a></div><div class="ttdeci">std::string _placeholder</div><div class="ttdef"><b>Definition:</b> ITextField.hpp:106</div></div>
+<div class="ttc" id="aclassLE_1_1GUI_1_1ITextField_html_adc10017019e11c5869231ab458606b4f"><div class="ttname"><a href="classLE_1_1GUI_1_1ITextField.html#adc10017019e11c5869231ab458606b4f">LE::GUI::ITextField::init</a></div><div class="ttdeci">virtual void init()=0</div><div class="ttdoc">Initialize the text field.</div></div>
 <div class="ttc" id="aclassLE_1_1IEngine_html"><div class="ttname"><a href="classLE_1_1IEngine.html">LE::IEngine</a></div><div class="ttdoc">Interface for the Lion Engine core functionalities.</div><div class="ttdef"><b>Definition:</b> IEngine.hpp:64</div></div>
 <div class="ttc" id="anamespaceLE_html"><div class="ttname"><a href="namespaceLE.html">LE</a></div><div class="ttdoc">Namespace for the Lion Engine.</div></div>
 </div><!-- fragment --> </div><!-- contents -->
