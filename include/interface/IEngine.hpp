@@ -222,8 +222,8 @@ namespace LE
         std::shared_ptr<T> addScene(const std::string &name)
         {
             auto scene = std::make_shared<T>(this);
-            scene->init();
             _game->getSceneManager()->addScene(scene, name);
+            scene->init();
             return scene;
         }
 

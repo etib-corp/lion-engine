@@ -32,8 +32,8 @@ bool LE::GUI::SFMLTextField::isHover()
     auto windowPos = _window->getWindow()->getPosition();
     auto windowSize = _window->getWindow()->getSize();
 
-    if (mousePos.x >= windowPos.x + _x && mousePos.x <= windowPos.x + _x + _width &&
-        mousePos.y >= windowPos.y + _y && mousePos.y <= windowPos.y + _y + _height) {
+    if (mousePos.x >= _x && mousePos.x <= _x + _width &&
+        mousePos.y >= _y && mousePos.y <= _y + _height) {
         return true;
     }
     return false;
@@ -63,8 +63,10 @@ void LE::GUI::SFMLTextField::init()
 
 void LE::GUI::SFMLTextField::bind(LE::IEngine *engine)
 {
+    std::cout << engine->getGame()->getSceneManager()->getCurrentScene() << std::endl;
     auto eventManager = engine->getGame()->getSceneManager()->getCurrentScene()->getEventManager();
 
+    std::cout << eventManager << std::endl;
     eventManager->addEventListener({LE::KEYBOARD, LE_KEY_SPACE, LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
         if (_isFocus) {
             if (_input->getContent().size() < _maxChar)
@@ -85,21 +87,29 @@ void LE::GUI::SFMLTextField::bind(LE::IEngine *engine)
         }
     });
 
+
     for (int key = LE_KEY_A; key <= LE_KEY_Z; key++) {
-        eventManager->addEventListener({LE::KEYBOARD, static_cast<LE::Event>(key), LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
+        eventManager->addEventListener({LE::KEYBOARD, static_cast<LE::Event>(key), LE::JUST_PRESSED, false}, [&, key](LE::IEngine &engine, float dt) {
             if (_isFocus) {
                 if (_input->getContent().size() < _maxChar)
-                    _input->setContent(_input->getContent() + static_cast<char>(key));
+                    _input->setContent(_input->getContent() + static_cast<char>(key + 65));
             }
         });
     }
 
     for (int key = LE_KEY_0; key <= LE_KEY_9; key++) {
-        eventManager->addEventListener({LE::KEYBOARD, static_cast<LE::Event>(key), LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
+        eventManager->addEventListener({LE::KEYBOARD, static_cast<LE::Event>(key), LE::JUST_PRESSED, false}, [&, key](LE::IEngine &engine, float dt) {
             if (_isFocus) {
                 if (_input->getContent().size() < _maxChar)
-                    _input->setContent(_input->getContent() + static_cast<char>(key));
+                    _input->setContent(_input->getContent() + static_cast<char>(key + 22));
             }
         });
     }
+
+    eventManager->addEventListener({LE::KEYBOARD, LE_KEY_PERIOD, LE::JUST_PRESSED, false}, [&](LE::IEngine &engine, float dt) {
+        if (_isFocus) {
+            if (_input->getContent().size() < _maxChar)
+                _input->setContent(_input->getContent() + ".");
+        }
+    });
 }

@@ -58,6 +58,10 @@ void LE::SceneManager::addScene(std::shared_ptr<LE::Scene> scene, const std::str
 {
     if (_scenes.find(name) != _scenes.end())
         throw SceneManagerError("Scene already exists.", "The scene " + name + " already exists.", "Choose a different name for the scene.");
+    if (_currentScene == nullptr) {
+        _currentScene = scene;
+        _currentSceneName = name;
+    }
     _scenes[name] = scene;
 }
 
