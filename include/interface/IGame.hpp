@@ -33,6 +33,8 @@ namespace LE
 
         std::shared_ptr<SceneManager> &getSceneManager() { return _sceneManager; }
 
+        void setClientBroker(std::shared_ptr<ClientBroker> clientBroker) { _clientBroker = clientBroker; }
+
     protected:
         std::shared_ptr<ClientBroker> _clientBroker;
         std::shared_ptr<ServerBroker> _serverBroker;

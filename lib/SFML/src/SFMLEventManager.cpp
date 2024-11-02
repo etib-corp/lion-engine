@@ -22,12 +22,22 @@ void LE::SFMLEventManager::pollEvents()
     std::shared_ptr<LE::SFMLWindow> window = _engine.getWindow<LE::SFMLWindow>();
 
     for (auto &[key, callback] : _eventCallbacks) {
-        if (sf::Keyboard::isKeyPressed(static_cast<sf::Keyboard::Key>(sfmlKeys[key->key]))) {
+        // if (sf::Keyboard::isKeyPressed(static_cast<sf::Keyboard::Key>(sfmlKeys[key->key]))) {
+        //     if ((key->type == LE::JUST_PRESSED && !key->_alreadyPressed) || key->type == LE::PRESSED)
+        //         callback(_engine, 0);
+        //     key->_alreadyPressed = true;
+        // }
+        // if (!sf::Keyboard::isKeyPressed(static_cast<sf::Keyboard::Key>(sfmlKeys[key->key]))) {
+        //     if ((key->type == LE::JUST_RELEASED && key->_alreadyPressed) || key->type == LE::RELEASED)
+        //         callback(_engine, 0);
+        //     key->_alreadyPressed = false;
+        // }
+        if (sf::Mouse::isButtonPressed(static_cast<sf::Mouse::Button>(sfmlKeys[key->key]))) {
             if ((key->type == LE::JUST_PRESSED && !key->_alreadyPressed) || key->type == LE::PRESSED)
                 callback(_engine, 0);
             key->_alreadyPressed = true;
         }
-        if (!sf::Keyboard::isKeyPressed(static_cast<sf::Keyboard::Key>(sfmlKeys[key->key]))) {
+        if (!sf::Mouse::isButtonPressed(static_cast<sf::Mouse::Button>(sfmlKeys[key->key]))) {
             if ((key->type == LE::JUST_RELEASED && key->_alreadyPressed) || key->type == LE::RELEASED)
                 callback(_engine, 0);
             key->_alreadyPressed = false;
@@ -36,6 +46,20 @@ void LE::SFMLEventManager::pollEvents()
     while (window->getWindow()->pollEvent(_event)) {
         if (_event.type == sf::Event::Closed) {
             exit(0);
+        }
+        for (auto &[key, callback] : _eventCallbacks) {
+            if (_event.type == sf::Event::KeyPressed) {
+                if (_event.key.code == key->key && ((key->type == LE::JUST_PRESSED && !key->_alreadyPressed) || key->type == LE::PRESSED)) {
+                    callback(_engine, 0);
+                }
+                key->_alreadyPressed = true;
+            }
+            if (_event.type == sf::Event::KeyReleased) {
+                if (_event.key.code == key->key && (key->type == LE::JUST_RELEASED && key->_alreadyPressed) || key->type == LE::RELEASED) {
+                    callback(_engine, 0);
+                }
+                key->_alreadyPressed = false;
+            }
         }
     }
 }
