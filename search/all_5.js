@@ -9,6 +9,8 @@ var searchData=
   ['errorassetfactory_6',['ErrorAssetFactory',['../classErrorAssetFactory.html',1,'']]],
   ['errortype_7',['ErrorType',['../classLE_1_1Sound_1_1Device.html#a9a61bcab7b67f2e1388bce04fc6212a7',1,'LE::Sound::Device']]],
   ['event_8',['Event',['../namespaceLE.html#a77ec8703445f48e7d3407bc63f1b3df6',1,'LE']]],
-  ['eventmanager_9',['EventManager',['../classEventManager.html',1,'']]],
-  ['eventmanagererror_10',['EventManagerError',['../classEventManagerError.html',1,'']]]
+  ['eventcallback_9',['EventCallback',['../unionEventCallback.html',1,'']]],
+  ['eventcallback_5fs_10',['EventCallback_s',['../structLE_1_1EventCallback__s.html',1,'LE']]],
+  ['eventmanager_11',['EventManager',['../classEventManager.html',1,'']]],
+  ['eventmanagererror_12',['EventManagerError',['../classEventManagerError.html',1,'']]]
 ];

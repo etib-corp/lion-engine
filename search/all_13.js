@@ -5,6 +5,6 @@ var searchData=
   ['topic_2',['Topic',['../classLE_1_1Topic.html',1,'LE::Topic'],['../classLE_1_1Topic.html#a2cfd019d0be7c56ab0a47691aa7c0b1a',1,'LE::Topic::Topic()']]],
   ['transformcomponent_3',['TransformComponent',['../structTransformComponent.html',1,'']]],
   ['transpose_4',['transpose',['../classLE_1_1Matrix.html#a9aa965f0dd4473b07cc678845806e2d0',1,'LE::Matrix']]],
-  ['type_5',['type',['../structLE_1_1Key.html#ad0eea4ace8db9bd84e5f5928b1a159dd',1,'LE::Key']]],
+  ['type_5',['type',['../structLE_1_1Key__s.html#ae64dcaadd63f01a99aa5a0bf145979ae',1,'LE::Key_s']]],
   ['type_6',['Type',['../namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4',1,'LE']]]
 ];
