@@ -32,7 +32,7 @@ namespace LE
          * @param details The details of the error.
          * @param help The help message for the error.
          */
-        IError(const std::string &title = "", const std::string &details = "", const std::string &help = "")
+        IError(const std::string &title = "", const std::string &details = "", const std::string &help = "") : _title(title), _details(details), _help(help)
         {
             if (title.empty())
                 _title = "An error as occured.";
