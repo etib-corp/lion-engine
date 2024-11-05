@@ -161,7 +161,7 @@ std::shared_ptr<LE::IEngine> instanciateEngine(void)
     if (!isLoaded)
     {
         std::cerr << "Failed to load Lua script." << std::endl;
-        return nullptr;
+        exit(84);
     }
     luacpp::LuaTable servConf = l.Get("servConfiguration");
 
