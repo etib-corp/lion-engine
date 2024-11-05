@@ -31,7 +31,8 @@ LE::Scene::Scene(LE::IEngine *engine)
     _ecs->registerSystem<ShootPatternSystem>();
     _ecs->registerSystem<AnimatedSpriteSystem>();
 
-    // collision->createRectangle(engine);
+    if (engine->_hasDebugger)
+        collision->createRectangle(engine);
 
     Signature CollisionSignature;
     CollisionSignature.set(_ecs->getComponentType<TransformComponent>());
