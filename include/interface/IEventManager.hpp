@@ -5,8 +5,7 @@
 ** IEventManager
 */
 
-#ifndef IEVENTMANAGER_HPP_
-#define IEVENTMANAGER_HPP_
+#pragma once
 
 #include <functional>
 #include <map>
@@ -293,6 +292,28 @@ namespace LE
         LE_MOUSE_BUTTON_MIDDLE = 105,
         LE_MOUSE_BUTTON_X1 = 106,
         LE_MOUSE_BUTTON_X2 = 107,
+
+        LE_JOYSTICK_BUTTON_A = 108,
+        LE_JOYSTICK_BUTTON_B = 109,
+        LE_JOYSTICK_BUTTON_X = 110,
+        LE_JOYSTICK_BUTTON_Y = 111,
+        LE_JOYSTICK_BUTTON_UP = 112,
+        LE_JOYSTICK_BUTTON_DOWN = 113,
+        LE_JOYSTICK_BUTTON_LEFT = 114,
+        LE_JOYSTICK_BUTTON_RIGHT = 115,
+        LE_JOYSTICK_BUTTON_START = 116,
+        LE_JOYSTICK_BUTTON_SELECT = 117,
+        LE_JOYSTICK_BUTTON_LB = 118,
+        LE_JOYSTICK_BUTTON_RB = 119,
+        LE_JOYSTICK_BUTTON_LSB = 120,
+        LE_JOYSTICK_BUTTON_RSB = 121,
+
+        LE_JOYSTICK_AXIS_LEFT_X = 122,
+        LE_JOYSTICK_AXIS_LEFT_Y = 123,
+        LE_JOYSTICK_AXIS_RIGHT_X = 124,
+        LE_JOYSTICK_AXIS_RIGHT_Y = 125,
+        LE_JOYSTICK_AXIS_LT = 126,
+        LE_JOYSTICK_AXIS_RT = 127,
     } Event;
 
 
@@ -326,13 +347,52 @@ namespace LE
      * - type: The type of the event.
      * - _alreadyPressed: A boolean value indicating whether the key was already pressed.
      */
-    typedef struct
+    typedef struct Key_s
     {
-        Input input;          ///< The input source of the event.
-        Event key;              ///< The key code of the event.
-        Type type;            ///< The type of the event.
-        bool _alreadyPressed; ///< A boolean value indicating whether the key was already pressed.
+        Input input;                    ///< The input source of the event.
+        Event key;                      ///< The key code of the event.
+        Type type = LE::PRESSED;        ///< The type of the event.
+        bool _alreadyPressed = false;   ///< A boolean value indicating whether the key was already pressed.
+        float axisDeadzone = 10.0f;     ///< The deadzone for joystick axis events.
+
+        void setAlreadyPressed(bool value) const
+        {
+            const_cast<Key_s *>(this)->_alreadyPressed = value;
+        }
+
+        bool operator<(const Key_s &other) const
+        {
+            return std::tie(input, key, type) < std::tie(other.input, other.key, other.type);
+        }
+
+        bool operator==(const Key_s &other) const
+        {
+            return input == other.input && key == other.key && type == other.type;
+        }
     } Key;
+
+
+    /**
+     * @union EventCallback
+     * @brief Represents a callback function for an event.
+     *
+     * callback: A callback function that takes an Engine object and a float parameter for the delta time.
+     * callbackAxis: A callback function that takes an Engine object, a first float parameter for the delta time and another float parameter for the axis value.
+     */
+    typedef struct EventCallback_s {
+        EventCallback_s() = default;
+        EventCallback_s(std::function<void(LE::IEngine &, float)> callback) : callback(callback) {}
+        EventCallback_s(std::function<void(LE::IEngine &, float, float)> callbackAxis) : callbackAxis(callbackAxis) {}
+
+        std::function<void(LE::IEngine &, float)> callback;
+        std::function<void(LE::IEngine &, float, float)> callbackAxis;
+        enum Type { UNKNOWN = -1, CALLBACK, CALLBACK_AXIS } type = UNKNOWN;
+
+        bool operator==(const EventCallback_s &other) const
+        {
+            return callback.target<void(LE::IEngine &, float)>() == other.callback.target<void(LE::IEngine &, float)>();
+        }
+    } EventCallback;
 
     /**
      * @class EventManager
@@ -391,13 +451,27 @@ namespace LE
          */
         virtual Status addEventListener(const LE::Key &key, std::function<void(LE::IEngine &, float)> callback)
         {
-            auto newKey = std::make_shared<Key>(key);
-            auto it = _eventCallbacks.find(newKey);
+            auto it = _eventCallbacks.find(key);
             if (it != _eventCallbacks.end())
             {
                 return {false, "Event listener already exists for this event type."};
             }
-            _eventCallbacks[newKey] = callback;
+            _eventCallbacks[key] = LE::EventCallback(callback);
+            return {true, "Event listener added successfully."};
+        }
+
+        virtual Status addEventListener(const LE::Event& event, float deadZone, std::function<void(LE::IEngine &, float, float)> callback)
+        {
+            LE::Key key;
+            key.input = LE::JOYSTICK_AXIS;
+            key.key = event;
+            key.axisDeadzone = deadZone;
+            auto it = _eventCallbacks.find(key);
+            if (it != _eventCallbacks.end())
+            {
+                return {false, "Event listener already exists for this event type."};
+            }
+            _eventCallbacks[key] = LE::EventCallback(callback);
             return {true, "Event listener added successfully."};
         }
 
@@ -412,11 +486,10 @@ namespace LE
          */
         virtual void removeEventListener(const LE::Key &key)
         {
-            auto newKey = std::make_shared<Key>(key);
-            auto it = _eventCallbacks.find(newKey);
+            auto it = _eventCallbacks.find(key);
             if (it != _eventCallbacks.end())
             {
-                _eventCallbacks.erase(newKey);
+                _eventCallbacks.erase(key);
             }
         }
 
@@ -426,8 +499,10 @@ namespace LE
         virtual void pollEvents() = 0;
 
     protected:
-        std::map<std::shared_ptr<LE::Key>, std::function<void(LE::IEngine &, float)>> _eventCallbacks; ///< List of event callbacks.
+        std::map<LE::Key, EventCallback> _eventCallbacks; ///< List of event callbacks.
     };
 }
 
-#endif /* !IEVENTMANAGER_HPP_ */
+std::ostream &operator<<(std::ostream &os, const LE::Status &status);
+std::ostream &operator<<(std::ostream &os, const LE::Key &key);
+

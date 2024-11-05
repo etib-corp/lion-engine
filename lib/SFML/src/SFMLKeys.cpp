@@ -115,7 +115,27 @@ std::map<LE::Event, int> sfmlKeys = {
     {LE::Event::LE_MOUSE_BUTTON_RIGHT, sf::Mouse::Right},
     {LE::Event::LE_MOUSE_BUTTON_MIDDLE, sf::Mouse::Middle},
     {LE::Event::LE_MOUSE_BUTTON_X1, sf::Mouse::XButton1},
-    {LE::Event::LE_MOUSE_BUTTON_X2, sf::Mouse::XButton2}
+    {LE::Event::LE_MOUSE_BUTTON_X2, sf::Mouse::XButton2},
+    {LE::Event::LE_JOYSTICK_BUTTON_A, 0},
+    {LE::Event::LE_JOYSTICK_BUTTON_B, 1},
+    {LE::Event::LE_JOYSTICK_BUTTON_X, 2},
+    {LE::Event::LE_JOYSTICK_BUTTON_Y, 3},
+    {LE::Event::LE_JOYSTICK_BUTTON_UP, 31}, // ?
+    {LE::Event::LE_JOYSTICK_BUTTON_DOWN, 31}, // ?
+    {LE::Event::LE_JOYSTICK_BUTTON_LEFT, 31}, // ?
+    {LE::Event::LE_JOYSTICK_BUTTON_RIGHT, 31}, // ?
+    {LE::Event::LE_JOYSTICK_BUTTON_START, 7},
+    {LE::Event::LE_JOYSTICK_BUTTON_SELECT, 6},
+    {LE::Event::LE_JOYSTICK_BUTTON_LB, 4},
+    {LE::Event::LE_JOYSTICK_BUTTON_RB, 5},
+    {LE::Event::LE_JOYSTICK_BUTTON_LSB, 9},
+    {LE::Event::LE_JOYSTICK_BUTTON_RSB, 10},
+    {LE::Event::LE_JOYSTICK_AXIS_LEFT_X, sf::Joystick::Axis::X},
+    {LE::Event::LE_JOYSTICK_AXIS_LEFT_Y, sf::Joystick::Axis::Y},
+    {LE::Event::LE_JOYSTICK_AXIS_RIGHT_X, sf::Joystick::Axis::U},
+    {LE::Event::LE_JOYSTICK_AXIS_RIGHT_Y, sf::Joystick::Axis::V},
+    {LE::Event::LE_JOYSTICK_AXIS_LT, sf::Joystick::Axis::Z},
+    {LE::Event::LE_JOYSTICK_AXIS_RT, sf::Joystick::Axis::R}
 };
 
 

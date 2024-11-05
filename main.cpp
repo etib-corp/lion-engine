@@ -84,6 +84,18 @@ class SnakeScene : public LE::Scene {
             }, 1.0f, true);
             animatedSprite->currentAnimation = "idle";
             _ecs->addComponent<AnimatedSpriteComponent>(entity2, *animatedSprite);
+
+            _eventManager->addEventListener({LE::KEYBOARD, LE::LE_KEY_ESCAPE, LE::JUST_PRESSED}, [=](LE::IEngine &engine, float deltaTime) {
+                exit(0);
+            });
+
+            _eventManager->addEventListener(LE::LE_JOYSTICK_AXIS_LEFT_X, 10.0f, [=, this](LE::IEngine &engine, float deltaTime, float value) {
+                _ecs->getComponent<TransformComponent>(entity2).position.x += value / 10;
+            });
+
+            _eventManager->addEventListener(LE::LE_JOYSTICK_AXIS_LEFT_Y, 10.0f, [=, this](LE::IEngine &engine, float deltaTime, float value) {
+                _ecs->getComponent<TransformComponent>(entity2).position.y += value / 10;
+            });
         }
 
         std::shared_ptr<LE::ISpriteComponent> _sprite;

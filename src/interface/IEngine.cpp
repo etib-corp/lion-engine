@@ -13,7 +13,7 @@ void LE::IEngine::init()
 {
     _window = createWindow(800, 600, "Lion Engine");
     _clock = std::make_unique<LE::Clock>();
-    _networkLoaderLib = std::make_unique<NetworkLoaderLib>("./build/dependencies/lion-engine/lib/NetworkModule/libNetworkModule.so");
+    _networkLoaderLib = std::make_unique<NetworkLoaderLib>("./build/lib/NetworkModule/libNetworkModule.so");
     _networkLoaderLib->LoadModule();
     _networkModule = _networkLoaderLib->createNetworkModule();
     _assetManager = std::make_shared<AssetManager>();
