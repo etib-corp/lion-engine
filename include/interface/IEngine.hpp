@@ -69,7 +69,7 @@ namespace LE
          * @brief Initializes the engine.
          *
          */
-        virtual void init();
+        virtual void init(const std::string &networkModulePath);
 
         /**
          * @brief Creates a font resource.
@@ -301,6 +301,7 @@ namespace LE
 
         virtual std::shared_ptr<LE::IRectangle> createRectangle(const LE::Vector3<float>& position, const LE::Vector2<float>& size, std::shared_ptr<LE::Color> color, std::shared_ptr<LE::IWindow> window) = 0;
 
+        bool _hasDebugger;
     protected:
         std::shared_ptr<IWindow> _window;
         std::map<std::string, std::shared_ptr<ISpriteComponent>> _sprites;
@@ -324,5 +325,6 @@ namespace LE
 }
 
 extern std::shared_ptr<LE::IEngine> g_engine;
+std::shared_ptr<LE::IEngine> instanciateEngine(void);
 
 #endif /* !IENGINE_HPP_ */

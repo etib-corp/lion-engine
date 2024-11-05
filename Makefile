@@ -9,9 +9,9 @@ SRC	=	main.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
-CXXFLAGS	=		 -I./include -std=c++20 -ggdb -g3
+CXXFLAGS	=		 -I./include -std=c++20 -ggdb -g3 -I./build/_deps/lua-src
 
-LXXDFLAGS = -L./build/ -llion-engine
+LXXDFLAGS = -L./build/ -llion-engine -Wl,--copy-dt-needed-entries -llua
 
 CC = g++
 

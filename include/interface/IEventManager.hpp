@@ -389,17 +389,17 @@ namespace LE
          * @param callback The callback function to be called when the key event occurs.
          * @return A Status object indicating the success or failure of the operation.
          */
-        virtual Status addEventListener(const LE::Key &key, std::function<void(LE::IEngine &, float)> callback)
-        {
-            auto newKey = std::make_shared<Key>(key);
-            auto it = _eventCallbacks.find(newKey);
-            if (it != _eventCallbacks.end())
-            {
-                return {false, "Event listener already exists for this event type."};
-            }
-            _eventCallbacks[newKey] = callback;
-            return {true, "Event listener added successfully."};
-        }
+        // virtual Status addEventListener(const LE::Key &key, std::function<void(LE::IEngine &, float)> callback)
+        // {
+        //     auto newKey = std::make_shared<Key>(key);
+        //     auto it = _eventCallbacks.find(newKey);
+        //     if (it != _eventCallbacks.end())
+        //     {
+        //         return {false, "Event listener already exists for this event type."};
+        //     }
+        //     _eventCallbacks[newKey] = callback;
+        //     return {true, "Event listener added successfully."};
+        // }
 
         /**
          * @brief Removes an event listener for the specified key.
