@@ -8,6 +8,10 @@
 #include "IEngine.hpp"
 #include "GraphicalLib.hpp"
 #include "interface/GUI/ITextField.hpp"
+#include "luacpp/luacpp.h"
+#include <iostream>
+#include <string>
+#include <vector>
 
 void LE::IEngine::init(const std::string &networkModulePath)
 {
@@ -108,11 +112,40 @@ std::shared_ptr<AssetManager> LE::IEngine::getAssetManager()
     return _assetManager;
 }
 
-#include "luacpp/luacpp.h"
-#include <iostream>
-#include <string>
-#include <vector>
+static bool isValidFile(const std::string& path) {
+    return std::filesystem::exists(path) && std::filesystem::is_regular_file(path);
+}
 
+static void checkFileConf(luacpp::LuaTable servConf)
+{
+    bool hasEnginePath = false;
+    bool hasNetworkModulePath = false;
+    bool hasFramerateLimit = false;
+    bool hasDebug = false;
+
+    if (servConf.GetType() == 0)
+    {
+        std::cerr << "Error in Lua configuration" << std::endl;
+        exit(84);
+    }
+
+    servConf.ForEach([&](const luacpp::LuaObject& key, const luacpp::LuaObject& value) -> bool {
+        if (::strcmp(key.ToString(), "gameEnginePath") == 0)
+            hasEnginePath = true;
+        if (::strcmp(key.ToString(), "networkModulePath") == 0)
+            hasNetworkModulePath = true;
+        if (::strcmp(key.ToString(), "FramerateLimit") == 0)
+            hasFramerateLimit = true;
+        if (::strcmp(key.ToString(), "Debug") == 0)
+            hasDebug = true;
+        return true;
+    });
+    if (!hasEnginePath || !hasNetworkModulePath || !hasFramerateLimit || !hasDebug)
+    {
+        std::cerr << "Error in Lua configuration" << std::endl;
+        exit(84);
+    }
+}
 
 std::shared_ptr<LE::IEngine> instanciateEngine(void)
 {
@@ -132,6 +165,8 @@ std::shared_ptr<LE::IEngine> instanciateEngine(void)
     }
     luacpp::LuaTable servConf = l.Get("servConfiguration");
 
+    checkFileConf(servConf);
+
     servConf.ForEach([&](const luacpp::LuaObject& key, const luacpp::LuaObject& value) -> bool {
         if (::strcmp(key.ToString(), "gameEnginePath") == 0)
             rGraphicalLibPath.assign(value.ToString(), ::strlen(value.ToString()));
@@ -143,6 +178,12 @@ std::shared_ptr<LE::IEngine> instanciateEngine(void)
             isDebugger = value.ToBool();
         return true;
     });
+
+    if (!isValidFile(rGraphicalLibPath) || !isValidFile(networkModulePath))
+    {
+        std::cerr << "Bad path" << std::endl;
+        exit(84);
+    }
 
     void *_handle = dlopen(rGraphicalLibPath.c_str(), RTLD_LAZY);
     if (!_handle)
