@@ -6,14 +6,14 @@
 */
 
 #include "IEngine.hpp"
-
+#include "GraphicalLib.hpp"
 #include "interface/GUI/ITextField.hpp"
 
-void LE::IEngine::init()
+void LE::IEngine::init(const std::string &networkModulePath)
 {
     _window = createWindow(800, 600, "Lion Engine");
     _clock = std::make_unique<LE::Clock>();
-    _networkLoaderLib = std::make_unique<NetworkLoaderLib>("./build/lib/NetworkModule/libNetworkModule.so");
+    _networkLoaderLib = std::make_unique<NetworkLoaderLib>(networkModulePath.c_str());
     _networkLoaderLib->LoadModule();
     _networkModule = _networkLoaderLib->createNetworkModule();
     _assetManager = std::make_shared<AssetManager>();
@@ -106,4 +106,52 @@ void LE::IEngine::restartClock()
 std::shared_ptr<AssetManager> LE::IEngine::getAssetManager()
 {
     return _assetManager;
+}
+
+#include "luacpp/luacpp.h"
+#include <iostream>
+#include <string>
+#include <vector>
+
+
+std::shared_ptr<LE::IEngine> instanciateEngine(void)
+{
+    std::string rGraphicalLibPath;
+    std::string networkModulePath;
+    bool isDebugger = false;
+    std::shared_ptr<LE::IEngine> r_g_engine;
+
+    int rFramerateLimit = 0;
+    luacpp::LuaState l(luaL_newstate(), true);
+    bool isLoaded = l.DoFile("serv.conf.lua");
+
+    if (!isLoaded)
+    {
+        std::cerr << "Failed to load Lua script." << std::endl;
+        return nullptr;
+    }
+    luacpp::LuaTable servConf = l.Get("servConfiguration");
+
+    servConf.ForEach([&](const luacpp::LuaObject& key, const luacpp::LuaObject& value) -> bool {
+        if (::strcmp(key.ToString(), "gameEnginePath") == 0)
+            rGraphicalLibPath.assign(value.ToString(), ::strlen(value.ToString()));
+        if (::strcmp(key.ToString(), "networkModulePath") == 0)
+            networkModulePath.assign(value.ToString(), ::strlen(value.ToString()));
+        if (::strcmp(key.ToString(), "FramerateLimit") == 0)
+            rFramerateLimit = value.ToInteger();
+        if (::strcmp(key.ToString(), "Debug") == 0)
+            isDebugger = value.ToBool();
+        return true;
+    });
+
+    void *_handle = dlopen(rGraphicalLibPath.c_str(), RTLD_LAZY);
+    if (!_handle)
+        throw LE::IEngineError("GraphicalLib", "Failed to load the graphical library", dlerror());
+    std::shared_ptr<LE::IEngine> (*_createEngine)() = reinterpret_cast<std::shared_ptr<LE::IEngine>(*)()>(dlsym(_handle, "createEngine"));
+
+    r_g_engine = _createEngine();
+    r_g_engine->init(networkModulePath);
+    r_g_engine->setFramerateLimit(rFramerateLimit);
+    r_g_engine->_hasDebugger = isDebugger;
+    return r_g_engine;
 }

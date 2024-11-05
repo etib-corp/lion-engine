@@ -7,6 +7,11 @@
 
 #include "GraphicalLib.hpp"
 
+LE::GraphicalLib::GraphicalLib()
+{
+    
+}
+
 LE::GraphicalLib::GraphicalLib(const std::string& path)
 {
     _handle = dlopen(path.c_str(), RTLD_LAZY);

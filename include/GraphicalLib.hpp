@@ -27,6 +27,7 @@ namespace LE {
     class GraphicalLib {
         public:
             GraphicalLib(const std::string& path);
+            GraphicalLib();
             ~GraphicalLib();
 
             std::shared_ptr<IEngine> createEngine();
