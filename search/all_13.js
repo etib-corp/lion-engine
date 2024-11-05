@@ -6,5 +6,6 @@ var searchData=
   ['transformcomponent_3',['TransformComponent',['../structTransformComponent.html',1,'']]],
   ['transpose_4',['transpose',['../classLE_1_1Matrix.html#a9aa965f0dd4473b07cc678845806e2d0',1,'LE::Matrix']]],
   ['type_5',['type',['../structLE_1_1Key__s.html#ae64dcaadd63f01a99aa5a0bf145979ae',1,'LE::Key_s']]],
-  ['type_6',['Type',['../namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4',1,'LE']]]
+  ['type_6',['Type',['../namespaceLE.html#a6a38d5ec26795c109be9ba947245eef4',1,'LE']]],
+  ['typeholder_7',['TypeHolder',['../structluacpp_1_1TypeHolder.html',1,'luacpp']]]
 ];

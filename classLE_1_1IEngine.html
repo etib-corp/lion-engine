@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classLE_1_1IEngine-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LE::IEngine Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
@@ -97,9 +98,9 @@ Inheritance diagram for LE::IEngine:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a53ae7b256614f9c8a7f0578fe2e3878c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#a53ae7b256614f9c8a7f0578fe2e3878c">init</a> ()</td></tr>
-<tr class="memdesc:a53ae7b256614f9c8a7f0578fe2e3878c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine.  <br /></td></tr>
-<tr class="separator:a53ae7b256614f9c8a7f0578fe2e3878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9ceba34af13c35dad446302c3e4458"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#aaa9ceba34af13c35dad446302c3e4458">init</a> (const std::string &amp;networkModulePath)</td></tr>
+<tr class="memdesc:aaa9ceba34af13c35dad446302c3e4458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine.  <br /></td></tr>
+<tr class="separator:aaa9ceba34af13c35dad446302c3e4458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af99d5cac5471f3f20533c7a3299a9b14"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1IFont.html">LE::IFont</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLE_1_1IEngine.html#af99d5cac5471f3f20533c7a3299a9b14">createFont</a> (const std::string &amp;path, int height, int width)=0</td></tr>
 <tr class="memdesc:af99d5cac5471f3f20533c7a3299a9b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a font resource.  <br /></td></tr>
 <tr class="separator:af99d5cac5471f3f20533c7a3299a9b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +209,12 @@ virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1GUI_1_1IContainer.htm
 <tr class="memitem:a888da584cbb547771dc6548b5fca17f8"><td class="memItemLeft" align="right" valign="top"><a id="a888da584cbb547771dc6548b5fca17f8" name="a888da584cbb547771dc6548b5fca17f8"></a>
 virtual std::shared_ptr&lt; <a class="el" href="classLE_1_1IRectangle.html">LE::IRectangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createRectangle</b> (const <a class="el" href="classLE_1_1Vector3.html">LE::Vector3</a>&lt; float &gt; &amp;position, const <a class="el" href="classLE_1_1Vector2.html">LE::Vector2</a>&lt; float &gt; &amp;size, std::shared_ptr&lt; <a class="el" href="classLE_1_1Color.html">LE::Color</a> &gt; color, std::shared_ptr&lt; <a class="el" href="classLE_1_1IWindow.html">LE::IWindow</a> &gt; window)=0</td></tr>
 <tr class="separator:a888da584cbb547771dc6548b5fca17f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a72c232366fddc9a92feda5beceeceaa8"><td class="memItemLeft" align="right" valign="top"><a id="a72c232366fddc9a92feda5beceeceaa8" name="a72c232366fddc9a92feda5beceeceaa8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_hasDebugger</b></td></tr>
+<tr class="separator:a72c232366fddc9a92feda5beceeceaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -847,8 +854,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a53ae7b256614f9c8a7f0578fe2e3878c" name="a53ae7b256614f9c8a7f0578fe2e3878c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53ae7b256614f9c8a7f0578fe2e3878c">&#9670;&#160;</a></span>init()</h2>
+<a id="aaa9ceba34af13c35dad446302c3e4458" name="aaa9ceba34af13c35dad446302c3e4458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9ceba34af13c35dad446302c3e4458">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -859,7 +866,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void LE::IEngine::init </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>networkModulePath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
